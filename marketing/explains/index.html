@@ -31,6 +31,14 @@ a{color:var(--link)}
 .masthead{container-type:inline-size}.ybt{font-size:min(1em,calc((100cqw - 4px)/var(--w)))}.yb,.fw{display:inline-block}.fw{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:1em;letter-spacing:0;margin-left:.1em;vertical-align:baseline}
 .dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:4px double var(--rule);padding:5px 2px;
   font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+.ex-special{--ex-bg:#E3BF5A;--ex-ink:#2a1f12;--ex-soft:#3b2d1a;--ex-faint:#4a3a22;--ex-link:#4a2c10;
+  background-color:var(--ex-bg);background-image:radial-gradient(rgba(70,45,10,.13) .9px,transparent 1.3px),linear-gradient(180deg,rgba(255,240,190,.35),rgba(150,105,20,.12));
+  background-size:5px 5px,100% 100%;border:6px double var(--ex-ink);outline:1px solid var(--ex-ink);outline-offset:3px;color:var(--ex-ink);position:relative}
+.ex-tab{display:inline-block;margin:0 0 6px;background:var(--ex-ink);color:#F6E3A6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:11.5px;
+  letter-spacing:.26em;text-transform:uppercase;padding:4px 10px 3px;line-height:1.2}
+.ex-brand{margin:0 0 4px;font-family:"UnifrakturMaguntia","Old English Text MT","Playfair Display",serif;font-weight:400;font-size:clamp(30px,5vw,40px);line-height:1.05;color:var(--ex-ink)}
+.ex-brand .yb,.ex-brand .fw{display:inline-block}.ex-brand .fw{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:1em;margin-left:.1em}
+.colhead{padding:14px 20px 4px;margin:0 0 22px}.colhead .kicker{color:var(--ex-faint);border-top:2px solid var(--ex-ink);padding-top:5px}.colhead h1{color:var(--ex-ink)}.colhead .dek{color:var(--ex-soft)}.colhead .byline{color:var(--ex-faint);border-color:var(--ex-ink)}.colhead .byline b{color:var(--ex-ink)}
 .kicker{font-family:"Old Standard TT",Georgia,serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 6px}
 h1{margin:0 0 10px;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(30px,5.4vw,46px);line-height:1.1;color:var(--ink)}
 .dek{margin:0 0 12px;font-size:19px;line-height:1.5;font-style:italic;color:var(--ink-soft)}
@@ -38,7 +46,7 @@ h1{margin:0 0 10px;font-family:"Playfair Display",Georgia,serif;font-weight:900;
   border-top:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft);padding:6px 0;margin:0 0 18px}
 .byline b{color:var(--ink)}
 article.col p{margin:0 0 14px;text-align:justify;hyphens:auto}
-article.col > p.byline + p::first-letter{float:left;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:3.4em;line-height:.85;padding:5px 7px 0 0;color:var(--ink)}
+article.col > header.colhead + p::first-letter{float:left;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:3.4em;line-height:.85;padding:5px 7px 0 0;color:var(--ink)}
 article.col h2{margin:24px 0 8px;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:23px;line-height:1.2;border-top:1px solid var(--rule);padding-top:8px}
 article.col ul{margin:0 0 14px;padding-left:22px}
 article.col li{margin:0 0 6px}
