@@ -16,3 +16,4 @@ Free licence stock photos, converted to grayscale, cropped 16:9, 800x450 WebP.
 | marketing.webp | https://www.pexels.com/photo/close-up-of-megaphones-17619961/ | Pexels License |
 | finance.webp | https://www.pexels.com/photo/stock-program-on-a-screen-in-black-and-white-16594724/ | Pexels License |
 | aviation.webp | https://www.pexels.com/photo/aircraft-wing-3914711/ | Pexels License |
+| business.webp | https://commons.wikimedia.org/wiki/File:Legal_Contract_%26_Signature_-_Warm_Tones.jpg (photo by Blogtrepreneur) | CC BY 2.0 |

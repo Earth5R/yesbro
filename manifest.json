@@ -1,1 +1,1 @@
-{"name":"Yes Bro","short_name":"Yes Bro","start_url":"/","scope":"/","display":"standalone","background_color":"#f3ead6","theme_color":"#f3ead6","icons":[{"src":"/icon-512.png","sizes":"512x512","type":"image/png"}]}
+{"id":"/","name":"Yes Bro","short_name":"Yes Bro","start_url":"/","scope":"/","display":"standalone","background_color":"#f3ead6","theme_color":"#f3ead6","icons":[{"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}]}

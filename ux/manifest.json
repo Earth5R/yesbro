@@ -1,1 +1,1 @@
-{"name":"Yes Bro UX","short_name":"Yes Bro UX","start_url":"./","display":"standalone","background_color":"#f3ead6","theme_color":"#f3ead6","icons":[{"src":"../icon-512.png","sizes":"512x512","type":"image/png"}]}
+{"id": "/ux/", "name": "Yes Bro UX", "short_name": "Yes Bro UX", "description": "Yes Bro UX, a free daily newspaper by Yes Bro.", "start_url": "/ux/", "scope": "/ux/", "display": "standalone", "background_color": "#f3ead6", "theme_color": "#f3ead6", "icons": [{"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}
