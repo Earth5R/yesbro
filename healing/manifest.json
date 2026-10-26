@@ -1,0 +1,1 @@
+{"id": "/healing/", "name": "Yes Bro Healing", "short_name": "Yes Bro Healing", "description": "Yes Bro Healing, a free daily newspaper by Yes Bro.", "start_url": "/healing/", "scope": "/healing/", "display": "standalone", "background_color": "#f3ead6", "theme_color": "#f3ead6", "icons": [{"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}
