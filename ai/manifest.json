@@ -1,0 +1,1 @@
+{"id": "/ai/", "name": "Yes Bro AI", "short_name": "Yes Bro AI", "description": "Yes Bro AI, a free daily newspaper by Yes Bro.", "start_url": "/ai/", "scope": "/ai/", "display": "standalone", "background_color": "#f3ead6", "theme_color": "#f3ead6", "icons": [{"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}

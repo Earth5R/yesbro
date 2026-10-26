@@ -18,3 +18,4 @@ Free licence stock photos, converted to grayscale, cropped 16:9, 800x450 WebP.
 | aviation.webp | https://www.pexels.com/photo/aircraft-wing-3914711/ | Pexels License |
 | business.webp | https://commons.wikimedia.org/wiki/File:Legal_Contract_%26_Signature_-_Warm_Tones.jpg (photo by Blogtrepreneur) | CC BY 2.0 |
 | healing.webp | https://commons.wikimedia.org/wiki/File:Stacked_stones_on_beach.jpg (photo by DeFacto) | CC BY-SA 4.0 |
+| ai.webp | https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg (photo by Carl Lender) | CC BY 2.0 |
