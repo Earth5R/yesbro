@@ -1,0 +1,1 @@
+{"id": "/packaging/", "name": "Yes Bro Packaging", "short_name": "Packaging", "description": "Yes Bro Packaging, a free daily newspaper by Yes Bro.", "start_url": "/packaging/", "scope": "/packaging/", "display": "standalone", "background_color": "#f3ead6", "theme_color": "#f3ead6", "icons": [{"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}
