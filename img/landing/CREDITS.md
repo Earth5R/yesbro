@@ -20,3 +20,4 @@ Free licence stock photos, converted to grayscale, cropped 16:9, 800x450 WebP.
 | healing.webp | https://commons.wikimedia.org/wiki/File:Stacked_stones_on_beach.jpg (photo by DeFacto) | CC BY-SA 4.0 |
 | ai.webp | https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg (photo by Carl Lender) | CC BY 2.0 |
 | packaging.webp | https://commons.wikimedia.org/wiki/File:Bales_of_PET_bottles_closeup.jpg (photo by Grendelkhan) | CC BY-SA 4.0 |
+| fashion.webp | https://www.pexels.com/photo/7679720/ (fashion / textiles stock) | Pexels License |
