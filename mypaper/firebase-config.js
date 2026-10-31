@@ -5,7 +5,7 @@
 window.YESBRO_FIREBASE = {
   enabled: true,
   apiKey: "AIzaSyAZDxiPDulKxcND2dmDLiQjUQnr9ASpsTs",
-  authDomain: "yes-bro-5c2dd.firebaseapp.com",
+  authDomain: "yesbrohq.com",
   projectId: "yes-bro-5c2dd",
   storageBucket: "yes-bro-5c2dd.firebasestorage.app",
   messagingSenderId: "1043001791506",
