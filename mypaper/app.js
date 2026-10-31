@@ -194,35 +194,50 @@
     return "My Paper (" + picks.length + ")";
   }
 
-  /* ---- Picker ---- */
-  function renderPicker() {
-    var root = $("picker-grid");
-    if (!catalog) {
-      root.innerHTML = "<p class=\"empty\">Catalog is still warming up.</p>";
+
+  var sectionsOpen = false;
+  var sectionsFocusKey = null;
+
+  function selectedPaperKeys() {
+    var keys = [];
+    var seen = {};
+    picks.forEach(function (id) {
+      var k = paperKeyOf(id);
+      if (!k || seen[k]) return;
+      seen[k] = 1;
+      keys.push(k);
+    });
+    return keys;
+  }
+
+  function paperByKey(key) {
+    return (catalog.papers || []).find(function (p) { return p.key === key; });
+  }
+
+  function renderSectionsPanel() {
+    var panel = $("sections-panel");
+    if (!panel) return;
+    if (!sectionsOpen) {
+      panel.classList.remove("open");
+      panel.innerHTML = "";
       return;
     }
-    var html = "";
-    (catalog.papers || []).forEach(function (paper) {
-      var on = hasWhole(paper.key);
-      var topicCount = (paper.topics || []).length;
-      html += "<section class=\"paper-block\" data-paper=\"" + esc(paper.key) + "\">";
-      html += "<div class=\"paper-card" + (on ? " on" : "") + "\">";
-      html += "<div class=\"paper-card-main\">";
-      html += "<div class=\"paper-card-left\">";
-      html += "<span class=\"paper-ico\">" + paperIcon(paper.key) + "</span>";
-      html += "<div class=\"paper-card-text\"><h2>" + esc(paper.label) + "</h2>";
-      html += "<p class=\"paper-card-meta\">Yes Bro " + esc(paper.label);
-      if (topicCount) html += " · " + topicCount + " topics today";
-      html += "</p></div></div>";
-      html += "<button type=\"button\" class=\"whole-btn" + (on ? " on" : "") + "\" data-whole=\"" + esc(paper.key) + "\" aria-pressed=\"" + (on ? "true" : "false") + "\">";
-      html += on ? "✓ Whole paper" : "+ Add whole paper";
-      html += "</button></div>";
-      html += "<a class=\"paper-link\" href=\"" + esc(paper.url) + "\">Open full paper</a>";
+    panel.classList.add("open");
+    var keys = sectionsFocusKey ? [sectionsFocusKey] : selectedPaperKeys();
+    if (!keys.length) {
+      panel.innerHTML = "<h3>Sections</h3><p class=\"empty\">Select a paper first, then open sections here.</p>";
+      return;
+    }
+    var html = "<h3>Sections</h3>";
+    keys.forEach(function (key) {
+      var paper = paperByKey(key);
+      if (!paper) return;
+      var on = hasWhole(key);
+      html += "<div class=\"sec-paper\" data-paper=\"" + esc(key) + "\">";
+      html += "<div class=\"sec-paper-head\"><h4>" + esc(paper.label) + "</h4>";
+      if (paper.url) html += "<a href=\"" + esc(paper.url) + "\">Open full paper</a>";
       html += "</div>";
-
       if (paper.topics && paper.topics.length) {
-        html += "<details class=\"section-pick\"" + (on ? "" : "") + ">";
-        html += "<summary>Or pick sections</summary>";
         html += "<div class=\"topic-grid\">";
         paper.topics.forEach(function (t) {
           var ton = on || picks.indexOf(t.id) >= 0;
@@ -233,20 +248,86 @@
           html += "<span class=\"t-btn\" aria-hidden=\"true\">" + (ton ? "✓" : "+") + "</span>";
           html += "</button>";
         });
-        html += "</div></details>";
+        html += "</div>";
+      } else {
+        html += "<p class=\"empty\">No sections listed for today.</p>";
       }
-      html += "</section>";
+      html += "</div>";
     });
-    root.innerHTML = html || "<p class=\"empty\">No papers yet for today.</p>";
-    root.querySelectorAll(".whole-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () { toggleWholePaper(btn.getAttribute("data-whole")); });
-    });
-    root.querySelectorAll(".topic").forEach(function (btn) {
+    panel.innerHTML = html;
+    panel.querySelectorAll(".topic").forEach(function (btn) {
       btn.addEventListener("click", function () { toggleTopic(btn.getAttribute("data-id")); });
     });
+  }
+
+  function openSectionsFor(key) {
+    sectionsOpen = true;
+    sectionsFocusKey = key || null;
+    if (key && !hasWhole(key)) {
+      /* Long-press on an unpicked tile: add the whole paper first */
+      addWholePaper(key);
+      renderSectionsPanel();
+      return;
+    }
+    renderSectionsPanel();
+  }
+
+  /* ---- Picker ---- */
+  function renderPicker() {
+    var root = $("picker-grid");
+    if (!catalog) {
+      root.innerHTML = "<p class=\"empty\">Catalog is still warming up.</p>";
+      return;
+    }
+    var html = "<div class=\"tile-grid\" role=\"list\">";
+    (catalog.papers || []).forEach(function (paper) {
+      var on = hasWhole(paper.key);
+      html += "<button type=\"button\" class=\"tile" + (on ? " on" : "") + "\" role=\"listitem\" data-whole=\"" + esc(paper.key) + "\" aria-pressed=\"" + (on ? "true" : "false") + "\">";
+      html += "<span class=\"tick\" aria-hidden=\"true\">✓</span>";
+      html += "<span class=\"ico\">" + paperIcon(paper.key) + "</span>";
+      html += "<span class=\"name\">" + esc(paper.label) + "</span>";
+      html += "</button>";
+    });
+    html += "</div>";
+    html += "<button type=\"button\" class=\"sections-link\" id=\"sections-link\">Sections for selected papers</button>";
+    html += "<div class=\"sections-panel\" id=\"sections-panel\" aria-live=\"polite\"></div>";
+    root.innerHTML = html || "<p class=\"empty\">No papers yet for today.</p>";
+
+    root.querySelectorAll("button.tile").forEach(function (btn) {
+      var key = btn.getAttribute("data-whole");
+      var pressTimer = null;
+      var longPressed = false;
+      btn.addEventListener("click", function () {
+        if (longPressed) { longPressed = false; return; }
+        toggleWholePaper(key);
+      });
+      btn.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        openSectionsFor(key);
+      });
+      btn.addEventListener("touchstart", function () {
+        longPressed = false;
+        pressTimer = setTimeout(function () {
+          longPressed = true;
+          openSectionsFor(key);
+        }, 480);
+      }, { passive: true });
+      btn.addEventListener("touchend", function () { clearTimeout(pressTimer); });
+      btn.addEventListener("touchmove", function () { clearTimeout(pressTimer); });
+      btn.addEventListener("touchcancel", function () { clearTimeout(pressTimer); });
+    });
+    var secLink = $("sections-link");
+    if (secLink) {
+      secLink.addEventListener("click", function () {
+        sectionsFocusKey = null;
+        sectionsOpen = true;
+        renderSectionsPanel();
+      });
+    }
     var dateEl = $("catalog-date");
     if (dateEl && catalog.date) dateEl.textContent = catalog.date;
     renderPickerState();
+    if (sectionsOpen) renderSectionsPanel();
   }
 
   function renderPickerState() {
@@ -260,19 +341,18 @@
       sticky.disabled = n === 0;
       sticky.textContent = stickyLabel();
     }
-    document.querySelectorAll(".paper-block").forEach(function (block) {
-      var key = block.getAttribute("data-paper");
+    document.querySelectorAll("button.tile").forEach(function (btn) {
+      var key = btn.getAttribute("data-whole");
       var on = hasWhole(key);
-      var card = block.querySelector(".paper-card");
-      var whole = block.querySelector(".whole-btn");
-      if (card) card.classList.toggle("on", on);
-      if (whole) {
-        whole.classList.toggle("on", on);
-        whole.setAttribute("aria-pressed", on ? "true" : "false");
-        whole.textContent = on ? "✓ Whole paper" : "+ Add whole paper";
-      }
-      block.querySelectorAll(".topic").forEach(function (btn) {
+      btn.classList.toggle("on", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    if (sectionsOpen) renderSectionsPanel();
+    else {
+      document.querySelectorAll(".sections-panel .topic").forEach(function (btn) {
         var id = btn.getAttribute("data-id");
+        var key = paperKeyOf(id);
+        var on = hasWhole(key);
         var ton = on || picks.indexOf(id) >= 0;
         btn.classList.toggle("on", ton);
         btn.classList.toggle("locked", on);
@@ -280,7 +360,7 @@
         var mark = btn.querySelector(".t-btn");
         if (mark) mark.textContent = ton ? "✓" : "+";
       });
-    });
+    }
     var clear = $("clear-picks");
     if (clear) clear.hidden = n === 0;
   }

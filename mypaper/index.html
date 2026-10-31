@@ -47,38 +47,44 @@ a{color:inherit}
 .dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:4px double var(--rule);
   padding:5px 2px;font-family:"Old Standard TT",Georgia,serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
 .dateline b{color:var(--ink)}
-.lede{max-width:36em;margin:18px auto 8px;text-align:center;font-size:16px;color:var(--ink-soft)}
+.lede{max-width:34em;margin:14px auto 6px;text-align:center;font-size:14.5px;color:var(--ink-soft)}
 .lede strong{color:var(--ink);font-weight:700}
-.hint{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13.5px;color:var(--ink-faint);margin:0 0 18px}
+.hint{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:12.5px;color:var(--ink-faint);margin:0 0 12px}
 
-/* Picker */
-.paper-block{margin:0 0 22px;padding:0 0 14px;border-bottom:1px solid var(--rule-soft)}
-.paper-card{border:1.5px solid var(--rule-soft);border-radius:12px;background:#f7efdc;padding:14px 16px;margin:0 0 8px}
-.paper-card.on{border-color:var(--rule);background:#e4d4b4;box-shadow:inset 0 0 0 1px var(--rule)}
-.paper-card-main{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.paper-card-left{display:flex;align-items:center;gap:12px;min-width:0;flex:1 1 auto}
-.paper-ico{flex:0 0 auto;width:30px;height:30px;color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
-.paper-ico svg{width:30px;height:30px;display:block}
-.topic .t-ico{display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:18px;height:18px;color:var(--ink-soft);margin-right:4px}
-.topic .t-ico svg{width:18px;height:18px;display:block}
-.paper-card-text h2{margin:0 0 4px;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:24px;
+/* Picker — compact tile grid */
+.tile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 10px}
+@media (min-width:720px){
+  .tile-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+}
+@media (min-width:1100px){
+  .tile-grid{grid-template-columns:repeat(7,minmax(0,1fr))}
+}
+button.tile{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  min-height:76px;padding:8px 4px 7px;border:1.5px solid var(--rule-soft);border-radius:12px;
+  background:#f7efdc;color:var(--ink);cursor:pointer;position:relative;text-align:center;font:inherit}
+button.tile:hover{background:#efe4c8;border-color:var(--rule)}
+button.tile.on{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+button.tile .ico{width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:inherit}
+button.tile .ico svg{width:22px;height:22px;display:block;stroke:currentColor}
+button.tile .name{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:12.5px;line-height:1.15;letter-spacing:.01em}
+button.tile .tick{position:absolute;top:5px;right:6px;width:14px;height:14px;border-radius:50%;
+  border:1px solid transparent;font-size:9px;line-height:12px;display:none;align-items:center;justify-content:center;
+  font-family:"Old Standard TT",Georgia,serif}
+button.tile.on .tick{display:flex;border-color:var(--paper);color:var(--paper)}
+.sections-link{display:block;text-align:center;margin:4px 0 0;font-family:"Old Standard TT",Georgia,serif;
+  font-size:12.5px;font-style:italic;color:var(--ink-soft);background:none;border:none;cursor:pointer;
+  text-decoration:underline;text-underline-offset:3px;width:100%;padding:8px}
+.sections-panel{display:none;margin:8px 0 16px;padding:12px 14px;border:1px solid var(--rule-soft);border-radius:12px;background:#f7efdc}
+.sections-panel.open{display:block}
+.sections-panel h3{margin:0 0 8px;font-family:"Playfair Display",Georgia,serif;font-size:16px;font-weight:900;
   letter-spacing:.02em;text-transform:uppercase}
-.paper-card-meta{margin:0;font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;letter-spacing:.06em;
+.sections-panel .sec-paper{margin:0 0 14px;padding:0 0 10px;border-bottom:1px solid var(--rule-soft)}
+.sections-panel .sec-paper:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.sections-panel .sec-paper-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 8px;flex-wrap:wrap}
+.sections-panel .sec-paper-head h4{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:15px;
+  letter-spacing:.02em;text-transform:uppercase}
+.sections-panel .sec-paper-head a{font-family:"Old Standard TT",Georgia,serif;font-size:11.5px;letter-spacing:.06em;
   text-transform:uppercase;color:var(--ink-faint)}
-.whole-btn{appearance:none;min-height:46px;padding:0 18px;border:2px solid var(--rule);border-radius:999px;
-  background:#2e2a24;color:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:13px;
-  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
-.whole-btn.on{background:#f3ead6;color:var(--ink)}
-.whole-btn:hover{background:#4a4238;color:#f3ead6}
-.whole-btn.on:hover{background:#efe4c8;color:var(--ink)}
-.paper-link{font-family:"Old Standard TT",Georgia,serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--ink-faint);text-decoration:underline;text-underline-offset:3px;display:inline-block;margin-top:8px}
-.section-pick{margin:6px 0 0}
-.section-pick summary{cursor:pointer;font-family:"Old Standard TT",Georgia,serif;font-size:13px;font-style:italic;
-  color:var(--ink-soft);padding:6px 2px;list-style:none}
-.section-pick summary::-webkit-details-marker{display:none}
-.section-pick summary::before{content:"+ ";font-style:normal;font-weight:700}
-.section-pick[open] summary::before{content:"\2212 "}
 .paper-banner{border-top:4px double var(--rule);border-bottom:1px solid var(--rule);padding:10px 0 8px;margin:8px 0 18px;text-align:center}
 .paper-banner-title{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:28px;letter-spacing:.02em;text-transform:uppercase}
 .paper-banner-meta{margin:4px 0 0;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13px;color:var(--ink-faint)}
@@ -89,6 +95,8 @@ button.topic{appearance:none;display:flex;flex-direction:column;align-items:flex
 button.topic:hover{background:#efe4c8;border-color:var(--rule)}
 button.topic.on{background:#e4d4b4;border-color:var(--rule);box-shadow:inset 0 0 0 1px var(--rule)}
 .t-row{display:flex;align-items:center;gap:6px;width:100%;padding-right:28px}
+.t-ico{display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:18px;height:18px;color:var(--ink-soft);margin-right:4px}
+.t-ico svg{width:18px;height:18px;display:block}
 .t-name{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:15px;line-height:1.2}
 .t-meta{font-family:"Old Standard TT",Georgia,serif;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 .t-btn{position:absolute;top:8px;right:10px;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--rule);
@@ -162,9 +170,7 @@ footer a{color:var(--ink-soft)}
   .topic-grid{grid-template-columns:1fr 1fr}
   .t-name{font-size:13.5px}
   button.topic{min-height:68px;padding:8px 10px}
-  .paper-card-text h2{font-size:20px}
-  .whole-btn{min-height:42px;padding:0 14px;font-size:12px;letter-spacing:.08em;width:100%}
-  .paper-card-main{flex-direction:column;align-items:stretch}
+  button.tile{min-height:72px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -194,8 +200,8 @@ footer a{color:var(--ink-soft)}
   </div>
 
   <div id="view-picker">
-    <p class="lede">Add whole papers with one tap. UX, Architecture, Auto, Startups and the rest stack into one scroll. Or open <strong>Or pick sections</strong> under a paper for a thinner cut.</p>
-    <p class="hint">Picks stay on this device and in the link, so you can share the URL. Whole papers use a star, like ux.*</p>
+    <p class="lede">Tap a field to add the whole paper. Little scrolling. Long-press a tile, or use Sections below, for a thinner cut.</p>
+    <p class="hint">Picks stay on this device and in the link, so you can share the URL.</p>
     <p class="hint" id="pick-summary">Nothing picked yet</p>
     <div class="toolbar">
       <button type="button" id="clear-picks" hidden>Clear picks</button>
