@@ -1,4 +1,4 @@
-/* Yes Bro My Paper — Firebase web config (public client values).
+/* Yes Bro My Paper — Google sign-in config (public client values).
    Project: Yes Bro (yes-bro-5c2dd). Owner: ontheworldroad@gmail.com.
    Authorized domains include yesbrohq.com and www.yesbrohq.com.
    Do not put service-account keys here. */

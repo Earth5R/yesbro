@@ -1,6 +1,6 @@
 /* Yes Bro My Paper — picker + reader. Zero server AI.
    Picks in localStorage and ?t= URL. Whole-paper picks use key.* (e.g. ux.*).
-   Google sign-in syncs picks to Firestore when firebase-config.js is enabled. */
+   Google sign-in syncs picks across devices when sign-in is enabled. */
 (function () {
   "use strict";
 

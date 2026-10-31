@@ -1,5 +1,5 @@
 /* Yes Bro shared strip: sign in to build your own newspaper.
-   Injected on landing + every field paper. Uses /mypaper/firebase-config.js.
+   Injected on landing + every field paper. Uses /mypaper/firebase-config.js for Google sign-in.
    Light reading-first chrome. No big colours. */
 (function () {
   "use strict";
@@ -172,7 +172,7 @@
       })
       .then(wireAuth)
       .catch(function () {
-        /* Firebase unavailable: keep strip as a quiet link into My Paper */
+        /* Sign-in unavailable: keep strip as a quiet link into My Paper */
         var msg = document.getElementById("yb-mp-msg");
         var act = document.getElementById("yb-mp-actions");
         if (msg) msg.textContent = "Build your own newspaper";
