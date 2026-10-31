@@ -11,7 +11,7 @@ Section picks look like `daily.india-politics`. They sit under **Or pick section
 
 Shareable URL example:
 
-`https://yesbrohq.com/mypaper/?t=ux.*,architecture.*,startups.*`
+`https://yesbrohq.com/mypaper/?t=ux.*,arch.*,startups.*`
 
 Reader view shows each added paper as its own block with the paper name as a heading.
 
