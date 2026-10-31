@@ -1,18 +1,18 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Each signed-in reader may read and write only their own profile doc.
-    // Doc shape: users/{uid} = { email, name, picks, created, last_seen }
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read: if request.auth != null && request.auth.uid == userId;
       allow create: if request.auth != null
                     && request.auth.uid == userId
-                    && request.resource.data.keys().hasOnly(['email', 'name', 'picks', 'created', 'last_seen'])
+                    && request.resource.data.uid == userId
+                    && request.resource.data.keys().hasOnly(['uid', 'email', 'name', 'photo', 'picks', 'created', 'last_seen'])
                     && request.resource.data.picks is list;
       allow update: if request.auth != null
                     && request.auth.uid == userId
+                    && request.resource.data.uid == userId
                     && request.resource.data.diff(resource.data).affectedKeys()
-                         .hasOnly(['name', 'picks', 'last_seen']);
+                         .hasOnly(['email', 'name', 'photo', 'picks', 'last_seen']);
     }
   }
 }

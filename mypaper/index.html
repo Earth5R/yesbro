@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Paper | Yes Bro</title>
-<meta name="description" content="Build your own Yes Bro paper. Pick sections from every edition, keep adding, then read the lot in one place.">
+<meta name="description" content="Build your own Yes Bro paper. Add whole editions or pick sections, keep adding, then read the lot in one place.">
 <link rel="canonical" href="https://yesbrohq.com/mypaper/">
 <meta property="og:title" content="My Paper | Yes Bro">
 <meta property="og:description" content="Pick sections from every Yes Bro paper and read them as one.">
@@ -52,12 +52,31 @@ a{color:inherit}
 .hint{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13.5px;color:var(--ink-faint);margin:0 0 18px}
 
 /* Picker */
-.paper-block{margin:0 0 22px;padding:0 0 8px;border-bottom:1px solid var(--rule-soft)}
-.paper-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px}
-.paper-head h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:22px;
+.paper-block{margin:0 0 22px;padding:0 0 14px;border-bottom:1px solid var(--rule-soft)}
+.paper-card{border:1.5px solid var(--rule-soft);border-radius:12px;background:#f7efdc;padding:14px 16px;margin:0 0 8px}
+.paper-card.on{border-color:var(--rule);background:#e4d4b4;box-shadow:inset 0 0 0 1px var(--rule)}
+.paper-card-main{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.paper-card-text h2{margin:0 0 4px;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:24px;
   letter-spacing:.02em;text-transform:uppercase}
+.paper-card-meta{margin:0;font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.whole-btn{appearance:none;min-height:46px;padding:0 18px;border:2px solid var(--rule);border-radius:999px;
+  background:#2e2a24;color:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.whole-btn.on{background:#f3ead6;color:var(--ink)}
+.whole-btn:hover{background:#4a4238;color:#f3ead6}
+.whole-btn.on:hover{background:#efe4c8;color:var(--ink)}
 .paper-link{font-family:"Old Standard TT",Georgia,serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--ink-faint);text-decoration:underline;text-underline-offset:3px}
+  color:var(--ink-faint);text-decoration:underline;text-underline-offset:3px;display:inline-block;margin-top:8px}
+.section-pick{margin:6px 0 0}
+.section-pick summary{cursor:pointer;font-family:"Old Standard TT",Georgia,serif;font-size:13px;font-style:italic;
+  color:var(--ink-soft);padding:6px 2px;list-style:none}
+.section-pick summary::-webkit-details-marker{display:none}
+.section-pick summary::before{content:"+ ";font-style:normal;font-weight:700}
+.section-pick[open] summary::before{content:"\2212 "}
+.paper-banner{border-top:4px double var(--rule);border-bottom:1px solid var(--rule);padding:10px 0 8px;margin:8px 0 18px;text-align:center}
+.paper-banner-title{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:28px;letter-spacing:.02em;text-transform:uppercase}
+.paper-banner-meta{margin:4px 0 0;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13px;color:var(--ink-faint)}
 .topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
 button.topic{appearance:none;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;
   padding:10px 12px 10px 12px;border:1.5px solid var(--rule-soft);border-radius:10px;background:#f7efdc;
@@ -137,6 +156,9 @@ footer a{color:var(--ink-soft)}
   .topic-grid{grid-template-columns:1fr 1fr}
   .t-name{font-size:13.5px}
   button.topic{min-height:68px;padding:8px 10px}
+  .paper-card-text h2{font-size:20px}
+  .whole-btn{min-height:42px;padding:0 14px;font-size:12px;letter-spacing:.08em;width:100%}
+  .paper-card-main{flex-direction:column;align-items:stretch}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -149,7 +171,7 @@ footer a{color:var(--ink-soft)}
   <header>
     <div class="masthead">
       <h1>My Paper</h1>
-      <p class="motto">Your sections. One scroll.</p>
+      <p class="motto">Your papers. One scroll.</p>
     </div>
     <div class="dateline">
       <span>Yes Bro</span>
@@ -162,12 +184,13 @@ footer a{color:var(--ink-soft)}
     <p id="auth-status">Sign in with Google to save your paper across devices.</p>
     <button type="button" id="auth-signin">Sign in with Google</button>
     <button type="button" id="auth-signout" hidden>Sign out</button>
-    <p class="privacy">We store your email, name and section picks so your paper follows you. No ads sold against it. You can clear picks any time.</p>
+    <p class="privacy" id="auth-privacy">We store your email, name, photo and paper picks so your paper follows you. No ads sold against it. You can clear picks any time.</p>
   </div>
 
   <div id="view-picker">
-    <p class="lede">Tap <strong>+</strong> on any topic from any Yes Bro paper. Keep going. Then open your own combined paper.</p>
-    <p class="hint">Picks stay on this device and in the link, so you can share the URL.</p>
+    <p class="lede">Add whole papers with one tap. UX, Architecture, Auto, Startups and the rest stack into one scroll. Or open <strong>Or pick sections</strong> under a paper for a thinner cut.</p>
+    <p class="hint">Picks stay on this device and in the link, so you can share the URL. Whole papers use a star, like ux.*</p>
+    <p class="hint" id="pick-summary">Nothing picked yet</p>
     <div class="toolbar">
       <button type="button" id="clear-picks" hidden>Clear picks</button>
     </div>
@@ -182,7 +205,8 @@ footer a{color:var(--ink-soft)}
     <div class="dateline" style="margin-bottom:16px">
       <span>My Paper</span>
       <b id="reader-date">Today</b>
-      <span><span id="pick-count">0</span> topics</span>
+      <span id="pick-summary-reader">Your picks</span>
+      <span hidden><span id="pick-count">0</span></span>
     </div>
     <div id="reader-mount"></div>
   </div>

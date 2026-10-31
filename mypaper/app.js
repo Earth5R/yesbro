@@ -1,4 +1,6 @@
-/* Yes Bro My Paper — picker + reader. Zero server AI. Picks in localStorage and ?t= URL. */
+/* Yes Bro My Paper — picker + reader. Zero server AI.
+   Picks in localStorage and ?t= URL. Whole-paper picks use key.* (e.g. ux.*).
+   Google sign-in syncs picks to Firestore when firebase-config.js is enabled. */
 (function () {
   "use strict";
 
@@ -6,8 +8,42 @@
   var catalog = null;
   var paperCache = {};
   var picks = [];
+  var authUser = null;
+  var authReady = false;
+  var cloudHydrated = false;
+  var firebaseFailed = false;
 
   function $(id) { return document.getElementById(id); }
+
+  function unique(arr) {
+    var seen = {}, out = [];
+    (arr || []).forEach(function (t) {
+      if (!t || seen[t]) return;
+      seen[t] = 1;
+      out.push(t);
+    });
+    return out;
+  }
+
+  function isWhole(id) {
+    return typeof id === "string" && /\.\*$/.test(id);
+  }
+
+  function paperKeyOf(topicId) {
+    var i = String(topicId || "").indexOf(".");
+    return i < 0 ? topicId : topicId.slice(0, i);
+  }
+
+  function topicSuffix(topicId) {
+    var i = String(topicId || "").indexOf(".");
+    return i < 0 ? "" : topicId.slice(i + 1);
+  }
+
+  function wholeId(key) { return key + ".*"; }
+
+  function hasWhole(key) {
+    return picks.indexOf(wholeId(key)) >= 0;
+  }
 
   function parseTopicsFromUrl() {
     try {
@@ -34,48 +70,61 @@
     }
   }
 
-  function unique(arr) {
-    var seen = {}, out = [];
-    arr.forEach(function (t) {
-      if (!t || seen[t]) return;
-      seen[t] = 1;
-      out.push(t);
-    });
-    return out;
-  }
-
   function saveLocal() {
     try { localStorage.setItem(LS_KEY, JSON.stringify(picks)); } catch (e) {}
   }
 
   function writeUrl() {
-    var u = new URL(location.href);
-    if (picks.length) u.searchParams.set("t", picks.join(","));
-    else u.searchParams.delete("t");
-    history.replaceState(null, "", u.pathname + u.search + u.hash);
+    try {
+      var u = new URL(location.href);
+      if (picks.length) u.searchParams.set("t", picks.join(","));
+      else u.searchParams.delete("t");
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    } catch (e) {}
   }
 
-  function setPicks(next) {
+  function setPicks(next, opts) {
     picks = unique(next);
     saveLocal();
     writeUrl();
     renderPickerState();
-    syncCloudPicks();
+    if (!(opts && opts.skipCloud)) syncCloudPicks();
+  }
+
+  function addWholePaper(key) {
+    var next = picks.filter(function (t) { return paperKeyOf(t) !== key; });
+    next.push(wholeId(key));
+    setPicks(next);
+  }
+
+  function removeWholePaper(key) {
+    setPicks(picks.filter(function (t) { return t !== wholeId(key); }));
+  }
+
+  function toggleWholePaper(key) {
+    if (hasWhole(key)) removeWholePaper(key);
+    else addWholePaper(key);
   }
 
   function toggleTopic(id) {
+    var key = paperKeyOf(id);
+    if (hasWhole(key)) {
+      /* Switching from whole paper to a la carte: drop .* and keep other sections except this one if removing */
+      var paper = (catalog.papers || []).find(function (p) { return p.key === key; });
+      var all = (paper && paper.topics ? paper.topics.map(function (t) { return t.id; }) : []);
+      var next = picks.filter(function (t) { return paperKeyOf(t) !== key; });
+      all.forEach(function (tid) {
+        if (tid !== id) next.push(tid);
+      });
+      setPicks(next);
+      return;
+    }
     if (picks.indexOf(id) >= 0) setPicks(picks.filter(function (x) { return x !== id; }));
     else setPicks(picks.concat([id]));
   }
 
-  function paperKeyOf(topicId) {
-    var i = topicId.indexOf(".");
-    return i < 0 ? topicId : topicId.slice(0, i);
-  }
-
-  function topicSuffix(topicId) {
-    var i = topicId.indexOf(".");
-    return i < 0 ? "" : topicId.slice(i + 1);
+  function mergePicks(a, b) {
+    return unique([].concat(a || [], b || []));
   }
 
   function fetchJson(url) {
@@ -106,6 +155,21 @@
       .replace(/"/g, "&quot;");
   }
 
+  function pickCountLabel() {
+    var wholes = picks.filter(isWhole).length;
+    var parts = picks.filter(function (t) { return !isWhole(t); }).length;
+    if (wholes && parts) return wholes + " papers, " + parts + " sections";
+    if (wholes) return wholes === 1 ? "1 paper" : wholes + " papers";
+    if (parts) return parts === 1 ? "1 section" : parts + " sections";
+    return "My Paper";
+  }
+
+  function stickyLabel() {
+    if (!picks.length) return "My Paper";
+    return "My Paper (" + picks.length + ")";
+  }
+
+  /* ---- Picker ---- */
   function renderPicker() {
     var root = $("picker-grid");
     if (!catalog) {
@@ -113,23 +177,42 @@
       return;
     }
     var html = "";
-    catalog.papers.forEach(function (paper) {
-      if (!paper.topics || !paper.topics.length) return;
+    (catalog.papers || []).forEach(function (paper) {
+      var on = hasWhole(paper.key);
+      var topicCount = (paper.topics || []).length;
       html += "<section class=\"paper-block\" data-paper=\"" + esc(paper.key) + "\">";
-      html += "<div class=\"paper-head\"><h2>" + esc(paper.label) + "</h2>";
-      html += "<a class=\"paper-link\" href=\"" + esc(paper.url) + "\">Open paper</a></div>";
-      html += "<div class=\"topic-grid\">";
-      paper.topics.forEach(function (t) {
-        var on = picks.indexOf(t.id) >= 0;
-        html += "<button type=\"button\" class=\"topic" + (on ? " on" : "") + "\" data-id=\"" + esc(t.id) + "\" aria-pressed=\"" + (on ? "true" : "false") + "\">";
-        html += "<span class=\"t-name\">" + esc(t.name) + "</span>";
-        html += "<span class=\"t-meta\">" + esc(String(t.count)) + (t.kind === "section" ? " stories" : "") + "</span>";
-        html += "<span class=\"t-btn\" aria-hidden=\"true\">" + (on ? "✓" : "+") + "</span>";
-        html += "</button>";
-      });
-      html += "</div></section>";
+      html += "<div class=\"paper-card" + (on ? " on" : "") + "\">";
+      html += "<div class=\"paper-card-main\">";
+      html += "<div class=\"paper-card-text\"><h2>" + esc(paper.label) + "</h2>";
+      html += "<p class=\"paper-card-meta\">Yes Bro " + esc(paper.label);
+      if (topicCount) html += " · " + topicCount + " topics today";
+      html += "</p></div>";
+      html += "<button type=\"button\" class=\"whole-btn" + (on ? " on" : "") + "\" data-whole=\"" + esc(paper.key) + "\" aria-pressed=\"" + (on ? "true" : "false") + "\">";
+      html += on ? "✓ Whole paper" : "+ Add whole paper";
+      html += "</button></div>";
+      html += "<a class=\"paper-link\" href=\"" + esc(paper.url) + "\">Open full paper</a>";
+      html += "</div>";
+
+      if (paper.topics && paper.topics.length) {
+        html += "<details class=\"section-pick\"" + (on ? "" : "") + ">";
+        html += "<summary>Or pick sections</summary>";
+        html += "<div class=\"topic-grid\">";
+        paper.topics.forEach(function (t) {
+          var ton = on || picks.indexOf(t.id) >= 0;
+          html += "<button type=\"button\" class=\"topic" + (ton ? " on" : "") + (on ? " locked" : "") + "\" data-id=\"" + esc(t.id) + "\" aria-pressed=\"" + (ton ? "true" : "false") + "\">";
+          html += "<span class=\"t-name\">" + esc(t.name) + "</span>";
+          html += "<span class=\"t-meta\">" + esc(String(t.count)) + (t.kind === "section" ? " stories" : "") + "</span>";
+          html += "<span class=\"t-btn\" aria-hidden=\"true\">" + (ton ? "✓" : "+") + "</span>";
+          html += "</button>";
+        });
+        html += "</div></details>";
+      }
+      html += "</section>";
     });
-    root.innerHTML = html || "<p class=\"empty\">No topics yet for today.</p>";
+    root.innerHTML = html || "<p class=\"empty\">No papers yet for today.</p>";
+    root.querySelectorAll(".whole-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () { toggleWholePaper(btn.getAttribute("data-whole")); });
+    });
     root.querySelectorAll(".topic").forEach(function (btn) {
       btn.addEventListener("click", function () { toggleTopic(btn.getAttribute("data-id")); });
     });
@@ -142,18 +225,33 @@
     var n = picks.length;
     var sticky = $("sticky-go");
     var countEl = $("pick-count");
+    var summary = $("pick-summary");
     if (countEl) countEl.textContent = String(n);
+    if (summary) summary.textContent = n ? pickCountLabel() : "Nothing picked yet";
     if (sticky) {
       sticky.disabled = n === 0;
-      sticky.textContent = n ? ("My Paper (" + n + ")") : "My Paper";
+      sticky.textContent = stickyLabel();
     }
-    document.querySelectorAll(".topic").forEach(function (btn) {
-      var id = btn.getAttribute("data-id");
-      var on = picks.indexOf(id) >= 0;
-      btn.classList.toggle("on", on);
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
-      var mark = btn.querySelector(".t-btn");
-      if (mark) mark.textContent = on ? "✓" : "+";
+    document.querySelectorAll(".paper-block").forEach(function (block) {
+      var key = block.getAttribute("data-paper");
+      var on = hasWhole(key);
+      var card = block.querySelector(".paper-card");
+      var whole = block.querySelector(".whole-btn");
+      if (card) card.classList.toggle("on", on);
+      if (whole) {
+        whole.classList.toggle("on", on);
+        whole.setAttribute("aria-pressed", on ? "true" : "false");
+        whole.textContent = on ? "✓ Whole paper" : "+ Add whole paper";
+      }
+      block.querySelectorAll(".topic").forEach(function (btn) {
+        var id = btn.getAttribute("data-id");
+        var ton = on || picks.indexOf(id) >= 0;
+        btn.classList.toggle("on", ton);
+        btn.classList.toggle("locked", on);
+        btn.setAttribute("aria-pressed", ton ? "true" : "false");
+        var mark = btn.querySelector(".t-btn");
+        if (mark) mark.textContent = ton ? "✓" : "+";
+      });
     });
     var clear = $("clear-picks");
     if (clear) clear.hidden = n === 0;
@@ -195,7 +293,7 @@
   }
 
   function renderJobs(items) {
-    return items.map(function (j) {
+    return (items || []).map(function (j) {
       return (
         "<article class=\"meta-card\">" +
         "<h3><a href=\"" + esc(j.url) + "\" target=\"_blank\" rel=\"noopener\">" + esc(j.title) + "</a></h3>" +
@@ -206,7 +304,7 @@
   }
 
   function renderEvents(items) {
-    return items.map(function (e) {
+    return (items || []).map(function (e) {
       var when = [e.start, e.time].filter(Boolean).join(" · ");
       var where = [e.city, e.mode].filter(Boolean).join(" · ");
       return (
@@ -220,7 +318,7 @@
   }
 
   function renderResearch(items) {
-    return items.map(function (r) {
+    return (items || []).map(function (r) {
       return (
         "<article class=\"meta-card\">" +
         "<h3><a href=\"" + esc(r.url) + "\" target=\"_blank\" rel=\"noopener\">" + esc(r.title) + "</a></h3>" +
@@ -232,7 +330,7 @@
   }
 
   function renderTalks(items) {
-    return items.map(function (t) {
+    return (items || []).map(function (t) {
       return (
         "<article class=\"meta-card\">" +
         "<h3><a href=\"" + esc(t.url) + "\" target=\"_blank\" rel=\"noopener\">" + esc(t.title) + "</a></h3>" +
@@ -247,9 +345,27 @@
     if (!body) return "";
     return (
       "<section class=\"sec\">" +
-      "<div class=\"sec-head\"><h2>" + esc(title) + "</h2><span>" + esc(kicker) + "</span></div>" +
-      "<div class=\"sec-body\">" + body + "</div></section>"
+      "<div class=\"sec-head\"><h2>" + esc(title) + "</h2>" +
+      (kicker ? "<span>" + esc(kicker) + "</span>" : "") +
+      "</div><div class=\"sec-body\">" + body + "</div></section>"
     );
+  }
+
+  function renderWholePaper(paper) {
+    var html = "";
+    html += "<div class=\"paper-banner\"><h2 class=\"paper-banner-title\">Yes Bro " + esc(paper.label) + "</h2>";
+    html += "<p class=\"paper-banner-meta\">Whole paper · " + esc(paper.date || "") + "</p></div>";
+    (paper.sections || []).forEach(function (sec, idx) {
+      if (!sec.stories || !sec.stories.length) return;
+      var body = sec.stories.map(function (s, i) { return storyCard(s, i === 0); }).join("");
+      html += buildSectionHtml(sec.name, paper.label, body);
+      if (idx === 1) html += fieldworkAd();
+    });
+    if ((paper.events || []).length) html += buildSectionHtml("Events and Conferences", paper.label, renderEvents(paper.events));
+    if ((paper.research || []).length) html += buildSectionHtml("Research and Development", paper.label, renderResearch(paper.research));
+    if ((paper.talks || []).length) html += buildSectionHtml("Talks", paper.label, renderTalks(paper.talks));
+    if ((paper.jobs || []).length) html += buildSectionHtml("Jobs", paper.label, renderJobs(paper.jobs));
+    return html;
   }
 
   function openReader() {
@@ -262,11 +378,22 @@
       var html = "";
       var adAt = 2;
       var secCount = 0;
+      var seenWhole = {};
+
       picks.forEach(function (tid) {
         var key = paperKeyOf(tid);
-        var suf = topicSuffix(tid);
         var paper = paperCache[key];
         if (!paper) return;
+
+        if (isWhole(tid)) {
+          if (seenWhole[key]) return;
+          seenWhole[key] = 1;
+          html += renderWholePaper(paper);
+          return;
+        }
+        if (hasWhole(key) || seenWhole[key]) return;
+
+        var suf = topicSuffix(tid);
         var kicker = paper.label;
         var body = "";
         var title = suf;
@@ -293,83 +420,157 @@
         secCount += 1;
         if (secCount === adAt) html += fieldworkAd();
       });
+
       if (!html) html = "<p class=\"empty\">Those topics are empty today. Add another from the picker.</p>";
       var dateLabel = (catalog && catalog.date) || "";
-      $("reader-date").textContent = dateLabel;
+      if ($("reader-date")) $("reader-date").textContent = dateLabel;
+      if ($("pick-summary-reader")) $("pick-summary-reader").textContent = pickCountLabel();
       mount.innerHTML = html;
     }).catch(function () {
       mount.innerHTML = "<p class=\"empty\">Could not load today's sections. Try again in a minute.</p>";
     });
   }
 
-  /* ---- Phase 2 auth (inert until firebase-config enabled) ---- */
-  var authUser = null;
-
-  function firebaseReady() {
+  /* ---- Auth / Firestore ---- */
+  function configEnabled() {
     var c = window.YESBRO_FIREBASE;
-    return !!(c && c.enabled && c.apiKey && c.projectId && window.firebase);
+    return !!(c && c.enabled && c.apiKey && c.projectId);
   }
 
-  function setupAuthUi() {
+  function firebaseReady() {
+    return configEnabled() && !!window.firebase && !firebaseFailed;
+  }
+
+  function showAuthWrap(show) {
     var wrap = $("auth-wrap");
     if (!wrap) return;
-    if (!firebaseReady()) {
-      wrap.hidden = true;
-      return;
-    }
-    wrap.hidden = false;
-    try {
-      if (!firebase.apps.length) firebase.initializeApp(window.YESBRO_FIREBASE);
-      var auth = firebase.auth();
-      auth.onAuthStateChanged(function (user) {
-        authUser = user;
-        renderAuth();
-        if (user) syncCloudPicks();
-      });
-    } catch (e) {
-      wrap.hidden = true;
-    }
+    wrap.hidden = !show;
   }
 
   function renderAuth() {
     var status = $("auth-status");
     var btnIn = $("auth-signin");
     var btnOut = $("auth-signout");
+    var privacy = $("auth-privacy");
     if (!status) return;
+    if (firebaseFailed) {
+      status.textContent = "Sign-in is resting. Your picks still save on this device.";
+      if (btnIn) btnIn.hidden = true;
+      if (btnOut) btnOut.hidden = true;
+      if (privacy) privacy.hidden = false;
+      return;
+    }
     if (authUser) {
-      status.textContent = "Signed in as " + (authUser.email || authUser.displayName || "you");
+      var who = authUser.displayName || authUser.email || "you";
+      status.innerHTML = "Signed in as <b>" + esc(who) + "</b>";
       if (btnIn) btnIn.hidden = true;
       if (btnOut) btnOut.hidden = false;
+      if (privacy) privacy.hidden = false;
     } else {
       status.textContent = "Sign in with Google to save your paper across devices.";
       if (btnIn) btnIn.hidden = false;
       if (btnOut) btnOut.hidden = true;
+      if (privacy) privacy.hidden = false;
     }
   }
 
+  function userPayload(extra) {
+    var photo = "";
+    try { photo = (authUser.photoURL || ""); } catch (e) {}
+    var base = {
+      uid: authUser.uid,
+      email: authUser.email || "",
+      name: authUser.displayName || "",
+      photo: photo,
+      picks: picks,
+      last_seen: firebase.firestore.FieldValue.serverTimestamp()
+    };
+    if (extra) {
+      Object.keys(extra).forEach(function (k) { base[k] = extra[k]; });
+    }
+    return base;
+  }
+
   function syncCloudPicks() {
-    if (!firebaseReady() || !authUser) return;
+    if (!firebaseReady() || !authUser || !authReady) return;
     try {
-      var db = firebase.firestore();
-      var ref = db.collection("users").doc(authUser.uid);
-      ref.set({
-        email: authUser.email || "",
-        name: authUser.displayName || "",
-        picks: picks,
-        last_seen: firebase.firestore.FieldValue.serverTimestamp()
-      }, { merge: true });
+      firebase.firestore().collection("users").doc(authUser.uid)
+        .set(userPayload(), { merge: true })
+        .catch(function () { /* localStorage still holds picks */ });
     } catch (e) {}
   }
 
-  function pullCloudPicks() {
-    if (!firebaseReady() || !authUser) return;
+  function hydrateFromCloud(user) {
+    if (!firebaseReady() || !user) return;
     try {
-      firebase.firestore().collection("users").doc(authUser.uid).get().then(function (doc) {
-        if (!doc.exists) return;
-        var remote = doc.data().picks;
-        if (Array.isArray(remote) && remote.length && !picks.length) setPicks(remote);
+      var ref = firebase.firestore().collection("users").doc(user.uid);
+      ref.get().then(function (doc) {
+        var local = picks.slice();
+        if (!doc.exists) {
+          ref.set(userPayload({
+            created: firebase.firestore.FieldValue.serverTimestamp()
+          }), { merge: true }).catch(function () {});
+          cloudHydrated = true;
+          return;
+        }
+        var data = doc.data() || {};
+        var remote = Array.isArray(data.picks) ? data.picks : [];
+        /* First sign-in / any device: merge local pre-sign-in picks with cloud picks */
+        var merged = mergePicks(remote, local);
+        if (merged.join("\n") !== picks.join("\n")) {
+          setPicks(merged, { skipCloud: true });
+          renderPicker();
+        }
+        ref.set(userPayload(), { merge: true }).catch(function () {});
+        cloudHydrated = true;
+      }).catch(function () {
+        /* Firestore failed: keep localStorage picks */
+        cloudHydrated = true;
       });
-    } catch (e) {}
+    } catch (e) {
+      cloudHydrated = true;
+    }
+  }
+
+  function initFirebaseApp() {
+    if (!configEnabled()) {
+      showAuthWrap(false);
+      return;
+    }
+    showAuthWrap(true);
+    renderAuth();
+    if (!window.firebase) {
+      /* SDK still loading, or failed. Keep wrap visible with a soft wait, then fallback. */
+      var tries = 0;
+      var timer = setInterval(function () {
+        tries += 1;
+        if (window.firebase) {
+          clearInterval(timer);
+          wireAuth();
+        } else if (tries > 40) {
+          clearInterval(timer);
+          firebaseFailed = true;
+          renderAuth();
+        }
+      }, 250);
+      return;
+    }
+    wireAuth();
+  }
+
+  function wireAuth() {
+    try {
+      if (!firebase.apps.length) firebase.initializeApp(window.YESBRO_FIREBASE);
+      authReady = true;
+      firebase.auth().onAuthStateChanged(function (user) {
+        authUser = user;
+        renderAuth();
+        if (user) hydrateFromCloud(user);
+      });
+    } catch (e) {
+      firebaseFailed = true;
+      renderAuth();
+    }
   }
 
   function bind() {
@@ -382,36 +583,45 @@
     });
     $("clear-picks").addEventListener("click", function () {
       setPicks([]);
+      renderPicker();
     });
     var top = $("back-top");
     window.addEventListener("scroll", function () {
       if (!top) return;
       top.classList.toggle("show", window.scrollY > 480);
     });
-    top.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+    if (top) top.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
 
     var btnIn = $("auth-signin");
     var btnOut = $("auth-signout");
     if (btnIn) btnIn.addEventListener("click", function () {
-      if (!firebaseReady()) return;
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider).then(function () { pullCloudPicks(); }).catch(function () {});
+      if (!firebaseReady()) {
+        renderAuth();
+        return;
+      }
+      try {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({ prompt: "select_account" });
+        firebase.auth().signInWithPopup(provider).catch(function () {
+          /* Popup blocked or cancelled: picks stay local */
+        });
+      } catch (e) {
+        firebaseFailed = true;
+        renderAuth();
+      }
     });
     if (btnOut) btnOut.addEventListener("click", function () {
       if (!firebaseReady()) return;
-      firebase.auth().signOut();
+      try { firebase.auth().signOut(); } catch (e) {}
     });
   }
 
   loadPicks();
   bind();
-  setupAuthUi();
+  initFirebaseApp();
   loadCatalog().then(function () {
     renderPicker();
-    if (picks.length && parseTopicsFromUrl()) {
-      /* Shared URL lands straight in the reader */
-      openReader();
-    }
+    if (picks.length && parseTopicsFromUrl()) openReader();
   }).catch(function () {
     $("picker-grid").innerHTML = "<p class=\"empty\">Catalog missing. The night build may still be running.</p>";
   });

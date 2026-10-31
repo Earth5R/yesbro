@@ -1,14 +1,13 @@
-/* Yes Bro My Paper — Firebase web config (Phase 2).
-   Leave enabled:false until a real Firebase project is wired.
-   Fill apiKey, authDomain, projectId, appId from the Firebase console
-   (Project settings → Your apps → Web app). Authorized domain must include yesbrohq.com.
-   Do not commit private service-account keys here. This file is public by design. */
+/* Yes Bro My Paper — Firebase web config (public client values).
+   Project: Yes Bro (yes-bro-5c2dd). Owner: ontheworldroad@gmail.com.
+   Authorized domains include yesbrohq.com and www.yesbrohq.com.
+   Do not put service-account keys here. */
 window.YESBRO_FIREBASE = {
-  enabled: false,
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  enabled: true,
+  apiKey: "AIzaSyAZDxiPDulKxcND2dmDLiQjUQnr9ASpsTs",
+  authDomain: "yes-bro-5c2dd.firebaseapp.com",
+  projectId: "yes-bro-5c2dd",
+  storageBucket: "yes-bro-5c2dd.firebasestorage.app",
+  messagingSenderId: "1043001791506",
+  appId: "1:1043001791506:web:8208576915d681e7bbf4cb"
 };

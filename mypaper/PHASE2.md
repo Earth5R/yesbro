@@ -1,27 +1,30 @@
-# My Paper Phase 2 — Google sign-in (not live yet)
+# My Paper Phase 2 — Google sign-in + whole-paper picks
 
-Front-end code is already wired behind `firebase-config.js` (`enabled: false`).
-No Firebase project was created. No keys were invented.
+Live for project **Yes Bro** (`yes-bro-5c2dd`), Spark plan.
+Web config lives in `firebase-config.js` with `enabled: true`.
 
-## What the user needs to switch it on
+## Whole-paper picks
 
-1. A Google account that will own the Firebase project (ideally the Earth5R / Yes Bro org account).
-2. Create a Firebase project in the Firebase console (Blaze not required for Auth + Firestore light use).
-3. Enable Authentication → Sign-in method → Google.
-4. Add authorized domain: `yesbrohq.com` (and `localhost` for tests).
-5. Create a Web app in Project settings and copy the web config.
-6. Create a Firestore database (production mode), then paste the rules from `firestore.rules` in this folder.
-7. Edit `/mypaper/firebase-config.js` on the site:
-   - set `enabled: true`
-   - fill `apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId`, `appId`
-8. Redeploy / commit that one file. The Sign in with Google button appears on its own.
+Paper-level picks look like `ux.*`. Adding a whole paper includes every section, jobs, events, research and talks for that edition, including sections that land on future days.
 
-## Data shape
+Section picks look like `daily.india-politics`. They sit under **Or pick sections** in the picker.
 
-Collection `users`, document id = Firebase Auth `uid`:
+Shareable URL example:
 
-```
-{ email, name, picks: ["auto.india-auto", "daily.india-politics", ...], created, last_seen }
-```
+`https://yesbrohq.com/mypaper/?t=ux.*,architecture.*,startups.*`
 
-Picks still also live in `localStorage` and the `?t=` URL so anonymous readers keep working.
+Reader view shows each added paper as its own block with the paper name as a heading.
+
+## Console links
+
+- Auth users: https://console.firebase.google.com/project/yes-bro-5c2dd/authentication/users
+- Firestore `users` collection: https://console.firebase.google.com/project/yes-bro-5c2dd/firestore/databases/-default-/data/~2Fusers
+- Rules editor: https://console.firebase.google.com/project/yes-bro-5c2dd/firestore/databases/-default-/rules
+
+Paste `firestore.rules` from this folder into the Rules editor and publish. The live rules must allow `uid`, `email`, `name`, `photo`, `picks`, `created`, `last_seen` or sign-in merge writes will fail.
+
+## Doc shape
+
+`users/{uid}` = `{ uid, email, name, photo, picks, created, last_seen }`
+
+On Google sign-in the client merges local picks with cloud picks (union), writes the merged list, then keeps localStorage as a fallback when signed out or offline.
