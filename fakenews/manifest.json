@@ -1,1 +1,0 @@
-{"id": "/fakenews/", "name": "Yes Bro Fake News", "short_name": "Fake News", "description": "Yes Bro Fake News, a free daily newspaper by Yes Bro.", "start_url": "/fakenews/", "scope": "/fakenews/", "display": "standalone", "background_color": "#f3ead6", "theme_color": "#f3ead6", "icons": [{"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}
