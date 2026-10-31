@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Paper | Yes Bro</title>
+<meta name="description" content="Build your own Yes Bro paper. Pick sections from every edition, keep adding, then read the lot in one place.">
+<link rel="canonical" href="https://yesbrohq.com/mypaper/">
+<meta property="og:title" content="My Paper | Yes Bro">
+<meta property="og:description" content="Pick sections from every Yes Bro paper and read them as one.">
+<meta property="og:url" content="https://yesbrohq.com/mypaper/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yesbrohq.com/icon-512.png">
+<meta name="theme-color" content="#f3ead6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="My Paper">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="icon" href="../icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:wght@700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1e7cf; --paper-deep:#e8dbbb; --ink:#2e2a24; --ink-soft:#4a4238; --ink-faint:#6f6454;
+  --rule:#3d362d; --rule-soft:#a8987a; --link:#5b3a1e;
+}
+*{box-sizing:border-box}
+html{background:#d9cba8;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"Libre Caslon Text","Old Standard TT",Georgia,"Times New Roman",serif;
+  font-size:15.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.sheet{max-width:1100px;margin:0 auto;padding:22px 28px 80px;background-color:var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 0%,rgba(255,250,235,.55),transparent 60%),
+    radial-gradient(ellipse at 100% 100%,rgba(190,165,115,.28),transparent 55%);
+  box-shadow:0 0 0 1px rgba(80,60,30,.15),0 8px 40px rgba(70,50,20,.25);position:relative}
+.pillrow{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin:0 0 8px}
+.pillrow a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border:1.5px solid var(--rule);
+  border-radius:999px;background:#f3ead6;color:var(--ink);text-decoration:none;font-family:"Old Standard TT",Georgia,serif;
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.pillrow a:hover{background:#e8dbbb}
+.masthead{text-align:center;border-top:4px double var(--rule);border-bottom:1px solid var(--rule);padding:8px 0 4px}
+.masthead h1{margin:0;font-family:"UnifrakturMaguntia","Playfair Display",serif;font-weight:400;
+  font-size:clamp(42px,8vw,96px);line-height:1.02}
+.motto{font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin:0 0 6px}
+.dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:4px double var(--rule);
+  padding:5px 2px;font-family:"Old Standard TT",Georgia,serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.dateline b{color:var(--ink)}
+.lede{max-width:36em;margin:18px auto 8px;text-align:center;font-size:16px;color:var(--ink-soft)}
+.lede strong{color:var(--ink);font-weight:700}
+.hint{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13.5px;color:var(--ink-faint);margin:0 0 18px}
+
+/* Picker */
+.paper-block{margin:0 0 22px;padding:0 0 8px;border-bottom:1px solid var(--rule-soft)}
+.paper-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px}
+.paper-head h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:22px;
+  letter-spacing:.02em;text-transform:uppercase}
+.paper-link{font-family:"Old Standard TT",Georgia,serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-faint);text-decoration:underline;text-underline-offset:3px}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+button.topic{appearance:none;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;
+  padding:10px 12px 10px 12px;border:1.5px solid var(--rule-soft);border-radius:10px;background:#f7efdc;
+  color:var(--ink);cursor:pointer;position:relative;min-height:74px;font:inherit}
+button.topic:hover{background:#efe4c8;border-color:var(--rule)}
+button.topic.on{background:#e4d4b4;border-color:var(--rule);box-shadow:inset 0 0 0 1px var(--rule)}
+.t-name{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:15px;line-height:1.2;padding-right:28px}
+.t-meta{font-family:"Old Standard TT",Georgia,serif;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.t-btn{position:absolute;top:8px;right:10px;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;background:#f3ead6;line-height:1}
+button.topic.on .t-btn{background:var(--ink);color:var(--paper)}
+.empty{text-align:center;font-style:italic;color:var(--ink-faint);padding:24px 8px}
+
+/* Sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;pointer-events:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.sticky button{pointer-events:auto;min-width:220px;min-height:48px;padding:0 22px;border:2px solid var(--rule);
+  border-radius:999px;background:#2e2a24;color:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;
+  font-size:14px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 20px rgba(40,30,10,.35)}
+.sticky button:disabled{opacity:.45;cursor:not-allowed}
+.sticky button:not(:disabled):hover{background:#4a4238}
+
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:8px 0 16px}
+.toolbar button,.toolbar a.btn{appearance:none;display:inline-flex;align-items:center;min-height:38px;padding:0 14px;
+  border:1.5px solid var(--rule);border-radius:999px;background:#f3ead6;color:var(--ink);font-family:"Old Standard TT",Georgia,serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none}
+.toolbar button:hover,.toolbar a.btn:hover{background:#e8dbbb}
+
+/* Reader — house story look, no side accent stripes on cards */
+section.sec{margin:0 0 28px;scroll-margin-top:12px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-top:3px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:5px 0 3px;margin-bottom:14px}
+.sec-head h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:22px;letter-spacing:.02em;
+  text-transform:uppercase}
+.sec-head span{font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13px;color:var(--ink-faint)}
+.sec-body{display:flex;flex-direction:column;gap:14px}
+article.story,article.meta-card{padding:0 0 14px;border-bottom:1px solid var(--rule-soft)}
+article.story:last-child,article.meta-card:last-child{border-bottom:0}
+.story figure{margin:0 0 8px;border:1px solid var(--rule-soft);background:var(--paper-deep)}
+.story img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.97)}
+.story h3,.meta-card h3{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:19px;line-height:1.18}
+article.lead h3{font-size:26px;font-weight:900}
+.story h3 a,.meta-card h3 a{text-decoration:none}
+.story h3 a:hover,.meta-card h3 a:hover{text-decoration:underline;text-decoration-thickness:1px}
+.byline{font-family:"Old Standard TT",Georgia,serif;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 5px}
+.story p.sum,.meta-card p.sum{margin:0 0 7px;text-align:justify;hyphens:auto;color:var(--ink)}
+.more{font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:14px;color:var(--link);text-decoration:none;border-bottom:1px solid var(--rule-soft)}
+.more:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+.housead{max-width:760px;margin:6px auto 30px;border:3px double var(--rule);padding:14px 22px 16px;text-align:center;background:#f7efdc}
+.housead .ad-kicker{font-family:"Old Standard TT",Georgia,serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 4px}
+.housead .ad-brand{font-family:"Playfair Display",Georgia,serif;font-weight:900;letter-spacing:.01em;font-size:38px;line-height:1.05;margin:0 0 4px}
+.housead h4{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:22px;line-height:1.2}
+.housead p{margin:0 0 8px;font-size:15px;line-height:1.45;color:var(--ink-soft)}
+.housead a.ad-cta{display:inline-block;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;border:2px solid var(--rule);padding:8px 16px;color:var(--ink);background:#f3ead6}
+.housead a.ad-cta:hover{background:rgba(90,70,40,.1)}
+
+#auth-wrap{max-width:520px;margin:18px auto 8px;padding:12px 16px;border:1px solid var(--rule-soft);background:#f7efdc;text-align:center}
+#auth-wrap p{margin:0 0 8px;font-size:14px;color:var(--ink-soft)}
+#auth-wrap .privacy{font-size:12.5px;font-style:italic;color:var(--ink-faint);margin:8px 0 0}
+#auth-wrap button{appearance:none;min-height:38px;padding:0 16px;border:1.5px solid var(--rule);border-radius:999px;
+  background:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;cursor:pointer;margin:0 4px}
+
+.back-top{position:fixed;right:16px;bottom:84px;z-index:35;width:44px;height:44px;border-radius:50%;border:2px solid var(--rule);
+  background:#f3ead6;color:var(--ink);font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 4px 12px rgba(40,30,10,.2)}
+.back-top.show{opacity:1;visibility:visible;transform:none}
+
+footer{border-top:4px double var(--rule);padding-top:10px;margin-top:28px;text-align:center;
+  font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;font-style:italic;color:var(--ink-faint)}
+footer a{color:var(--ink-soft)}
+
+@media (max-width:640px){
+  .sheet{padding:16px 14px 90px}
+  .topic-grid{grid-template-columns:1fr 1fr}
+  .t-name{font-size:13.5px}
+  button.topic{min-height:68px;padding:8px 10px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<div class="sheet">
+  <div class="pillrow">
+    <a href="/">All Yes Bro papers</a>
+  </div>
+  <header>
+    <div class="masthead">
+      <h1>My Paper</h1>
+      <p class="motto">Your sections. One scroll.</p>
+    </div>
+    <div class="dateline">
+      <span>Yes Bro</span>
+      <b id="catalog-date">Today</b>
+      <span>Price: Free, still</span>
+    </div>
+  </header>
+
+  <div id="auth-wrap" hidden>
+    <p id="auth-status">Sign in with Google to save your paper across devices.</p>
+    <button type="button" id="auth-signin">Sign in with Google</button>
+    <button type="button" id="auth-signout" hidden>Sign out</button>
+    <p class="privacy">We store your email, name and section picks so your paper follows you. No ads sold against it. You can clear picks any time.</p>
+  </div>
+
+  <div id="view-picker">
+    <p class="lede">Tap <strong>+</strong> on any topic from any Yes Bro paper. Keep going. Then open your own combined paper.</p>
+    <p class="hint">Picks stay on this device and in the link, so you can share the URL.</p>
+    <div class="toolbar">
+      <button type="button" id="clear-picks" hidden>Clear picks</button>
+    </div>
+    <div id="picker-grid"></div>
+  </div>
+
+  <div id="view-reader" hidden>
+    <div class="toolbar">
+      <button type="button" id="back-picker">Edit picks</button>
+      <a class="btn" href="/">Front door</a>
+    </div>
+    <div class="dateline" style="margin-bottom:16px">
+      <span>My Paper</span>
+      <b id="reader-date">Today</b>
+      <span><span id="pick-count">0</span> topics</span>
+    </div>
+    <div id="reader-mount"></div>
+  </div>
+
+  <footer>
+    Built from today's Yes Bro editions. Every headline still links to the original report.
+    <p class="credit"><a href="https://earth5r.org/">A product of Earth5R</a></p>
+  </footer>
+</div>
+
+<div class="sticky"><button type="button" id="sticky-go" disabled>My Paper</button></div>
+<button type="button" class="back-top" id="back-top" aria-label="Back to top">↑</button>
+
+<script src="firebase-config.js"></script>
+<!-- Firebase SDKs load only when config.enabled is true (Phase 2). -->
+<script>
+(function(){
+  var c = window.YESBRO_FIREBASE;
+  if (!c || !c.enabled || !c.apiKey) return;
+  var s1 = document.createElement("script");
+  s1.src = "https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js";
+  s1.onload = function(){
+    var s2 = document.createElement("script");
+    s2.src = "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js";
+    s2.onload = function(){
+      var s3 = document.createElement("script");
+      s3.src = "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js";
+      document.head.appendChild(s3);
+    };
+    document.head.appendChild(s2);
+  };
+  document.head.appendChild(s1);
+})();
+</script>
+<script src="app.js"></script>
+</body>
+</html>
