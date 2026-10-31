@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Paper | Yes Bro</title>
-<meta name="description" content="Build your own Yes Bro paper. Add whole editions or pick sections, keep adding, then read the lot in one place.">
+<meta name="description" content="Build your own newspaper. Read every day what you want. Like the paper on your doorstep. Nobody watches what you read.">
 <link rel="canonical" href="https://yesbrohq.com/mypaper/">
 <meta property="og:title" content="My Paper | Yes Bro">
-<meta property="og:description" content="Pick sections from every Yes Bro paper and read them as one.">
+<meta property="og:description" content="Build your own newspaper from every Yes Bro edition. Nobody watches what you read.">
 <meta property="og:url" content="https://yesbrohq.com/mypaper/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://yesbrohq.com/icon-512.png">
@@ -40,16 +40,21 @@ a{color:inherit}
   border-radius:999px;background:#f3ead6;color:var(--ink);text-decoration:none;font-family:"Old Standard TT",Georgia,serif;
   font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .pillrow a:hover{background:#e8dbbb}
-.masthead{text-align:center;border-top:4px double var(--rule);border-bottom:1px solid var(--rule);padding:8px 0 4px}
-.masthead h1{margin:0;font-family:"UnifrakturMaguntia","Playfair Display",serif;font-weight:400;
-  font-size:clamp(42px,8vw,96px);line-height:1.02}
-.motto{font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin:0 0 6px}
-.dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:4px double var(--rule);
-  padding:5px 2px;font-family:"Old Standard TT",Georgia,serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.masthead{text-align:center;border-top:3px double var(--rule);border-bottom:1px solid var(--rule);padding:4px 0 2px}
+.masthead .brand{margin:0;font-family:"UnifrakturMaguntia","Playfair Display",serif;font-weight:400;
+  font-size:clamp(28px,6vw,44px);line-height:1.05}
+.dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px double var(--rule);
+  padding:4px 2px;font-family:"Old Standard TT",Georgia,serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
 .dateline b{color:var(--ink)}
-.lede{max-width:34em;margin:14px auto 6px;text-align:center;font-size:14.5px;color:var(--ink-soft)}
-.lede strong{color:var(--ink);font-weight:700}
-.hint{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:12.5px;color:var(--ink-faint);margin:0 0 12px}
+.hero{text-align:center;max-width:34em;margin:12px auto 10px;padding:0 4px}
+.hero h1{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:900;
+  font-size:clamp(26px,6.5vw,40px);line-height:1.12;letter-spacing:.01em;color:var(--ink)}
+.hero .sub{margin:0 0 8px;font-family:"Old Standard TT",Georgia,serif;font-size:clamp(15px,3.8vw,18px);
+  color:var(--ink-soft);font-style:italic}
+.hero .privacy-line{margin:0;font-family:"Old Standard TT",Georgia,serif;font-size:13px;line-height:1.35;
+  color:var(--ink-faint)}
+.pick-bar{text-align:center;font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:12.5px;
+  color:var(--ink-faint);margin:0 0 8px}
 
 /* Picker — compact tile grid */
 .tile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 10px}
@@ -118,6 +123,7 @@ button.topic.on .t-btn{background:var(--ink);color:var(--paper)}
   border:1.5px solid var(--rule);border-radius:999px;background:#f3ead6;color:var(--ink);font-family:"Old Standard TT",Georgia,serif;
   font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none}
 .toolbar button:hover,.toolbar a.btn:hover{background:#e8dbbb}
+.toolbar button[hidden],#auth-wrap[hidden],#auth-signin[hidden],#auth-signout[hidden]{display:none!important}
 
 /* Reader — house story look, no side accent stripes on cards */
 section.sec{margin:0 0 28px;scroll-margin-top:12px}
@@ -149,12 +155,14 @@ article.lead h3{font-size:26px;font-weight:900}
   text-transform:uppercase;text-decoration:none;border:2px solid var(--rule);padding:8px 16px;color:var(--ink);background:#f3ead6}
 .housead a.ad-cta:hover{background:rgba(90,70,40,.1)}
 
-#auth-wrap{max-width:520px;margin:18px auto 8px;padding:12px 16px;border:1px solid var(--rule-soft);background:#f7efdc;text-align:center}
-#auth-wrap p{margin:0 0 8px;font-size:14px;color:var(--ink-soft)}
-#auth-wrap .privacy{font-size:12.5px;font-style:italic;color:var(--ink-faint);margin:8px 0 0}
-#auth-wrap button{appearance:none;min-height:38px;padding:0 16px;border:1.5px solid var(--rule);border-radius:999px;
-  background:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:12px;letter-spacing:.1em;
-  text-transform:uppercase;cursor:pointer;margin:0 4px}
+#auth-wrap{max-width:420px;margin:14px auto 4px;padding:10px 12px;border:1px dashed var(--rule-soft);
+  background:transparent;text-align:center}
+#auth-wrap p{margin:0 0 6px;font-size:13px;color:var(--ink-faint)}
+#auth-wrap .privacy{font-size:11.5px;font-style:italic;color:var(--ink-faint);margin:6px 0 0}
+#auth-wrap button{appearance:none;min-height:34px;padding:0 14px;border:1px solid var(--rule-soft);border-radius:999px;
+  background:#f3ead6;font-family:"Old Standard TT",Georgia,serif;font-weight:700;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;cursor:pointer;margin:0 4px;color:var(--ink-soft)}
+#auth-wrap button:hover{border-color:var(--rule);color:var(--ink)}
 
 .back-top{position:fixed;right:16px;bottom:84px;z-index:35;width:44px;height:44px;border-radius:50%;border:2px solid var(--rule);
   background:#f3ead6;color:var(--ink);font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);
@@ -166,11 +174,15 @@ footer{border-top:4px double var(--rule);padding-top:10px;margin-top:28px;text-a
 footer a{color:var(--ink-soft)}
 
 @media (max-width:640px){
-  .sheet{padding:16px 14px 90px}
+  .sheet{padding:10px 12px 90px}
+  .pillrow{margin:0 0 4px}
+  .hero{margin:8px auto 8px}
+  .hero h1{font-size:clamp(24px,7vw,32px)}
   .topic-grid{grid-template-columns:1fr 1fr}
   .t-name{font-size:13.5px}
   button.topic{min-height:68px;padding:8px 10px}
-  button.tile{min-height:72px}
+  button.tile{min-height:68px;padding:6px 3px 5px}
+  button.tile .name{font-size:11.5px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -182,31 +194,34 @@ footer a{color:var(--ink-soft)}
   </div>
   <header>
     <div class="masthead">
-      <h1>My Paper</h1>
-      <p class="motto">Your papers. One scroll.</p>
+      <p class="brand">Yes Bro</p>
     </div>
     <div class="dateline">
-      <span>Yes Bro</span>
+      <span>My Paper</span>
       <b id="catalog-date">Today</b>
       <span>Price: Free, still</span>
     </div>
   </header>
 
-  <div id="auth-wrap" hidden>
-    <p id="auth-status">Sign in with Google to save your paper across devices.</p>
-    <button type="button" id="auth-signin">Sign in with Google</button>
-    <button type="button" id="auth-signout" hidden>Sign out</button>
-    <p class="privacy" id="auth-privacy">We store your email, name, photo and paper picks so your paper follows you. No ads sold against it. You can clear picks any time. <a href="/privacy/">Privacy</a></p>
+  <div class="hero">
+    <h1>Build your own newspaper</h1>
+    <p class="sub">Read every day what you want.</p>
+    <p class="privacy-line">Like the paper on your doorstep. Nobody watches what you read.</p>
   </div>
 
   <div id="view-picker">
-    <p class="lede">Tap a field to add the whole paper. Little scrolling. Long-press a tile, or use Sections below, for a thinner cut.</p>
-    <p class="hint">Picks stay on this device and in the link, so you can share the URL.</p>
-    <p class="hint" id="pick-summary">Nothing picked yet</p>
+    <p class="pick-bar" id="pick-summary">Nothing picked yet</p>
     <div class="toolbar">
       <button type="button" id="clear-picks" hidden>Clear picks</button>
     </div>
     <div id="picker-grid"></div>
+
+    <div id="auth-wrap" hidden>
+      <p id="auth-status">Optional. Sign in to keep your paper on every device.</p>
+      <button type="button" id="auth-signin">Sign in with Google</button>
+      <button type="button" id="auth-signout" hidden>Sign out</button>
+      <p class="privacy" id="auth-privacy">We store your email, name, photo and paper picks so your paper follows you. No ads sold against it. You can clear picks any time. <a href="/privacy/">Privacy</a></p>
+    </div>
   </div>
 
   <div id="view-reader" hidden>

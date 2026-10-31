@@ -575,7 +575,7 @@
       if (btnOut) btnOut.hidden = false;
       if (privacy) privacy.hidden = false;
     } else {
-      status.textContent = "Sign in with Google to save your paper across devices.";
+      status.textContent = "Optional. Sign in to keep your paper on every device.";
       if (btnIn) btnIn.hidden = false;
       if (btnOut) btnOut.hidden = true;
       if (privacy) privacy.hidden = false;
