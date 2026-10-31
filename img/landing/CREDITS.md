@@ -22,3 +22,4 @@ Free licence stock photos, converted to grayscale, cropped 16:9, 800x450 WebP.
 | packaging.webp | https://commons.wikimedia.org/wiki/File:Bales_of_PET_bottles_closeup.jpg (photo by Grendelkhan) | CC BY-SA 4.0 |
 | fashion.webp | https://www.pexels.com/photo/7679720/ (fashion / textiles stock) | Pexels License |
 | realestate.webp | https://www.pexels.com/photo/323780/ (modern buildings / real estate stock) | Pexels License |
+| auto.webp | https://www.pexels.com/photo/170811/ (cars / auto stock) | Pexels License |
