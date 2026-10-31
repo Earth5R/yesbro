@@ -77,8 +77,12 @@
   function writeUrl() {
     try {
       var u = new URL(location.href);
-      if (picks.length) u.searchParams.set("t", picks.join(","));
-      else u.searchParams.delete("t");
+      if (picks.length) {
+        u.searchParams.set("t", picks.join(","));
+        u.searchParams.delete("mine");
+      } else {
+        u.searchParams.delete("t");
+      }
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     } catch (e) {}
   }
@@ -155,6 +159,27 @@
       .replace(/"/g, "&quot;");
   }
 
+  function paperIcon(key) {
+    try { return (window.YESBRO_ICON && window.YESBRO_ICON(key)) || ""; } catch (e) { return ""; }
+  }
+
+  function topicIcon(topic) {
+    var kind = (topic && topic.kind) || "section";
+    if (kind === "events" || kind === "research" || kind === "jobs" || kind === "talks") {
+      return paperIcon(kind);
+    }
+    return paperIcon("section");
+  }
+
+  function wantsMine() {
+    try {
+      var u = new URL(location.href);
+      if (u.searchParams.has("mine")) return true;
+      return false;
+    } catch (e) { return false; }
+  }
+
+
   function pickCountLabel() {
     var wholes = picks.filter(isWhole).length;
     var parts = picks.filter(function (t) { return !isWhole(t); }).length;
@@ -183,10 +208,12 @@
       html += "<section class=\"paper-block\" data-paper=\"" + esc(paper.key) + "\">";
       html += "<div class=\"paper-card" + (on ? " on" : "") + "\">";
       html += "<div class=\"paper-card-main\">";
+      html += "<div class=\"paper-card-left\">";
+      html += "<span class=\"paper-ico\">" + paperIcon(paper.key) + "</span>";
       html += "<div class=\"paper-card-text\"><h2>" + esc(paper.label) + "</h2>";
       html += "<p class=\"paper-card-meta\">Yes Bro " + esc(paper.label);
       if (topicCount) html += " · " + topicCount + " topics today";
-      html += "</p></div>";
+      html += "</p></div></div>";
       html += "<button type=\"button\" class=\"whole-btn" + (on ? " on" : "") + "\" data-whole=\"" + esc(paper.key) + "\" aria-pressed=\"" + (on ? "true" : "false") + "\">";
       html += on ? "✓ Whole paper" : "+ Add whole paper";
       html += "</button></div>";
@@ -200,7 +227,8 @@
         paper.topics.forEach(function (t) {
           var ton = on || picks.indexOf(t.id) >= 0;
           html += "<button type=\"button\" class=\"topic" + (ton ? " on" : "") + (on ? " locked" : "") + "\" data-id=\"" + esc(t.id) + "\" aria-pressed=\"" + (ton ? "true" : "false") + "\">";
-          html += "<span class=\"t-name\">" + esc(t.name) + "</span>";
+          html += "<span class=\"t-row\"><span class=\"t-ico\">" + topicIcon(t) + "</span>";
+          html += "<span class=\"t-name\">" + esc(t.name) + "</span></span>";
           html += "<span class=\"t-meta\">" + esc(String(t.count)) + (t.kind === "section" ? " stories" : "") + "</span>";
           html += "<span class=\"t-btn\" aria-hidden=\"true\">" + (ton ? "✓" : "+") + "</span>";
           html += "</button>";
@@ -500,6 +528,13 @@
     } catch (e) {}
   }
 
+
+  function maybeOpenMine() {
+    if (!wantsMine()) return;
+    if (!picks.length) return;
+    openReader();
+  }
+
   function hydrateFromCloud(user) {
     if (!firebaseReady() || !user) return;
     try {
@@ -511,21 +546,28 @@
             created: firebase.firestore.FieldValue.serverTimestamp()
           }), { merge: true }).catch(function () {});
           cloudHydrated = true;
+          maybeOpenMine();
           return;
         }
         var data = doc.data() || {};
         var remote = Array.isArray(data.picks) ? data.picks : [];
         /* First sign-in / any device: merge local pre-sign-in picks with cloud picks */
         var merged = mergePicks(remote, local);
+        if (wantsMine() && remote.length) {
+          /* ?mine prefers the saved cloud paper */
+          merged = unique(remote);
+        }
         if (merged.join("\n") !== picks.join("\n")) {
           setPicks(merged, { skipCloud: true });
           renderPicker();
         }
         ref.set(userPayload(), { merge: true }).catch(function () {});
         cloudHydrated = true;
+        maybeOpenMine();
       }).catch(function () {
         /* Firestore failed: keep localStorage picks */
         cloudHydrated = true;
+        maybeOpenMine();
       });
     } catch (e) {
       cloudHydrated = true;
@@ -565,7 +607,17 @@
       firebase.auth().onAuthStateChanged(function (user) {
         authUser = user;
         renderAuth();
-        if (user) hydrateFromCloud(user);
+        if (user) {
+          hydrateFromCloud(user);
+        } else if (wantsMine() && !window.__YB_MINE_PROMPTED__) {
+          window.__YB_MINE_PROMPTED__ = true;
+          /* Quiet prompt so Your paper deep-links still work */
+          try {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            provider.setCustomParameters({ prompt: "select_account" });
+            firebase.auth().signInWithPopup(provider).catch(function () {});
+          } catch (e) {}
+        }
       });
     } catch (e) {
       firebaseFailed = true;
@@ -622,6 +674,7 @@
   loadCatalog().then(function () {
     renderPicker();
     if (picks.length && parseTopicsFromUrl()) openReader();
+    else if (wantsMine() && picks.length && (!configEnabled() || authUser)) maybeOpenMine();
   }).catch(function () {
     $("picker-grid").innerHTML = "<p class=\"empty\">Catalog missing. The night build may still be running.</p>";
   });

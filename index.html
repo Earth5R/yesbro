@@ -231,4 +231,4 @@ function done(){cp.textContent='Copied';cp.classList.add('done');setTimeout(func
 function fallback(){var t=document.createElement('textarea');t.value=d.url;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';
  document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){prompt('Copy this link',d.url)}document.body.removeChild(t)}
 cp.addEventListener('click',function(){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(d.url).then(done,fallback)}else fallback()});
-})();</script></body></html>
+})();</script><!-- yb-mypaper-bar: shared sign-in strip --><script src="/js/yb-mypaper-bar.js" defer></script></body></html>
