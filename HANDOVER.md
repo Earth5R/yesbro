@@ -75,3 +75,9 @@ python /workspace/yesbro_actions/pipeline/run_daily.py --date YYYY-MM-DD --per-s
 - Nobody reviews each day's page before it goes live. House rules are baked into the prompts
   and `blocklist.py` still strips Begin Group and trade-fair free coverage.
 - Image fetching can be slow or flaky on Actions. A run still publishes text-only stories.
+
+## Model note (important)
+Default model is `gemini-3.1-flash-lite`. Non-lite Flash free tiers can be as low as
+about 20 requests per day and will trip quickly. If Gemini returns 429/503 repeatedly,
+the pipeline opens a circuit and finishes the remaining papers with teaser-based fallback
+copy so the site still updates.
