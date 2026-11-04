@@ -1,41 +1,41 @@
 {
- "sections": [
-  "Models and Labs",
-  "AI Products and Tools",
-  "AI in India",
-  "AI Startups and Funding",
-  "Research and Papers",
-  "Chips and Compute",
-  "AI at Work",
-  "Safety and Policy"
- ],
- "title": "Yes Bro AI",
- "masthead": "Yes Bro AI",
- "family": "Yes Bro Newspaper",
- "motto": "Artificial intelligence news, written by people, for now",
- "ear_left": "No Prompt<br>Required",
- "ear_right": "Printed This Morning<br>Hallucinations Removed",
- "edition": "AI Edition",
- "price": "Price: Free, unlike the compute",
- "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Benchmarks are as reported, not as vibed.",
- "ad_after": 3,
- "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Some data has to be collected on foot.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems and work with the community, with a mentor checking the work along the way. The training data is the street outside.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
- "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want to build AI that knows the real world? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
- "jobs_intro": "AI and machine learning roles in India first, then global and remote, checked today. Every listing links to the original posting. The interview may involve a whiteboard.",
- "events_intro": "AI conferences and summits coming up, each checked against its own page this morning. Badge lanyards will be provided.",
- "key": "ai",
- "url": "https://yesbrohq.com/ai/",
- "seo_title": "Artificial Intelligence News, AI Startups and AI Jobs | Yes Bro AI",
- "seo_desc": "Daily AI news: models and labs, AI products, AI in India, startup funding, research, chips and compute, AI at work and safety and policy, plus AI jobs. Free daily.",
- "meme": true,
- "research_block": {
-  "title": "Research and Development",
-  "nav": "R&D",
-  "intro": "AI and machine learning papers and lab notes that landed recently. Preprints say so on the card. Findings stay where the source put them."
- },
- "talks_block": {
-  "title": "Talks",
-  "nav": "Talks",
-  "intro": "Talks on models, agents and research. Each one was still up on YouTube this morning."
- }
+  "sections": [
+    "Models and Labs",
+    "AI Products and Tools",
+    "AI in India",
+    "AI Startups and Funding",
+    "Research and Papers",
+    "Chips and Compute",
+    "AI at Work",
+    "Safety and Policy"
+  ],
+  "title": "Yes Bro AI",
+  "masthead": "Yes Bro AI",
+  "family": "Yes Bro Newspaper",
+  "motto": "Artificial intelligence news, written by people, for now",
+  "ear_left": "No Prompt<br>Required",
+  "ear_right": "Printed This Morning<br>Hallucinations Removed",
+  "edition": "AI Edition",
+  "price": "Price: Free, unlike the compute",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Benchmarks are as reported, not as vibed.",
+  "ad_after": 3,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Some data has to be collected on foot.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems and work with the community, with a mentor checking the work along the way. The training data is the street outside.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want to build AI that knows the real world? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "AI and machine learning roles in India first, then global and remote, checked today. Every listing links to the original posting. The interview may involve a whiteboard.",
+  "events_intro": "AI conferences and summits coming up, each checked against its own page this morning. Badge lanyards will be provided.",
+  "key": "ai",
+  "url": "https://yesbrohq.com/ai/",
+  "seo_title": "Daily AI news India and world | Yes Bro AI",
+  "seo_desc": "Daily artificial intelligence news: models and labs, AI products, AI in India, startup funding, research, chips and compute, AI at work, and safety and policy, plus AI jobs. Free. No tracking.",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "AI and machine learning papers and lab notes that landed recently. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks on models, agents and research. Each one was still up on YouTube this morning."
+  }
 }

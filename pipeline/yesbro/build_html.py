@@ -225,40 +225,104 @@ def _iso(date):
         return _dt.date.today().isoformat()
 
 def seo_head(c, date, secs):
-    """Canonical, description, Open Graph, Twitter card and CollectionPage/ItemList JSON-LD for a paper.
-    No JobPosting markup: the jobs are third party listings we do not host."""
+    """Canonical, description, Open Graph, Twitter card and JSON-LD for a paper.
+
+    Emits CollectionPage (with about/keywords/genre), ItemList of top stories as
+    NewsArticle-shaped entries, and BreadcrumbList. Category keyword sets come from
+    seo_categories.json when present. No JobPosting markup: jobs are third-party.
+    About-this-paper lives in JSON-LD/meta only (invisible) so AEO can quote it.
+    """
     if not c.get("url"):
         return ""
-    title = c["seo_title"] or c["title"]
-    desc = c["seo_desc"] or c["motto"]
+    cat = {}
+    try:
+        from pathlib import Path as _P
+        import json as _json
+        _p = _P(__file__).resolve().parent / "seo_categories.json"
+        if _p.exists():
+            _all = _json.loads(_p.read_text(encoding="utf-8"))
+            cat = (_all.get("papers") or {}).get(c.get("key") or "", {}) or {}
+            if not cat:
+                folder = (c.get("url") or "").rstrip("/").split("/")[-1]
+                for _k, _m in (_all.get("papers") or {}).items():
+                    if _m.get("folder") == folder:
+                        cat = _m
+                        break
+    except Exception:
+        cat = {}
+    title = c.get("seo_title") or cat.get("title") or c["title"]
+    desc = c.get("seo_desc") or cat.get("description") or c["motto"]
+    about = cat.get("about") or desc
+    keywords = cat.get("keywords") or []
+    genre = cat.get("genre") or []
     import share
     img = share.og_image(c.get("key"))
     iso = _iso(date)
-    items, pos = [], 0
+    folder = (c.get("url") or "").rstrip("/").split("/")[-1]
+    feed = f"{SITE}/{folder}/feed.xml" if folder else ""
+    items, articles, pos = [], [], 0
     for n, ss in secs:
         for st in ss[:3]:
             pos += 1
             items.append({"@type": "ListItem", "position": pos, "url": st["url"], "name": st["headline"]})
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": c["url"], "description": desc,
-          "inLanguage": "en", "dateModified": iso, "isAccessibleForFree": True,
+            art = {
+                "@type": "NewsArticle",
+                "headline": st["headline"],
+                "url": st["url"],
+                "datePublished": iso,
+                "isAccessibleForFree": True,
+                "inLanguage": "en",
+                "isPartOf": {"@type": "Periodical", "name": c["title"], "url": c["url"]},
+                "publisher": {"@type": "Organization", "name": "Yes Bro", "url": SITE + "/"},
+            }
+            if keywords:
+                art["keywords"] = keywords
+            if genre:
+                art["genre"] = genre
+            if about:
+                art["about"] = {"@type": "Thing", "name": cat.get("name") or c["title"], "description": about}
+            articles.append(art)
+    publisher = {"@type": "Organization", "name": "Yes Bro", "url": SITE + "/",
+                 "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png"},
+                 "parentOrganization": {"@type": "Organization", "name": "Earth5R", "url": "https://earth5r.org/"}}
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": c["url"],
+          "description": desc, "abstract": about, "inLanguage": "en", "dateModified": iso,
+          "isAccessibleForFree": True,
           "isPartOf": {"@type": "WebSite", "name": "Yes Bro", "url": SITE + "/"},
-          "publisher": {"@type": "Organization", "name": "Yes Bro", "url": SITE + "/",
-                        "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png"},
-                        "parentOrganization": {"@type": "Organization", "name": "Earth5R", "url": "https://earth5r.org/"}},
-          "image": img,
-          "mainEntity": {"@type": "ItemList", "name": f'{c["title"]} top stories, {date}', "itemListElement": items}}
+          "publisher": publisher, "image": img,
+          "mainEntity": {"@type": "ItemList", "name": f'{c["title"]} top stories, {date}',
+                         "itemListElement": items},
+          "hasPart": articles}
+    if keywords:
+        ld["keywords"] = keywords
+    if genre:
+        ld["genre"] = genre
+    if about:
+        ld["about"] = {"@type": "Thing", "name": cat.get("name") or c["title"], "description": about}
     if c.get("no_earth5r"):
         ld["publisher"].pop("parentOrganization", None)
+    crumbs = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Yes Bro", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": c["title"], "item": c["url"]},
+        ],
+    }
+    kw_meta = f'\n<meta name="keywords" content="{esc(", ".join(keywords))}">' if keywords else ""
+    abs_meta = f'\n<meta name="abstract" content="{esc(about)}">' if about else ""
+    rss = f'\n<link rel="alternate" type="application/rss+xml" title="{esc(title)}" href="{feed}">' if feed else ""
     return f"""
-<meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{c["url"]}">
+<meta name="description" content="{esc(desc)}">{kw_meta}{abs_meta}
+<link rel="canonical" href="{c["url"]}">{rss}
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Yes Bro">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{c["url"]}"><meta property="og:image" content="{img}"><meta property="og:image:width" content="800"><meta property="og:image:height" content="450"><meta property="og:image:alt" content="{esc(c["title"])}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{img}">
-<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>"""
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps(crumbs, ensure_ascii=False)}</script>"""
+
 
 AD_CSS = r"""
 .housead{max-width:760px;margin:6px auto 30px;border:3px double var(--rule);padding:14px 22px 16px;text-align:center;

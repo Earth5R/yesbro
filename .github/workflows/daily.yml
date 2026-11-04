@@ -80,3 +80,9 @@ jobs:
             git commit -m "Yes Bro daily: $(TZ=Asia/Kolkata date +%F)"
             git push
           fi
+
+
+      - name: Ping IndexNow
+        if: success()
+        run: |
+          python pipeline/yesbro/indexnow_ping.py --site "$GITHUB_WORKSPACE"

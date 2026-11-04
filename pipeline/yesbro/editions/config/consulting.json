@@ -1,39 +1,39 @@
 {
- "sections": [
-  "The Big Firms",
-  "Research and Insights",
-  "Deals and Moves",
-  "India Policy and Business",
-  "Careers and Campus"
- ],
- "title": "Yes Bro Consulting",
- "masthead": "Yes Bro Consulting",
- "family": "Yes Bro Newspaper",
- "motto": "All the consulting news, minus the deck",
- "ear_left": "Executive Summary<br>Inside",
- "ear_right": "Printed This Morning<br>Jobs Near the Back",
- "edition": "Consulting Edition",
- "price": "Price: Free, not billed by the hour",
- "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Key takeaways are left as an exercise.",
- "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Consulting\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
- "ad_after": 3,
- "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Real fieldwork beats another framework.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems with the community, with a mentor checking each finding. Evidence from the ground makes a better appendix.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
- "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want a case on your CV that is real? FIELDWORK by Earth5R is a mentored fellowship where school and university students work on a live Earth5R project near home, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
- "jobs_intro": "Consulting, strategy and advisory roles checked today, India first. Every listing links to the original posting. The case interview is still yours to crack.",
- "key": "consulting",
- "url": "https://yesbrohq.com/consulting/",
- "seo_title": "Consulting Industry News, Research and Jobs | Yes Bro Consulting",
- "seo_desc": "Daily consulting news: McKinsey, BCG, Bain, the Big Four and Accenture, research and insights, deals, India business policy and consulting careers and jobs.",
- "events_intro": "Upcoming summits and forums, each checked against its own page this morning. The networking is billable to nobody.",
- "meme": true,
- "research_block": {
-  "title": "Research and Development",
-  "nav": "R&D",
-  "intro": "Strategy-adjacent research on firms, markets and work. Preprints say so on the card. Findings stay where the source put them."
- },
- "talks_block": {
-  "title": "Talks",
-  "nav": "Talks",
-  "intro": "Talks for consultants and clients. Each one was still up on YouTube this morning."
- }
+  "sections": [
+    "The Big Firms",
+    "Research and Insights",
+    "Deals and Moves",
+    "India Policy and Business",
+    "Careers and Campus"
+  ],
+  "title": "Yes Bro Consulting",
+  "masthead": "Yes Bro Consulting",
+  "family": "Yes Bro Newspaper",
+  "motto": "All the consulting news, minus the deck",
+  "ear_left": "Executive Summary<br>Inside",
+  "ear_right": "Printed This Morning<br>Jobs Near the Back",
+  "edition": "Consulting Edition",
+  "price": "Price: Free, not billed by the hour",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Key takeaways are left as an exercise.",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Consulting\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "ad_after": 3,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Real fieldwork beats another framework.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems with the community, with a mentor checking each finding. Evidence from the ground makes a better appendix.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want a case on your CV that is real? FIELDWORK by Earth5R is a mentored fellowship where school and university students work on a live Earth5R project near home, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "Consulting, strategy and advisory roles checked today, India first. Every listing links to the original posting. The case interview is still yours to crack.",
+  "key": "consulting",
+  "url": "https://yesbrohq.com/consulting/",
+  "seo_title": "Consulting industry news and jobs | Yes Bro Consulting",
+  "seo_desc": "Daily consulting newspaper: strategy firms, GCCs, research and consulting jobs. Free. No tracking.",
+  "events_intro": "Upcoming summits and forums, each checked against its own page this morning. The networking is billable to nobody.",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Strategy-adjacent research on firms, markets and work. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks for consultants and clients. Each one was still up on YouTube this morning."
+  }
 }

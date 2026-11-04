@@ -1,0 +1,161 @@
+# Yes Bro
+
+> Build your own newspaper. Read every day what you want.
+> No accounts required to read. No tracking of what you read.
+
+Yes Bro publishes free daily newspapers for different fields. Every headline links to the original report. Readers pick a paper; there is no feed ranking and no tracking of what they read.
+
+## Papers
+
+## Yes Bro Daily
+
+Yes Bro Daily is a free morning newspaper covering India and the world. It gathers politics, business, startups, climate and ESG, AI, health, space and science, and light humour, then writes short deadpan summaries with links to the original reports. Readers pick what they want without accounts or tracking.
+
+- Home: https://yesbrohq.com/daily/
+- RSS: https://yesbrohq.com/daily/feed.xml
+- Keywords: India news today, world news, daily newspaper India, politics news India, health news, space news, AI news, climate news, humour news, Yes Bro Daily
+
+## Yes Bro AI
+
+Yes Bro AI is a free daily paper for anyone following artificial intelligence. It covers model launches, AI products, India AI news, funding, research papers, chips and compute, workplace AI, and safety and policy, with short summaries and links out. No launch-livestream fluff and no tracking.
+
+- Home: https://yesbrohq.com/ai/
+- RSS: https://yesbrohq.com/ai/feed.xml
+- Keywords: AI news, artificial intelligence news India, LLM news, AI startups, GPU compute, AI jobs, AI policy, Daily AI news, Yes Bro AI
+
+## Yes Bro Architecture
+
+Yes Bro Architecture covers buildings, materials, climate-responsive design and green codes for India, plus architecture jobs, in a free daily paper.
+
+- Home: https://yesbrohq.com/architecture/
+- RSS: https://yesbrohq.com/architecture/feed.xml
+- Keywords: architecture news India, green building, GRIHA, IGBC, architecture jobs, Yes Bro Architecture
+
+## Yes Bro Auto
+
+Yes Bro Auto covers Indian and global auto news: cars, EVs, two-wheelers, components and retail, with linked summaries and auto jobs.
+
+- Home: https://yesbrohq.com/auto/
+- RSS: https://yesbrohq.com/auto/feed.xml
+- Keywords: auto news India, EV news India, two wheeler, car sales India, Yes Bro Auto
+
+## Yes Bro Aviation
+
+Yes Bro Aviation is a free daily paper for airline and airport readers. It covers India and global aviation, aircraft orders, safety and pilot careers with linked summaries.
+
+- Home: https://yesbrohq.com/aviation/
+- RSS: https://yesbrohq.com/aviation/feed.xml
+- Keywords: aviation news India, airline news, pilot jobs India, airport news, Yes Bro Aviation
+
+## Yes Bro Business
+
+Yes Bro Business is a free daily trade paper for Indian business readers. It opens with Indian company and market news, then deals, explainers and tenders, with links to the original reports.
+
+- Home: https://yesbrohq.com/business/
+- RSS: https://yesbrohq.com/business/feed.xml
+- Keywords: Indian business news, stock market India, M&A India, business newspaper, tenders India, funding news, Yes Bro Business
+
+## Yes Bro Consulting
+
+Yes Bro Consulting is a free daily paper for consultants and analysts, covering firm news, GCCs in India and consulting jobs.
+
+- Home: https://yesbrohq.com/consulting/
+- RSS: https://yesbrohq.com/consulting/feed.xml
+- Keywords: consulting news, GCC India, strategy consulting, consulting jobs, Yes Bro Consulting
+
+## Yes Bro Fashion
+
+Yes Bro Fashion covers fashion, jewellery and textiles with an India-first lens, plus industry and jobs news in a free daily paper.
+
+- Home: https://yesbrohq.com/fashion/
+- RSS: https://yesbrohq.com/fashion/feed.xml
+- Keywords: fashion news India, jewellery industry, textiles India, sustainable fashion, fashion jobs, Yes Bro Fashion
+
+## Yes Bro Finance
+
+Yes Bro Finance covers markets, banking and personal finance for India in a free daily paper. Summaries stay factual and dry, with links to the source. It is not investment advice.
+
+- Home: https://yesbrohq.com/finance/
+- RSS: https://yesbrohq.com/finance/feed.xml
+- Keywords: stock market news India, personal finance India, banking news, mutual funds, RBI, Yes Bro Finance
+
+## Yes Bro Healing
+
+Yes Bro Healing is a kind, evidence-minded wellbeing paper. It covers mental health, mindfulness, sleep, nutrition and related topics without cure claims, and without Earth5R or FIELDWORK promotion.
+
+- Home: https://yesbrohq.com/healing/
+- RSS: https://yesbrohq.com/healing/feed.xml
+- Keywords: mental health news, wellbeing, mindfulness, yoga news, Ayurveda, Yes Bro Healing
+
+## Yes Bro Health
+
+Yes Bro Health is a free daily paper for doctors and health readers. It covers public health, medical research, pharma and health-tech news with careful, sourced summaries.
+
+- Home: https://yesbrohq.com/health/
+- RSS: https://yesbrohq.com/health/feed.xml
+- Keywords: health news India, medical news, public health, pharma news, hospital news, Yes Bro Health
+
+## Yes Bro Higher Ed
+
+Yes Bro Higher Ed covers university admissions, study abroad, visas and scholarships for Indian students in a free daily paper.
+
+- Home: https://yesbrohq.com/highered/
+- RSS: https://yesbrohq.com/highered/feed.xml
+- Keywords: study abroad India, university admissions, scholarships, student visa, Yes Bro Higher Ed
+
+## Yes Bro Marketing
+
+Yes Bro Marketing covers advertising, brand and media news plus marketing jobs in a free daily paper with linked summaries.
+
+- Home: https://yesbrohq.com/marketing/
+- RSS: https://yesbrohq.com/marketing/feed.xml
+- Keywords: marketing news, advertising India, brand news, marketing jobs, Yes Bro Marketing
+
+## Yes Bro Packaging
+
+Yes Bro Packaging is a free daily trade paper for packaging and plastics. It leads with plastic packaging and India news, then recycling, EPR and converting, without free expo coverage.
+
+- Home: https://yesbrohq.com/packaging/
+- RSS: https://yesbrohq.com/packaging/feed.xml
+- Keywords: packaging news, plastic packaging, EPR India, recycling, packaging jobs, Yes Bro Packaging
+
+## Yes Bro Real Estate
+
+Yes Bro Real Estate is a free India-first trade paper for developers, brokers and property readers, covering housing, commercial, policy, REITs and PropTech.
+
+- Home: https://yesbrohq.com/realestate/
+- RSS: https://yesbrohq.com/realestate/feed.xml
+- Keywords: real estate news India, RERA, REITs India, PropTech, housing news, Yes Bro Real Estate
+
+## Yes Bro Schools
+
+Yes Bro Schools is a free daily paper for senior-school students and teachers. It covers exams, scholarships, study skills and school policy in a gentle voice.
+
+- Home: https://yesbrohq.com/schools/
+- RSS: https://yesbrohq.com/schools/feed.xml
+- Keywords: IB news, school exams India, scholarships, Cambridge board, Yes Bro Schools
+
+## Yes Bro Startups
+
+Yes Bro Startups follows Indian startup funding, founder news and product launches in a free daily paper, with links to the original reports and startup jobs.
+
+- Home: https://yesbrohq.com/startups/
+- RSS: https://yesbrohq.com/startups/feed.xml
+- Keywords: startup funding India, Indian startups, venture capital India, startup jobs, Yes Bro Startups
+
+## Yes Bro Sustainability
+
+Yes Bro Sustainability follows ESG, climate and green industry news with sourced summaries and green jobs in a free daily paper.
+
+- Home: https://yesbrohq.com/sustainability/
+- RSS: https://yesbrohq.com/sustainability/feed.xml
+- Keywords: ESG news, climate news India, sustainability jobs, net zero, Yes Bro Sustainability
+
+## Yes Bro UX & Design
+
+Yes Bro UX & Design is a free daily paper for product and visual designers. It covers UX research, UI, design systems, tools and design jobs with short sourced summaries.
+
+- Home: https://yesbrohq.com/ux/
+- RSS: https://yesbrohq.com/ux/feed.xml
+- Keywords: UX news, product design news, UI design, design jobs, Figma, Yes Bro UX
+

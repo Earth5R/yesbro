@@ -1,39 +1,39 @@
 {
- "sections": [
-  "ESG and Disclosure",
-  "Carbon Markets and Climate Finance",
-  "Climate Policy",
-  "Circular Economy and Waste",
-  "Corporate Sustainability and Energy Transition"
- ],
- "title": "Yes Bro Sustainability",
- "masthead": "Yes Bro Sustainability",
- "family": "Yes Bro Newspaper",
- "motto": "All the climate and ESG news, sustainably sourced",
- "ear_left": "Printed on<br>No Paper at All",
- "ear_right": "Published This Morning<br>Jobs Near the Back",
- "edition": "Sustainability Edition",
- "price": "Price: Free, unlike a carbon offset",
- "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Net zero claims are reported, not endorsed.",
- "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Sustainability\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
- "ad_after": 3,
- "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Your ESG report needs ground truth.</h4><p>FIELDWORK by Earth5R takes you out of the classroom and into your own neighbourhood to work with the community on river clean ups and waste, with a mentor checking every step. Ground truth tends to be muddier than the dashboard.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
- "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want field experience that a sustainability hiring manager can check? FIELDWORK by Earth5R is a mentored fellowship for school and university students on a live Earth5R project near home, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
- "jobs_intro": "ESG and climate roles checked today. Every listing links to the original posting. Reusable cup not required for the interview.",
- "key": "sustainability",
- "url": "https://yesbrohq.com/sustainability/",
- "seo_title": "ESG, Climate and Sustainability News and Jobs | Yes Bro Sustainability",
- "seo_desc": "Daily ESG and sustainability news: BRSR and disclosure, carbon markets, CBAM, climate policy, circular economy and energy transition, plus open sustainability jobs.",
- "events_intro": "Climate weeks and ESG meetups coming up, each checked against its own page this morning. Take the metro if you can.",
- "meme": true,
- "research_block": {
-  "title": "Research and Development",
-  "nav": "R&D",
-  "intro": "Climate, materials and circular-economy research that landed recently. Preprints say so on the card. Findings stay where the source put them."
- },
- "talks_block": {
-  "title": "Talks",
-  "nav": "Talks",
-  "intro": "Talks on climate and sustainable practice. Each one was still up on YouTube this morning."
- }
+  "sections": [
+    "ESG and Disclosure",
+    "Carbon Markets and Climate Finance",
+    "Climate Policy",
+    "Circular Economy and Waste",
+    "Corporate Sustainability and Energy Transition"
+  ],
+  "title": "Yes Bro Sustainability",
+  "masthead": "Yes Bro Sustainability",
+  "family": "Yes Bro Newspaper",
+  "motto": "All the climate and ESG news, sustainably sourced",
+  "ear_left": "Printed on<br>No Paper at All",
+  "ear_right": "Published This Morning<br>Jobs Near the Back",
+  "edition": "Sustainability Edition",
+  "price": "Price: Free, unlike a carbon offset",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Net zero claims are reported, not endorsed.",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Sustainability\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "ad_after": 3,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Your ESG report needs ground truth.</h4><p>FIELDWORK by Earth5R takes you out of the classroom and into your own neighbourhood to work with the community on river clean ups and waste, with a mentor checking every step. Ground truth tends to be muddier than the dashboard.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want field experience that a sustainability hiring manager can check? FIELDWORK by Earth5R is a mentored fellowship for school and university students on a live Earth5R project near home, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "ESG and climate roles checked today. Every listing links to the original posting. Reusable cup not required for the interview.",
+  "key": "sustainability",
+  "url": "https://yesbrohq.com/sustainability/",
+  "seo_title": "ESG, climate and sustainability news | Yes Bro Sustainability",
+  "seo_desc": "Daily ESG and climate newspaper: sustainability news, green jobs and environment policy for India and the world. Free. No tracking.",
+  "events_intro": "Climate weeks and ESG meetups coming up, each checked against its own page this morning. Take the metro if you can.",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Climate, materials and circular-economy research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks on climate and sustainable practice. Each one was still up on YouTube this morning."
+  }
 }

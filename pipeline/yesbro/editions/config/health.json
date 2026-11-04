@@ -1,39 +1,39 @@
 {
- "sections": [
-  "Medicine and Research",
-  "Public Health India",
-  "Global Public Health",
-  "Health Tech",
-  "Wellness and Mental Health"
- ],
- "title": "Yes Bro Health",
- "masthead": "Yes Bro Health",
- "family": "Yes Bro Newspaper",
- "motto": "All the health news, in a reasonable dose",
- "ear_left": "Best Taken With<br>Morning Tea",
- "ear_right": "Printed This Morning<br>Jobs Near the Back",
- "edition": "Health Edition",
- "price": "Price: Free, no prescription needed",
- "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. This is a newspaper, not a diagnosis.",
- "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Health\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
- "ad_after": 3,
- "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Public health starts on your street.</h4><p>FIELDWORK by Earth5R takes students into their own neighbourhoods to work with the community on waste and the local environment, with a mentor checking the work as it goes. The conditions behind the statistics are usually a short walk away.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
- "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Heading for medicine or public health? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
- "jobs_intro": "Healthcare and pharma roles checked today, health tech included. Every listing links to the original posting. No referral needed, for once.",
- "key": "health",
- "url": "https://yesbrohq.com/health/",
- "seo_title": "Health and Medical News, Public Health India and Jobs | Yes Bro Health",
- "seo_desc": "Daily health news: medical research, public health in India and worldwide, health tech, wellness and mental health, plus open healthcare jobs. Free every morning.",
- "events_intro": "Health conferences coming up, each checked against its own page this morning. Hydrate between sessions.",
- "meme": true,
- "research_block": {
-  "title": "Research and Development",
-  "nav": "R&D",
-  "intro": "Peer-reviewed clinical and public-health findings that landed recently. Preprints say so on the card. No miracle claims."
- },
- "talks_block": {
-  "title": "Talks",
-  "nav": "Talks",
-  "intro": "Evidence-minded talks from medical journals and researchers. Each one was still up on YouTube this morning."
- }
+  "sections": [
+    "Medicine and Research",
+    "Public Health India",
+    "Global Public Health",
+    "Health Tech",
+    "Wellness and Mental Health"
+  ],
+  "title": "Yes Bro Health",
+  "masthead": "Yes Bro Health",
+  "family": "Yes Bro Newspaper",
+  "motto": "All the health news, in a reasonable dose",
+  "ear_left": "Best Taken With<br>Morning Tea",
+  "ear_right": "Printed This Morning<br>Jobs Near the Back",
+  "edition": "Health Edition",
+  "price": "Price: Free, no prescription needed",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. This is a newspaper, not a diagnosis.",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Health\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "ad_after": 3,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Public health starts on your street.</h4><p>FIELDWORK by Earth5R takes students into their own neighbourhoods to work with the community on waste and the local environment, with a mentor checking the work as it goes. The conditions behind the statistics are usually a short walk away.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Heading for medicine or public health? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "Healthcare and pharma roles checked today, health tech included. Every listing links to the original posting. No referral needed, for once.",
+  "key": "health",
+  "url": "https://yesbrohq.com/health/",
+  "seo_title": "Health and medical news India | Yes Bro Health",
+  "seo_desc": "Daily health and medical news for India: public health, hospitals, pharma, wellness and health jobs. Evidence-minded summaries with links. Free. No tracking.",
+  "events_intro": "Health conferences coming up, each checked against its own page this morning. Hydrate between sessions.",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Peer-reviewed clinical and public-health findings that landed recently. Preprints say so on the card. No miracle claims."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Evidence-minded talks from medical journals and researchers. Each one was still up on YouTube this morning."
+  }
 }

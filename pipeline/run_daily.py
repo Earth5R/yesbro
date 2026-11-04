@@ -516,6 +516,9 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
     if not skip_publish:
         subprocess.run([sys.executable, str(ROOT / "columns.py"), "publish", "--site", str(SITE)], cwd=str(ROOT), check=False)
         subprocess.run([sys.executable, str(ROOT / "build_landing.py"), "--site", str(SITE), "--stories-dir", str(ROOT)], cwd=str(ROOT), check=False)
+        # Category SEO/AEO: refresh paper <head> JSON-LD/meta, then sitemaps/robots/llms/RSS/IndexNow key
+        subprocess.run([sys.executable, str(ROOT / "enrich_seo.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
+        subprocess.run([sys.executable, str(ROOT / "sitemap.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
         subprocess.run([sys.executable, str(ROOT / "pwa.py")], cwd=str(ROOT), check=False)
         # mypaper best effort
         try:

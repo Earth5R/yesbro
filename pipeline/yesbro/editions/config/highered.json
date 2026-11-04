@@ -1,39 +1,39 @@
 {
- "sections": [
-  "Admissions and Entrance Exams",
-  "Study Abroad and Visas",
-  "Scholarships and Opportunities",
-  "Universities and Rankings",
-  "Policy and Campus Life"
- ],
- "title": "Yes Bro Higher Ed",
- "masthead": "Yes Bro Higher Ed",
- "family": "Yes Bro Newspaper",
- "motto": "All the university news, minus the waitlist",
- "ear_left": "Deadlines Are Closer<br>Than They Look",
- "ear_right": "Printed This Morning<br>Jobs Near the Back",
- "edition": "Higher Education Edition",
- "price": "Price: Free, unlike the application fee",
- "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Office hours are by appointment, as usual.",
- "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Higher Ed\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
- "ad_after": 3,
- "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Your application needs more than marks.</h4><p>FIELDWORK by Earth5R is a mentored fellowship for school and university students, built around a live Earth5R project near home. Along the way you join research conversations with professors at MIT, Oxford, Cambridge and LSE. The verified record of work is something your application can actually point to.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
- "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Applying to university? FIELDWORK by Earth5R puts school and university students on a live Earth5R project near home, with a mentor and research conversations with professors at MIT, Oxford, Cambridge and LSE. The work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
- "jobs_intro": "Real jobs only, from graduate roles to university admissions, checked today. Every listing links to the original posting. Want to stand out when you apply? Earth5R's FIELDWORK fellowship gives you real research with real people, which reads better than another certificate.",
- "key": "highered",
- "url": "https://yesbrohq.com/highered/",
- "seo_title": "University Admissions, Study Abroad and Scholarship News | Yes Bro Higher Ed",
- "seo_desc": "Daily higher education news: JEE, NEET and admissions, study abroad visas, scholarships, rankings and campus policy, plus university jobs. Free every morning.",
- "events_intro": "Education summits and conferences coming up, each checked against its own page this morning. Bring questions. Admissions teams like those.",
- "meme": true,
- "research_block": {
-  "title": "Research and Development",
-  "nav": "R&D",
-  "intro": "Higher-education and learning science that landed recently. Preprints say so on the card. Findings stay where the source put them."
- },
- "talks_block": {
-  "title": "Talks",
-  "nav": "Talks",
-  "intro": "Talks for campus people. Each one was still up on YouTube this morning."
- }
+  "sections": [
+    "Admissions and Entrance Exams",
+    "Study Abroad and Visas",
+    "Scholarships and Opportunities",
+    "Universities and Rankings",
+    "Policy and Campus Life"
+  ],
+  "title": "Yes Bro Higher Ed",
+  "masthead": "Yes Bro Higher Ed",
+  "family": "Yes Bro Newspaper",
+  "motto": "All the university news, minus the waitlist",
+  "ear_left": "Deadlines Are Closer<br>Than They Look",
+  "ear_right": "Printed This Morning<br>Jobs Near the Back",
+  "edition": "Higher Education Edition",
+  "price": "Price: Free, unlike the application fee",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Office hours are by appointment, as usual.",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Higher Ed\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "ad_after": 3,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Your application needs more than marks.</h4><p>FIELDWORK by Earth5R is a mentored fellowship for school and university students, built around a live Earth5R project near home. Along the way you join research conversations with professors at MIT, Oxford, Cambridge and LSE. The verified record of work is something your application can actually point to.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Applying to university? FIELDWORK by Earth5R puts school and university students on a live Earth5R project near home, with a mentor and research conversations with professors at MIT, Oxford, Cambridge and LSE. The work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "Real jobs only, from graduate roles to university admissions, checked today. Every listing links to the original posting. Want to stand out when you apply? Earth5R's FIELDWORK fellowship gives you real research with real people, which reads better than another certificate.",
+  "key": "highered",
+  "url": "https://yesbrohq.com/highered/",
+  "seo_title": "University, study abroad and scholarship news | Yes Bro Higher Ed",
+  "seo_desc": "Daily higher education newspaper: admissions, study abroad, visas, scholarships and campus news for Indian students. Free. No tracking.",
+  "events_intro": "Education summits and conferences coming up, each checked against its own page this morning. Bring questions. Admissions teams like those.",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Higher-education and learning science that landed recently. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks for campus people. Each one was still up on YouTube this morning."
+  }
 }

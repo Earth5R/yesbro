@@ -1,0 +1,382 @@
+{
+  "site": {
+    "name": "Yes Bro",
+    "url": "https://yesbrohq.com/",
+    "tagline": "Build your own newspaper. Read every day what you want.",
+    "promise": "No accounts required to read. No tracking of what you read.",
+    "positioning": "Build your own newspaper. Read every day what you want. No tracking.",
+    "publisher": "Yes Bro",
+    "parent": {
+      "name": "Earth5R",
+      "url": "https://earth5r.org/"
+    },
+    "language": "en",
+    "indexnow_key": "da9aad9dff46a6d19f0322f17a2be8ab"
+  },
+  "papers": {
+    "daily": {
+      "name": "Yes Bro Daily",
+      "folder": "daily",
+      "title": "Daily India and world news: politics, health, space, humour | Yes Bro Daily",
+      "description": "Free daily newspaper for India and the world: politics, business, startups, ESG, climate, AI, health, space and science, and humour. Every headline links to the original report. No tracking.",
+      "about": "Yes Bro Daily is a free morning newspaper covering India and the world. It gathers politics, business, startups, climate and ESG, AI, health, space and science, and light humour, then writes short deadpan summaries with links to the original reports. Readers pick what they want without accounts or tracking.",
+      "keywords": [
+        "India news today",
+        "world news",
+        "daily newspaper India",
+        "politics news India",
+        "health news",
+        "space news",
+        "AI news",
+        "climate news",
+        "humour news",
+        "Yes Bro Daily"
+      ],
+      "genre": [
+        "politics",
+        "business",
+        "technology",
+        "health",
+        "science",
+        "environment"
+      ]
+    },
+    "ai": {
+      "name": "Yes Bro AI",
+      "folder": "ai",
+      "title": "Daily AI news India and world | Yes Bro AI",
+      "description": "Daily artificial intelligence news: models and labs, AI products, AI in India, startup funding, research, chips and compute, AI at work, and safety and policy, plus AI jobs. Free. No tracking.",
+      "about": "Yes Bro AI is a free daily paper for anyone following artificial intelligence. It covers model launches, AI products, India AI news, funding, research papers, chips and compute, workplace AI, and safety and policy, with short summaries and links out. No launch-livestream fluff and no tracking.",
+      "keywords": [
+        "AI news",
+        "artificial intelligence news India",
+        "LLM news",
+        "AI startups",
+        "GPU compute",
+        "AI jobs",
+        "AI policy",
+        "Daily AI news",
+        "Yes Bro AI"
+      ],
+      "genre": [
+        "technology",
+        "artificial intelligence",
+        "business"
+      ]
+    },
+    "business": {
+      "name": "Yes Bro Business",
+      "folder": "business",
+      "title": "Indian business news, markets, deals and funding | Yes Bro Business",
+      "description": "Free daily Indian business newspaper: companies, markets, deals and M&A, business basics, tenders and funding calls. Written for people who read the business pages first. No tracking.",
+      "about": "Yes Bro Business is a free daily trade paper for Indian business readers. It opens with Indian company and market news, then deals, explainers and tenders, with links to the original reports.",
+      "keywords": [
+        "Indian business news",
+        "stock market India",
+        "M&A India",
+        "business newspaper",
+        "tenders India",
+        "funding news",
+        "Yes Bro Business"
+      ],
+      "genre": [
+        "business",
+        "finance"
+      ]
+    },
+    "finance": {
+      "name": "Yes Bro Finance",
+      "folder": "finance",
+      "title": "Stock market, banking and personal finance news | Yes Bro Finance",
+      "description": "Daily finance news: markets, banking, personal money and investing explainers for India. Free newspaper, not investment advice. No tracking.",
+      "about": "Yes Bro Finance covers markets, banking and personal finance for India in a free daily paper. Summaries stay factual and dry, with links to the source. It is not investment advice.",
+      "keywords": [
+        "stock market news India",
+        "personal finance India",
+        "banking news",
+        "mutual funds",
+        "RBI",
+        "Yes Bro Finance"
+      ],
+      "genre": [
+        "finance",
+        "business"
+      ]
+    },
+    "health": {
+      "name": "Yes Bro Health",
+      "folder": "health",
+      "title": "Health and medical news India | Yes Bro Health",
+      "description": "Daily health and medical news for India: public health, hospitals, pharma, wellness and health jobs. Evidence-minded summaries with links. Free. No tracking.",
+      "about": "Yes Bro Health is a free daily paper for doctors and health readers. It covers public health, medical research, pharma and health-tech news with careful, sourced summaries.",
+      "keywords": [
+        "health news India",
+        "medical news",
+        "public health",
+        "pharma news",
+        "hospital news",
+        "Yes Bro Health"
+      ],
+      "genre": [
+        "health",
+        "medicine"
+      ]
+    },
+    "startups": {
+      "name": "Yes Bro Startups",
+      "folder": "startups",
+      "title": "Indian startup funding news and startup jobs | Yes Bro Startups",
+      "description": "Daily Indian startup newspaper: funding rounds, founders, product launches and startup jobs. Free. No tracking.",
+      "about": "Yes Bro Startups follows Indian startup funding, founder news and product launches in a free daily paper, with links to the original reports and startup jobs.",
+      "keywords": [
+        "startup funding India",
+        "Indian startups",
+        "venture capital India",
+        "startup jobs",
+        "Yes Bro Startups"
+      ],
+      "genre": [
+        "business",
+        "technology"
+      ]
+    },
+    "ux": {
+      "name": "Yes Bro UX & Design",
+      "folder": "ux",
+      "title": "UX and design news and jobs today | Yes Bro UX & Design",
+      "description": "Daily UX, product design and visual design news, plus design jobs. Free newspaper for designers. No tracking.",
+      "about": "Yes Bro UX & Design is a free daily paper for product and visual designers. It covers UX research, UI, design systems, tools and design jobs with short sourced summaries.",
+      "keywords": [
+        "UX news",
+        "product design news",
+        "UI design",
+        "design jobs",
+        "Figma",
+        "Yes Bro UX"
+      ],
+      "genre": [
+        "design",
+        "technology"
+      ]
+    },
+    "fashion": {
+      "name": "Yes Bro Fashion",
+      "folder": "fashion",
+      "title": "Fashion, jewellery and textiles news India | Yes Bro Fashion",
+      "description": "Daily fashion newspaper: India fashion, jewellery, textiles, sustainable fashion and fashion jobs. Free. No tracking.",
+      "about": "Yes Bro Fashion covers fashion, jewellery and textiles with an India-first lens, plus industry and jobs news in a free daily paper.",
+      "keywords": [
+        "fashion news India",
+        "jewellery industry",
+        "textiles India",
+        "sustainable fashion",
+        "fashion jobs",
+        "Yes Bro Fashion"
+      ],
+      "genre": [
+        "fashion",
+        "business"
+      ]
+    },
+    "aviation": {
+      "name": "Yes Bro Aviation",
+      "folder": "aviation",
+      "title": "Aviation news, airlines and pilot careers India | Yes Bro Aviation",
+      "description": "Daily aviation newspaper: India airlines, airports, aircraft orders, safety and pilot training, plus aviation jobs. Free. No tracking.",
+      "about": "Yes Bro Aviation is a free daily paper for airline and airport readers. It covers India and global aviation, aircraft orders, safety and pilot careers with linked summaries.",
+      "keywords": [
+        "aviation news India",
+        "airline news",
+        "pilot jobs India",
+        "airport news",
+        "Yes Bro Aviation"
+      ],
+      "genre": [
+        "aviation",
+        "business"
+      ]
+    },
+    "packaging": {
+      "name": "Yes Bro Packaging",
+      "folder": "packaging",
+      "title": "Packaging and plastics industry news | Yes Bro Packaging",
+      "description": "Daily packaging newspaper: plastic packaging, resins, recycling, EPR rules, machinery and packaging jobs. India first. Free. No tracking.",
+      "about": "Yes Bro Packaging is a free daily trade paper for packaging and plastics. It leads with plastic packaging and India news, then recycling, EPR and converting, without free expo coverage.",
+      "keywords": [
+        "packaging news",
+        "plastic packaging",
+        "EPR India",
+        "recycling",
+        "packaging jobs",
+        "Yes Bro Packaging"
+      ],
+      "genre": [
+        "manufacturing",
+        "environment",
+        "business"
+      ]
+    },
+    "arch": {
+      "name": "Yes Bro Architecture",
+      "folder": "architecture",
+      "title": "Architecture and green building news India | Yes Bro Architecture",
+      "description": "Daily architecture newspaper: design, materials, climate-responsive building, green codes and architecture jobs. Free. No tracking.",
+      "about": "Yes Bro Architecture covers buildings, materials, climate-responsive design and green codes for India, plus architecture jobs, in a free daily paper.",
+      "keywords": [
+        "architecture news India",
+        "green building",
+        "GRIHA",
+        "IGBC",
+        "architecture jobs",
+        "Yes Bro Architecture"
+      ],
+      "genre": [
+        "architecture",
+        "design"
+      ]
+    },
+    "schools": {
+      "name": "Yes Bro Schools",
+      "folder": "schools",
+      "title": "IB and school news for students and teachers | Yes Bro Schools",
+      "description": "Daily schools newspaper for grades 9 to 12, IB and Cambridge: careers, exams, scholarships, teaching and education India. Gentle voice. Free. No tracking.",
+      "about": "Yes Bro Schools is a free daily paper for senior-school students and teachers. It covers exams, scholarships, study skills and school policy in a gentle voice.",
+      "keywords": [
+        "IB news",
+        "school exams India",
+        "scholarships",
+        "Cambridge board",
+        "Yes Bro Schools"
+      ],
+      "genre": [
+        "education"
+      ]
+    },
+    "sustainability": {
+      "name": "Yes Bro Sustainability",
+      "folder": "sustainability",
+      "title": "ESG, climate and sustainability news | Yes Bro Sustainability",
+      "description": "Daily ESG and climate newspaper: sustainability news, green jobs and environment policy for India and the world. Free. No tracking.",
+      "about": "Yes Bro Sustainability follows ESG, climate and green industry news with sourced summaries and green jobs in a free daily paper.",
+      "keywords": [
+        "ESG news",
+        "climate news India",
+        "sustainability jobs",
+        "net zero",
+        "Yes Bro Sustainability"
+      ],
+      "genre": [
+        "environment",
+        "business"
+      ]
+    },
+    "highered": {
+      "name": "Yes Bro Higher Ed",
+      "folder": "highered",
+      "title": "University, study abroad and scholarship news | Yes Bro Higher Ed",
+      "description": "Daily higher education newspaper: admissions, study abroad, visas, scholarships and campus news for Indian students. Free. No tracking.",
+      "about": "Yes Bro Higher Ed covers university admissions, study abroad, visas and scholarships for Indian students in a free daily paper.",
+      "keywords": [
+        "study abroad India",
+        "university admissions",
+        "scholarships",
+        "student visa",
+        "Yes Bro Higher Ed"
+      ],
+      "genre": [
+        "education"
+      ]
+    },
+    "consulting": {
+      "name": "Yes Bro Consulting",
+      "folder": "consulting",
+      "title": "Consulting industry news and jobs | Yes Bro Consulting",
+      "description": "Daily consulting newspaper: strategy firms, GCCs, research and consulting jobs. Free. No tracking.",
+      "about": "Yes Bro Consulting is a free daily paper for consultants and analysts, covering firm news, GCCs in India and consulting jobs.",
+      "keywords": [
+        "consulting news",
+        "GCC India",
+        "strategy consulting",
+        "consulting jobs",
+        "Yes Bro Consulting"
+      ],
+      "genre": [
+        "business"
+      ]
+    },
+    "marketing": {
+      "name": "Yes Bro Marketing",
+      "folder": "marketing",
+      "title": "Marketing and advertising news and jobs | Yes Bro Marketing",
+      "description": "Daily marketing newspaper: advertising, brands, media and marketing jobs. Free. No tracking.",
+      "about": "Yes Bro Marketing covers advertising, brand and media news plus marketing jobs in a free daily paper with linked summaries.",
+      "keywords": [
+        "marketing news",
+        "advertising India",
+        "brand news",
+        "marketing jobs",
+        "Yes Bro Marketing"
+      ],
+      "genre": [
+        "marketing",
+        "business"
+      ]
+    },
+    "healing": {
+      "name": "Yes Bro Healing",
+      "folder": "healing",
+      "title": "Mental health, wellbeing, yoga and Ayurveda news | Yes Bro Healing",
+      "description": "Daily wellbeing newspaper: mental health, mindfulness, sleep, nutrition, longevity and alternative therapies, evidence-minded. Free. No tracking.",
+      "about": "Yes Bro Healing is a kind, evidence-minded wellbeing paper. It covers mental health, mindfulness, sleep, nutrition and related topics without cure claims, and without Earth5R or FIELDWORK promotion.",
+      "keywords": [
+        "mental health news",
+        "wellbeing",
+        "mindfulness",
+        "yoga news",
+        "Ayurveda",
+        "Yes Bro Healing"
+      ],
+      "genre": [
+        "health",
+        "wellbeing"
+      ]
+    },
+    "realestate": {
+      "name": "Yes Bro Real Estate",
+      "folder": "realestate",
+      "title": "Real estate, housing, REITs and PropTech news India | Yes Bro Real Estate",
+      "description": "Daily Indian real estate newspaper: housing, commercial, RERA, REITs, PropTech and real estate jobs. Free. No tracking.",
+      "about": "Yes Bro Real Estate is a free India-first trade paper for developers, brokers and property readers, covering housing, commercial, policy, REITs and PropTech.",
+      "keywords": [
+        "real estate news India",
+        "RERA",
+        "REITs India",
+        "PropTech",
+        "housing news",
+        "Yes Bro Real Estate"
+      ],
+      "genre": [
+        "real estate",
+        "business"
+      ]
+    },
+    "auto": {
+      "name": "Yes Bro Auto",
+      "folder": "auto",
+      "title": "Auto, EV and two-wheeler news India | Yes Bro Auto",
+      "description": "Daily auto newspaper: cars, EVs, two-wheelers, components, dealers and auto jobs. India first. Free. No tracking.",
+      "about": "Yes Bro Auto covers Indian and global auto news: cars, EVs, two-wheelers, components and retail, with linked summaries and auto jobs.",
+      "keywords": [
+        "auto news India",
+        "EV news India",
+        "two wheeler",
+        "car sales India",
+        "Yes Bro Auto"
+      ],
+      "genre": [
+        "automotive",
+        "business"
+      ]
+    }
+  }
+}
