@@ -1,0 +1,82 @@
+name: Yes Bro daily
+
+on:
+  schedule:
+    # 00:00 UTC = 05:30 IST
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Paper date YYYY-MM-DD (IST). Empty = today IST."
+        required: false
+        default: ""
+      eds:
+        description: "Comma list of papers, or empty for all"
+        required: false
+        default: ""
+      dry_run:
+        description: "Set to 1 to skip Gemini and use fallback copy"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yesbro-daily
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r pipeline/requirements.txt
+          # Builder scripts live under pipeline/yesbro (vendored). Site HTML is repo root.
+
+      - name: Configure paths
+        run: |
+          echo "YESBRO_ROOT=${GITHUB_WORKSPACE}/pipeline/yesbro" >> "$GITHUB_ENV"
+          echo "YESBRO_SITE=${GITHUB_WORKSPACE}" >> "$GITHUB_ENV"
+          echo "PYTHONPATH=${GITHUB_WORKSPACE}/pipeline:${GITHUB_WORKSPACE}/pipeline/yesbro" >> "$GITHUB_ENV"
+          mkdir -p pipeline/yesbro/memes pipeline/yesbro/columns pipeline/yesbro/cache
+
+      - name: Run daily pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YESBRO_DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          YESBRO_EDS: ${{ github.event.inputs.eds || '' }}
+          YESBRO_GEMINI_MODEL: gemini-3.1-flash-lite
+        run: |
+          DATE_ARG="${{ github.event.inputs.date }}"
+          EXTRA=()
+          if [ -n "$DATE_ARG" ]; then EXTRA+=(--date "$DATE_ARG"); fi
+          # Prefer fewer stories per section to stay inside free-tier Gemini limits.
+          python pipeline/run_daily.py --per-section 9 "${EXTRA[@]}"
+
+      - name: Commit published pages
+        run: |
+          git config user.name "yesbro-bot"
+          git config user.email "yesbro-bot@users.noreply.github.com"
+          # Never touch CNAME
+          git add -A
+          git reset HEAD -- CNAME || true
+          if git diff --cached --quiet; then
+            echo "No site changes to commit"
+          else
+            git commit -m "Yes Bro daily: $(TZ=Asia/Kolkata date +%F)"
+            git push
+          fi

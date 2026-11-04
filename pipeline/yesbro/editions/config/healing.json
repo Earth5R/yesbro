@@ -1,0 +1,46 @@
+{
+ "sections": [
+  "Mental Health",
+  "Mindfulness and Meditation",
+  "Sleep and Balance",
+  "Body and Movement",
+  "Food and Nutrition",
+  "Longevity",
+  "Alternative Therapies"
+ ],
+ "title": "Yes Bro Healing",
+ "masthead": "Yes Bro Healing",
+ "family": "Yes Bro Newspaper",
+ "motto": "Wellbeing news, read slowly on purpose",
+ "ear_left": "Best Read After<br>a Deep Breath",
+ "ear_right": "Printed This Morning<br>Evidence Included",
+ "edition": "Healing Edition",
+ "price": "Price: Free, unlike the retreat",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Nothing here is medical advice, which is what doctors are for.",
+ "head_extra": "",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Mindful Wholeness</p><h4>Healing hands with thirty years on them. They come to you.</h4><p>Sunil gives Shiatsu and reflexology privately at your home in Mumbai, and mindfulness-based counselling in person or online wherever you happen to be. The practice has grown by word of mouth, which is slower than advertising. We are aware of the irony.</p><p style=\"font-size:12.5px;font-style:italic\">Fees are shared on enquiry. WhatsApp messages only, no calls. Complementary therapies, not a substitute for medical or emergency care.</p><a class=\"ad-cta\" href=\"https://mindfulwholeness.org/\" target=\"_blank\" rel=\"noopener\">Visit mindfulwholeness.org</a></aside>",
+ "ad_id": "mindfulwholeness",
+ "ad_menu": "Mindful Wholeness",
+ "ad_menu_note": "Advertisement",
+ "ad2_after": 6,
+ "ad2_html": "<aside class=\"jobsad\" id=\"mindfulwholeness-counselling\"><b>Advertisement</b> Reading about sleep is not the same as getting some. Mindfulness-based counselling with Sunil of Mindful Wholeness draws on mindfulness and evidence-based psychotherapy, with progress measured week by week, in Mumbai or online in your time zone. <a href=\"https://mindfulwholeness.org/mindfulness-counselling/\" target=\"_blank\" rel=\"noopener\">mindfulwholeness.org</a></aside>",
+ "no_earth5r": true,
+ "jobs_intro": "Therapy and wellness roles checked today. Each one links to the original posting. The deep breath before applying is on you.",
+ "events_intro": "Conferences and festivals on mental health and the older healing traditions, each checked against its own page this morning. Comfortable shoes advised.",
+ "key": "healing",
+ "url": "https://yesbrohq.com/healing/",
+ "seo_title": "Mental Health, Wellbeing, Yoga and Ayurveda News | Yes Bro Healing",
+ "seo_desc": "Daily wellbeing news on mental health, sleep, nutrition, longevity, mindfulness and alternative therapies, reported from the evidence with every source linked. Free daily.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Sleep, stress and mental-health research with evidence behind it. Preprints say so on the card. No miracle claims."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Evidence-minded talks on sleep, stress and attention. Each one was still up on YouTube this morning."
+ }
+}

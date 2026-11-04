@@ -1,0 +1,46 @@
+{
+ "sections": [
+  "Plastic Packaging",
+  "Polymers and Resin Prices",
+  "Recycling and Recycled Content",
+  "EPR and Plastic Waste Rules",
+  "Paper and Sustainable Packaging",
+  "Machinery and Converting",
+  "FMCG and E-commerce Packaging",
+  "Deals and Funding"
+ ],
+ "title": "Yes Bro Packaging",
+ "masthead": "Yes Bro Packaging",
+ "family": "Yes Bro Newspaper",
+ "motto": "Packaging industry news, plastic first, India first",
+ "ear_left": "Some Assembly<br>Required",
+ "ear_right": "Printed This Morning<br>Shrink-Wrapped by Noon",
+ "edition": "Packaging Edition",
+ "price": "Price: Free, the wrapping costs extra",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Recycled content is as claimed by the company, until someone checks.",
+ "ad_after": 3,
+ "ad_id": "earth5r-training",
+ "ad_menu": "Sustainability Training",
+ "ad_menu_note": "Earth5R",
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Earth5R</p><h4>The pouch is now in the annual report.</h4><p>Earth5R Corporate Sustainability Training runs sessions for boards, sustainability teams, employees and suppliers on BRSR reporting, emissions and climate risk. Every programme is mapped to BRSR principles and comes with participant certificates and a completion register for your filing.</p><a class=\"ad-cta\" href=\"https://earth5r.org/corporate-sustainability-training/\" target=\"_blank\" rel=\"noopener\">See the programmes at earth5r.org</a></aside>",
+ "ad2_after": 6,
+ "ad2_html": "<aside class=\"jobsad\" id=\"expo-slot\"><b>Advertisement</b> Your expo here. Ask Saurabh. Trade fairs and expos appear in Yes Bro Packaging only as paid listings. <a href=\"mailto:ontheworldroad@gmail.com?subject=Yes%20Bro%20Packaging%20expo%20listing\">ontheworldroad@gmail.com</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Know a student who wants to see where packaging ends up? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Packaging, plastics and converting roles in India first, then global, checked today. Every listing links to the original posting. Bring your own bubble wrap.",
+ "events_intro": "Packaging and recycling conferences coming up, each checked against its own page this morning. Trade fairs and expos are paid listings only.",
+ "key": "packaging",
+ "url": "https://yesbrohq.com/packaging/",
+ "seo_title": "Packaging Industry News, Plastic Packaging and Packaging Jobs | Yes Bro Packaging",
+ "seo_desc": "Daily packaging news: plastic packaging, polymer and resin prices, recycling, EPR and plastic waste rules, paper packaging, machinery, FMCG and e-commerce packaging and deals, plus packaging jobs. Free daily.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Materials, polymers and recycling papers that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on packaging, plastics and circular design. Each one was still up on YouTube this morning."
+ }
+}

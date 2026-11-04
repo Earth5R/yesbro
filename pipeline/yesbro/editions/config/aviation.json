@@ -1,0 +1,39 @@
+{
+ "sections": [
+  "India Airlines and Airports",
+  "Global Airlines",
+  "Aircraft Orders and Industry",
+  "Safety and Regulation",
+  "Pilots and Training"
+ ],
+ "title": "Yes Bro Aviation",
+ "masthead": "Yes Bro Aviation",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the aviation news, cleared for reading",
+ "ear_left": "Seat Belt Sign<br>Switched Off",
+ "ear_right": "Printed This Morning<br>Cadet Intakes Near the Back",
+ "edition": "Aviation Edition",
+ "price": "Price: Free, no baggage fee",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Please remain seated until the page has fully loaded.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Aviation\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Ground school for the real world.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems with the community. A mentor checks the work as you go. Consider it logbook practice.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Waiting on a cadet intake? FIELDWORK by Earth5R is a mentored fellowship for school and university students, built around a live Earth5R project near home. The work gets verified, which is more than most gap years can say. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Cadet pilot programmes first, then aviation and aerospace roles, checked today. Every listing links to the original page. The medical is your own affair.",
+ "key": "aviation",
+ "url": "https://yesbrohq.com/aviation/",
+ "seo_title": "Aviation News, Airline Jobs and Pilot Cadet Programmes | Yes Bro Aviation",
+ "seo_desc": "Daily aviation news: Indian and global airlines, airports, aircraft orders, DGCA and safety, pilot training, plus airline jobs and open cadet pilot programmes.",
+ "events_intro": "Air shows and aviation conferences coming up, each checked against its own page this morning. Arrive early, out of habit.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Flight, propulsion and air-traffic research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on flying and aerospace. Each one was still up on YouTube this morning."
+ }
+}

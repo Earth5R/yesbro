@@ -1,0 +1,44 @@
+{
+ "sections": [
+  "India Real Estate",
+  "Residential and Housing",
+  "Commercial, Offices and Retail",
+  "Industrial, Warehousing and Data Centres",
+  "Land, Infrastructure and Smart Cities",
+  "Policy, RERA and Regulation",
+  "Finance, REITs, Deals and Funding",
+  "PropTech",
+  "Construction and Materials",
+  "Green Buildings and Sustainability",
+  "Global Real Estate"
+ ],
+ "title": "Yes Bro Real Estate",
+ "masthead": "Yes Bro Real Estate",
+ "family": "Yes Bro Newspaper",
+ "motto": "Real estate news for people who actually look at the floor plans",
+ "ear_left": "No Brokerage<br>Required",
+ "ear_right": "Printed This Morning<br>Possession by Noon",
+ "edition": "Real Estate Edition",
+ "price": "Price: Free, no brokerage",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Carpet area is as claimed by the brochure, until someone measures.",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>The city looks different from the street.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems in the built environment and work with the community, with a mentor checking the work along the way. Before the next floor plan, walk the block.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want a portfolio that knows how people actually use a building? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Developer, brokerage, facility management, valuation and PropTech roles in India first, then global and remote, checked today. Every listing links to the original posting. Bring your own site shoes.",
+ "events_intro": "Real estate, PropTech and built environment conferences coming up, each checked against its own page this morning. Property expos and housing fairs are paid listings only.",
+ "key": "realestate",
+ "url": "https://yesbrohq.com/realestate/",
+ "seo_title": "Real Estate News, Housing, REITs, PropTech and Real Estate Jobs | Yes Bro Real Estate",
+ "seo_desc": "Daily real estate news: India real estate, residential, commercial, industrial and warehouses, RERA and policy, REITs and deals, PropTech, construction, green buildings and global property, plus research, events and jobs. Free daily.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Market reports and papers on housing, commercial property and cities that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on real estate, cities and PropTech. Each one was still up on YouTube this morning."
+ }
+}

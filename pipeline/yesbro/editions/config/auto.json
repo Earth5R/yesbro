@@ -1,0 +1,47 @@
+{
+ "sections": [
+  "India Auto",
+  "Cars and SUVs",
+  "Two-Wheelers and Three-Wheelers",
+  "Electric Vehicles and Charging",
+  "Commercial Vehicles",
+  "Tractors and Off-Highway",
+  "Components, Tyres and Supply Chain",
+  "Sales, Dealers and Retail",
+  "Finance, Insurance and Deals",
+  "Auto Tech, Software and Autonomy",
+  "Policy and Regulation",
+  "Motorsport",
+  "Sustainability and Clean Mobility",
+  "Global Auto"
+ ],
+ "title": "Yes Bro Auto",
+ "masthead": "Yes Bro Auto",
+ "family": "Yes Bro Newspaper",
+ "motto": "Auto news for people who still check the on-road price",
+ "ear_left": "No On-Road<br>Charges",
+ "ear_right": "Printed This Morning<br>Test Drive by Noon",
+ "edition": "Auto Edition",
+ "price": "Price: Free, no on-road charges",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Ex-showroom is a starting point, not a promise.",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Mobility looks different from the street.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems in transport and the built environment and work with the community, with a mentor checking the work along the way. Before the next brochure, walk the block that cars actually use.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want a portfolio that knows how people actually move through a city? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real neighbourhood mobility problems with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "OEM, components, EV, dealer and mobility roles in India first, then global and remote, checked today. Every listing links to the original posting. Bring your own high-vis vest.",
+ "events_intro": "Auto, EV and mobility conferences coming up, each checked against its own page this morning. Auto Expo, motor shows and trade fairs are paid listings only.",
+ "key": "auto",
+ "url": "https://yesbrohq.com/auto/",
+ "seo_title": "Auto News, EVs, Two-Wheelers, Components and Auto Jobs | Yes Bro Auto",
+ "seo_desc": "Daily auto news: India cars and SUVs, two-wheelers, EVs and charging, commercial vehicles, components, dealers, finance, auto tech, policy, motorsport, clean mobility and global auto, plus research, events and jobs. Free daily.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Industry data and papers on vehicles, batteries, safety and mobility that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on cars, EVs and mobility. Each one was still up on YouTube this morning."
+ }
+}

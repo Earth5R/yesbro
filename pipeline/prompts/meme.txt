@@ -1,0 +1,9 @@
+Write one Yes Bro Meme of the day as JSON only.
+Formats: nobody | expect | chart | classic
+nobody: {"format":"nobody","url":"<exact story url>","lines":[["Nobody",""],["Absolutely nobody",""],["Speaker","what they say"]],"after":"optional reaction"}
+expect: {"format":"expect","url":"...","expect":"...","reality":"..."}
+chart: {"format":"chart","url":"...","title":"...","bars":[["label",60],["label",20]]}
+classic: {"format":"classic","url":"...","top":"...","bottom":"..."}
+Voice: fun not funny, deadpan, grand language for small things. Joke about the reader or the situation, never the people in the story.
+Banned: politics, religion, conflict, named communities, death, illness, disasters, crime, layoffs, dashes, semicolons, intern words, counting our own things, "not X but Y", tricolons, lol, emoji.
+Healing: kind, never imply a cure, never FIELDWORK or Earth5R.

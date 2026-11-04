@@ -1,0 +1,42 @@
+# Yes Bro Real Estate (from 31 Oct 2026): Indian real estate trade paper, India first then global.
+# Trade press plus Google News. Property expos, housing fairs and trade shows are never covered for free (blocklist.py).
+G="https://news.google.com/rss/search?q={}+when:3d&hl={}&gl={}&ceid={}:en"
+def g(q,r="IN"):
+    hl={"IN":"en-IN","US":"en-US","GB":"en-GB"}[r]; return G.format(q,hl,r,r)
+FEEDS={"realestate":[
+ "https://www.constructionweekonline.in/rss",
+ "https://www.realtyplusmag.com/feed/",
+ "https://housing.com/news/feed/",
+ "https://www.moneycontrol.com/rss/realestate.xml",
+ "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/rssfeeds/13357421.cms",
+ "https://www.livemint.com/rss/industry",
+ "https://www.hindustantimes.com/feeds/rss/real-estate/rssfeed.xml",
+ "https://www.architecturaldigest.in/feed/",
+ g("real+estate+India+OR+property+market+India"),
+ g("housing+sales+India+OR+residential+sales+India+OR+home+sales+India"),
+ g("Mumbai+real+estate+OR+Delhi+NCR+property+OR+Bengaluru+real+estate+OR+Pune+housing"),
+ g("CREDAI+OR+NAREDCO+OR+RERA+India"),
+ g("%22magicbricks%22+OR+99acres+OR+Housing.com+OR+NoBroker"),
+ g("DLF+OR+Godrej+Properties+OR+Prestige+Estates+OR+Oberoi+Realty+OR+Brigade+OR+Lodha"),
+ g("Embassy+REIT+OR+Mindspace+REIT+OR+Brookfield+India+REIT+OR+Nexus+Select"),
+ g("commercial+real+estate+India+OR+office+leasing+India+OR+Grade+A+office"),
+ g("warehouse+India+OR+industrial+park+India+OR+data+centre+India+OR+data+center+India"),
+ g("retail+leasing+India+OR+mall+India+OR+shopping+centre+India"),
+ g("smart+city+India+OR+infrastructure+corridor+OR+industrial+corridor+India"),
+ g("land+acquisition+India+OR+land+parcel+developer+India"),
+ g("PropTech+India+OR+real+estate+tech+India+OR+proptech+funding"),
+ g("construction+materials+India+OR+cement+prices+India+OR+ready+mix+concrete"),
+ g("green+building+India+OR+IGBC+OR+GRIHA+OR+net+zero+building+India"),
+ g("home+loan+India+OR+housing+finance+India+OR+NHB+OR+affordable+housing"),
+ g("JLL+India+OR+Knight+Frank+India+OR+CBRE+India+OR+Anarock"),
+ g("real+estate","US"),
+ g("commercial+real+estate+OR+office+vacancy","US"),
+ g("REIT+OR+real+estate+investment+trust","US"),
+ g("warehouse+OR+industrial+real+estate+OR+data+center+real+estate","US"),
+ g("PropTech+OR+real+estate+technology","US"),
+ g("housing+market+OR+home+prices","US"),
+ g("green+building+OR+net+zero+building","GB"),
+ g("CBRE+OR+JLL+OR+Knight+Frank+OR+Cushman+OR+Colliers","GB"),
+ g("construction+OR+building+materials","GB"),
+ g("real+estate+funding+OR+property+acquisition","US"),
+]}

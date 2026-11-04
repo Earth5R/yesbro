@@ -1,0 +1,42 @@
+{
+ "sections": [
+  "Fashion News India",
+  "Global Fashion",
+  "Jewellery",
+  "Accessories",
+  "Textiles and Craft",
+  "Sustainable and Circular Fashion",
+  "Fashion Industry",
+  "Fashion Tech and Retail",
+  "Opportunities"
+ ],
+ "title": "Yes Bro Fashion",
+ "masthead": "Yes Bro Fashion",
+ "family": "Yes Bro Newspaper",
+ "motto": "Fashion, jewellery and accessories news, India first",
+ "ear_left": "No Fitting<br>Required",
+ "ear_right": "Printed This Morning<br>Stitched by Noon",
+ "edition": "Fashion Edition",
+ "price": "Price: Free, unlike the designer label",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Trends are as claimed by the brand, until someone wears them.",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Some research has to leave the studio.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems and work with the community, with a mentor checking the work along the way. The brief is the street outside.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want a design portfolio that knows the real world? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Fashion, jewellery, textiles and retail roles in India first, then global and remote, checked today. Every listing links to the original posting. Bring your own tape measure.",
+ "events_intro": "Fashion, jewellery and design conferences coming up, each checked against its own page this morning. Trade fairs are paid listings only.",
+ "key": "fashion",
+ "url": "https://yesbrohq.com/fashion/",
+ "seo_title": "Fashion News, Jewellery, Textiles and Fashion Jobs | Yes Bro Fashion",
+ "seo_desc": "Daily fashion news: India fashion, global fashion, jewellery, accessories, textiles and craft, sustainable fashion, fashion industry, fashion tech and opportunities, plus fashion jobs. Free daily.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Materials, textiles and fashion papers that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on fashion, design and craft. Each one was still up on YouTube this morning."
+ }
+}

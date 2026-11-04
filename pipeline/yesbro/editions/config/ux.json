@@ -1,0 +1,41 @@
+{
+ "sections": [
+  "UX and Product Design",
+  "UI and Visual Design",
+  "AI and Design",
+  "Design Tools and Platforms",
+  "Design in India",
+  "Design Startups and Funding",
+  "Careers and Ideas"
+ ],
+ "title": "Yes Bro UX & Design",
+ "masthead": "Yes Bro UX & Design",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the design news, pixel perfect enough",
+ "ear_left": "Fully<br>Responsive",
+ "ear_right": "Printed This Morning<br>Jobs Near the Back",
+ "edition": "Design Edition",
+ "price": "Price: Free, no dark patterns",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. The back button works, on purpose.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro UX & Design\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Your next user interview is down the street.</h4><p>FIELDWORK by Earth5R takes you out of the studio and into your own neighbourhood to study real problems alongside the community, with a mentor checking every step. The users, it turns out, have addresses.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Want research on your portfolio that hiring managers can check? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their own neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "UX, product and design roles checked today, research included. Every listing links to the original posting. The portfolio review is still ahead of you.",
+ "key": "ux",
+ "url": "https://yesbrohq.com/ux/",
+ "seo_title": "UX and Design News and Jobs Today | Yes Bro UX & Design",
+ "seo_desc": "Daily UX, UI, product, graphic and industrial design news, AI design tools, design in India and open design jobs in India, worldwide and remote. Free every morning.",
+ "events_intro": "Design conferences and meetups coming up, each checked against its own page this morning. Someone else is bringing the sticky notes.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Human-computer interaction and design research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on design, usability and research. Each one was still up on YouTube this morning."
+ }
+}

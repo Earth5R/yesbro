@@ -1,0 +1,54 @@
+{
+ "sections": [
+  "Indian Business",
+  "Stock Market",
+  "Deals and M&A",
+  "Business Basics"
+ ],
+ "top_blocks": [
+  "Indian Business",
+  "Stock Market",
+  "Deals and M&A",
+  "Business Basics",
+  "funding",
+  "tenders",
+  "events",
+  "jobs"
+ ],
+ "title": "Yes Bro Business",
+ "masthead": "Yes Bro Business",
+ "family": "Yes Bro Newspaper",
+ "motto": "Where the money is, and where it goes for coffee",
+ "ear_left": "Read It Before<br>the Meeting",
+ "ear_right": "Printed This Morning<br>Markets Inside",
+ "edition": "Business Edition",
+ "price": "Price: Free, unlike your CA",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Every tender links to someone who will want paperwork.",
+ "head_extra": "",
+ "ad_after": 4,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>The best market research is still done on foot.</h4><p>FIELDWORK by Earth5R takes students into their own neighbourhoods to work with the community on circular economy projects, with a mentor checking the work along the way. The customers, it turns out, live nearby.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Planning a career in business? FIELDWORK by Earth5R is a mentored fellowship where school and university students work on a live Earth5R project near home and sit in on research conversations with professors at MIT, Oxford, Cambridge and LSE. The work is verified, which tends to come up in interviews. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Business development and operations roles, among others, checked today. Each one links to the original posting, where the real interview begins. Dress for the job, or at least for the video call.",
+ "events_intro": "Summits and founder meetups coming up, each checked against its own page this morning. Bring cards, and a better opener than &ldquo;so what do you do&rdquo;.",
+ "key": "business",
+ "url": "https://yesbrohq.com/business/",
+ "seo_title": "Indian Business News, Markets, Deals and Funding | Yes Bro Business",
+ "seo_desc": "Daily Indian business news with Sensex and Nifty moves, deals and M&A, business basics, funding calls, government tenders, conferences and real jobs. Free every morning.",
+ "menu_pins": [
+  "jobs",
+  "events",
+  "funding",
+  "tenders"
+ ],
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Firm, labour and economics research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks for operators and managers. Each one was still up on YouTube this morning."
+ }
+}

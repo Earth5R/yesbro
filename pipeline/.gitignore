@@ -1,0 +1,13 @@
+yesbro/cache/
+yesbro/**/__pycache__/
+yesbro/run_actions_*/
+yesbro/stories_*.json
+yesbro/yesbro_*.html
+yesbro/jobs_*.json
+yesbro/events_*.json
+yesbro/research_*.json
+yesbro/talks_*.json
+yesbro/fetched_*.json
+yesbro/**/*.pyc
+__pycache__/
+*.pyc

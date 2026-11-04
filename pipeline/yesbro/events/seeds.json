@@ -1,0 +1,1497 @@
+[
+ {
+  "name": "18th GRIHA Summit",
+  "start": "2026-11-03",
+  "end": "2026-11-04",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Green building and sustainable habitat summit at India Habitat Centre.",
+  "url": "https://grihaindia.org/grihasummit/18th-grihasummit/",
+  "eds": [
+   "arch",
+   "sustainability",
+   "realestate"
+  ]
+ },
+ {
+  "name": "Green Building Congress 2026",
+  "start": "2026-11-26",
+  "end": "2026-11-28",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "IGBC's annual congress at Jio World Convention Centre.",
+  "url": "https://www.greenbuildingcongress.com/conference.php",
+  "eds": [
+   "arch",
+   "sustainability",
+   "daily",
+   "realestate"
+  ]
+ },
+ {
+  "name": "FOAID New Delhi",
+  "start": "2026-11-27",
+  "end": "2026-11-28",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Festival of Architecture and Interior Designing at NSIC Okhla.",
+  "url": "https://www.foaidindia.in/festival",
+  "eds": [
+   "arch"
+  ]
+ },
+ {
+  "name": "World Architecture Festival 2026",
+  "start": "2026-11-18",
+  "end": "2026-11-20",
+  "city": "Fort Lauderdale",
+  "mode": "In person",
+  "line": "Awards, live crits and talks from the global architecture festival.",
+  "url": "https://www.worldarchitecturefestival.com/WAF2026/en/page/attendfestival",
+  "eds": [
+   "arch",
+   "daily"
+  ]
+ },
+ {
+  "name": "Earthshot Prize Mumbai 2026",
+  "start": "2026-11-16",
+  "end": "2026-11-17",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "The Earthshot Prize week and awards come to Mumbai.",
+  "url": "https://earthshotprize.org/the-prize/mumbai-2026/",
+  "eds": [
+   "sustainability",
+   "daily"
+  ]
+ },
+ {
+  "name": "IVCA Climate Capital Summit 2026",
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "city": "India",
+  "mode": "In person",
+  "line": "Investors and founders on climate finance, hosted by IVCA.",
+  "url": "https://www.ivca.in/ivca-climate-capital-summit-2026",
+  "eds": [
+   "sustainability",
+   "finance",
+   "business"
+  ]
+ },
+ {
+  "name": "GSA Annual Meeting",
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Global Sustainability Alliance annual meeting by ET Edge.",
+  "url": "https://gsa.et-edge.com/annual-meeting/",
+  "eds": [
+   "sustainability",
+   "business"
+  ]
+ },
+ {
+  "name": "COP31",
+  "start": "2026-11-09",
+  "end": "2026-11-20",
+  "city": "Antalya",
+  "mode": "In person",
+  "line": "The UN climate change conference. Negotiators, observers and a lot of lanyards.",
+  "url": "https://unfccc.int/cop31",
+  "eds": [
+   "sustainability",
+   "daily"
+  ]
+ },
+ {
+  "name": "Bengaluru Tech Summit 2026",
+  "start": "2026-11-17",
+  "end": "2026-11-19",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Karnataka's flagship tech and startup summit at BIEC.",
+  "url": "https://www.bengalurutechsummit.com/",
+  "eds": [
+   "startups",
+   "business",
+   "daily",
+   "ux",
+   "ai"
+  ]
+ },
+ {
+  "name": "TiEcon Delhi-NCR 2026",
+  "start": "2026-12-02",
+  "end": "2026-12-03",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "TiE Delhi-NCR's founder and investor conference at India Habitat Centre.",
+  "url": "https://www.tiecon-delhi.in/",
+  "eds": [
+   "startups",
+   "business"
+  ]
+ },
+ {
+  "name": "TiE Global Summit 2026",
+  "start": "2026-12-14",
+  "end": "2026-12-15",
+  "city": "Indore",
+  "mode": "In person",
+  "line": "TiE's global gathering of founders and investors.",
+  "url": "https://tieglobalsummit.org/",
+  "eds": [
+   "startups",
+   "business",
+   "daily"
+  ]
+ },
+ {
+  "name": "Web Summit 2026",
+  "start": "2026-11-09",
+  "end": "2026-11-12",
+  "city": "Lisbon",
+  "mode": "In person",
+  "line": "The large tech conference in Lisbon. Comfortable shoes advised.",
+  "url": "https://websummit.com/web-summit-2026/",
+  "eds": [
+   "startups",
+   "business",
+   "daily",
+   "ai"
+  ]
+ },
+ {
+  "name": "Slush 2026",
+  "start": "2026-11-18",
+  "end": "2026-11-19",
+  "city": "Helsinki",
+  "mode": "In person",
+  "line": "Founder and investor event in Helsinki.",
+  "url": "https://slush.org/",
+  "eds": [
+   "startups",
+   "daily"
+  ]
+ },
+ {
+  "name": "Maritime India Conference and Expo",
+  "start": "2026-11-02",
+  "end": "2026-11-04",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "FICCI's maritime conference and expo at Bombay Exhibition Centre.",
+  "url": "http://maritimeindia.ficci.in/",
+  "eds": [
+   "business"
+  ]
+ },
+ {
+  "name": "CII Partnership Summit 2026",
+  "start": "2026-11-12",
+  "end": "2026-11-13",
+  "city": "Visakhapatnam",
+  "mode": "In person",
+  "line": "CII's investment and partnership summit with government and industry.",
+  "url": "https://partnershipsummit.com/",
+  "eds": [
+   "business",
+   "consulting",
+   "daily"
+  ]
+ },
+ {
+  "name": "CII Industry-Academia Summit 2026",
+  "start": "2026-11-27",
+  "end": "2026-11-27",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Industry and universities on skills and research, at The Lalit.",
+  "url": "https://www.cii-industryacademia.in/summit_2026",
+  "eds": [
+   "business",
+   "highered"
+  ]
+ },
+ {
+  "name": "EGN Connect X International Schools Leadership Summit",
+  "start": "2026-11-03",
+  "end": "2026-11-04",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "School leaders on international curricula and study abroad.",
+  "url": "https://egnconnectx.com/study-abroad-international-schools.php",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "DIDAC India 2026",
+  "start": "2026-11-25",
+  "end": "2026-11-27",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Education and edtech expo with a conference for educators.",
+  "url": "https://didacindia.com/visitors/the-event/",
+  "eds": [
+   "schools",
+   "highered",
+   "daily"
+  ]
+ },
+ {
+  "name": "British Council English Language Symposium",
+  "start": "2026-11-25",
+  "end": "2026-11-26",
+  "city": "Hyderabad",
+  "mode": "In person",
+  "line": "Connecting research and practice in English language teaching.",
+  "url": "https://www.britishcouncil.in/international-symposium-connecting-research-and-practice-english-language-insight-classroom-impact",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Study UK Education Fair, Delhi",
+  "start": "2026-11-21",
+  "end": "2026-11-21",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Meet UK universities, by the British Council. Registration required.",
+  "url": "https://www.britishcouncil.in/study-uk/events/education-fair-registration",
+  "eds": [
+   "highered",
+   "schools"
+  ]
+ },
+ {
+  "name": "Study UK Education Fair, Mumbai",
+  "start": "2026-11-23",
+  "end": "2026-11-23",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "Meet UK universities, by the British Council. Registration required.",
+  "url": "https://www.britishcouncil.in/study-uk/events/education-fair-registration",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "Begin International Education Fair Mumbai",
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "Universities from several countries under one roof.",
+  "url": "https://begin-expo.com/en/events/international-education-fair-mumbai/",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "International Education Fairs India, Mumbai",
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "International universities meet students and parents.",
+  "url": "https://www.educationfair.net/event/international-education-fairs-india/",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "International Education Fairs India, Delhi",
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "International universities meet students and parents.",
+  "url": "https://www.educationfair.net/event/international-education-fairs-india/",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "ANU Discovery Day India, Delhi",
+  "start": "2026-11-28",
+  "end": "2026-11-28",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "The Australian National University on courses, scholarships and admissions.",
+  "url": "https://study.anu.edu.au/explore-anu/events/anu-discovery-day-india",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "ANU Discovery Day India, Mumbai",
+  "start": "2026-11-29",
+  "end": "2026-11-29",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "The Australian National University on courses, scholarships and admissions.",
+  "url": "https://study.anu.edu.au/explore-anu/events/anu-discovery-day-india",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "Education Worldwide India Fall Fair, Delhi",
+  "start": "2026-11-28",
+  "end": "2026-11-28",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "European and international universities recruiting in India.",
+  "url": "https://www.eduworldwideindia.com/fall/",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "Education Worldwide India Fall Fair, Mumbai",
+  "start": "2026-12-01",
+  "end": "2026-12-01",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "European and international universities recruiting in India.",
+  "url": "https://www.eduworldwideindia.com/fall/",
+  "eds": [
+   "highered"
+  ]
+ },
+ {
+  "name": "DIA India Annual Meeting 2026",
+  "start": "2026-11-18",
+  "end": "2026-11-19",
+  "city": "Navi Mumbai",
+  "mode": "In person",
+  "line": "Regulators and industry on drug development and regulatory science.",
+  "url": "https://www.diaglobal.org/en/conference-listing/meetings/2026/09/dia-india-annual-meeting-2026/register",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "Global Digital Health Summit 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-21",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Digital health summit at Bharat Mandapam.",
+  "url": "https://www.globalsummit.health/gdhs2026",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "InnoHEALTH 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-21",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Health innovation conference at Jamia Millia Islamia.",
+  "url": "https://innohealth.in/2026/",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "PMIC 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-22",
+  "city": "Lucknow",
+  "mode": "In person",
+  "line": "Pain medicine conference at KGMU.",
+  "url": "https://www.pmicsociety.org/",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "WoundcareCon 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-22",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Wound care conference for clinicians.",
+  "url": "https://www.woundcarecon2026.in/",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "India Brand Summit",
+  "start": "2026-11-27",
+  "end": "2026-11-27",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Brand and marketing leaders, by indiantelevision.com.",
+  "url": "https://event.indiantelevision.com/events/india-brand-summit/",
+  "eds": [
+   "marketing"
+  ]
+ },
+ {
+  "name": "BrandManthan",
+  "start": "2026-11-28",
+  "end": "2026-11-28",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "Pharma brand and marketing summit.",
+  "url": "https://brandmanthan.pharmaconnect.co.in/",
+  "eds": [
+   "marketing",
+   "health"
+  ]
+ },
+ {
+  "name": "Digital Marketing Summit",
+  "start": "2026-11-28",
+  "end": "2026-11-28",
+  "city": "Hyderabad",
+  "mode": "In person",
+  "line": "Talks and workshops on search, social and performance marketing.",
+  "url": "https://digitalmarketingsummit.in/",
+  "eds": [
+   "marketing"
+  ]
+ },
+ {
+  "name": "IEBC Summit",
+  "start": "2026-12-03",
+  "end": "2026-12-03",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Employer branding and talent marketing conference.",
+  "url": "https://iebc-summit.com/",
+  "eds": [
+   "marketing"
+  ]
+ },
+ {
+  "name": "Elets NBFC100",
+  "start": "2026-11-19",
+  "end": "2026-11-19",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "NBFC leaders on lending, risk and regulation.",
+  "url": "https://nbfc100.eletsonline.com/",
+  "eds": [
+   "finance",
+   "business"
+  ]
+ },
+ {
+  "name": "CFO Stratech Mumbai",
+  "start": "2026-11-19",
+  "end": "2026-11-19",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "CFOs on finance strategy and technology.",
+  "url": "https://www.cfostratech.com/mumbai/",
+  "eds": [
+   "finance",
+   "business"
+  ]
+ },
+ {
+  "name": "Fintech Revolution Summit India",
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "city": "India",
+  "mode": "In person",
+  "line": "Banks and fintechs on payments, lending and regulation.",
+  "url": "https://fintechrevolutionseries.com/india/",
+  "eds": [
+   "finance"
+  ]
+ },
+ {
+  "name": "Elets BFSI AI Summit",
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "AI in banking, financial services and insurance.",
+  "url": "https://events.eletsonline.com/bfsi-ai-summit/",
+  "eds": [
+   "finance",
+   "ai"
+  ]
+ },
+ {
+  "name": "Singapore FinTech Festival 2026",
+  "start": "2026-11-18",
+  "end": "2026-11-20",
+  "city": "Singapore",
+  "mode": "In person",
+  "line": "The large fintech festival at Singapore EXPO.",
+  "url": "https://www.fintechfestival.sg/faq",
+  "eds": [
+   "finance",
+   "business",
+   "daily"
+  ]
+ },
+ {
+  "name": "Everest Group Engage Bengaluru 2026",
+  "start": "2026-11-18",
+  "end": "2026-11-19",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Everest Group's conference on services, sourcing and AI.",
+  "url": "https://www.everestgrp.com/events/conferences/engage-bengaluru-2026/",
+  "eds": [
+   "consulting"
+  ]
+ },
+ {
+  "name": "SMF Conference 2026",
+  "start": "2026-12-10",
+  "end": "2026-12-12",
+  "city": "Ranchi",
+  "mode": "In person",
+  "line": "Strategic Management Forum conference at IIM Ranchi.",
+  "url": "https://smf2026.iimranchi.ac.in/",
+  "eds": [
+   "consulting",
+   "highered"
+  ]
+ },
+ {
+  "name": "India Strategy Conference 2026",
+  "start": "2026-12-13",
+  "end": "2026-12-15",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Strategy research and practice at IIM Bangalore.",
+  "url": "https://indiastrategy.org/2026/",
+  "eds": [
+   "consulting"
+  ]
+ },
+ {
+  "name": "CX Strategy Summit 2026",
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Customer experience leaders on strategy and service design.",
+  "url": "https://cxstrategy.in/edition26/",
+  "eds": [
+   "consulting",
+   "ux",
+   "marketing"
+  ]
+ },
+ {
+  "name": "Bharat Drone Stack Conference 2026",
+  "start": "2026-11-11",
+  "end": "2026-11-12",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Drone Federation India's conference on the drone ecosystem.",
+  "url": "https://www.dronefederation.in/events-and-programs/bharat-drone-stack-conference-2026?id=40",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "IndiAirport 2026",
+  "start": "2026-11-19",
+  "end": "2026-11-20",
+  "city": "Gandhinagar",
+  "mode": "In person",
+  "line": "Airport infrastructure and operations conference.",
+  "url": "https://indiairport.com/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "PDAS 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-21",
+  "city": "Chennai",
+  "mode": "In person",
+  "line": "Propulsion, defence and aerospace symposium.",
+  "url": "https://pdas.org.in/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "SAROD 2026",
+  "start": "2026-11-25",
+  "end": "2026-11-27",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Symposium on applied aerodynamics and design of aerospace vehicles, at CSIR-NAL.",
+  "url": "https://sarod2026.nal.res.in/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "MRO Australasia 2026",
+  "start": "2026-11-10",
+  "end": "2026-11-11",
+  "city": "Brisbane",
+  "mode": "In person",
+  "line": "Aviation Week's maintenance, repair and overhaul event.",
+  "url": "https://mroaustralasia.aviationweek.com/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "CAPA Airline Leader Summit World",
+  "start": "2026-12-10",
+  "end": "2026-12-11",
+  "city": "Milan",
+  "mode": "In person",
+  "line": "Airline chiefs on strategy and the year ahead.",
+  "url": "https://was26.capaevents.com/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "GAD World 2026",
+  "start": "2026-12-09",
+  "end": "2026-12-10",
+  "city": "Milan",
+  "mode": "In person",
+  "line": "Global Airport Development conference.",
+  "url": "https://world26.gad-events.com/",
+  "eds": [
+   "aviation"
+  ]
+ },
+ {
+  "name": "Together Against Stigma Conference 2026",
+  "start": "2026-11-12",
+  "end": "2026-11-14",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Mental health stigma conference at AIIMS New Delhi, with The George Institute and UNICEF India.",
+  "url": "https://www.georgeinstitute.org/news-and-media/event/together-against-stigma-conference-2026",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Global Wellness Summit 2026",
+  "start": "2026-11-10",
+  "end": "2026-11-13",
+  "city": "Phuket, Thailand",
+  "mode": "In person",
+  "line": "The wellness industry's annual summit, themed The Science, Art and Soul of Wellness.",
+  "url": "https://www.globalwellnesssummit.com/2026-global-wellness-summit/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "National Mental Health Conference 2026",
+  "start": "2026-11-05",
+  "end": "2026-11-06",
+  "city": "Guwahati",
+  "mode": "In person",
+  "line": "Conference for mental health professionals, educators and social service groups, hosted by CMHM India.",
+  "url": "https://www.cmhmindia.org/upcomingevents",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Hearth Summit Bangalore 2026",
+  "start": "2026-11-19",
+  "end": "2026-11-21",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Gathering on wellbeing for changemakers, themed From Burnout to Regenerative Changemaking.",
+  "url": "https://www.hearthsummitbangalore.com/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Wellness Connect 2026",
+  "start": "2026-11-22",
+  "end": "2026-11-23",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "Business platform for the wellness industry at Sofitel Mumbai.",
+  "url": "https://professionalbeauty.in/wellness-connect",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Indian Mental Health Summit 2026",
+  "start": "2026-11-28",
+  "end": "2026-11-29",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "Clinical practice summit covering digital therapeutics, neuroscience and psychotherapy.",
+  "url": "https://www.indianmentalhealthsummit.org/agenda2026",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Suhana Swasthyam 2026",
+  "start": "2026-12-04",
+  "end": "2026-12-06",
+  "city": "Pune",
+  "mode": "In person",
+  "line": "Holistic wellness festival at Pandit Farms. Registration required.",
+  "url": "https://www.globalswasthyam.com/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Manotsava National Mental Health Festival 2026",
+  "start": "2026-12-05",
+  "end": "2026-12-06",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Free public festival on mental health and society, by NIMHANS, NCBS and Rohini Nilekani Philanthropies.",
+  "url": "https://www.nationalmentalhealthfestival.com/faq/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "11th World Ayurveda Congress and Arogya Expo",
+  "start": "2026-12-10",
+  "end": "2026-12-13",
+  "city": "Bhubaneswar",
+  "mode": "In person",
+  "line": "Ayurveda congress and expo at Janata Maidan, supported by the Ministry of Ayush.",
+  "url": "https://ayurworld.org/11th-wac-arogya-expo-2026/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Mysuru Yoga Utsava 2026",
+  "start": "2026-12-17",
+  "end": "2026-12-20",
+  "city": "Mysuru",
+  "mode": "In person",
+  "line": "Yoga festival with workshops, meditation and philosophy sessions.",
+  "url": "https://mysuruyogautsava.com/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "ANCIPS 2027",
+  "start": "2027-01-07",
+  "end": "2027-01-10",
+  "city": "Madurai",
+  "mode": "In person",
+  "line": "Annual national conference of the Indian Psychiatric Society.",
+  "url": "https://ancips2027.com/index.php",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Yoga Sangam International Conclave",
+  "start": "2027-01-23",
+  "end": "2027-01-24",
+  "city": "Siliguri",
+  "mode": "In person",
+  "line": "Indian Yoga Association conclave on yoga practice and research.",
+  "url": "https://www.yogaiya.in/yoga-sangam-international-conclave/",
+  "eds": [
+   "healing"
+  ]
+ },
+ {
+  "name": "Bharat AI Innovation 2026",
+  "start": "2026-11-20",
+  "end": "2026-11-21",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "B2B AI conference and expo at World Trade Center Mumbai, with GenAI tracks and startup pitches.",
+  "url": "https://bharataiinnovation.com/",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "Civo Navigate India 2026",
+  "start": "2026-11-24",
+  "end": "2026-11-24",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Cloud, AI and data sovereignty conference for engineers and platform teams in Whitefield.",
+  "url": "https://www.civo.com/navigate/india/2026",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "WeAreDevelopers Conference India",
+  "start": "2026-11-25",
+  "end": "2026-11-26",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Developer conference on building and running software with AI, with talks and hands-on workshops.",
+  "url": "https://www.wearedevelopers.com/conference-india",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "AWS re:Invent 2026",
+  "start": "2026-11-30",
+  "end": "2026-12-04",
+  "city": "Las Vegas",
+  "mode": "In person",
+  "line": "Amazon Web Services' annual cloud and AI conference, with keynotes and an expo.",
+  "url": "https://aws.amazon.com/events/reinvent/",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "NeurIPS 2026",
+  "start": "2026-12-06",
+  "end": "2026-12-12",
+  "city": "Sydney",
+  "mode": "In person",
+  "line": "The main machine learning research conference, in Sydney with satellite meetings in Atlanta and Paris.",
+  "url": "https://neurips.cc/Conferences/2026",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "GAISA 6.0",
+  "start": "2026-12-08",
+  "end": "2026-12-09",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Global Artificial Intelligence Summit and Awards by AICRA at Bharat Mandapam, with an expo.",
+  "url": "https://gaisa.in/",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "GAINS 2026",
+  "start": "2026-12-09",
+  "end": "2026-12-10",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Engineering-first AI native summit from the makers of GIDS, at NIMHANS Convention Centre.",
+  "url": "https://meraevents.com/events/gains2026",
+  "eds": [
+   "ai"
+  ]
+ },
+ {
+  "name": "PACK.Nxt 2026",
+  "start": "2026-12-15",
+  "end": "2026-12-15",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "One-day packaging forum on recycled content, recyclable design and pharma QR codes ahead of 2027 rules.",
+  "url": "https://packnxtevent.com/",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "World Circular Plastics and Waste-to-Value Summit 2026",
+  "start": "2026-12-03",
+  "end": "2026-12-04",
+  "city": "Vienna, Austria",
+  "mode": "In person",
+  "line": "Recyclers, brand owners and polymer makers on recycled-content strategy, sorting and packaging rules.",
+  "url": "https://monbienevents.com/world-circular-plastics-waste-to-value-summit-2026/",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "Responsible End Markets and Supply Chain Development Summit",
+  "start": "2026-12-14",
+  "end": "2026-12-16",
+  "city": "Research Triangle Park, USA",
+  "mode": "In person",
+  "line": "Circle summit on where recycled material goes after the MRF, as US packaging EPR takes effect.",
+  "url": "https://www.circlenetwork.co/events/responsible-end-markets-supply-chain-development-for-pcr-summit",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "AI-Powered Literacy Pedagogy",
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "city": "Online",
+  "mode": "Online",
+  "time": "2:30 AM IST next day (4:00 to 6:00 PM ET)",
+  "line": "A Zoom workshop for grades 3 to 12 teachers on turning texts into audio, video and mind maps. Hosted by Nextech.",
+  "url": "https://nextech.org/event/ai-powered-literacy-pedagogy/",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Why Assessment Matters (Cambridge English)",
+  "start": "2026-11-03",
+  "end": "2026-11-03",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 PM IST (10:00 GMT)",
+  "line": "Free Cambridge English teacher webinar on why assessment matters for opportunity and lifelong learning. Second sitting 5 Nov at 9:30 PM IST.",
+  "url": "https://www.cambridgeenglish.org/educators-organisations/resources-for-teachers/webinars/",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Understanding Assessment for Your Learners (Cambridge English)",
+  "start": "2026-11-17",
+  "end": "2026-11-17",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 PM IST (10:00 GMT)",
+  "line": "Free Cambridge English webinar on choosing the right assessment approach. Second sitting 19 Nov at 9:30 PM IST.",
+  "url": "https://www.cambridgeenglish.org/educators-organisations/resources-for-teachers/webinars/",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Protecting culture and language through parent-school partnerships",
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "city": "Online",
+  "mode": "Online",
+  "time": "Check TeachingEnglish for the Zoom hour",
+  "line": "British Council TeachingEnglish webinar for teacher educators on heritage language and biliteracy with families.",
+  "url": "https://www.teachingenglish.org.uk/professional-development-for-teacher-educators/webinars",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Supporting children's emotional regulation in class (Chatteris)",
+  "start": "2026-11-19",
+  "end": "2026-11-19",
+  "city": "Online",
+  "mode": "Online",
+  "time": "2:00 PM IST (4:30 PM Hong Kong)",
+  "line": "Free Zoom PD from Chatteris and Nord Anglia on Thrive Approach strategies for emotional regulation in primary classrooms.",
+  "url": "https://chatteris.org.hk/chatterisxnordanglia/",
+  "eds": [
+   "schools"
+  ]
+ },
+ {
+  "name": "Navigating Design-for-Recycling of Flexible Packaging",
+  "start": "2026-11-17",
+  "end": "2026-11-17",
+  "city": "Online",
+  "mode": "Online",
+  "time": "2:30 PM IST (10:00 CET)",
+  "line": "Recyda webinar on EN 18120 standards, PPWR and EPR fee implications for flexible packaging, with a live digital assessment demo.",
+  "url": "https://www.recyda.com/resources/webinars/flexible-plastic-packaging-recyclability",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "Is Your Packaging Portfolio Ready for PPWR Compliance?",
+  "start": "2026-11-24",
+  "end": "2026-11-24",
+  "city": "Online",
+  "mode": "Online",
+  "time": "8:30 PM IST (10:00 EST)",
+  "line": "Intertek webinar on PPWR testing, recycled content verification, PFAS and heavy metals for packaging portfolios.",
+  "url": "https://www.intertek.com/packaging/is-your-packaging-portfolio-ready-for-ppwr-compliance/",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "Packaging Recyclability, PPWR and the Path to Compliance",
+  "start": "2026-11-10",
+  "end": "2026-11-10",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 PM IST (11:00 CET)",
+  "line": "Free respACT and Interzero webinar on packaging recyclability fundamentals under PPWR.",
+  "url": "https://www.respact.at/portal/de/termine/calendar/3720.html",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "Navigating the Packaging and Packaging Waste Regulation",
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "city": "Online",
+  "mode": "Online",
+  "time": "6:30 PM IST (1:00 to 2:00 pm Ireland)",
+  "line": "Enterprise Ireland webinar with Repak on PPWR producer duties, reporting and Ireland's EPR transition.",
+  "url": "https://www.enterprise-ireland.com/en/insights-webinars/navigating-the-packaging-and-packaging-waste-regulation",
+  "eds": [
+   "packaging",
+   "business"
+  ]
+ },
+ {
+  "name": "EU PPWR practical guidance for non-EU operators (AGRINFO)",
+  "start": "2026-12-02",
+  "end": "2026-12-02",
+  "city": "Online",
+  "mode": "Online",
+  "time": "2:30 PM IST (9:00 UTC)",
+  "line": "AGRINFO webinar on PPWR declarations of conformity and technical docs for agri-food exporters outside the EU. Second sitting later the same day.",
+  "url": "https://agrinfo.eu/webinars/eu-packaging-and-packaging-waste-regulation-ppwr-practical-guidance-for-non-eu-operators/",
+  "eds": [
+   "packaging"
+  ]
+ },
+ {
+  "name": "Beyond Chatbots: Applications and Foundations of Machine Learning",
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "city": "Online",
+  "mode": "Online",
+  "time": "6:30 PM IST (14:00 CET)",
+  "line": "Free AI:AT Zoom webinar on supervised, unsupervised and reinforcement learning beyond chatbots.",
+  "url": "https://ai-at.eu/training/beyond-chatbots-applications-and-foundations-of-machine-learning/",
+  "eds": [
+   "ai",
+   "daily",
+   "startups"
+  ]
+ },
+ {
+  "name": "An Introduction to Gaussian Splatting and AI Perception",
+  "start": "2026-11-10",
+  "end": "2026-11-10",
+  "city": "Online",
+  "mode": "Online",
+  "time": "5:30 PM IST (13:00 CET)",
+  "line": "Free AI:AT webinar on 3D scene representation, NeRFs and Gaussian Splatting.",
+  "url": "https://events.asc.ac.at/event/373/",
+  "eds": [
+   "ai",
+   "ux"
+  ]
+ },
+ {
+  "name": "Introduction to Explainable AI (XAI)",
+  "start": "2026-11-17",
+  "end": "2026-11-17",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 PM IST (11:00 CET)",
+  "line": "Free AI:AT Zoom webinar on why models are black boxes and how explainability techniques open them.",
+  "url": "https://events.asc.ac.at/event/348/",
+  "eds": [
+   "ai",
+   "consulting"
+  ]
+ },
+ {
+  "name": "Introduction to Advanced Machine Learning: Neural Networks",
+  "start": "2026-11-30",
+  "end": "2026-11-30",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 AM IST next day (3:00 PM PT)",
+  "line": "Free UC Riverside virtual workshop on neural networks with a PyTorch handwriting example.",
+  "url": "https://events.ucr.edu/event/introduction-to-advanced-machine-learning-neural-networks",
+  "eds": [
+   "ai",
+   "highered"
+  ]
+ },
+ {
+  "name": "Machine Learning: Intro to AI (Afternoon Sessions)",
+  "start": "2026-11-09",
+  "end": "2026-11-09",
+  "city": "Online",
+  "mode": "Online",
+  "time": "4:00 AM IST next day (4:00 PM ET)",
+  "line": "Free UMaine Extension Zoom series for ages 9 to 12 on how models make predictions.",
+  "url": "https://extension.umaine.edu/event/machine-learning-intro-to-ai-afternoon/",
+  "eds": [
+   "schools",
+   "ai"
+  ]
+ },
+ {
+  "name": "Regional Webinar on World Diabetes Day 2026",
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "city": "Online",
+  "mode": "Online",
+  "time": "1:00 PM IST",
+  "line": "WHO SEARO webinar on diabetes service delivery lessons from South-East Asia, including India.",
+  "url": "https://www.who.int/southeastasia/news/events/detail/2026/11/05/south-east-asia-events/regional-webinar-on-world-diabetes-day-2026",
+  "eds": [
+   "health",
+   "daily"
+  ]
+ },
+ {
+  "name": "Strengthening Blackfly Surveillance for the Onchocerciasis Endgame",
+  "start": "2026-11-30",
+  "end": "2026-11-30",
+  "city": "Online",
+  "mode": "Online",
+  "time": "7:30 PM IST (15:00 CET)",
+  "line": "WHO GONE webinar on research priorities for blackfly surveillance tools and thresholds.",
+  "url": "https://www.who.int/news-room/events/detail/2026/11/30/default-calendar/strengthening-blackfly-surveillance-for-the-onchocerciasis-endgame",
+  "eds": [
+   "health"
+  ]
+ },
+ {
+  "name": "From data to decision-making: health workforce planning",
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "city": "Online",
+  "mode": "Online",
+  "time": "9:00 PM IST (10:30 a.m. ET)",
+  "line": "PAHO webinar on information systems for health workforce planning, with English interpretation.",
+  "url": "https://www.paho.org/en/events/data-decision-making-information-systems-health-workforce-planning",
+  "eds": [
+   "health",
+   "consulting"
+  ]
+ },
+ {
+  "name": "Teaching competencies for public health education",
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "city": "Online",
+  "mode": "Online",
+  "time": "8:30 PM IST (10:00 a.m. ET)",
+  "line": "PAHO webinar on self-assessment and continuous professional development for public health teaching.",
+  "url": "https://www.paho.org/en/events/teaching-competencies-transformation-public-health-education-self-assessment-innovation-and",
+  "eds": [
+   "health",
+   "highered"
+  ]
+ },
+ {
+  "name": "Designing for the senses with smart home technology",
+  "start": "2026-11-03",
+  "end": "2026-11-03",
+  "city": "Online",
+  "mode": "Online",
+  "time": "5:30 PM IST (12:00 pm UK)",
+  "line": "Free RIBAJ webinar on lighting, AV and climate control that stays discreet in the architecture.",
+  "url": "https://www.riba.org/whats-on/designing-for-the-senses-with-smart-home-technology-webinar/",
+  "eds": [
+   "arch",
+   "ux"
+  ]
+ },
+ {
+  "name": "Early Stage Design Decisions and Whole Life Carbon",
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "city": "Online",
+  "mode": "Online",
+  "time": "5:30 PM IST (12:00 PM UTC)",
+  "line": "CIOB CPD on Space Architects D-CARB tool for whole-life carbon at concept stage.",
+  "url": "https://www.ciob.org/events/early-stage-design-decisions-and-their-impact-on-whole-life-carbon-1998207347968",
+  "eds": [
+   "arch",
+   "sustainability"
+  ]
+ },
+ {
+  "name": "A Slice of Lime Free Online CPD",
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "city": "Online",
+  "mode": "Online",
+  "time": "7:30 PM IST (2:00 pm GMT)",
+  "line": "Free AECB CPD on the lime cycle, building limes and example specifications.",
+  "url": "https://aecb.net/venue/online/",
+  "eds": [
+   "arch",
+   "sustainability"
+  ]
+ },
+ {
+  "name": "Introduction to Natural Fibre Insulation Free Online CPD",
+  "start": "2026-11-27",
+  "end": "2026-11-27",
+  "city": "Online",
+  "mode": "Online",
+  "time": "7:30 PM IST (2:00 pm GMT)",
+  "line": "Free AECB CPD on natural insulation products, applications and benefits.",
+  "url": "https://aecb.net/venue/online/",
+  "eds": [
+   "arch",
+   "sustainability"
+  ]
+ },
+ {
+  "name": "WUD Africa 2026: Designing a Sustainable Future with Ethical AI",
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "city": "Online",
+  "mode": "Online",
+  "time": "8:30 PM IST (4:00 PM WAT)",
+  "line": "Free virtual World Usability Day Africa on human-centred and ethical AI design.",
+  "url": "https://wudafrica.com/",
+  "eds": [
+   "ux",
+   "ai",
+   "sustainability"
+  ]
+ },
+ {
+  "name": "Becoming the Source AI Cites: GEO for Higher Education",
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "city": "Online",
+  "mode": "Online",
+  "time": "10:30 PM IST (12:00 PM CDT)",
+  "line": "Free AMA webinar with Michigan State on making program pages citable by AI search tools.",
+  "url": "https://www.ama.org/events/webinar/becoming-the-source-ai-cites-geo-best-practices-for-higher-education/",
+  "eds": [
+   "highered",
+   "marketing"
+  ]
+ },
+ {
+  "name": "The Student Has Changed. Has Your Higher Ed Strategy?",
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "city": "Online",
+  "mode": "Online",
+  "time": "8:30 PM IST (10:00 am)",
+  "line": "Virtual Red Door session on Gen Z recruitment, trust breaks and private higher-ed marketing.",
+  "url": "https://www.reddoor.biz/learn/the-student-has-changed-higher-ed-webinar",
+  "eds": [
+   "highered",
+   "marketing"
+  ]
+ },
+ {
+  "name": "IATA Cargo Operations 2027 Market Trends",
+  "start": "2026-11-17",
+  "end": "2026-11-17",
+  "city": "Online",
+  "mode": "Online",
+  "time": "6:30 PM IST (14:00 CET)",
+  "line": "IATA webinar on cargo operations market trends and key updates for 2027.",
+  "url": "https://www.iata.org/en/events/webinars/",
+  "eds": [
+   "aviation",
+   "business"
+  ]
+ },
+ {
+  "name": "IATA Ground Operations 2027 Market Trends",
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "city": "Online",
+  "mode": "Online",
+  "time": "6:30 PM IST (14:00 CET)",
+  "line": "IATA webinar on ground operations market trends and key updates for 2027.",
+  "url": "https://www.iata.org/en/events/webinars/",
+  "eds": [
+   "aviation",
+   "business"
+  ]
+ },
+ {
+  "name": "Survive Finance Without a CFO",
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "city": "Online",
+  "mode": "Online",
+  "time": "3:30 PM IST (11:00 CET)",
+  "line": "Free F.INSTITUTE founder webinar on cashflow, MRR and runway without a full-time CFO.",
+  "url": "https://www.f.institute/webinar-registration",
+  "eds": [
+   "startups",
+   "finance",
+   "business"
+  ]
+ },
+ {
+  "name": "Unmasking the Secrets to a Better Night's Sleep",
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "city": "Online",
+  "mode": "Online",
+  "time": "10:30 PM IST (12:00 pm CT)",
+  "line": "Free Learn to Live webinar on practical steps toward better sleep.",
+  "url": "https://www.learntolive.com/webinars",
+  "eds": [
+   "healing",
+   "health"
+  ]
+ },
+ {
+  "name": "BAM Wellbeing: Mindfulness and Compassion",
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "city": "Online",
+  "mode": "Online",
+  "time": "5:30 PM IST (12:00 GMT)",
+  "line": "British Academy of Management wellbeing webinar on mindfulness and compassion at work.",
+  "url": "https://www.bam.ac.uk/events-landing/ems-event-calendar/bam-wellbeing-webinars-series-mindfulness-and-compassion.html",
+  "eds": [
+   "healing",
+   "business",
+   "consulting"
+  ]
+ },
+ {
+  "name": "Improving your sleep ThriveWell workshop",
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "city": "Online",
+  "mode": "Online",
+  "time": "7:30 PM IST (2:00 pm UK)",
+  "line": "University of Surrey online ThriveWell workshop on sleep habits.",
+  "url": "https://my.surrey.ac.uk/events/2026-11-13-improving-your-sleep-thrivewell-workshop",
+  "eds": [
+   "healing",
+   "highered"
+  ]
+ },
+ {
+  "name": "Understanding and Managing Adolescent Sleep Problems",
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "city": "Online",
+  "mode": "Online",
+  "time": "check page for IST",
+  "line": "ACAMH clinical webinar on adolescent sleep problems for mental health professionals.",
+  "url": "https://www.acamh.org/event/adolescent-sleep-problems/",
+  "eds": [
+   "healing",
+   "health",
+   "schools"
+  ]
+ },
+ {
+  "name": "RICS India Built Environment Summit",
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "city": "Mumbai",
+  "mode": "In person",
+  "line": "One-day RICS summit on digital transformation and sustainability in India's built environment, with structured CPD.",
+  "url": "https://www.rics.org/training-events/conferences/rics-india-built-environment-summit",
+  "eds": [
+   "realestate",
+   "arch"
+  ]
+ },
+ {
+  "name": "MIPIM Asia Summit 2026",
+  "start": "2026-12-02",
+  "end": "2026-12-03",
+  "city": "Hong Kong",
+  "mode": "In person",
+  "line": "Property leaders summit for Asia Pacific at Rosewood Hong Kong, covering investment and urban development.",
+  "url": "https://www.mipim-asia.com/en-gb.html",
+  "eds": [
+   "realestate",
+   "business"
+  ]
+ },
+ {
+  "name": "Realty and Beyond Bengaluru",
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "ET Realty leadership summit on urban development, investment and PropTech for South India markets.",
+  "url": "https://realty.economictimes.indiatimes.com/realty-beyond-summit",
+  "eds": [
+   "realestate",
+   "business"
+  ]
+ },
+ {
+  "name": "Choosing India: Global Companies and Real Estate Strategies",
+  "start": "2026-12-02",
+  "end": "2026-12-02",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "CoreNet Global session on how global companies are reshaping India real estate strategies, 4:00 to 4:45 pm IST.",
+  "url": "https://corenetglobal.connectedcommunity.org/events1/event-description?CalendarEventKey=4c8aa2d1-6618-44aa-9107-01a11d9a0dbf",
+  "eds": [
+   "realestate",
+   "business"
+  ]
+ },
+ {
+  "name": "SAEINDIA APAC 23 Asia Pacific Automotive Engineering Conference",
+  "start": "2026-11-13",
+  "end": "2026-11-14",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "SAEINDIA hosts the Asia Pacific Automotive Engineering Conference at Yashobhoomi on safe, secure, sustainable and intelligent mobility.",
+  "url": "https://apac23.in/",
+  "eds": [
+   "auto"
+  ]
+ },
+ {
+  "name": "ETAuto EV Conclave 2026",
+  "start": "2026-12-01",
+  "end": "2026-12-02",
+  "city": "New Delhi",
+  "mode": "In person",
+  "line": "Eleventh ETAuto EV Conclave at Hyatt Regency on batteries, charging, localisation and software-defined vehicles.",
+  "url": "https://auto.economictimes.indiatimes.com/ev-conclave",
+  "eds": [
+   "auto"
+  ]
+ },
+ {
+  "name": "Auto EV TechVision Summit 2026",
+  "start": "2026-12-10",
+  "end": "2026-12-11",
+  "city": "Bengaluru",
+  "mode": "In person",
+  "line": "Two-day EV and automotive technology conference for design and product engineers at KTPO Whitefield.",
+  "url": "https://www.techvisionsummit.com/",
+  "eds": [
+   "auto"
+  ]
+ },
+ {
+  "name": "Careers in EV Charging Infrastructure webinar",
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "city": "Online",
+  "mode": "Online",
+  "line": "Free DIYguru webinar at 19:00 IST on charging industry roles, OCPP and CCS2 standards, and first jobs with CPOs.",
+  "url": "https://events.diyguru.org/events/webinars/webinar-careers-ev-charging-infrastructure-nov-2026",
+  "eds": [
+   "auto"
+  ],
+  "time": "19:00 IST"
+ }
+]

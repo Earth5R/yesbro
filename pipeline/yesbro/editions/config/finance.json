@@ -1,0 +1,39 @@
+{
+ "sections": [
+  "Indian Markets",
+  "Global Markets",
+  "Banking and Regulation",
+  "Fintech and Payments",
+  "Personal Money"
+ ],
+ "title": "Yes Bro Finance",
+ "masthead": "Yes Bro Finance",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the money news, compounded daily",
+ "ear_left": "News About Money<br>Tips Not Included",
+ "ear_right": "Printed This Morning<br>Jobs Near the Back",
+ "edition": "Finance Edition",
+ "price": "Price: Free, zero expense ratio",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Past headlines are no guarantee of future headlines.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Finance\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Some returns do not show up in a portfolio.</h4><p>FIELDWORK by Earth5R takes students into their own neighbourhoods to work with the community on climate and waste projects, with a mentor checking the work along the way. The returns are slow and entirely real.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Studying finance or economics? FIELDWORK by Earth5R is a mentored fellowship where school and university students work on a live Earth5R project near home and join research conversations with professors at MIT, Oxford, Cambridge and LSE. Every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Banking and markets roles checked today, fintech included. Every listing links to the original posting. Salary negotiation sold separately.",
+ "key": "finance",
+ "url": "https://yesbrohq.com/finance/",
+ "seo_title": "Stock Market, Banking and Personal Finance News | Yes Bro Finance",
+ "seo_desc": "Daily finance news: Sensex and Nifty, global markets, RBI and Sebi, banking, fintech and UPI, personal money and tax, plus open finance jobs. Free every morning.",
+ "events_intro": "Upcoming fintech festivals and finance summits, each checked against its own page this morning. Lanyards are not an asset class.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Markets, banking and fintech research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on money and markets. Each one was still up on YouTube this morning."
+ }
+}

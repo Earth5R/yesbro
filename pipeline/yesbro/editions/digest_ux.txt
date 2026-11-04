@@ -1,0 +1,371 @@
+
+## UX and Product Design
+446|200|nngroup.com|AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings
+  D:AI saves UX practitioners time on nearly every task, yet most feel lukewarm about it: mandates, unreliable output, and inflated expectations eat the gains.
+  T:Nielsen Norman Group Nielsen Norman Group UX Training & Courses Live Online All Live Online Courses Upcoming Live Online Training Train Your Team Group-Discount Pricing Private Team Training UX Certification Self-Paced Self-Paced Courses New Deciding Between Formats? Find the training option that fits your learning style. Email article Share on LinkedIn Share on Twitter Summary
+445|200|nngroup.com|UX Disciplines: Glossary
+  D:Definitions of fields related to user experience, including UX design, UI design, visual design, interaction design, service design, UX research, and DesignOps
+  T:Nielsen Norman Group Nielsen Norman Group UX Training & Courses Live Online All Live Online Courses Upcoming Live Online Training Train Your Team Group-Discount Pricing Private Team Training UX Certification Self-Paced Self-Paced Courses New Deciding Between Formats? Find the training option that fits your learning style. Email article Share on LinkedIn Share on Twitter Summary
+1672|403|uxdesign.cc|Let AI have the average user: Why User Research should focus on bad days
+  D:
+  T:
+893|403|uxdesign.cc|Buy vs. build is now also a UX decision, especially in enterprise
+  D:
+  T:
+1931|403|uxdesign.cc|Human attention is the new old bottleneck. We have to design for it even more.
+  D:
+  T:
+1524|403|uxdesign.cc|Design v ADHD
+  D:
+  T:
+537|200|smashingmagazine.com|Accordion Icons: Which Work Best?
+  D:A closer look at accordion icons, why split menus are harmful, and why it’s better not to have icons and text labels link to different actions. Plus, why the caret is the safest icon choice. You’ll find more [useful guid
+  T:');filter:grayscale(100%);transition:filter .1s cubic-bezier(0,0,.2,1);border:none}lite-youtube .lty-playbtn:focus,lite-youtube:hover>.lty-playbtn{filter:none}lite-youtube.lyt-activated{cursor:unset}lite-youtube.lyt-activated::before,lite-youtube.lyt-activated>.lty-playbtn{opacity:0;pointer-events:none}.lyt-visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;over
+208|403|uxplanet.org|Deel vs. Rippling for Contractor Management: Which Platform Gets the User Experience Right?
+  D:
+  T:
+1561|HTTPSConnectionPool(host='fintechnews.ch', port=443): Max re|fintechnews.ch|EU Financial Institutions Employ Deceptive UX Design, Addictive App Features - FintechNews CH
+  D:
+  T:
+2074|200|ixdf.org|Structure First: The Inverted Pyramid and Visual Organization
+  D:Learn how the inverted pyramid approach and visual hierarchy make web content scannable, clear, and easy to read. Key UX principles for web writers.
+  T:Courses Master Classes Programs Career Programs Jobs Community Library Log in Start Today Build Your Skills Learn design and AI from 211 industry leaders. Learn Design From the Best 1.1M+ enrollments · 4.9 on Google Reviews Log In Last Chance! Product UX Copy with AI Master Class Last Chance! Better Product UX Copy with AI Master Class Structure First: The Inverted Pyramid and 
+1283|403|uxdesign.cc|A founder with a tool is not a founder with a clue
+  D:
+  T:
+1518|200|apeatling.com|Your product is not the center of the universe
+  D:Established products have a problem. They assume they’re the center of someone’s universe, and everything should feed through them. I’m going to call this a product-centric view. The product is…
+  T:Your product is not the center of the universe October 19, 2026 • 4 min read Established products have a problem. They assume they’re the center of someone’s universe, and everything should feed through them. I’m going to call this a product-centric view. The product is at the center, everything else orbits it. I think this product-centric view has an expiry date. Once someone’
+2618|200|officechai.com|The Screenshot Trap: Show an App Idea Without Pretending It Already Works - OfficeChai
+  D:A startup founder walks into a product meeting with six polished app screenshots. The investors like the presentation. The developers have a harder...
+  T:an communicate the feeling of a product while hiding the decisions that make it usable. That becomes dangerous when attractive visuals are mistaken for a working prototype. Generative tools such as Banana Pro AI can help teams explore visual directions through text-to-image creat
+1468|200|straitstimes.com|App to help diners with visual impairment at hawker centres among ideas at inaugural challenge - The Straits T
+  D:Prototype app helps diners with visual impairment find empty tables at Singapore hawker centres Read more at straitstimes.com.
+  T:(From left) Tay Yu Qing and Genevieve Yip, product designers from the Skills and Workforce Development Agency; Ho Yin Mei, a principal design lead from the Ministry of Social and Family Development; and Jeffrey Ang, a principal architect from the Urban Redevelopment Authority. ListenSummariseSingapore launched the Inclusive Design Challenge to create accessible digital solution
+1833|200|davedavies.dev|State of Ecommerce Accessibility 2026
+  D:An audit of 59,400 ecommerce product pages. 64% had at least one automatically detected accessibility failure rated critical.
+  T:This year, 39,976 Shopify and 19,424 WooCommerce product pages from stores ranked among the worldâs top one million websites were scanned. On 37,874 of them, at least one issue in the highest potential-impact category was discovered. On a product page, that could mean a customer cannot read important information, use a form or select a buying option. Critical findings are onl
+3082|200|itsnicethat.com|Design disasters or creative solutions? The self-made paper signs replacing wayfinding in Singapore’s railway 
+  D:As the Southeast Asian nation plans to expand its rail network to about 360 km by the early 2030s – matching cities such as Hong Kong, London, Tokyo and New York – station managers have designed their own signs to help p
+  T:HomeMenuDisciplinesAdvertisingAnimationArchitectureArtCreative IndustryDigitalEventFashionFilmGraphic DesignIllustrationPhotographyProduct DesignPublicationPopular Tags3DBookBrandingCollageComicExhibitionFontFood & DrinkIdentityLogoMagazineMusicPoliticsPortraitPosterSportSustainabilityTechnologyTypographyWeb DesignZineIt’s Nice ThatAbout Design disasters or creative solutions? 
+3036|200|gulfnews.com|Watch: Dubai Municipality introduces smart navigation system with audio for visually impaired people - Gulf Ne
+  D:NaviLens featured among municipality’s integrated approach to accessibility and inclusion at AccessAbilities Expo 2026
+  T:DUBAI 34°CGOLD/FOREXPRAYER TIMESNEWSLETTERSEPAPER GOLD/FOREXDUBAI 34°CPRAYER TIMES UAEUAEASK GULF NEWSABU DHABIDUBAIPEOPLEGOVERNMENTTRANSPORTCOURT & CRIMEEDUCATIONHEALTHEMERGENCIESENVIRONMENTWEATHER Watch: Dubai Municipality introduces smart navigation system with audio for visually impaired peopleNaviLens featured among municipality’s integrated approach to accessibility and i
+
+## UI and Visual Design
+1374|200|fastcompany.com|The new, handmade Apple Music logo leans into the science of sound
+  D:Liquid glass UI design hits a high note.
+  T:The new brand—which includes a new wordmark, a custom sonic logo, and a rippling visual language—was created through a partnership between the team at Apple Music, the bespoke design agency TBWA\Media Arts Lab (MAL), the music producer Fred again.., and his collaborator Nest Acoustics. It will begin appearing across Apple Music’s original content and event programming this week
+1011|200|9to5mac.com|iOS 27.2 introduces design changes for these Apple apps
+  D:iOS 27.2 launches next week with a variety of new features, and also design changes for select Apple apps. Here’s what’s coming.
+  T:Go to the 9to5Mac home page Switch site 9to5Toys 9to5Google Logo9to5Google Electrek Drone DJ LogoDroneDJ Space Explored About Privacy Toggle social menu Toggle dark mode Search for: Submit Toggle search form Forums Store Podcasts Apple@Work Happy Hour 9to5Mac Daily Overtime iPhone iPhone Mac Mac MacBook Pro MacBook Air iMac Mac mini Mac Studio Mac Pro iPad iPad Pro iPad Air iPa
+412|200|abduzeedo.com|Cuberto Unveils Magma Web Design & Interactive 3D UI
+  D:Explore the Magma web design by Cuberto, pairing Jost typography and #0F4BFD cobalt screens with Blender GLTF 3D building twins and GSAP. Real estateâ¦
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"Cuberto Unveils Magma Web Design & Interactive 3D UI","description":"Explore the Magma web design by Cuberto, pairing Jost typography and #0F4
+1307|200|abduzeedo.com|Humbleteam Unveils Podium UI/UX Design & Web System
+  D:Explore the Podium UI/UX design and brand system by Humbleteam, built around a Pantone 185 red spotlight motif and modular interface cards. Performanceâ¦
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"Humbleteam Unveils Podium UI/UX Design & Web System","description":"Explore the Podium UI/UX design and brand system by Humbleteam, built arou
+1821|200|smashingmagazine.com|Embracing Playful Imperfection With The CSS `random()` Function
+  D:Design systems thrive on consistency, so where does randomness fit in? Through playful demos of organic typography, bouncing letters, and splayed cards, Brecht De Ruyte shows how the new CSS `random()` function brings a 
+  T:');filter:grayscale(100%);transition:filter .1s cubic-bezier(0,0,.2,1);border:none}lite-youtube .lty-playbtn:focus,lite-youtube:hover>.lty-playbtn{filter:none}lite-youtube.lyt-activated{cursor:unset}lite-youtube.lyt-activated::before,lite-youtube.lyt-activated>.lty-playbtn{opacity:0;pointer-events:none}.lyt-visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;over
+1522|200|maxschmitt.me|A simple guide to calm UI
+  D:
+  T:BeforeItemsItem oneItem twoItem threeAfterItemsItem oneItem twoItem three Why does the second example feel so much calmer? BeforeItemsItem oneItem twoItem threeAfterItemsItem oneItem twoItem three Same principle as above. Fewer discrete loading states and no toasts make for a calmer UI. BeforeEdit itemNameSave changesAfterEdit itemNameSave changes The toast might look cleaner b
+711|200|shannadige.com|Fast is a design decision
+  D:Building a site has never been cheaper, but making it fast still costs attention and your user
+  T:ucts for stakeholders to view actionable insights and make informed strategic decisions. The first designer setup design weekly standups with the whole team but used 2 whole hours to argue for diverse states in every data display. The second designer spent months deliberating ove
+1218|200|design.interfere.com|Interfere Design System
+  D:Components, styles and guidelines for building Interfere products.
+  T:SearchâKIntroductionFoundationsBrandColorsRadiusShadowsTypographyFont FamiliesHeadingsTextCaptionCodePrimitivesAccordionAvatarBadgeBreadcrumbButtonCardCheckboxCode CardCollapsibleComboboxCommandContext MenuDialogDividerDrawerInputInput OTPKbdLabelMenuPopoverRadio GroupReactionScroll AreaSelectSkeletonSpinnerSwitchTableTabsTextareaToastTooltipSystemLightDarkOpen InterfereWorks
+586|403|uxdesign.cc|Entering Atomic Design from the screen
+  D:
+  T:
+925|200|abduzeedo.com|Studiogusto Unveils the Michelangelus Typeface
+  D:The Michelangelus typeface decodes Michelangelo
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"Studiogusto Unveils the Michelangelus Typeface","description":"The Michelangelus typeface decodes Michelangelo's handwriting into a humanist s
+1948|200|abduzeedo.com|Typography: Server Mono by Blaze Type for INTDEV
+  D:Blaze Type and INTDEV team up on Server Mono, an open-source monospaced font built for terminal legibility and crisp web typography. Developers stare atâ¦
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"Typography: Server Mono by Blaze Type for INTDEV","description":"Blaze Type and INTDEV team up on Server Mono, an open-source monospaced font 
+1048|200|abduzeedo.com|TT Norms Pro: Type Design by TypeType Foundry
+  D:Explore the TT Norms Pro 4.100 type design by TypeType Foundry, featuring redrawn bold cuts, 104 styles, Arabic Naskh script, and UI icons. Workhorseâ¦
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"TT Norms Pro: Type Design by TypeType Foundry","description":"Explore the TT Norms Pro 4.100 type design by TypeType Foundry, featuring redraw
+2585|200|stirworld.com|Reading between the signs: Tanya George on experiencing a city through typography - STIRworld
+  D:STIR speaks with the Mumbai-based type designer about her practice, type walks and why she wants more people to have stronger opinions about Indian-script fonts.
+  T:We walk past myriad signs every day—building names, menus, logos, shop signs, symbols—without turning our heads or sparing them a second thought, but for Mumbai-based type designer and design educator Tanya George, noticing them is a 'default setting', as she tells STIR in a video conversation. A crooked letter, an unusual curve or a particularly pleasing arrangement of seeming
+1006|200|creativebloq.com|Apple Music's splashy new logo is gorgeous – so why isn't the new app icon?
+  D:Apple has revealed a new visual identity that was months in the works.
+  T:";inherits:false;initial-value:100%;}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 rgba(0,0,0,0);}@property --tw-inset-shadow-color{syntax:"*";inherits:false;}@property --tw-inset-shadow-alpha{syntax:"";inherits:false;initial-value:100%;}@property --tw-ring-color{syntax:"*";inherits:false;}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-va
+2954|200|itsnicethat.com|Studio Herrström gives disruptor music label a lightning logomark and palette made of milkshake flavours - It'
+  D:Drawing on the familiar forms of car window stickers, Studio Herrström’s gives music label Milkshake the visual structure it needs to scale.
+  T:HomeMenuDisciplinesAdvertisingAnimationArchitectureArtCreative IndustryDigitalEventFashionFilmGraphic DesignIllustrationPhotographyProduct DesignPublicationPopular Tags3DBookBrandingCollageComicExhibitionFontFood & DrinkIdentityLogoMagazineMusicPoliticsPortraitPosterSportSustainabilityTechnologyTypographyWeb DesignZineIt’s Nice ThatAbout Studio Herrström gives disruptor music l
+3083|200|itsnicethat.com|Fulham F.C gets a brand refresh built on hand-rendered lettering found on the walls of its stadium - It's Nice
+  D:Creative agency Music, in collaboration with F37 Foundry, translate the architectural references to Fulham as an area and the heritage of Fulham as a football team into a functioning type system.
+  T:HomeMenuDisciplinesAdvertisingAnimationArchitectureArtCreative IndustryDigitalEventFashionFilmGraphic DesignIllustrationPhotographyProduct DesignPublicationPopular Tags3DBookBrandingCollageComicExhibitionFontFood & DrinkIdentityLogoMagazineMusicPoliticsPortraitPosterSportSustainabilityTechnologyTypographyWeb DesignZineIt’s Nice ThatAbout Fulham F.C gets a brand refresh built on
+3104|200|creativeboom.com|Pentagram's bilingual identity for Design Doha Biennial 2026 - Creative Boom
+  D:Samar Maakaroun's Pentagram team weaves Arabic and English into one typographic system for Design Doha Biennial 2026, so neither script takes second place.
+  T:Subscribe⌘KNewsInspirationAdviceJobsCommunityAboutSubscribeSearch⌘KLatest newsWhat's happening across art and design Dear BoomOur regular agony aunt column for creatives, answering your biggest dilemmas Searching for a job?Handpicked roles from across the industry. We always include the salary Working for yourself?Pricing, contracts, finding clients and getting paid on time "Th
+2348|403|news.designrush.com|Visa’s New V Logo Puts Its 61% AI Payment Trust to the Test - DesignRush
+  D:
+  T:
+1304|200|abduzeedo.com|The i Paper Digital Experience Finally Feels Like Its Journalism
+  D:ustwo rebuilt the i Paper Digital Experience around impartial news and intelligent debate, made to feel active, premium and energising. Most news appsâ¦
+  T:menu Categories 3D Branding Editorial Design Graphic Design Illustration Motion Design Typography Tutorials UI/UX Information About us Get featured Privacy & Terms of Service {"@context":"https://schema.org","@type":"Article","headline":"The i Paper Digital Experience Finally Feels Like Its Journalism","description":"ustwo rebuilt the i Paper Digital Experience around impartial
+2579|200|analyticsinsight.net|Inside a Design System That Teaches AI What It Is Not Allowed to Change - Analytics Insight
+  D:The rule looks simple on paper. If a component touches a medication or a patient record, no generative tool can quietly strip the confirmation step out of it. T
+  T:CopiedThe rule looks simple on paper. If a component touches a medication or a patient record, no generative tool can quietly strip the confirmation step out of it. That rule now lives inside the components themselves, written in a form machines can read, on the design system being built to replace the one Deepanjan Mukherjee's team used to own. Mukherjee is a director of engin
+
+## AI and Design
+936|200|techcrunch.com|Canva releases its first image generation model - TechCrunch
+  D:Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.
+  T:Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. TechCrunch Desktop Logo TechCrunch Mobile Logo LatestStartupsVentureAppleSecurityAIAppsDisrupt 2026 EventsPodcastsNewsletters SearchSubmit Site Search Toggle Mega Menu Toggle Topics Latest Canva releases its first image generation model Ivan Mehta 12:00 PM PDT · October 22, 2026 Desig
+1759|200|techcrunch.com|Figma co-founder Dylan Field thinks MCP is not a perfect protocol - TechCrunch
+  D:Figma said it plans to support as many standards as possible without exposing all of its data.
+  T:Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. TechCrunch Desktop Logo TechCrunch Mobile Logo LatestStartupsVentureAppleSecurityAIAppsDisrupt 2026 EventsPodcastsNewsletters SearchSubmit Site Search Toggle Mega Menu Toggle Topics Latest Figma co-founder Dylan Field thinks MCP is not a perfect protocol Ivan Mehta 7:13 AM PDT · Octob
+837|200|figma.com|How to put your design system to work with the Figma agent
+  D:Your design system can help the Figma agent understand the principles and guidelines that define your product. Here’s to make that context useful to the agent.
+  T:CategoriesMaker StoriesWorking WellInside FigmaInsightsLatestTopicsFeatured TopicsNewsGet the latest on all things Figma Everything you need to know about building and scaling design systems in the age of AI Your design system can help the Figma agent understand the principles and guidelines that define your product. Here’s how to make that context useful to the agent. The Figm
+366|200|figma.com|6 ways teams are experimenting with code layers
+  D:Here’s how six teams are using it to experiment, get stakeholders aligned, and move faster.
+  T:CategoriesMaker StoriesWorking WellInside FigmaInsightsLatestTopicsFeatured TopicsNewsGet the latest on all things Figma Everything you need to know about building and scaling design systems in the age of AI Now that code layers is in open beta, you can bring code to the canvas. Here’s how six teams are using it to experiment, get stakeholders aligned, and move faster. When we 
+1010|200|figma.com|How Lufthansa Systems prototypes realistic maps for the cockpit with Figma Make
+  D:To bring more dynamic prototypes to user testing, Lufthansa Systems turned to Figma Make.
+  T:CategoriesMaker StoriesWorking WellInside FigmaInsightsLatestTopicsFeatured TopicsNewsGet the latest on all things Figma Everything you need to know about building and scaling design systems in the age of AI Pilots depend on in-flight software to navigate routes, see air traffic, avoid turbulence, and more. To bring more dynamic prototypes to user testing, Lufthansa Systems tur
+1395|202|almcorp.com|Figma Launches Specs To Help AI Agents Follow Design Rules - ALM Corp
+  D:
+  T:
+1649|200|tokenpost.com|Figma Adds 20 New MCP Partners With Expanded Canvas Tools - www.tokenpost.com
+  D:The MCP improvements are available now, while code layers and Figma Specs are rolling out to eligible users.
+  T:Sign inNewsMarketsFeedWatchDataResearchHomeBusiness1 min readAdd as a preferred source on GoogleFigma Adds 20 New MCP Partners With Expanded Canvas ToolsThe MCP improvements are available now, while code layers and Figma Specs are rolling out to eligible users. SaveShareColorful tiles fit together on a dark design canvas / TokenPost.aiFigma added 20 new partners to its Model Co
+2019|200|campaignindia.in|When code turns cheap, Figma says design becomes the moat - Campaign India
+  D:More than 30,000 people registered for Config India in Bengaluru, making it Figma's largest international conference yet.
+  T:
+951|403|app.dealroom.co|Framer opens its website builder to outside AI agents with a new MCP server - Dealroom
+  D:
+  T:
+2083|200|creativeboom.com|Meet Krea 3: the fast, easy-to-use tool built for editing (not replacing) your work
+  D:Krea 3 is an image model made for editing your own work, with 2K edits in under six seconds, style references and LoRA training. Here's how it works.
+  T:Subscribe⌘KNewsInspirationAdviceJobsCommunityAboutSubscribeSearch⌘KLatest newsWhat's happening across art and design Dear BoomOur regular agony aunt column for creatives, answering your biggest dilemmas Searching for a job?Handpicked roles from across the industry. We always include the salary Working for yourself?Pricing, contracts, finding clients and getting paid on time "Th
+531|403|uxplanet.org|Can Claude Code Design Professional UI Animations? I Tested 3 Approaches
+  D:
+  T:
+1991|403|uxplanet.org|I Tried Designing an Entire Product in Claude Code Without Figma
+  D:
+  T:
+1505|403|adage.com|AI creative platforms are moving into agency territory—inside Runway’s push into advertising - Ad Age
+  D:
+  T:
+3|200|afaqs.com|Vicco Laboratories names Aditya Aole as Head – International Business
+  D:Previously, he was working with The Himalaya Drug Company as category marketing lead - haircare, oralcare & bodycare – Middle East, Turkey & Africa.
+  T:Login Join afaqs!. Sign In with Google Sign In with Facebook Sign in with Email Sign Up with Facebook Sign Up with Twitter Sign Up with Instagram Sign Up with LinkedIn -->By clicking the button, I accept the Terms of Use of the service and its Privacy Policy, as well as consent to the processing of personal data. BookmarksMy ProfileLog Out News AdvertisingMarketingBrands People
+1957|200|martechcube.com|Adobe and NVIDIA Expand Collaboration to Accelerate Agentic AI Creation - MarTech Cube
+  D:Adobe and NVIDIA Expand Partnership to Accelerate AI-Powered Creativity, Video Production and Personalization Across Flagship Creative Tools and Platforms
+  T:News Advertising & Promotion Adtech Digital Marketing Digital Advertising Display & Programmatic Advertising Mobile Advertising Mobile Marketing Native/Content Advertising PPC PR Performance Marketing Search & Social Advertising Video Advertising Commerce & Sales Affiliate Marketing & Management Channel, Partner & Local Marketing Conversational Intelligence Demand Generation Ec
+2101|200|tribuneindia.com|Adobe Firefly Adds Compatibility with More Than 10 Partner Models - The Tribune
+  D:Adobe has been conducting extensive research into AI trends in recent months, specifically focusing on the signs of AI readiness in different national and regional markets. Throughout their research, India has consistent
+  T:function setupMenuToggle23(){document.getElementById("hm-toggle-btn12");let e=document.getElementById("sm"),t=document.getElementById("sm-in"),s=document.getElementById("srch_ip_fld2");t.classList.toggle("show"),e.classList.toggle("show"),s.toggle(".show-elem")}document.getElementById("srch_ip_fld23")&&window.addEventListener("scroll",(function(){var e=document.getElementById("
+2757|200|the-decoder.com|Mistral and Nvidia want to speed up industrial design with physics AI - The Decoder
+  D:Mistral and Nvidia are teaming up to speed up engineering simulations and industrial product design with AI.
+  T: physics AI with Nvidia's CUDA-X and Warp software libraries and Omniverse for 3D simulations. The goal is to link design, simulation, and AI training in one continuous workflow for industries like aerospace, automotive, and semiconductors. The companies also plan to release publ
+1284|403|uxdesign.cc|Can you take AI at its word?
+  D:
+  T:
+
+## Design Tools and Platforms
+1913|200|webflowmarketingmain.com|Your next campaign starts here. Meet Webflow Campaigns.
+  D:Create on-brand landing pages and ads, launch on your timeline, and connect performance to pipeline.
+  T:Platform→Platform←BackBuildDesignEdit contentInteractionsCollaborationPage building ManageCMSHostingLocalizeSecurityShared Libraries ConvertAnalyzeOptimizeSEOAEOCampaigns newExtendAppsFigma to WebflowWebflow CloudDevLinkMCPPlatform OverviewExplore the power of the Webflow platform MarketerDesignerDeveloperAgencyAppearanceLight modeDark modeAuto (OS)SourceSolutions→Solutions←Bac
+1532|200|creativeboom.com|Adobe MAX, it's been a while: why Creative Boom is heading to Miami after 11 years away
+  D:Creative Boom's founding editor returns to Adobe MAX for the first time since 2015. Here's what changed in between, and what to expect in Miami.
+  T:Subscribe⌘KNewsInspirationAdviceJobsCommunityAboutSubscribeSearch⌘KLatest newsWhat's happening across art and design Dear BoomOur regular agony aunt column for creatives, answering your biggest dilemmas Searching for a job?Handpicked roles from across the industry. We always include the salary Working for yourself?Pricing, contracts, finding clients and getting paid on time "Th
+1029|200|the-race.com|Adobe makes first move into F1 with Alpine deal - The Race
+  D:Adobe has made its first ever move into a Formula 1 commercial partnership by joining Alpine in a new deal focused around its AI products
+  T:Formula 1 MotoGP Extra Business Podcasts Login Join Members' Club document.getElementById('sidebarCollapse').addEventListener('click', function() { document.getElementById('sidebar').click(); }); document.getElementById('sidebar_dismiss').addEventListener('click', function() { document.getElementById('sidebar').click(); }); Home Business Adobe makes first move into F1 with Alpi
+1616|200|finance.yahoo.com|Adobe (ADBE) Deepens AI Partnerships Across Creative And Customer Experience Tools - Yahoo Finance
+  D:Adobe (NasdaqGS:ADBE) expanded its partnership with NVIDIA, integrating next generation GPU acceleration into flagship creative applications. The collaboration introduces advanced AI powered features aimed at speeding up
+  T:Skip to navigation Skip to main content Skip to right column Home News Finance Sports More News US Politics World Tech Science Originals Weather Newsletters Finance My portfolio News Markets Research Community Personal finance Videos Sports Fantasy Football 2026 NFL College football NBA MLB NHL College basketball Soccer Fantasy Sports Betting NFL Odds Yahoo Sports AM Shopping S
+2690|403|autodesk.com|October 2026 Major Product Update – What’s New - Autodesk
+  D:
+  T:
+3140|200|camerajabber.com|DxO PhotoLab 10.1 adds one-click export to Affinity - Camera Jabber
+  D:For photographers By photographers
+  T:DxO has released PhotoLab 10.1, and its headline feature is a new link with Affinity by Canva. With one click, PhotoLab 10.1 exports a developed image as a native Affinity document in .af format, ready for retouching, compositing, typography or page layout. The two companies describe this as the first step in a partnership that combines DxO’s RAW processing with Affinity’s reto
+2279|200|windowsreport.com|Microsoft Introduces Reactor to Build Windows 11 Apps Without XAML - Windows Report
+  D:Microsoft introduces Reactor, a new C# framework that simplifies native Windows 11 app development without XAML.
+  T:Microsoft is experimenting with Microsoft.UI.Reactor, a new C# framework that lets developers build native Windows 11 applications without writing XAML. The framework aims to simplify Windows app development, particularly for developers familiar with React, React Native, SwiftUI, and Jetpack Compose. Microsoft.UI.Reactor builds on top of WinUI and uses existing Windows interfac
+1870|202|tech-critter.com|Cloudflare brings Asana, Box, Canva, GitHub, and more into Cloudflare OS, its AI workspace for enterprises - T
+  D:
+  T:
+2087|200|cyberdaily.au|Exclusive: Aussie software giant Canva confirms third-party data incident - Cyber Daily
+  D:Ransomware newcomer Seven Deadly Sins claims the hack, saying stolen Salesforce data has already been sold to an unidentified “private buyer”.
+  T:Sections Home News Cyber Security Awareness Month Security Digital Transformation Tech Government Culture Podcasts Live Streams Insights Opinion Events Special Reports More About Advertise Contact Exclusive: Aussie software giant Canva confirms third-party data incident p]:font-normal max-sm:text-base max-sm:leading-6"> Ransomware newcomer Seven Deadly Sins claims the hack, say
+1962|403|kalkine.ca|Why Figma (NYSE: FIG) and Adobe (NASDAQ: ADBE) Are Falling as Wall Street Rethinks Software in the AI Era - ka
+  D:
+  T:
+2108|200|punchng.com|LSETF, Canva to train 5,000 Lagos businesses in AI - Punch Newspapers
+  D:The Lagos State Employment Trust Fund and Canva have partnered to train 5,000 businesses in digital marketing, branding, and artificial intelligence.
+  T:Videos --> --> Subscribe: Punch E-Paper Subscribe: Punch E-Paper Home News Featured Metro Plus Business Sports HealthWise Editorial Columns BBNaija 11 Videos Continuation From Print PunchNG Menu: --> --> Politics Spice Special Features Education Sex & Relationship Interview Columns Opinion Advertise with us ID) . '?utm_source=news-flash&utm_medium=web"> Download Punch Lite App 
+867|200|edtechinnovationhub.com|Canva adds 60 free AI and digital literacy resources through Common Sense Media partnership - EdTech Innovatio
+  D:Canva and Common Sense Media have partnered to bring 60 free AI and digital literacy resources to Canva Education for grades 6–12. Lessons cover misinformation, digital citizenship, online safety and privacy, with editab
+  T:0 function shouldShowAnnouncementBar() { try { if (!window.Static.SQUARESPACE_CONTEXT.showAnnouncementBar) { return false; } var localDataStr = localStorage.getItem('squarespace-announcement-bar'); if (localDataStr && JSON.parse(localDataStr).closed) { return false; } return true; } catch(e) { console.error(e); return true; } } if (shouldShowAnnouncementBar()) { document.body.c
+315|200|marketech-apac.com|Canva partners with Metro Systems to expand enterprise access across Thai businesses - marketech apac
+  D:Canva expands its enterprise reach in Thailand through a partnership with Metro Systems to support organisational design.
+  T:SUBSCRIBE MARKETING TECHNOLOGY PLATFORM SME //You can replace offset value from here var offset = 1200 $(window).on('load scroll', function(){ if( $(window).scrollTop() > offset ){ $('body').addClass('show') }else{ $('body').removeClass('show') } }) document.addEventListener('DOMContentLoaded', function() { // Find the button using the provided selector var button = document.qu
+2440|200|thisdaylive.com|Software Engineer Samuel Cousin Launches Naki UI, Expanding Dart’s Possibilities on the Web - THISDAYLIVE
+  D:
+  T:Nigerian software engineer and technology entrepreneur Samuel Cousin has launched Naki UI, an open-source design system created for Jaspr, a web framework that allows developers to build websites using the Dart programming language. Released on pub.dev in September, Naki UI gives developers more than 75 reusable interface components and design utilities for creating modern web 
+1774|200|cybernews.com|Wix vs Framer: Which Website Builder Is Better for You? - Cybernews
+  D:Compare Wix and Framer to find a website builder that suits your needs. We break down their features, pricing, and ease of use to help you make the right choice.
+  T:While both are no-code website builders, Wix and Framer are created with different users in mind. Wix prioritizes ease of use with pre-made templates, drag-and-drop elements, and a wide range of business tools. Meanwhile, Framer gives users more creative freedom, but comes with a steeper learning curve and fewer built-in business features. To determine which one is ultimately b
+
+## Design in India
+7|200|indiatoday.in|Max Verstappen reveals extent of spinal damage after years of competing in F1
+  D:Max Verstappen has revealed worrying spinal damage after years of competing in Formula One, highlighting the physical toll of modern F1 cars. The Red Bull driver also raised concerns over the bumpy Circuit of the America
+  T:MagazineLive TVSearchSEARCHSIGN INEdition ININUSHome TVLive TVPrimetimeMagazineLatest EditionInsightBest CollegesIndia Today HindiJobsIndiaBusinessAll Business NewsShare MarketIPOPersonal FinanceCompaniesLife+StylePuzzlesSouthGlobal SportsAll SportsCricketLive ScoreFootballTechnologyShowbuzzEntertainmentMoviesBollywoodHollywoodTelevisionOTTLatest ReviewsMo SpecialsPodcastsSunda
+2808|200|localsamosa.com|At Mumbai's India Design ID, the Sustainable Paradox that Stood Out - Local Samosa
+  D:Amidst the design-related brands stood artworks posing many relevant questions on the environment, sustainability, and their intersection....
+  T:Cities AhmedabadAmritsarBengaluruBhopalChandigarhChennaiDelhi NCRGoaIndoreJaipurJodhpurMumbaiKolkataLucknowHyderabadPuneSuratUdaipurVadodaraVaranasi News Trending NowLocal Round-up Food & Drinks ReviewsDiscover/RecommendationsFacts & HistoryRecipesInterviewsFood & CultureLocal Finds Travel ReviewsSamosa RecommendsTravel StoriesFacts & HistoryPop culture Inspired/ Cine InspiredG
+2563|200|thehindu.com|Nimish Shah on Shift Man, and why good design should be accessible - The Hindu
+  D:Nimish Shah returns with Shift Man, a new menswear line that champions ease, understated cool and accessible craft. Ahead of its Mumbai trunk show at Jamaat Art Gallery from October 23 to 25, the designer talks about sus
+  T:From Shift Man, designer Nimish’s Shah’s latest menswear collection | Photo Credit: Special Arrangement Between 2012 and 2018, a celebrity sighting in Shift, designer Nimish Shah’s label, on the pages of fashion blogs (Instagram paparazzi reels weren’t a thing back then) meant a look that screamed an almost artful ease. Think of Deepika Padukone in an olive skirt and a sky blue
+745|200|yourstory.com|How AI Is democratising creativity, according to Canva India’s Chandrika Deb - YourStory.com
+  D:At TechSparks 2026, Canva India’s Chandrika Deb discussed how AI is democratising creativity, reshaping workplace collaboration and making creative tools more accessible.
+  T:Start your day with impactful startup stories and concise news! All delivered in a quick five-minute read in your inbox. I hereby consent to the processing of the personal data that I have provided and declare my agreement with the data protection regulations in the privacy policy on the website. Follow UsAbout UsCareersPrivacy PolicyTerms & ConditionCopyright © 2026 YourStory 
+1665|200|businesstoday.in|BT Explainer: The companies behind the brands: Why product design could be India's next manufacturing opportun
+  D:As global companies diversify supply chains, Indian OEMs are seeking to move beyond manufacturing into product design, engineering and technology to capture greater value.
+  T:Kisan TakLallantopMalyalamBanglaSports TakCrime TakAajtak CampusAstro tak/* latin-ext */ @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 300; font-display: swap; src: url(https://akm-img-a-in.tosshub.com/sites/businesstoday/resources/fonts/pxiByp8kv8JHgFVrLDz8Z1JlFc-K.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7
+600|200|passionateinmarketing.com|BITS Design School Opens Applications for 2027 Intake - Passionate In Marketing
+  D:BITS Design School opens 2027 admissions for its four-year Bachelor of Design programme, offering scholarships and industry exposure.
+  T:Sign in Welcome! Log into your account your username your password Forgot your password? Get help Password recovery Recover your password your email A password will be e-mailed to you. .tdi_15{min-height:0}.tdi_15>.td-element-style:after{content:''!important;width:100%!important;height:100%!important;position:absolute!important;top:0!important;left:0!important;z-index:0!importa
+3074|200|firstpost.com|Turning back time on grandpa’s watch: When Gen Z redesigns the iconic HMT - Firstpost
+  D:At a Mumbai hackathon, applied art students, who knew HMT only from their grandparents, reimagined its classics, designed tribute watches, and created a womenâs collection. Could this spark a true revival of the legacy
+  T:LIVE TVWorldIndiaExplainersOpinionLifestyleBusinessTrendingFrance protestsFire at Canada military baseRussia-Ukraine warTiger Shroff assassination attemptâHills on the Edgeâ seriesUS midtermsLIVE TV First AIHomeLive TVFirst AISectionsWorldExplainersOpinionFlauntIndiaBusinessTechLifestyleHealthAutoShowsVantageFirstpost AmericaFirstpost AfricaFirst SportsSpotlightThe SpendPla
+294|200|theprint.in|An online platform is moving beyond sign language to help India’s deaf community communicate - theprint
+  D:
+  T:
+361|200|dailyexcelsior.com|IT Deptt organises workshop on UX4G to enhance digital governance and citizen experience in Ladakh - Daily Exc
+  D:Excelsior Correspondent LEH, Oct 23: The Information Technology Department, Union Territory of Ladakh, in collaboration with the Ministry of Electronics and Information Technology (MeitY), Government of India, organised 
+  T:Sensitisation Workshop on User Experience and Design System (UX4G) at the LAHDC, Conference Hall, Leh. The workshop, themed “Digital Transformation through User Experience,” aims to sensitise the participants about the importance of user-centric design in digital governance and p
+295|200|boldnewsonline.com|India Sets October 2028 Target for Indigenous Smartphones, Shifting Focus to Design and Technology - Bold News
+  D:India is aiming to develop its own globally competitive smartphone brands, with Union Electronics and Information Technology Minister Ashwini
+  T:NEW DELHI, October 24: India is aiming to develop its own globally competitive smartphone brands, with Union Electronics and Information Technology Minister Ashwini Vaishnaw setting October 23, 2028, as the target for mobile phones that are designed, manufactured and marketed under Indian brands. The announcement, made at the NDTV World Summit in New Delhi on October 23, signal
+1555|200|indianexpress.com|From UCEED to CEED: What design aspirants should prepare for
+  D:Both UCEED and CEED reward how candidates see, reason, and respond, not just how well they draw. Here is what each exam requires, and how to prepare.
+  T:");background-repeat:no-repeat;background-position:right 5px center;background-size:9px 6px;border:solid 1px #e5e7eb}.ie-audio-time,.ie-audio-label{margin-top:2px}@media (max-width:767px){.translation-toggle-wrap{flex-wrap:wrap;row-gap:12px;padding:15px;display:flex;min-height:147px}.fpuuid-present{display:none}.ai_assisted{vertical-align:text-top}.translation-toggle-wrap .lang
+2948|200|indianmasterminds.com|NHAI Launches Toll Plaza Feedback Feature on Rajmargyatra App to Improve Highway User Experience - Indian Mast
+  D:NHAI launches a Toll Plaza Feedback feature on the Rajmargyatra app, allowing highway users to rate services, report issues and share suggestions.
+  T:Home » News » NHAI Launches Toll Plaza Feedback Feature on Rajmargyatra App to Improve Highway User Experience New Delhi: The National Highways Authority of India (NHAI) has introduced a new ‘Toll Plaza Feedback’ feature on the Rajmargyatra mobile app to improve the experience of National Highway users at toll plazas. The initiative aims to strengthen citizen participation, imp
+2628|200|thehindu.com|Pilli Taxi’s Deepavali edit brings handcrafted labels to Hyderabad - The Hindu
+  D:Pilli Taxi’s Deepavali edit in Hyderabad showcases over 25 craft-led labels, featuring jewellery, textiles, and handmade home décor this weekend.
+  T:Pili Taxi is returning to Hyderabad, with more than 25 Indian craft-led labels. The Deepavali edit will showcase jewellery, handcrafted bags and accessories, heritage textiles, home décor, and more. Winglore: For those who love to dress up without any occasion, there’s plenty in store. Built on the idea of slow fashion and storytelling, the label blends quirky motifs with tradi
+2663|403|newsbytesapp.com|BMW Motorrad files India design patent for Vision CE scooter - NewsBytes
+  D:
+  T:
+2793|200|grazia.co.in|Tanishq Natural Diamonds And Rahul Mishra Are Reimagining Indian Luxury | Grazia India - Grazia India
+  D:Discover how Tanishq Natural Diamonds and Rahul Mishra translate couture artistry into one-of-a-kind jewellery rooted in Indian design.
+  T:.co.inToggle navigationHomeFashionBeauty & Wellness PeopleLifestyleCultureHoroscopeVideoAwardsGrazia Indie Beauty SuperstarsGrazia Fashion Awards 2026Fashion First 2020Grazia Most Loved Brands 2026About UsContact UsPrivacy PolicyTerms of Use Follow Home Fashion Tanishq Natural Diamonds And Rahul Mishra Are Reimagining Indian LuxuryTanishq Natural Diamonds And Rahul Mishra Are R
+2246|200|globalsouthopportunities.com|Cardboard Hiring 2026: Six Full-Time Design, Engineering and AI Jobs in Bengaluru, India - Global South Opport
+  D:Cardboard is inviting talented designers, engineers and artificial intelligence specialists to explore six full-time career opportunities at the company. The
+  T:Search for Scholarships Jobs Internships Funding fellowships Opinion Articles Global South Indaba Home/Jobs/Cardboard Hiring 2026: Six Full-Time Design, Engineering and AI Jobs in Bengaluru, India{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/www.globalsout
+
+## Design Startups and Funding
+2925|200|thenextweb.com|Vectorial raises $3M to simulate how users react before launch - The Next Web
+  D:‘Vectorial puts users in the room where you build,’ says co-founder Rahul Garg, as the behavior simulation platform raises a $3M seed round.
+  T:");border-radius:50%;width:3.5rem;height:3.5rem;display:block;position:absolute;top:calc(50% - 1.5rem);left:calc(50% - 1.5rem)}.o-map *,.o-map :after,.o-map :before{box-sizing:content-box}.o-page{flex-direction:column;min-height:100vh;padding-top:3.5rem;transition:all .25s ease-out;display:flex}.is-menu--level1 .o-page{transform:translate(25%)}.is-menu--level2 .o-page{transform
+1762|403|bizjournals.com|Marklo raises $5M as Jessica Herrin launches AI-native startup - Bizwomen - The Business Journals
+  D:
+  T:
+1430|200|techcrunch.com|Mach9 raises $34M after pivoting to AI CAD software
+  D:The startup initially set out to build better, faster, and cheaper surveying hardware in 2021.
+  T:Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. TechCrunch Desktop Logo TechCrunch Mobile Logo LatestStartupsVentureAppleSecurityAIAppsDisrupt 2026 EventsPodcastsNewsletters SearchSubmit Site Search Toggle Mega Menu Toggle Topics Latest Mach9 raises $34M after pivoting to AI CAD software Sean O'Kane 6:00 AM PDT · October 21, 2026 W
+1495|403|app.dealroom.co|Circuit Mind raises $18.5M Series A to automate circuit board design - Dealroom
+  D:
+  T:
+2012|200|techjuice.pk|Friend-Focused Photo App Retro Raises $21 Million Series A - TechJuice
+  D:Retro raised over $21 million in Series A funding, reaching a $100 million valuation without relying on ads.
+  T:Home Latest Tech AI Startups Mobile Business Auto Education More Price Portal Guides Crypto Portal Home Latest Tech AI Startups Mobile Business Auto Education More Price Portal Guides Crypto Portal Search Home Latest Technology AI Startups Mobile Business Auto Education Home>Social Media>Former Instagram Engineers' Social Media App Hits $100M Valuation googletag.cmd.push(functi
+317|200|inc42.com|From Even Health To The Pant Project— Indian Startups Raised Over $184 Mn This Week
+  D:Indian startup funding activity slowed down in the third week of October, with 17 startups raising over $184 Mn
+  T:D2CX by Inc42 is a 12-week hands-on program to help you level up your D2C game. Learn from India's top 1% D2C founders and experts through actionable insights, proven strategies and tactics on how to 10X your D2C brand. ManagementX by Inc42 – India’s first Startup Management Program is a 6-month hands-on program that will take you on an intense journey that shatters the outdate
+512|200|yourstory.com|[Weekly funding roundup Oct 17-23] VC funding falls below $100M amid lack of big deals
+  D:Venture capital funding in the third week of October recorded a sharp fall due to lower number of deals and absence of large value transactions.
+  T:Start your day with impactful startup stories and concise news! All delivered in a quick five-minute read in your inbox. I hereby consent to the processing of the personal data that I have provided and declare my agreement with the data protection regulations in the privacy policy on the website. Follow UsAbout UsCareersPrivacy PolicyTerms & ConditionCopyright © 2026 YourStory 
+382|200|techcrunch.com|VCs, Superhuman Mail founder share red flags about product-market fit
+  D:Top investors from Iconiq and Sapphire Ventures, along with Rahul Vohra, the founder of Superhuman Mail, share the do's and don'ts for building hit products.
+  T:Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. TechCrunch Desktop Logo TechCrunch Mobile Logo LatestStartupsVentureAppleSecurityAIAppsDisrupt 2026 EventsPodcastsNewsletters SearchSubmit Site Search Toggle Mega Menu Toggle Topics Latest VCs, Superhuman Mail founder share red flags about product-market fit Dominic-Madori Davis 1:57 
+363|200|techcrunch.com|Startups don’t need to go viral to win customers
+  D:At TechCrunch Disrupt last week, two founders and a VC discussed how to not just gain an early following but keep one.
+  T:Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. TechCrunch Desktop Logo TechCrunch Mobile Logo LatestStartupsVentureAppleSecurityAIAppsDisrupt 2026 EventsPodcastsNewsletters SearchSubmit Site Search Toggle Mega Menu Toggle Topics Latest Startups don’t need to go viral to win customers Lucas Ropek 4:07 PM PDT · October 23, 2026 Gett
+575|200|saastr.com|The Double Hockey Stick: Why 1% of Your Users Now Drive 75% of Your AI Costs, and What Figma, Clay, and Higgsf
+  D:Ulrik Lehrskov-Schmidt has worked on pricing full time for about ten years. He’s the founder and CEO of Willingness to Pay, his team has run hundreds of pricing projects, and he’s writt…
+  T:{{{ data._highlightResult.name.value }}} {{{ data._highlightResult.display_name.value }}} Search by Algolia No results matched your query "{{ data.query }}" jQuery(function () { /* init Algolia client */ var client = algoliasearch(algolia.application_id, algolia.search_api_key); /* setup default sources */ var sources = []; jQuery.each(algolia.autocomplete.sources, function (i,
+1973|200|economictimes.indiatimes.com|From Product Brief to Campaign-Ready Ad in 4 Minutes With Higgsfield - The Economic Times
+  D:Every business needs posters, carousels, pitch decks, hiring posts, and social media creatives. Most teams either wait on a designer, pay an agency, or settle for AI images that look good but cannot be edited. In this vi
+  T:Choose your reason below and click on the Report button. This will alert our moderators to take action
+2867|200|vanguardngr.com|UK-based Nigerian product designer Adekunle expands across AI, fintech, global markets - Vanguard News
+  D:By Favour Ulebor  Nigerian-born product designer and digital strategist, Oladosu Ibrahim Adekunle, who is currently based in the United Kingdom, has been broadening his influence in the tech industry through the creation
+  T:0){if(q.length==2){if(typeof q[1]==FUNC_TYPE){this[q[0]]=q[1].call(this,match)}else{this[q[0]]=q[1]}}else if(q.length==3){if(typeof q[1]===FUNC_TYPE&&!(q[1].exec&&q[1].test)){this[q[0]]=match?q[1].call(this,match,q[2]):undefined}else{this[q[0]]=match?match.replace(q[1],q[2]):undefined}}else if(q.length==4){this[q[0]]=match?q[3].call(this,match.replace(q[1],q[2])):undefined}}els
+2592|200|foro3d.com|Orru Designs leaves stable jobs and bets on 3D printing in Ireland - Foro3D
+  D:Aaron and Jenny Byrne leave their stable jobs to devote themselves to Orru Designs in Ireland, creating 3D ornaments, lamps and prototypes. They plan workshops for young people and are considering opening a physical stor
+  T:Aaron and Jenny Byrne, at the helm of Orru Designs in Rosscarbery (Ireland), have taken the step of devoting themselves fully to 3D printing after combining the business with a stable job. Their catalogue covers customised ornaments, decorative lamps, functional replacement parts and prototypes created from a photograph or a sketch. The studio is planning hands-on workshops for
+1813|403|producthunt.com|Dub Startup Program
+  D:
+  T:
+
+## Careers and Ideas
+1673|403|uxdesign.cc|AI doesn’t care about your job title
+  D:
+  T:
+2008|200|hrnews.co.uk|The most in demand skills that employers look for in creative designers - HR News
+  D:A new study by Adobe Firefly has revealed the most sought after job skills that employers list when recruiting for creative design jobs. The research analysed the job descriptions of over 14,000 job listings on Indeed to
+  T:My Account Advertising 25 Oct 2026 HomeTopicsAbsence ManagementAI & EmploymentArtificial IntelligenceBenefits & RewardBusiness AdviceEmployee DevelopmentGamificationHR NewsHybrid WorkingIndustry Sector NewsLegal NewsOffice WorkingRecruitmentRemote WorkingSoftware / AI / TechnologyStaff WellbeingNewsPartner InsightsEventsAPHRFree TrialHR SoftwarePricingSubmit Free ArticleAdverti
+1222|200|anthropic.com|How employment is changing at Anthropic
+  D:How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the ec
+  T:Skip to main contentNewsResearchPolicyCommitmentsCompanyTry Claude{"@context":"https://schema.org","@type":"Article","headline":"How employment is changing at Anthropic","description":"How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and l
+1219|200|gabrielvaldivia.com|Everyone is starting over
+  D:
+  T:It’s a Tuesday afternoon on a Zoom call, and someone asks me a question that hangs in the air: “If you were to start over again today, what skills, tools, or frameworks would you focus on learning?” I glance out the window. It’s getting brisk. The sun feels brighter and sharper, the warmth that once felt like a bath now stings like a knife to my pupils. The green in the leaves 
+2725|200|latestly.com|BioWare Layoffs: EA Shuts Down Iconic Studio, Cancels New Mass Effect Game - LatestLY
+  D:Electronic Arts confirms the closure of BioWare, the legendary studio behind Mass Effect, Dragon Age, and Star Wars: Knights of the Old Republic, on October 21, 2026. This shocking announcement also halts development on 
+  T:In a seismic shift for the global gaming industry, Electronic Arts (EA) has officially confirmed the shutdown of BioWare, the revered Canadian development studio responsible for some of the most influential role-playing games (RPGs) in history. The closure, announced on October 21, 2026, spells the end for a studio that shaped the narrative and character-driven gameplay for mil
+1205|200|designweek.co.uk|Surge or authorship: which studio are you building?
+  D:As generative AI floods the creative pipeline, agencies face a critical choice: surrender to the surge of automated content, or draw a hard line to protect human authorship. According to Paul Melcher, the future of brand
+  T:Newsletter News Features Partnerships Directory Jobs Join Sign In Members Jobs --> Find Disciplines Advertising Apps Automotive Brand Identity Corporate Exhibition Film and TV Games Graphic Design Industrial Interior Packaging Product Retail Stage UX/UI Web More Latest Newsletter Jobs Board Supplier Directory Partner with us Events Other About Contact Privacy Legal Submit Adver
+1873|200|designweek.co.uk|Does brand design have a longevity problem?
+  D:In an attention economy addicted to viral hype and disposable rebrands, Span’s Bud Rodecker argues that designers must stop chasing launch-day novelty and start building identity systems fit for a century.
+  T:Newsletter News Features Partnerships Directory Jobs Join Sign In Members Jobs --> Find Disciplines Advertising Apps Automotive Brand Identity Corporate Exhibition Film and TV Games Graphic Design Industrial Interior Packaging Product Retail Stage UX/UI Web More Latest Newsletter Jobs Board Supplier Directory Partner with us Events Other About Contact Privacy Legal Submit Adver
+296|200|designweek.co.uk|design/leader: Daniel Nicholas, design director & partner at Super Okay
+  D:In our interview series, design leaders answer five questions about design, and five questions about leadership.
+  T:Newsletter News Features Partnerships Directory Jobs Join Sign In Members Jobs --> Find Disciplines Advertising Apps Automotive Brand Identity Corporate Exhibition Film and TV Games Graphic Design Industrial Interior Packaging Product Retail Stage UX/UI Web More Latest Newsletter Jobs Board Supplier Directory Partner with us Events Other About Contact Privacy Legal Submit Adver
+3114|200|bbc.com|'My dream career started here': Costume designers protest degree closure - BBC
+  D:The designers behind the likes of Downton Abbey and Game of Thrones were trained at the Edinburgh College of Art.
+  T:British Broadcasting CorporationHomeNewsSportBusinessTechnologyHealthCultureArtsTravelEarthAudioVideoLiveHomeNewsUS & CanadaUKUK PoliticsEnglandN. IrelandN. Ireland PoliticsScotlandScotland PoliticsWalesWales PoliticsAfricaAsiaChinaIndiaAustraliaEuropeLatin AmericaMiddle EastIn PicturesBBC InDepthBBC VerifySportBusinessWorld of BusinessTechnology of BusinessNYSE Opening BellTec
+1827|200|dezeen.com|Design Academy Eindhoven students protest overcrowded facilities
+  D:Design Academy Eindhoven master’s students staged protests during the school’s annual Graduation Show over a lack of workspace that they say has created “economic segregation”.
+  T:Warning! Your browser does not support JavaScript! Skip navigation Dezeen Search Magazine Awards Showroom Events Guide School Shows Courses Competitions Awards Showroom Events Guide School Shows Courses Competitions Topic Architecture Interiors Design Technology Section News Features Interviews Opinion Series Videos Talks Podcasts Menu Dezeen Clear Close Search in: Magazine Ent
+253|200|creativebloq.com|"Nobody has it figured out, and that’s the point": Radim Malinic on the power of creative risk
+  D:The creative director makes the case for backing yourself in his new book, Daring Forever.
+  T:";inherits:false;initial-value:100%;}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 rgba(0,0,0,0);}@property --tw-inset-shadow-color{syntax:"*";inherits:false;}@property --tw-inset-shadow-alpha{syntax:"";inherits:false;initial-value:100%;}@property --tw-ring-color{syntax:"*";inherits:false;}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-va
+2821|200|macrumors.com|Apple CEO John Ternus Explains What Makes Good Product Design - MacRumors
+  D:Apple CEO John Ternus says improving the user's experience guides Apple's design decisions, whether that means adding practical features or an animation that simply makes a device more enjoyable to use. TIME published an
+  T:[["AirPods 5","https://www.macrumors.com/roundup/airpods/","https://images.macrumors.com/article-new/2018/02/airpods-4-roundup-menu.png"],["AirPods Max 2","https://www.macrumors.com/roundup/airpods-max/","https://images.macrumors.com/article-new/2020/05/airpods-max-2024-roundup-menu.png"],["AirPods Pro 3","https://www.macrumors.com/roundup/airpods-pro/","https://images.macrumor
+1043|200|247wallst.com|Dylan Field Says Don’t Let AI Think for You. What It Means for Figma Stock - 24/7 Wall St.
+  D:Figma's CEO went on a podcast to warn that AI makes creative work look the same, and investors who wrote off the stock at a 38% loss this year may have missed the part where that warning is actually Figma's business mode
+  T:Authoritative Financial News · Since 2006 AI Investor Podcast Menu Investing Personal Finance Technology Economy Politics AI Portfolio ❚❚ At close S&P 5007,640.00−0.42%Dow Jones52,284.00−1.20%Nasdaq 10029,019.90+0.26%Russell 20002,778.71−0.12% S&P 5007,640.00−0.42%Dow Jones52,284.00−1.20%Nasdaq 10029,019.90+0.26%Russell 20002,778.71−0.12% S&P 5007,640.00−0.42%Dow Jones52,284.00
+1909|200|finance.biggo.com|Figma CEO Dylan Field Says AI Is Lowering the Floor, Not Raising the Ceiling — and Design Is the New Code - Bi
+  D:Dylan Field, co-founder and CEO of Figma, used a wide-ranging interview to argue that the popular story about artificial intelligence is backwards: AI…
+  T:Ask AIReal-time NewsMarketEarnings CallEvent CalendarWatchlistPodcastEarnings CallEvent CalendarWatchlistPodcastMoreAsk AIReal-time NewsWatchlistHoldingsMarketEarnings CallEvent CalendarPodcast{"@context":"https://schema.org","@type":"NewsArticle","headline":"Figma CEO Dylan Field Says AI Is Lowering the Floor, Not Raising the Ceiling — and Design Is the New Code","image":["htt
+2726|200|monocle.com|‘Most have lost touch with the reality of the built world.’ Australian designer Henry Wilson on why working wi
+  D:In a market overrun by banal mass production, the Sydney industrial designer talks sand-casting, working with small foundries and why...
+  T:British Pound (GBP) Euro (EUR) US Dollar (USD) Australian Dollar (AUD) Swiss Franc (CHF) Magazine Radio Shop Monocle Logo Search for: Go Subscribe 0" x-text="$store.monocleState.shop.cartCount"> British Pound (GBP) Euro (EUR) US Dollar (USD) Australian Dollar (AUD) Swiss Franc (CHF) Daily inbox intelligence from Monocle Design Directory November 2026 5 Min Read ‘Most have lost 
+2782|200|monocle.com|‘German industry is not agile enough.’ Designer Konstantin Grcic on the Deutsch design crisis - Monocle
+  D:The Berlin-based industrial designer talks us through his archive of abandoned prototypes, the Italian manufacturers who shaped him and what...
+  T:British Pound (GBP) Euro (EUR) US Dollar (USD) Australian Dollar (AUD) Swiss Franc (CHF) Magazine Radio Shop Monocle Logo Search for: Go Subscribe 0" x-text="$store.monocleState.shop.cartCount"> British Pound (GBP) Euro (EUR) US Dollar (USD) Australian Dollar (AUD) Swiss Franc (CHF) Daily inbox intelligence from Monocle Design Directory November 2026 5 Min Read ‘German industry
+1836|200|newsletter.posthog.com|38 things we’ve learned about building AI products
+  D:Lessons from 4 years of building AI products at PostHog
+  T:SubscribeSign in{"@context":"https://schema.org","@type":"NewsArticle","url":"https://newsletter.posthog.com/p/38-things-weve-learned-about-building","mainEntityOfPage":"https://newsletter.posthog.com/p/38-things-weve-learned-about-building","headline":"38 things we've learned about building AI products","description":"Lessons from 4 years of building AI products at PostHog","i
+3044|403|printmag.com|Introducing the PRINT Awards 2026 Top Winners - PRINT Magazine
+  D:
+  T:
+2200|403|ndtv.com|Want To Make Video Games? 7 Careers Beyond Gaming - NDTV
+  D:
+  T:

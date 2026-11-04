@@ -1,0 +1,39 @@
+{
+ "sections": [
+  "India Funding",
+  "Global Funding",
+  "VC and Investors",
+  "IPOs, Exits and Results",
+  "Founders and Ideas"
+ ],
+ "title": "Yes Bro Startups",
+ "masthead": "Yes Bro Startups",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the startup news, pre revenue and post coffee",
+ "ear_left": "No Pitch Deck<br>Required",
+ "ear_right": "Printed This Morning<br>Jobs Near the Back",
+ "edition": "Startups Edition",
+ "price": "Price: Free, no term sheet required",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Valuations are as reported, not as felt.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Startups\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Find the problem before the pitch deck.</h4><p>FIELDWORK by Earth5R takes students out of the classroom and into their own neighbourhoods to study real problems and work with the community, with a mentor checking the work along the way. Customers are often closer than the investors.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Building toward a startup of your own? FIELDWORK by Earth5R is a mentored fellowship where school and university students study real problems in their neighbourhood with the community, and every piece of work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Startup roles in India first, then global and remote, checked today. Every listing links to the original posting. Equity is between you and the cap table.",
+ "key": "startups",
+ "url": "https://yesbrohq.com/startups/",
+ "seo_title": "Indian Startup Funding News and Startup Jobs | Yes Bro Startups",
+ "seo_desc": "Daily startup news: Indian and global funding rounds, VC moves, IPOs and exits, founder ideas, plus open startup jobs in India and remote. Free every morning.",
+ "events_intro": "Founder meetups and demo days coming up, each checked against its own page this morning. Bring a one line pitch, then shorten it.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Startup-relevant research on AI, markets and product. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks for founders and early teams. Each one was still up on YouTube this morning."
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "sections": [
+  "Careers and College",
+  "Student Achievers",
+  "Cool Science and Space",
+  "How-To and Study Skills",
+  "Competitions and Olympiads",
+  "Scholarships",
+  "Exams and Boards",
+  "Study Abroad and Visas",
+  "Learning and Coding",
+  "Teaching and Pedagogy",
+  "School Leadership and Policy",
+  "Education India"
+ ],
+ "title": "Yes Bro Schools",
+ "masthead": "Yes Bro Schools",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the school news worth a free period",
+ "ear_left": "No Homework<br>Attached",
+ "ear_right": "Printed This Morning<br>Deadlines Near the Back",
+ "edition": "Grades 9 to 12 Edition",
+ "price": "Price: Free, unlike tuition",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Citing it is good practice. Your teacher said so.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Schools\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 5,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>A real project for your university application.</h4><p>FIELDWORK by Earth5R is a mentored fellowship for school students, built around a live environmental project near home. Students also join research conversations with professors from universities such as MIT, Oxford and Cambridge, and their work is verified.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> For students, and for teachers to pass along: FIELDWORK by Earth5R is a mentored fellowship where school students work on a live environmental project near home and join research conversations with professors from MIT, Oxford, Cambridge and LSE. Their work is verified. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Teacher roles at international schools, checked today. Every listing links to the original page. Deadlines are real, unlike extensions.",
+ "jobs_remote_label": "Remote and Online",
+ "key": "schools",
+ "url": "https://yesbrohq.com/schools/",
+ "seo_title": "IB and Cambridge School News for Students and Teachers | Yes Bro Schools",
+ "seo_desc": "Daily paper for school students and teachers: competitions, scholarships, exams, careers, science, FIELDWORK notes, pedagogy and teacher roles.",
+ "events_intro": "Student events, teacher webinars and school conferences coming up, each checked against its own page this morning. Permission slips not supplied.",
+ "meme": true,
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Classroom research and learning science that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks for teachers and school people. Each one was still up on YouTube this morning."
+ },
+ "jobs_in_menu": false,
+ "bottom_blocks": [
+  "jobs"
+ ],
+ "menu_pins": [
+  "events",
+  "research"
+ ],
+ "student_opps_block": {
+  "title": "Student Opportunities",
+  "nav": "Opportunities",
+  "intro": "Competitions, olympiads, contests and scholarships still open for school students. India first where we can. Each deadline was on the official page this morning."
+ },
+ "fieldwork_blog_block": {
+  "title": "From the FIELDWORK Blog",
+  "nav": "FIELDWORK",
+  "intro": "Notes from Earth5R on university applications, profile building and live projects near home. FIELDWORK is a mentored fellowship for school students."
+ },
+ "halves": [
+  {
+   "id": "students",
+   "title": "The Back Bench",
+   "note": "The student half. Careers, science, study skills, FIELDWORK notes and what is still open to apply for.",
+   "blocks": [
+    "Careers and College",
+    "Student Achievers",
+    "Cool Science and Space",
+    "How-To and Study Skills",
+    "fieldwork_blog",
+    "student_opps",
+    "Competitions and Olympiads",
+    "Scholarships",
+    "Exams and Boards",
+    "Study Abroad and Visas",
+    "Learning and Coding",
+    "talks"
+   ]
+  },
+  {
+   "id": "teachers",
+   "title": "The Staff Room",
+   "note": "The teacher half. Pedagogy, policy, research, webinars and roles, in that order.",
+   "blocks": [
+    "Teaching and Pedagogy",
+    "School Leadership and Policy",
+    "Education India",
+    "research",
+    "events",
+    "jobs"
+   ]
+  }
+ ]
+}

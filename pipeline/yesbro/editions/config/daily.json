@@ -1,0 +1,36 @@
+{
+  "title": "Yes Bro Daily",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Daily\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "key": "daily",
+  "url": "https://yesbrohq.com/daily/",
+  "seo_title": "India and World News Today: Politics, Health, Space, Humour | Yes Bro Daily",
+  "seo_desc": "A free daily newspaper for India and the world: politics, business, startups, ESG, climate, AI, health, space and science, and humour, every headline linked to the original report.",
+  "motto": "All the news worth your morning chai",
+  "ear_left": "India and the World<br>Before the Chai Cools",
+  "footer": "Printed every morning. Every headline links to the original report, which opens in a new tab. The chai is your responsibility.",
+  "events_intro": "Conferences and summits coming up, each checked against its own page this morning. Dates do move, so click before you book the train.",
+  "ear_right": "Printed This Morning<br>Opinions Not Included",
+  "meme": true,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Science and lab notes that landed recently. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks worth a listen today. Each one was still up on YouTube this morning."
+  },
+  "sections": [
+    "India Politics",
+    "India Overall",
+    "India Startups",
+    "India ESG and Environment",
+    "Global Overall",
+    "Global AI and Technology",
+    "Global ESG and Environment",
+    "Health",
+    "Space and Science",
+    "Humour"
+  ]
+}

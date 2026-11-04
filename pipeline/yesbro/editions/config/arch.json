@@ -1,0 +1,51 @@
+{
+ "sections": [
+  "Sustainable and Green Architecture",
+  "Architecture India",
+  "Global Architecture and Design",
+  "Materials and Building Tech",
+  "Building for India's Climate Zones",
+  "Urbanism and Climate",
+  "Architecture Startups and Innovation",
+  "Education and Ideas"
+ ],
+ "title": "Yes Bro Architecture",
+ "masthead": "Yes Bro Architecture",
+ "family": "Yes Bro Newspaper",
+ "motto": "All the building news worth the site visit",
+ "ear_left": "Read Before<br>the Site Visit",
+ "ear_right": "Printed This Morning<br>Jobs Near the Back",
+ "edition": "Built Environment Edition",
+ "price": "Price: Free, unlike your consultant's fee",
+ "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Load bearing claims only.",
+ "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Yes Bro Arch\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+ "ad_after": 3,
+ "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>See how people really use the city.</h4><p>FIELDWORK by Earth5R puts you on the ground in your own neighbourhood, working with the community on local environmental problems while a mentor checks the field data behind every finding. Study the street before you draw it.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+ "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Still studying, or between offers? FIELDWORK by Earth5R is a mentored fellowship for school and university students. You work on a live Earth5R project near home and come away with a verified record of the field work. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+ "jobs_intro": "Architecture and urban design roles checked today, green building included. Every listing links to the original posting. Portfolio not included.",
+ "key": "arch",
+ "url": "https://yesbrohq.com/architecture/",
+ "seo_title": "Architecture and Green Building News and Jobs | Yes Bro Architecture",
+ "seo_desc": "Daily architecture news: green building, IGBC and GRIHA, building for India's climate zones, materials, urbanism, plus open architect jobs and the certifications they ask for. Free every morning.",
+ "events_intro": "Upcoming festivals and talks, each checked against its own page this morning. Wear the black shirt.",
+ "meme": true,
+ "evergreen_days": {
+  "Building for India's Climate Zones": 30
+ },
+ "skills_block": {
+  "title": "Jobs vs Certifications",
+  "nav": "Jobs vs Certifications",
+  "intro": "What today's architecture postings list as prerequisites, read from the postings themselves. It changes when the jobs do.",
+  "note": "Bars show how often each item appears across today's postings. Every link goes to the original posting, and the jobs themselves are listed below."
+ },
+ "research_block": {
+  "title": "Research and Development",
+  "nav": "R&D",
+  "intro": "Materials, cities and building science that landed recently. Preprints say so on the card. Findings stay where the source put them."
+ },
+ "talks_block": {
+  "title": "Talks",
+  "nav": "Talks",
+  "intro": "Talks on architecture and the built world. Each one was still up on YouTube this morning."
+ }
+}
