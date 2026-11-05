@@ -14,7 +14,7 @@ SITE = "https://yesbrohq.com"
 
 # One deadpan line per paper. The key matches the config "key" (columns.py edition key).
 TEXT = {
-    "landing": "Free daily newspapers for whatever you do. Pick your paper, bro.",
+    "landing": "The newspaper for your field. News, jobs, opportunities and research, every morning.",
     "daily": "India and the world, before your chai goes cold.",
     "business": "Today's deals and markets, without the conference call.",
     "ux": "Today's UX and design news, minus the dark patterns.",

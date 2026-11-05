@@ -190,8 +190,8 @@ AD = ('<aside class="housead" id="fieldwork"><p class="ad-kicker">Advertisement<
       'there is a street to start on.</p>'
       '<a class="btn" href="https://earth5r.org/fieldwork/" target="_blank" rel="noopener">Learn more at earth5r.org</a></aside>')
 
-DESC = ("Build your own newspaper. Read every day what you want. Free daily papers for your field: India and world news, business, finance, AI, health, startups, UX and design, "
-        "architecture, schools, sustainability, higher ed, consulting, marketing, aviation, healing, packaging, fashion, real estate and auto, with jobs and explainers. No tracking.")
+DESC = ("The newspaper for your field. News, jobs, opportunities and research, every morning. Yes Bro is the first field-specific daily newspaper: India and world news, business, finance, AI, health, startups, UX and design, "
+        "architecture, schools, sustainability, higher ed, consulting, marketing, aviation, healing, packaging, fashion, real estate and auto. No tracking.")
 
 def ld(day):
     org = {"@type": "Organization", "@id": "https://yesbrohq.com/#org", "name": "Yes Bro", "url": "https://yesbrohq.com/",
@@ -229,8 +229,8 @@ def build(d, site):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Yes Bro: Free Daily Newspapers for Your Field, with News, Jobs and Explainers</title>
 <meta name="description" content="{DESC}">
-<meta name="abstract" content="Yes Bro publishes free daily newspapers by field. Build your own newspaper. Read every day what you want. No accounts and no tracking of what you read.">
-<meta name="keywords" content="Yes Bro, daily newspaper, India news, AI news, business news, free newspaper, no tracking">
+<meta name="abstract" content="Yes Bro is the first field-specific newspaper: news, jobs, opportunities and research for your field, every morning. No accounts and no tracking of what you read.">
+<meta name="keywords" content="Yes Bro, field-specific newspaper, daily newspaper, news jobs opportunities research, India news, AI news, business news, no tracking">
 <link rel="canonical" href="https://yesbrohq.com/">
 <link rel="alternate" type="text/plain" title="llms.txt" href="https://yesbrohq.com/llms.txt">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -267,7 +267,7 @@ def build(d, site):
 {share.bar(SHARE_URL, SHARE_TITLE, SHARE_TEXT, label="Share Yes Bro")}
 </header>
 <main>
-<p class="tagline">A free daily newspaper for whatever you do.</p>
+<p class="tagline">The newspaper for your field. News, jobs, opportunities and research, every morning.</p>
 <p class="subtag">Pick your paper. Bro means everyone.</p>
 <div class="mypaper-door"><a href="mypaper/">My Paper<span>Mix sections from every edition</span></a></div>
 <div class="pick-head" id="papers">Pick your paper</div>

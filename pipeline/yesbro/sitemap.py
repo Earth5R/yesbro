@@ -259,13 +259,19 @@ def write_llms(site: str, cats: dict) -> None:
         papers.items(),
         key=lambda kv: (0 if kv[0] == "daily" else 1, (kv[1].get("name") or kv[0]).lower()),
     )
+    positioning = site_meta.get("positioning") or (
+        "Yes Bro is the first field-specific newspaper: news, jobs, opportunities and research "
+        "for your field, every morning. No tracking."
+    )
     short = [
         "# Yes Bro",
         "",
-        f"> {site_meta.get('tagline') or 'Build your own newspaper. Read every day what you want.'}",
+        f"> {site_meta.get('tagline') or 'The newspaper for your field. News, jobs, opportunities and research, every morning.'}",
         f"> {site_meta.get('promise') or 'No accounts required to read. No tracking of what you read.'}",
         "",
-        f"{site_meta.get('name') or 'Yes Bro'} publishes free daily newspapers for different fields. "
+        positioning,
+        "",
+        f"{site_meta.get('name') or 'Yes Bro'} publishes a free daily paper for each field. "
         "Every headline links to the original report. Readers pick a paper; there is no feed ranking and no tracking of what they read.",
         "",
         "## Papers",
