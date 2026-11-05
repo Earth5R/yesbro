@@ -14,6 +14,13 @@ from pathlib import Path
 
 SITE = "https://yesbrohq.com"
 
+def _about_entity(meta, about, folder_name):
+    brand = (meta or {}).get("brand") or {}
+    if isinstance(brand, dict) and brand.get("url") and brand.get("name"):
+        return {"@type": "Organization", "name": brand["name"], "url": brand["url"], "description": about}
+    return {"@type": "Thing", "name": folder_name, "description": about}
+
+
 
 def load_cats(root: Path) -> dict:
     p = root / "seo_categories.json"
@@ -112,7 +119,7 @@ def build_jsonld(meta: dict, folder: str, stories: list[dict], iso: str, no_eart
         if genre:
             art["genre"] = genre
         if about:
-            art["about"] = {"@type": "Thing", "name": name, "description": about}
+            art["about"] = _about_entity(meta, about, name)
         articles.append(art)
     publisher = {
         "@type": "Organization",
@@ -143,7 +150,10 @@ def build_jsonld(meta: dict, folder: str, stories: list[dict], iso: str, no_eart
     if genre:
         ld["genre"] = genre
     if about:
-        ld["about"] = {"@type": "Thing", "name": name, "description": about}
+        ld["about"] = _about_entity(meta, about, name)
+    brand = (meta or {}).get("brand") or {}
+    if isinstance(brand, dict) and brand.get("url"):
+        ld["mentions"] = {"@type": "Organization", "name": brand.get("name") or "", "url": brand["url"]}
     crumbs = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

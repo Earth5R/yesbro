@@ -224,6 +224,18 @@ def _iso(date):
     except ValueError:
         return _dt.date.today().isoformat()
 
+
+def _about_entity(cat, c, about):
+    """Schema.org about node. Healing (and similar) may set cat["brand"] for Mindful Wholeness etc."""
+    brand = (cat or {}).get("brand") or {}
+    if isinstance(brand, dict) and brand.get("url") and brand.get("name"):
+        node = {"@type": "Organization", "name": brand["name"], "url": brand["url"],
+                "description": about or brand.get("description") or ""}
+        if brand.get("description") and about:
+            node["description"] = about
+        return node
+    return {"@type": "Thing", "name": (cat or {}).get("name") or c.get("title") or "", "description": about}
+
 def seo_head(c, date, secs):
     """Canonical, description, Open Graph, Twitter card and JSON-LD for a paper.
 
@@ -291,7 +303,7 @@ def seo_head(c, date, secs):
             if genre:
                 art["genre"] = genre
             if about:
-                art["about"] = {"@type": "Thing", "name": cat.get("name") or c["title"], "description": about}
+                art["about"] = _about_entity(cat, c, about)
             articles.append(art)
     publisher = {"@type": "Organization", "name": "Yes Bro", "url": SITE + "/",
                  "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png"},
@@ -309,7 +321,11 @@ def seo_head(c, date, secs):
     if genre:
         ld["genre"] = genre
     if about:
-        ld["about"] = {"@type": "Thing", "name": cat.get("name") or c["title"], "description": about}
+        ld["about"] = _about_entity(cat, c, about)
+    brand = cat.get("brand") or {}
+    if isinstance(brand, dict) and brand.get("url"):
+        ld["mentions"] = {"@type": "Organization", "name": brand.get("name") or "", "url": brand["url"]}
+
     if c.get("no_earth5r"):
         ld["publisher"].pop("parentOrganization", None)
     crumbs = {

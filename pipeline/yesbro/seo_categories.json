@@ -325,21 +325,30 @@
     "healing": {
       "name": "Yes Bro Healing",
       "folder": "healing",
-      "title": "Mental health, wellbeing, yoga and Ayurveda news | Yes Bro Healing",
-      "description": "Daily wellbeing newspaper: mental health, mindfulness, sleep, nutrition, longevity and alternative therapies, evidence-minded. Free. No tracking.",
-      "about": "Yes Bro Healing is a kind, evidence-minded wellbeing paper. It covers mental health, mindfulness, sleep, nutrition and related topics without cure claims, and without house-ad promotion.",
+      "title": "Healing and mindfulness news daily | Mindful Wholeness · Yes Bro Healing",
+      "description": "Yes Bro Healing is the daily field newspaper for Mindful Wholeness (mindfulwholeness.org): mental health, mindfulness, sleep, nutrition, longevity and alternative therapies. Evidence-minded. Free. No tracking.",
+      "about": "Yes Bro Healing is the daily field newspaper for Mindful Wholeness (https://mindfulwholeness.org/), Saurabh's healing practice site. It covers mental health, mindfulness, sleep, nutrition and related topics without cure claims, and without house-ad promotion from other brands.",
       "keywords": [
+        "Mindful Wholeness",
+        "mindfulwholeness.org",
+        "healing news",
+        "mindfulness news",
         "mental health news",
         "wellbeing",
-        "mindfulness",
         "yoga news",
         "Ayurveda",
+        "Shiatsu Mumbai",
         "Yes Bro Healing"
       ],
       "genre": [
         "health",
         "wellbeing"
-      ]
+      ],
+      "brand": {
+        "name": "Mindful Wholeness",
+        "url": "https://mindfulwholeness.org/",
+        "description": "Shiatsu, reflexology, facials and mindfulness-based counselling in Mumbai and online."
+      }
     },
     "realestate": {
       "name": "Yes Bro Real Estate",
