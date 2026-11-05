@@ -519,7 +519,7 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
         # Category SEO/AEO: refresh paper <head> JSON-LD/meta, then sitemaps/robots/llms/RSS/IndexNow key
         subprocess.run([sys.executable, str(ROOT / "enrich_seo.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
         subprocess.run([sys.executable, str(ROOT / "sitemap.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
-        subprocess.run([sys.executable, str(ROOT / "pwa.py")], cwd=str(ROOT), check=False)
+        subprocess.run([sys.executable, str(ROOT / "pwa.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
         # mypaper best effort
         try:
             subprocess.run([sys.executable, str(ROOT / "build_mypaper_data.py"), "--date", D, "--site", str(SITE)], cwd=str(ROOT), check=False, timeout=120)

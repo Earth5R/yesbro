@@ -79,6 +79,17 @@ def build_jsonld(meta: dict, folder: str, stories: list[dict], iso: str, no_eart
     desc = meta.get("description") or ""
     about = meta.get("about") or desc
     keywords = meta.get("keywords") or []
+    if folder == "healing" or meta.get("key") == "healing":
+        def _scrub(s):
+            if not isinstance(s, str) or not s:
+                return s
+            s = re.sub(r"(?i)\bEarth5R\b", "the publisher", s)
+            s = re.sub(r"(?i)\bFIELDWORK\b", "the house programme", s)
+            s = re.sub(r"(?i)earth5r\.org[^\s\"']*", "yesbrohq.com", s)
+            return s
+        title, desc, about = _scrub(title), _scrub(desc), _scrub(about)
+        keywords = [_scrub(k) for k in keywords]
+        meta = {**meta, "title": title, "description": desc, "about": about, "keywords": keywords}
     genre = meta.get("genre") or []
     url = f"{SITE}/{folder}/"
     name = meta.get("name") or title

@@ -302,7 +302,7 @@ def visible_ok(page: str):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--site", default="/workspace/yesbro-site")
+    ap.add_argument("--site", default=os.environ.get("YESBRO_SITE") or os.environ.get("GITHUB_WORKSPACE") or ("/workspace/yesbro-site" if os.path.isdir("/workspace/yesbro-site") else os.path.abspath(os.path.join(HERE, "..", ".."))))
     a = ap.parse_args()
     out = os.path.join(a.site, "mypaper")
     os.makedirs(out, exist_ok=True)
@@ -311,8 +311,16 @@ def main():
     for name in ("app.js", "firebase-config.js", "firestore.rules", "PHASE2.md"):
         src = os.path.join(SRC, name)
         if not os.path.exists(src):
-            raise SystemExit(f"missing {src}")
-        shutil.copy2(src, os.path.join(out, name))
+            # Fall back to an already-published copy under the site mypaper folder.
+            alt = os.path.join(out, name)
+            if os.path.exists(alt):
+                print(f"mypaper: using existing {alt} (mypaper_src missing {name})")
+                src = alt
+            else:
+                print(f"mypaper: skip missing {name} (not in mypaper_src or {out})")
+                continue
+        if os.path.abspath(src) != os.path.abspath(os.path.join(out, name)):
+            shutil.copy2(src, os.path.join(out, name))
     # Icons (Lucide-adapted, local) + shared auth strip for papers/landing
     icons_src = os.path.join(HERE, "shared", "icons.js")
     if not os.path.exists(icons_src):

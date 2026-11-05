@@ -255,6 +255,17 @@ def seo_head(c, date, secs):
     about = cat.get("about") or desc
     keywords = cat.get("keywords") or []
     genre = cat.get("genre") or []
+    if c.get("no_earth5r"):
+        # Healing must never emit these strings (guard scans the whole page).
+        def _scrub(s):
+            if not isinstance(s, str) or not s:
+                return s
+            s = re.sub(r"(?i)\bEarth5R\b", "the publisher", s)
+            s = re.sub(r"(?i)\bFIELDWORK\b", "the house programme", s)
+            s = re.sub(r"(?i)earth5r\.org[^\s\"']*", "yesbrohq.com", s)
+            return s
+        title, desc, about = _scrub(title), _scrub(desc), _scrub(about)
+        keywords = [_scrub(k) for k in keywords]
     import share
     img = share.og_image(c.get("key"))
     iso = _iso(date)
