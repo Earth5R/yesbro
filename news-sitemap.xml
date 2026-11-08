@@ -8,8 +8,20 @@
         <news:name>Yes Bro AI</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Daily AI news India and world | Yes Bro AI</news:title>
+      <news:keywords>AI news, artificial intelligence news India, LLM news, AI startups, GPU compute, AI jobs, AI policy, Daily AI news, Yes Bro AI</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/ai/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro AI</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro AI — 2026-11-08</news:title>
       <news:keywords>AI news, artificial intelligence news India, LLM news, AI startups, GPU compute, AI jobs, AI policy, Daily AI news, Yes Bro AI</news:keywords>
     </news:news>
   </url>
@@ -38,26 +50,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/ai/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro AI</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro AI — 2026-11-05</news:title>
-      <news:keywords>AI news, artificial intelligence news India, LLM news, AI startups, GPU compute, AI jobs, AI policy, Daily AI news, Yes Bro AI</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/architecture/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Architecture</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Architecture and green building news India | Yes Bro Architecture</news:title>
+      <news:keywords>architecture news India, green building, GRIHA, IGBC, architecture jobs, Yes Bro Architecture</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/architecture/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Architecture</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Architecture — 2026-11-08</news:title>
       <news:keywords>architecture news India, green building, GRIHA, IGBC, architecture jobs, Yes Bro Architecture</news:keywords>
     </news:news>
   </url>
@@ -86,26 +98,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/architecture/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Architecture</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Architecture — 2026-11-05</news:title>
-      <news:keywords>architecture news India, green building, GRIHA, IGBC, architecture jobs, Yes Bro Architecture</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/auto/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Auto</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Auto, EV and two-wheeler news India | Yes Bro Auto</news:title>
+      <news:keywords>auto news India, EV news India, two wheeler, car sales India, Yes Bro Auto</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/auto/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Auto</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Auto — 2026-11-08</news:title>
       <news:keywords>auto news India, EV news India, two wheeler, car sales India, Yes Bro Auto</news:keywords>
     </news:news>
   </url>
@@ -134,26 +146,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/auto/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Auto</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Auto — 2026-11-05</news:title>
-      <news:keywords>auto news India, EV news India, two wheeler, car sales India, Yes Bro Auto</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/aviation/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Aviation</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Aviation news, airlines and pilot careers India | Yes Bro Aviation</news:title>
+      <news:keywords>aviation news India, airline news, pilot jobs India, airport news, Yes Bro Aviation</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/aviation/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Aviation</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Aviation — 2026-11-08</news:title>
       <news:keywords>aviation news India, airline news, pilot jobs India, airport news, Yes Bro Aviation</news:keywords>
     </news:news>
   </url>
@@ -182,26 +194,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/aviation/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Aviation</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Aviation — 2026-11-05</news:title>
-      <news:keywords>aviation news India, airline news, pilot jobs India, airport news, Yes Bro Aviation</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/business/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Business</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Indian business news, markets, deals and funding | Yes Bro Business</news:title>
+      <news:keywords>Indian business news, stock market India, M&amp;A India, business newspaper, tenders India, funding news, Yes Bro Business</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/business/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Business</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Business — 2026-11-08</news:title>
       <news:keywords>Indian business news, stock market India, M&amp;A India, business newspaper, tenders India, funding news, Yes Bro Business</news:keywords>
     </news:news>
   </url>
@@ -230,26 +242,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/business/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Business</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Business — 2026-11-05</news:title>
-      <news:keywords>Indian business news, stock market India, M&amp;A India, business newspaper, tenders India, funding news, Yes Bro Business</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/consulting/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Consulting</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Consulting industry news and jobs | Yes Bro Consulting</news:title>
+      <news:keywords>consulting news, GCC India, strategy consulting, consulting jobs, Yes Bro Consulting</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/consulting/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Consulting</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Consulting — 2026-11-08</news:title>
       <news:keywords>consulting news, GCC India, strategy consulting, consulting jobs, Yes Bro Consulting</news:keywords>
     </news:news>
   </url>
@@ -278,26 +290,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/consulting/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Consulting</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Consulting — 2026-11-05</news:title>
-      <news:keywords>consulting news, GCC India, strategy consulting, consulting jobs, Yes Bro Consulting</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/daily/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Daily</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Daily India and world news: politics, health, space, humour | Yes Bro Daily</news:title>
+      <news:keywords>India news today, world news, daily newspaper India, politics news India, health news, space news, AI news, climate news, humour news, Yes Bro Daily</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/daily/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Daily</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Daily — 2026-11-08</news:title>
       <news:keywords>India news today, world news, daily newspaper India, politics news India, health news, space news, AI news, climate news, humour news, Yes Bro Daily</news:keywords>
     </news:news>
   </url>
@@ -326,26 +338,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/daily/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Daily</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Daily — 2026-11-05</news:title>
-      <news:keywords>India news today, world news, daily newspaper India, politics news India, health news, space news, AI news, climate news, humour news, Yes Bro Daily</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/fashion/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Fashion</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Fashion, jewellery and textiles news India | Yes Bro Fashion</news:title>
+      <news:keywords>fashion news India, jewellery industry, textiles India, sustainable fashion, fashion jobs, Yes Bro Fashion</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/fashion/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Fashion</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Fashion — 2026-11-08</news:title>
       <news:keywords>fashion news India, jewellery industry, textiles India, sustainable fashion, fashion jobs, Yes Bro Fashion</news:keywords>
     </news:news>
   </url>
@@ -374,26 +386,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/fashion/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Fashion</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Fashion — 2026-11-05</news:title>
-      <news:keywords>fashion news India, jewellery industry, textiles India, sustainable fashion, fashion jobs, Yes Bro Fashion</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/finance/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Finance</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Stock market, banking and personal finance news | Yes Bro Finance</news:title>
+      <news:keywords>stock market news India, personal finance India, banking news, mutual funds, RBI, Yes Bro Finance</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/finance/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Finance</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Finance — 2026-11-08</news:title>
       <news:keywords>stock market news India, personal finance India, banking news, mutual funds, RBI, Yes Bro Finance</news:keywords>
     </news:news>
   </url>
@@ -422,26 +434,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/finance/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Finance</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Finance — 2026-11-05</news:title>
-      <news:keywords>stock market news India, personal finance India, banking news, mutual funds, RBI, Yes Bro Finance</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/healing/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Healing</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Healing and mindfulness news daily | Mindful Wholeness · Yes Bro Healing</news:title>
+      <news:keywords>Mindful Wholeness, mindfulwholeness.org, healing news, mindfulness news, mental health news, wellbeing, yoga news, Ayurveda, Shiatsu Mumbai, Yes Bro Healing</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/healing/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Healing</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Healing — 2026-11-08</news:title>
       <news:keywords>Mindful Wholeness, mindfulwholeness.org, healing news, mindfulness news, mental health news, wellbeing, yoga news, Ayurveda, Shiatsu Mumbai, Yes Bro Healing</news:keywords>
     </news:news>
   </url>
@@ -470,26 +482,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/healing/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Healing</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Healing — 2026-11-05</news:title>
-      <news:keywords>Mindful Wholeness, mindfulwholeness.org, healing news, mindfulness news, mental health news, wellbeing, yoga news, Ayurveda, Shiatsu Mumbai, Yes Bro Healing</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/health/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Health</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Health and medical news India | Yes Bro Health</news:title>
+      <news:keywords>health news India, medical news, public health, pharma news, hospital news, Yes Bro Health</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/health/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Health</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Health — 2026-11-08</news:title>
       <news:keywords>health news India, medical news, public health, pharma news, hospital news, Yes Bro Health</news:keywords>
     </news:news>
   </url>
@@ -518,26 +530,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/health/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Health</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Health — 2026-11-05</news:title>
-      <news:keywords>health news India, medical news, public health, pharma news, hospital news, Yes Bro Health</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/highered/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Higher Ed</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>University, study abroad and scholarship news | Yes Bro Higher Ed</news:title>
+      <news:keywords>study abroad India, university admissions, scholarships, student visa, Yes Bro Higher Ed</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/highered/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Higher Ed</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Higher Ed — 2026-11-08</news:title>
       <news:keywords>study abroad India, university admissions, scholarships, student visa, Yes Bro Higher Ed</news:keywords>
     </news:news>
   </url>
@@ -566,26 +578,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/highered/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Higher Ed</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Higher Ed — 2026-11-05</news:title>
-      <news:keywords>study abroad India, university admissions, scholarships, student visa, Yes Bro Higher Ed</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/marketing/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Marketing</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Marketing and advertising news and jobs | Yes Bro Marketing</news:title>
+      <news:keywords>marketing news, advertising India, brand news, marketing jobs, Yes Bro Marketing</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/marketing/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Marketing</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Marketing — 2026-11-08</news:title>
       <news:keywords>marketing news, advertising India, brand news, marketing jobs, Yes Bro Marketing</news:keywords>
     </news:news>
   </url>
@@ -614,25 +626,13 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/marketing/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Marketing</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Marketing — 2026-11-05</news:title>
-      <news:keywords>marketing news, advertising India, brand news, marketing jobs, Yes Bro Marketing</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/mypaper/</loc>
     <news:news>
       <news:publication>
         <news:name>mypaper</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>mypaper | Yes Bro</news:title>
     </news:news>
   </url>
@@ -643,8 +643,20 @@
         <news:name>Yes Bro Packaging</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Packaging and plastics industry news | Yes Bro Packaging</news:title>
+      <news:keywords>packaging news, plastic packaging, EPR India, recycling, packaging jobs, Yes Bro Packaging</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/packaging/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Packaging</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Packaging — 2026-11-08</news:title>
       <news:keywords>packaging news, plastic packaging, EPR India, recycling, packaging jobs, Yes Bro Packaging</news:keywords>
     </news:news>
   </url>
@@ -673,25 +685,13 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/packaging/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Packaging</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Packaging — 2026-11-05</news:title>
-      <news:keywords>packaging news, plastic packaging, EPR India, recycling, packaging jobs, Yes Bro Packaging</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/privacy/</loc>
     <news:news>
       <news:publication>
         <news:name>privacy</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>privacy | Yes Bro</news:title>
     </news:news>
   </url>
@@ -702,8 +702,20 @@
         <news:name>Yes Bro Real Estate</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Real estate, housing, REITs and PropTech news India | Yes Bro Real Estate</news:title>
+      <news:keywords>real estate news India, RERA, REITs India, PropTech, housing news, Yes Bro Real Estate</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/realestate/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Real Estate</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Real Estate — 2026-11-08</news:title>
       <news:keywords>real estate news India, RERA, REITs India, PropTech, housing news, Yes Bro Real Estate</news:keywords>
     </news:news>
   </url>
@@ -732,26 +744,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/realestate/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Real Estate</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Real Estate — 2026-11-05</news:title>
-      <news:keywords>real estate news India, RERA, REITs India, PropTech, housing news, Yes Bro Real Estate</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/schools/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Schools</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>IB and school news for students and teachers | Yes Bro Schools</news:title>
+      <news:keywords>IB news, school exams India, scholarships, Cambridge board, Yes Bro Schools</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/schools/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Schools</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Schools — 2026-11-08</news:title>
       <news:keywords>IB news, school exams India, scholarships, Cambridge board, Yes Bro Schools</news:keywords>
     </news:news>
   </url>
@@ -780,26 +792,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/schools/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Schools</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Schools — 2026-11-05</news:title>
-      <news:keywords>IB news, school exams India, scholarships, Cambridge board, Yes Bro Schools</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/startups/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Startups</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>Indian startup funding news and startup jobs | Yes Bro Startups</news:title>
+      <news:keywords>startup funding India, Indian startups, venture capital India, startup jobs, Yes Bro Startups</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/startups/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Startups</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Startups — 2026-11-08</news:title>
       <news:keywords>startup funding India, Indian startups, venture capital India, startup jobs, Yes Bro Startups</news:keywords>
     </news:news>
   </url>
@@ -828,26 +840,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/startups/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Startups</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Startups — 2026-11-05</news:title>
-      <news:keywords>startup funding India, Indian startups, venture capital India, startup jobs, Yes Bro Startups</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/sustainability/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro Sustainability</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>ESG, climate and sustainability news | Yes Bro Sustainability</news:title>
+      <news:keywords>ESG news, climate news India, sustainability jobs, net zero, Yes Bro Sustainability</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/sustainability/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro Sustainability</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro Sustainability — 2026-11-08</news:title>
       <news:keywords>ESG news, climate news India, sustainability jobs, net zero, Yes Bro Sustainability</news:keywords>
     </news:news>
   </url>
@@ -876,26 +888,26 @@
     </news:news>
   </url>
   <url>
-    <loc>https://yesbrohq.com/sustainability/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro Sustainability</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro Sustainability — 2026-11-05</news:title>
-      <news:keywords>ESG news, climate news India, sustainability jobs, net zero, Yes Bro Sustainability</news:keywords>
-    </news:news>
-  </url>
-  <url>
     <loc>https://yesbrohq.com/ux/</loc>
     <news:news>
       <news:publication>
         <news:name>Yes Bro UX &amp; Design</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-07</news:publication_date>
+      <news:publication_date>2026-11-08</news:publication_date>
       <news:title>UX and design news and jobs today | Yes Bro UX &amp; Design</news:title>
+      <news:keywords>UX news, product design news, UI design, design jobs, Figma, Yes Bro UX</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yesbrohq.com/ux/archive/2026-11-08.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yes Bro UX &amp; Design</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-08</news:publication_date>
+      <news:title>Yes Bro UX &amp; Design — 2026-11-08</news:title>
       <news:keywords>UX news, product design news, UI design, design jobs, Figma, Yes Bro UX</news:keywords>
     </news:news>
   </url>
@@ -920,18 +932,6 @@
       </news:publication>
       <news:publication_date>2026-11-06</news:publication_date>
       <news:title>Yes Bro UX &amp; Design — 2026-11-06</news:title>
-      <news:keywords>UX news, product design news, UI design, design jobs, Figma, Yes Bro UX</news:keywords>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://yesbrohq.com/ux/archive/2026-11-05.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Yes Bro UX &amp; Design</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-05</news:publication_date>
-      <news:title>Yes Bro UX &amp; Design — 2026-11-05</news:title>
       <news:keywords>UX news, product design news, UI design, design jobs, Figma, Yes Bro UX</news:keywords>
     </news:news>
   </url>
