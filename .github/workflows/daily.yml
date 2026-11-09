@@ -70,18 +70,7 @@ jobs:
           python pipeline/run_daily.py --per-section 9 "${EXTRA[@]}"
 
       - name: Commit published pages
-        run: |
-          git config user.name "yesbro-bot"
-          git config user.email "yesbro-bot@users.noreply.github.com"
-          # Never touch CNAME
-          git add -A
-          git reset HEAD -- CNAME || true
-          if git diff --cached --quiet; then
-            echo "No site changes to commit"
-          else
-            git commit -m "Yes Bro daily: $(TZ=Asia/Kolkata date +%F)"
-            git push
-          fi
+        run: sh pipeline/yesbro/publish_daily_commit.sh
 
 
       - name: Ping IndexNow
