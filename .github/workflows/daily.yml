@@ -2,10 +2,13 @@ name: Yes Bro daily
 
 on:
   schedule:
-    # GitHub cron is UTC. 23:30 UTC is 05:00 Asia/Kolkata (IST, UTC+05:30)
-    # the following IST morning. Schedule runs omit --date, so the pipeline
-    # dates the paper with today_ist() when the job starts.
-    - cron: "30 23 * * *"
+    # Backup only. The 05:00 IST publish is an external workflow_dispatch
+    # with no inputs (empty date = today IST). GitHub cron is UTC.
+    # 01:00 UTC is 06:30 IST that same morning, after the 05:00 run has
+    # normally committed. GitHub may still start this event later.
+    # A queued backup checks out origin/main when it starts, then skips
+    # if daily/archive/<that IST date>.html is already the published issue.
+    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       date:
@@ -36,7 +39,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check out latest main for the backup schedule
+        if: github.event_name == 'schedule'
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - name: Skip backup schedule when today's Daily is already published
+        id: published
+        run: sh pipeline/yesbro/skip_published_edition.sh
+
       - name: Set up Python
+        if: steps.published.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,12 +58,14 @@ jobs:
           cache-dependency-path: pipeline/requirements.txt
 
       - name: Install dependencies
+        if: steps.published.outputs.skip != 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r pipeline/requirements.txt
           # Builder scripts live under pipeline/yesbro (vendored). Site HTML is repo root.
 
       - name: Configure paths
+        if: steps.published.outputs.skip != 'true'
         run: |
           echo "YESBRO_ROOT=${GITHUB_WORKSPACE}/pipeline/yesbro" >> "$GITHUB_ENV"
           echo "YESBRO_SITE=${GITHUB_WORKSPACE}" >> "$GITHUB_ENV"
@@ -57,6 +73,7 @@ jobs:
           mkdir -p pipeline/yesbro/memes pipeline/yesbro/columns pipeline/yesbro/cache
 
       - name: Run daily pipeline
+        if: steps.published.outputs.skip != 'true'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           YESBRO_DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
@@ -70,10 +87,11 @@ jobs:
           python pipeline/run_daily.py --per-section 9 "${EXTRA[@]}"
 
       - name: Commit published pages
+        if: steps.published.outputs.skip != 'true'
         run: sh pipeline/yesbro/publish_daily_commit.sh
 
 
       - name: Ping IndexNow
-        if: success()
+        if: success() && steps.published.outputs.skip != 'true'
         run: |
           python pipeline/yesbro/indexnow_ping.py --site "$GITHUB_WORKSPACE"
