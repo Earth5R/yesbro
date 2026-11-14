@@ -256,6 +256,7 @@ PUBLISHER = {"@type": "Organization", "name": "Yes Bro", "url": SITE + "/",
              "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png", "width": 512, "height": 512}}
 
 def head(title, desc, canon, img, og_type, ld, depth):
+    from build_html import FIT_CSS
     up = "../" * depth
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -272,7 +273,7 @@ def head(title, desc, canon, img, og_type, ld, depth):
 <meta name="theme-color" content="#f3ead6"><link rel="icon" href="{up}icon-512.png"><link rel="apple-touch-icon" href="{up}icon-512.png">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 {FONTS}
-<style>{PAGE_CSS}</style></head>"""
+<style>{PAGE_CSS}{FIT_CSS}</style></head>"""
 
 def masthead(key, kicker_right):
     folder, label = EDS[key]

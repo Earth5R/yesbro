@@ -306,8 +306,10 @@ def main():
     a = ap.parse_args()
     out = os.path.join(a.site, "mypaper")
     os.makedirs(out, exist_ok=True)
-    visible_ok(HTML)
-    open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(HTML)
+    from build_html import FIT_CSS
+    page = HTML.replace("</style>", FIT_CSS + "\n</style>", 1)
+    visible_ok(page)
+    open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(page)
     for name in ("app.js", "firebase-config.js", "firestore.rules", "PHASE2.md"):
         src = os.path.join(SRC, name)
         if not os.path.exists(src):

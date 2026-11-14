@@ -10,7 +10,7 @@ editions) for the top headline. A missing file just leaves the card without a he
 To add a new paper, add one line to EDITIONS (and optionally a config JSON for its price and motto).
 """
 import argparse, glob, html, json, os, re, datetime
-from build_html import A2HS_CSS, a2hs_html, house_count_check
+from build_html import A2HS_CSS, FIT_CSS, a2hs_html, house_count_check
 import share, maker
 import yb_auth_strip
 # Landing page share: the front door URL, so friends land on all the papers (share.py).
@@ -255,7 +255,7 @@ def build(d, site):
 <link rel="icon" href="icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:wght@700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<style>{CSS}{A2HS_CSS}{meme_css}{share.CSS}{maker.css()}</style></head>
+<style>{CSS}{A2HS_CSS}{meme_css}{share.CSS}{maker.css()}{FIT_CSS}</style></head>
 <body id="top">
 <div class="cbar" id="cbar" role="region" aria-label="Your paper"><a class="cgo" id="cgo" href="daily/">Continue to your paper</a>
 <span class="cmore"><button type="button" id="call">Show all papers</button><button type="button" id="cforget">Forget my pick</button></span></div>
