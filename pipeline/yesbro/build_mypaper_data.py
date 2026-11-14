@@ -16,10 +16,16 @@ import argparse
 import json
 import os
 import re
+import sys
 from collections import OrderedDict
 from urllib.parse import urlparse
 
 from columns import EDS
+
+_PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _PIPE not in sys.path:
+    sys.path.append(_PIPE)
+import story_text
 
 SITE_URL = "https://yesbrohq.com"
 
@@ -88,7 +94,7 @@ def normalize_stories(raw):
         img = s.get("image") or s.get("image_url") or ""
         out.append({
             "title": title,
-            "summary": s.get("summary") or s.get("dek") or "",
+            "summary": story_text.present_summary(s.get("summary") or s.get("dek") or "", title),
             "url": url,
             "image": img,
             "source": s.get("source") or source_from_url(url),
