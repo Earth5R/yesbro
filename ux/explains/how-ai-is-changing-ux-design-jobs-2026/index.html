@@ -69,6 +69,79 @@ article.col a{text-decoration-color:var(--rule-soft);text-underline-offset:3px}
 footer{margin-top:28px;border-top:4px double var(--rule);padding-top:8px;text-align:center;font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;font-style:italic;color:var(--ink-faint)}
 footer a{color:var(--ink-soft)}
 @media (max-width:640px){.sheet{padding:14px 16px 30px}body{font-size:16.5px}.dek{font-size:17.5px}article.col p{text-align:left}}
+
+/* Keep a long URL, headline or picture inside the column. */
+.sheet,
+.cols,
+.cols > .rail,
+.briefs,
+.classifieds,
+.rd-grid,
+.tk-grid,
+.tk-card,
+.sk-grid,
+.card,
+.sec-head,
+.sec-head > *,
+.story,
+.brief,
+article,
+.meme,
+.meme .mm-half,
+.housead,
+.jobsad,
+.explains,
+.sharebar,
+.sh-grid > *,
+.dateline > *,
+.paper-pills,
+.menu-list a,
+.fw-blog,
+.stu-opp,
+.interlude,
+.half-banner,
+.tile-grid,
+.topic-grid,
+button.tile,
+button.topic,
+figure,
+.story img,
+.c-photo,
+.c-photo img {
+  min-width: 0;
+}
+.story h3, .brief h3, .story p, .brief p,
+.byline, .more, .sec-head h2, .sec-head span,
+.rd-item h3, .rd-sum, .rd-meta,
+.tk-card h3, .tk-note, .tk-meta,
+.classified, .classified a, .jobsad, .jobs-intro,
+.fw-item h3, .fw-sum,
+.housead h3, .housead h4, .housead p,
+.explains h3, .explains p, .ex-dek,
+article.col, article.col p, article.col h1, article.col h2, article.col li,
+.sources, .sources a, .dek, .kicker,
+.c-top, .c-blurb, .c-motto, .c-foot, .tagline,
+.hero h1, .hero p, .t-name, .paper-banner-title,
+.list h2, .list p,
+.mm-line, .mm-via, .mm-top, .mm-bot, .mm-half,
+.sk-asks, .sk-name, .inspired,
+nav.sections a, .menu-list a,
+footer, .a2hs, .a2hs p, .a2hs li,
+h2, h3, p, li, a, figcaption, td, th {
+  overflow-wrap: break-word;
+}
+.masthead h1, .masthead .mh, .ybt, .yb, .fw, .ex-brand {
+  overflow-wrap: normal;
+}
+img, video, canvas, iframe, table, pre, figure {
+  max-width: 100%;
+}
+/* A drop cap beside justified text stretches a short line across the column
+   when the next word is a long URL. On a phone, lead blurbs sit flush left. */
+@media (max-width: 640px) {
+  article.lead p.sum { text-align: left; }
+}
+
 </style></head>
 <body><div class="sheet"><header><div class="topbar"><a href="/ux/">&larr; Yes Bro UX &amp; Design</a><a href="/">All Yes Bro papers</a></div><div class="masthead"><p class="family">Yes Bro Newspaper</p><p class="mh"><a href="/ux/"><span class="ybt" style="--w:10.14"><span class="yb">Yes Bro</span> <span class="fw">UX &amp; Design</span></span></a></p></div><div class="dateline"><span>Yes Bro Explains</span><span>25 October 2026</span></div></header><main><article class="col"><header class="colhead ex-special"><p class="ex-tab">Special column</p><p class="ex-brand"><span class="yb">Yes Bro</span> <span class="fw">Explains</span></p><p class="kicker">UX &amp; Design</p><h1>How AI is changing UX design jobs in 2026, according to the data</h1><p class="dek">Nearly every UX practitioner now has AI at work and the tools keep shipping. The evidence suggests the job is moving rather than disappearing. Here is where the work, and the hiring, is going.</p><p class="byline">By <b>Yes Bro Desk</b> &middot; <time datetime="2026-10-25">25 October 2026</time> &middot; 3 min read</p></header><p>Every few months someone announces that AI will replace designers, and every few months the designers are still here, now with more tools to learn. This week offered better evidence than hot takes, so let us look at it.</p>
 <h2>Almost everyone has AI, almost nobody is thrilled</h2>

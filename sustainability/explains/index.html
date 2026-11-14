@@ -69,5 +69,78 @@ article.col a{text-decoration-color:var(--rule-soft);text-underline-offset:3px}
 footer{margin-top:28px;border-top:4px double var(--rule);padding-top:8px;text-align:center;font-family:"Old Standard TT",Georgia,serif;font-size:12.5px;font-style:italic;color:var(--ink-faint)}
 footer a{color:var(--ink-soft)}
 @media (max-width:640px){.sheet{padding:14px 16px 30px}body{font-size:16.5px}.dek{font-size:17.5px}article.col p{text-align:left}}
+
+/* Keep a long URL, headline or picture inside the column. */
+.sheet,
+.cols,
+.cols > .rail,
+.briefs,
+.classifieds,
+.rd-grid,
+.tk-grid,
+.tk-card,
+.sk-grid,
+.card,
+.sec-head,
+.sec-head > *,
+.story,
+.brief,
+article,
+.meme,
+.meme .mm-half,
+.housead,
+.jobsad,
+.explains,
+.sharebar,
+.sh-grid > *,
+.dateline > *,
+.paper-pills,
+.menu-list a,
+.fw-blog,
+.stu-opp,
+.interlude,
+.half-banner,
+.tile-grid,
+.topic-grid,
+button.tile,
+button.topic,
+figure,
+.story img,
+.c-photo,
+.c-photo img {
+  min-width: 0;
+}
+.story h3, .brief h3, .story p, .brief p,
+.byline, .more, .sec-head h2, .sec-head span,
+.rd-item h3, .rd-sum, .rd-meta,
+.tk-card h3, .tk-note, .tk-meta,
+.classified, .classified a, .jobsad, .jobs-intro,
+.fw-item h3, .fw-sum,
+.housead h3, .housead h4, .housead p,
+.explains h3, .explains p, .ex-dek,
+article.col, article.col p, article.col h1, article.col h2, article.col li,
+.sources, .sources a, .dek, .kicker,
+.c-top, .c-blurb, .c-motto, .c-foot, .tagline,
+.hero h1, .hero p, .t-name, .paper-banner-title,
+.list h2, .list p,
+.mm-line, .mm-via, .mm-top, .mm-bot, .mm-half,
+.sk-asks, .sk-name, .inspired,
+nav.sections a, .menu-list a,
+footer, .a2hs, .a2hs p, .a2hs li,
+h2, h3, p, li, a, figcaption, td, th {
+  overflow-wrap: break-word;
+}
+.masthead h1, .masthead .mh, .ybt, .yb, .fw, .ex-brand {
+  overflow-wrap: normal;
+}
+img, video, canvas, iframe, table, pre, figure {
+  max-width: 100%;
+}
+/* A drop cap beside justified text stretches a short line across the column
+   when the next word is a long URL. On a phone, lead blurbs sit flush left. */
+@media (max-width: 640px) {
+  article.lead p.sum { text-align: left; }
+}
+
 </style></head>
 <body><div class="sheet"><header><div class="topbar"><a href="/sustainability/">&larr; Yes Bro Sustainability</a><a href="/">All Yes Bro papers</a></div><div class="masthead"><p class="family">Yes Bro Newspaper</p><p class="mh"><a href="/sustainability/"><span class="ybt" style="--w:10.85"><span class="yb">Yes Bro</span> <span class="fw">Sustainability</span></span></a></p></div><div class="dateline"><span>Yes Bro Explains</span><span>The column archive</span></div></header><main><p class="kicker">Our own columns</p><h1>Yes Bro Explains: Sustainability</h1><p class="dek">Original analysis from the Yes Bro Desk, with a link for every fact. Opinions are kept to a minimum, with some effort.</p><ul class="list"><li><h2><a href="india-farm-carbon-credits-rice-methane-biochar-explained/">Rice methane and biochar credits explained, why big tech is buying carbon from Indian farms</a></h2><p>Salesforce is buying rice methane credits, Jain Irrigation is selling biochar and Jharkhand wants its own schemes to earn. Farm carbon is having a moment in India. Here is how it works and where it can go wrong.</p><span class="when">31 October 2026 &middot; Yes Bro Desk</span></li><li><h2><a href="green-jobs-2026-linkedin-green-skills-report-india/">Green jobs in 2026, what LinkedIn&#x27;s Green Skills Report says about hiring in India</a></h2><p>Green hiring is growing twice as fast as green talent, and India has one of the biggest hiring advantages for people with green skills. The surprise is where those jobs actually are.</p><span class="when">28 October 2026 &middot; Yes Bro Desk</span></li><li><h2><a href="cbam-explained-indian-exporters-2026/">CBAM explained: what the EU carbon border tax means for Indian exporters right now</a></h2><p>Delhi is promising to pay MSMEs&#x27; certification bills while Brussels argues about widening the net. The plain language version of a very expensive acronym.</p><span class="when">25 October 2026 &middot; Yes Bro Desk</span></li></ul><nav class="more"><a href="/sustainability/">More Yes Bro Sustainability &rarr;</a></nav></main><footer>New columns twice a week.<p class="credit"><a href="https://earth5r.org/">A product of Earth5R</a></p></footer></div></body></html>

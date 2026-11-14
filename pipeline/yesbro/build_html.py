@@ -83,15 +83,15 @@ section.sec{margin:0 0 26px;scroll-margin-top:12px}
 .sec-head h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:24px;letter-spacing:.02em;
   text-transform:uppercase;color:var(--ink)}
 .sec-head span{font-family:"Old Standard TT",Georgia,serif;font-style:italic;font-size:13px;color:var(--ink-faint)}
-.cols{display:grid;grid-template-columns:2fr 1fr 1fr;align-items:start}
-.cols.nolead{grid-template-columns:1fr 1fr}
-.rail{padding:0 16px;border-left:1px solid var(--rule-soft);min-height:100%}
+.cols{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);align-items:start}
+.cols.nolead{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.rail{padding:0 16px;border-left:1px solid var(--rule-soft);min-height:100%;min-width:0}
 .cols > .rail:first-child{border-left:0;padding-left:0}
 .cols > .rail:last-child{padding-right:0}
 .rail article.story + article.story{border-top:1px solid var(--rule-soft);padding-top:12px;margin-top:2px}
 article.story{padding:0 0 12px}
 .story figure{margin:0 0 8px;border:1px solid var(--rule-soft);background:var(--paper-deep)}
-.story img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.97)}
+.story img{display:block;width:100%;max-width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.97)}
 .story h3{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:19px;line-height:1.18;color:var(--ink)}
 article.lead h3{font-size:27px;font-weight:900;line-height:1.12}
 .story h3 a{text-decoration:none}
@@ -117,7 +117,7 @@ article.lead p.sum::first-letter{float:left;font-family:"Playfair Display",Georg
 footer{border-top:4px double var(--rule);padding-top:8px;text-align:center;font-family:"Old Standard TT",Georgia,serif;
   font-size:12.5px;font-style:italic;color:var(--ink-faint)}
 @media (max-width:1050px){
-  .cols{grid-template-columns:1fr 1fr}
+  .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .cols > .rail.leadrail{grid-column:1 / -1;padding:0 0 12px;border-bottom:1px solid var(--rule-soft);margin-bottom:12px}
   .cols > .rail.leadrail + .rail{border-left:0;padding-left:0}
 }
@@ -129,10 +129,89 @@ footer{border-top:4px double var(--rule);padding-top:8px;text-align:center;font-
   .dateline{justify-content:center;font-size:11.5px}
   nav.sections{gap:6px 0}
   nav.sections a{font-size:12px;padding:3px 9px}
-  .cols,.cols.nolead{grid-template-columns:1fr}
+  .cols,.cols.nolead{grid-template-columns:minmax(0,1fr)}
   .rail,.cols > .rail.leadrail + .rail{border-left:0;padding:0}
   .rail + .rail{border-top:1px solid var(--rule-soft);padding-top:12px}
   article.lead h3{font-size:24px}
+}
+"""
+
+# A grid track is minmax(auto, 1fr). One unbreakable string (an Akamai error URL,
+# a press-release path) or a wide picture stretches the rail past the phone.
+# The sheet stays viewport-wide, so the story paints onto the darker page
+# background. min-width: 0 lets the track shrink. overflow-wrap wraps the
+# string inside the column instead of clipping it. The masthead keeps its scaling.
+FIT_CSS = r"""
+/* Keep a long URL, headline or picture inside the column. */
+.sheet,
+.cols,
+.cols > .rail,
+.briefs,
+.classifieds,
+.rd-grid,
+.tk-grid,
+.tk-card,
+.sk-grid,
+.card,
+.sec-head,
+.sec-head > *,
+.story,
+.brief,
+article,
+.meme,
+.meme .mm-half,
+.housead,
+.jobsad,
+.explains,
+.sharebar,
+.sh-grid > *,
+.dateline > *,
+.paper-pills,
+.menu-list a,
+.fw-blog,
+.stu-opp,
+.interlude,
+.half-banner,
+.tile-grid,
+.topic-grid,
+button.tile,
+button.topic,
+figure,
+.story img,
+.c-photo,
+.c-photo img {
+  min-width: 0;
+}
+.story h3, .brief h3, .story p, .brief p,
+.byline, .more, .sec-head h2, .sec-head span,
+.rd-item h3, .rd-sum, .rd-meta,
+.tk-card h3, .tk-note, .tk-meta,
+.classified, .classified a, .jobsad, .jobs-intro,
+.fw-item h3, .fw-sum,
+.housead h3, .housead h4, .housead p,
+.explains h3, .explains p, .ex-dek,
+article.col, article.col p, article.col h1, article.col h2, article.col li,
+.sources, .sources a, .dek, .kicker,
+.c-top, .c-blurb, .c-motto, .c-foot, .tagline,
+.hero h1, .hero p, .t-name, .paper-banner-title,
+.list h2, .list p,
+.mm-line, .mm-via, .mm-top, .mm-bot, .mm-half,
+.sk-asks, .sk-name, .inspired,
+nav.sections a, .menu-list a,
+footer, .a2hs, .a2hs p, .a2hs li,
+h2, h3, p, li, a, figcaption, td, th {
+  overflow-wrap: break-word;
+}
+.masthead h1, .masthead .mh, .ybt, .yb, .fw, .ex-brand {
+  overflow-wrap: normal;
+}
+img, video, canvas, iframe, table, pre, figure {
+  max-width: 100%;
+}
+/* A drop cap beside justified text stretches a short line across the column
+   when the next word is a long URL. On a phone, lead blurbs sit flush left. */
+@media (max-width: 640px) {
+  article.lead p.sum { text-align: left; }
 }
 """
 
@@ -812,7 +891,7 @@ RD_CSS = r"""
 .rd-tag{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--rule-soft);padding:0 5px;margin-right:6px;color:#7a2e12}
 .rd-grid{column-count:2;column-gap:26px;column-rule:1px solid var(--rule-soft)}
 @media (max-width:700px){.rd-grid{column-count:1}}
-.tk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px}
+.tk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}
 .tk-card{border:1px solid var(--rule-soft);background:rgba(232,219,187,.25);overflow:hidden}
 .tk-card a.tk-thumb{display:block;background:#ddd;aspect-ratio:16/9;overflow:hidden}
 .tk-card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)}
@@ -822,8 +901,8 @@ RD_CSS = r"""
 .tk-card h3 a:hover{text-decoration:underline}
 .tk-meta{display:block;font-size:11.5px;color:var(--ink-faint);margin:0 0 4px;font-family:"Old Standard TT",Georgia,serif}
 .tk-note{margin:0;font-size:12.5px;line-height:1.35;color:var(--ink-soft)}
-@media (max-width:900px){.tk-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.tk-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.tk-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:560px){.tk-grid{grid-template-columns:minmax(0,1fr)}}
 """
 
 def research_section(rd, c):
@@ -1079,6 +1158,7 @@ def build(stories, date, fallbacks, sections=None, cfg=None, jobs=None, events=N
         css += share.CSS
         css += BACK_TOP_CSS
         house_count_check(f"{c.get('key', 'daily')} share", _st)
+    css += FIT_CSS
     out = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
