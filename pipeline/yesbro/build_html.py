@@ -9,9 +9,14 @@ stories.html.json : output of `fetch_images.py ... --mode html` (needs section, 
                     remote image gets its thumbnail as an onerror fallback, so a blocked hotlink still shows
                     a picture. Stories with no image at all render text only (no placeholder).
 """
-import sys, argparse, html, json, re
+import os, sys, argparse, html, json, re
 from sources import src
 import yb_auth_strip
+
+_PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _PIPE not in sys.path:
+    sys.path.append(_PIPE)
+import story_text
 
 # Long sections: only the top FEATURED stories in each section get photos and the full card layout.
 # Every story after that runs as a compact brief (headline, source, summary, Read more) in a
@@ -182,10 +187,11 @@ def story_html(s, lead, cls, fallbacks):
     kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
     # Same-page satire anchors stay in-tab; real reports still open in a new tab.
     tgt = '' if u.startswith('#') else ' target="_blank" rel="noopener"'
+    blurb = story_text.present_summary(s.get("summary") or "", s.get("headline") or "")
     return (f'<article class="story{" lead" if lead else ""}">{fig}{kick}'
             f'<h3><a href="{u}"{tgt}>{esc(s["headline"])}</a></h3>'
             f'<p class="byline">{esc(_byline(s))}</p>'
-            f'<p class="sum">{esc(s["summary"])}</p>'
+            f'<p class="sum">{esc(blurb)}</p>'
             f'{_inspired(s)}'
             f'<a class="more" href="{u}"{tgt}>{_more(s)}</a></article>')
 
@@ -193,8 +199,9 @@ def brief_html(s):
     u = esc(s["url"])
     kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
     tgt = '' if u.startswith('#') else ' target="_blank" rel="noopener"'
+    blurb = story_text.present_summary(s.get("summary") or "", s.get("headline") or "")
     return (f'<article class="brief">{kick}<h3><a href="{u}"{tgt}>{esc(s["headline"])}</a></h3>'
-            f'<p class="byline">{esc(_byline(s))}</p><p class="sum">{esc(s["summary"])}</p>'
+            f'<p class="byline">{esc(_byline(s))}</p><p class="sum">{esc(blurb)}</p>'
             f'{_inspired(s)}'
             f'<a class="more" href="{u}"{tgt}>{_more(s)}</a></article>')
 

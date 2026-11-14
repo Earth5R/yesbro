@@ -75,18 +75,32 @@ def _fallback_picks(sections: list[str], lines: list[str], per_section: int) -> 
 def write_copy(ed: str, items: list[dict]) -> dict:
     """items: [{id, title, text}]. Return {id: (headline, summary)}.
     Uses large batches (up to 20) to stay inside free-tier request limits.
+    Wall text never reaches the model. Items with no real prose use the teaser.
     """
+    import story_text
     from gemini_client import available, generate_json
     if not items:
         return {}
+    prepared = []
+    for it in items:
+        title = it.get("title") or ""
+        text = story_text.prepare_copy_text(it.get("text") or "", title)
+        prepared.append({**it, "title": title, "text": text})
+    titles = {int(it["id"]): it.get("title") or "" for it in prepared}
     if not available():
-        return _fallback_copy(items)
+        return _finish_copy(_fallback_copy(prepared), titles)
     out = {}
     batch = int(os.environ.get("YESBRO_COPY_BATCH", "18"))
-    for i in range(0, len(items), batch):
-        chunk = items[i:i + batch]
+    for i in range(0, len(prepared), batch):
+        chunk = prepared[i:i + batch]
+        ai_chunk = [it for it in chunk if (it.get("text") or "").strip()]
+        empty_chunk = [it for it in chunk if not (it.get("text") or "").strip()]
+        if empty_chunk:
+            out.update(_fallback_copy(empty_chunk))
+        if not ai_chunk:
+            continue
         blob = []
-        for it in chunk:
+        for it in ai_chunk:
             tx = re.sub(r"\s+", " ", (it.get("text") or ""))[:700]
             blob.append(f"ID {it['id']}\nTITLE: {it.get('title','')}\nTEXT: {tx}\n")
         prompt = _read("copy.txt") + "\n\nPaper: " + ed + "\n\n" + "\n".join(blob)
@@ -100,15 +114,17 @@ def write_copy(ed: str, items: list[dict]) -> dict:
                     continue
                 h = _clean(str(row.get("headline") or ""))
                 s = _clean(str(row.get("summary") or ""))
+                if story_text.title_is_wall(h):
+                    h = _clean(titles.get(iid) or h)
                 if h and s:
                     out[iid] = (h, s)
         except Exception as e:
             print(f"copy batch failed for {ed}: {e}", flush=True)
-            out.update(_fallback_copy(chunk))
-    missing = [it for it in items if int(it["id"]) not in out]
+            out.update(_fallback_copy(ai_chunk))
+    missing = [it for it in prepared if int(it["id"]) not in out]
     if missing:
         out.update(_fallback_copy(missing))
-    return out
+    return _finish_copy(out, titles)
 
 def _clean(t: str) -> str:
     t = t.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
@@ -116,22 +132,26 @@ def _clean(t: str) -> str:
     return t
 
 def _fallback_copy(items: list[dict]) -> dict:
+    import story_text
     out = {}
     for it in items:
         title = _clean(it.get("title") or "Untitled")
-        tx = _clean(it.get("text") or it.get("title") or "")
-        words = tx.split()
-        if len(words) < 30:
-            summary = (tx + " The full piece is for subscribers, and the headline is all that is public for now.").strip()
-        else:
-            summary = " ".join(words[:45])
-        sw = summary.split()
-        if len(sw) < 30:
-            summary = summary + " Further details were not available in the open teaser."
-            sw = summary.split()
-        summary = " ".join(sw[:50])
-        out[int(it["id"])] = (title[:120], _clean(summary))
+        summary = _clean(story_text.fallback_summary(title, it.get("text") or ""))
+        out[int(it["id"])] = (title[:120], summary)
     return out
+
+def _finish_copy(out: dict, titles: dict) -> dict:
+    """Strip any wall language the model echoed, then keep the 30 to 50 word shape."""
+    import story_text
+    done = {}
+    for iid, pair in out.items():
+        h, s = pair
+        title = titles.get(int(iid)) or h
+        if story_text.title_is_wall(h):
+            h = _clean(title)
+        s = _clean(story_text.present_summary(s, title or h))
+        done[int(iid)] = (_clean(h)[:120], s)
+    return done
 
 def write_meme(ed: str, stories: list[dict], date: str, prefer_format: str | None = None) -> dict | None:
     """Template meme only by default (YESBRO_AI_MEMES=1 to call Gemini)."""

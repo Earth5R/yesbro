@@ -11,6 +11,7 @@ Env:
 """
 from __future__ import annotations
 import argparse, calendar, datetime as dt, html, json, os, re, sys, time, traceback
+import story_text
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -87,6 +88,7 @@ def gather_fields(run_dir: Path, d: dt.date) -> Path:
                 continue
             desc = re.sub(r"<[^>]+>", " ", html.unescape(e.get("summary", "") or ""))
             desc = re.sub(r"\s+", " ", desc).strip()[:450]
+            desc = story_text.clean_body(desc)
             src = (e.get("source") or {}).get("title", "")
             out.append({"ed": ed, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": e.get("link", ""), "ts": ts, "desc": desc, "src": src})
         return ed, u, st, out
@@ -135,6 +137,7 @@ def gather_daily(run_dir: Path, d: dt.date) -> Path:
                 continue
             desc = re.sub(r"<[^>]+>", " ", html.unescape(e.get("summary", "") or ""))
             desc = re.sub(r"\s+", " ", desc).strip()[:500]
+            desc = story_text.clean_body(desc)
             out.append({"sec": sec, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": e.get("link", ""), "ts": ts, "desc": desc})
         return sec, u, st, out
 
@@ -225,11 +228,12 @@ def fetch_ids(run_dir: Path, ed: str, picks: dict, items_path: Path) -> dict:
 
     def work(i):
         k = str(i)
-        if k in cache and cache[k].get("status") == 200:
+        if k in cache and cache[k].get("status") == 200 and not story_text.needs_refetch(cache[k].get("tx") or ""):
             return k, cache[k]
         it = items[i]
         u = resolve(it["url"])
-        out = {"id": i, "title": it["title"], "rss_desc": strip(it.get("desc", ""))[:300], "url": u, "status": None, "final": "", "ogt": "", "ogd": "", "tx": "", "ts": it.get("ts"), "pub": ""}
+        rss = story_text.clean_body(strip(it.get("desc", "")))[:500]
+        out = {"id": i, "title": it["title"], "rss_desc": rss, "url": u, "status": None, "final": "", "ogt": "", "ogd": "", "tx": "", "ts": it.get("ts"), "pub": ""}
         if not u:
             out["status"] = "unresolved"
             return k, out
@@ -239,14 +243,16 @@ def fetch_ids(run_dir: Path, ed: str, picks: dict, items_path: Path) -> dict:
             out["final"] = r.url
             p = r.text
             out["ogt"] = meta(p, "og:title")
-            out["ogd"] = meta(p, "og:description") or meta(p, "description")
+            out["ogd"] = story_text.clean_body(meta(p, "og:description") or meta(p, "description"))[:500]
             out["pub"] = meta(p, "article:published_time") or meta(p, "datePublished") or ""
             t = ""
             if trafilatura:
                 t = trafilatura.extract(p) or ""
-            if len(t) < 150:
-                t = (t + " " + out["ogd"] + " " + out["rss_desc"]).strip()
-            out["tx"] = re.sub(r"\s+", " ", t)[:900]
+            # A challenge page's extract is the wall, not the article. Do not glue
+            # that wall to the headline and the feed description.
+            if story_text.page_is_challenge(p, r.status_code, t):
+                t = ""
+            out["tx"] = story_text.clean_body(t)[:900]
         except Exception as e:
             out["status"] = str(e)[:60]
         return k, out
@@ -275,6 +281,7 @@ def build_stories(ed: str, d: dt.date, cfg: dict, picks: dict, cache: dict, copy
             if int(i) not in copy_map:
                 continue
             h, s = copy_map[int(i)]
+            s = story_text.present_summary(s, h)
             u = o.get("final") or o.get("url") or ""
             u = re.sub(r"[?&](source|utm_[a-z]+)=[^&]*", "", u)
             st = o.get("status")
@@ -338,10 +345,8 @@ def process_field(run_dir: Path, ed: str, d: dt.date, per_section: int) -> Path 
     for sec, L in picks.items():
         for i in L:
             o = cache.get(str(i)) or {}
-            tx = o.get("tx") or ""
-            if len(tx) < 80:
-                tx = (tx + " " + (o.get("ogd") or "") + " " + (o.get("rss_desc") or "")).strip()
-            items.append({"id": i, "title": o.get("ogt") or o.get("title") or "", "text": tx, "section": sec})
+            prepared = story_text.prepare_item(o)
+            items.append({"id": i, "title": prepared["title"], "text": prepared["text"], "section": sec})
     copy_map = ai_write.write_copy(ed, items)
     write_copy_py(run_dir, ed, picks, copy_map)
     stories = build_stories(ed, d, cfg, picks, cache, copy_map)
@@ -373,10 +378,8 @@ def process_daily(run_dir: Path, d: dt.date, per_section: int) -> Path | None:
     for sec, L in picks.items():
         for i in L:
             o = cache.get(str(i)) or {}
-            tx = o.get("tx") or ""
-            if len(tx) < 80:
-                tx = (tx + " " + (o.get("ogd") or "") + " " + (o.get("rss_desc") or "")).strip()
-            items.append({"id": i, "title": o.get("ogt") or o.get("title") or "", "text": tx, "section": sec})
+            prepared = story_text.prepare_item(o)
+            items.append({"id": i, "title": prepared["title"], "text": prepared["text"], "section": sec})
     copy_map = ai_write.write_copy("daily", items)
     stories = build_stories("daily", d, cfg, picks, cache, copy_map)
     if len(stories) < 10:
