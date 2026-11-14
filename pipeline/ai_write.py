@@ -116,7 +116,7 @@ def write_copy(ed: str, items: list[dict]) -> dict:
                 s = _clean(str(row.get("summary") or ""))
                 if story_text.title_is_wall(h):
                     h = _clean(titles.get(iid) or h)
-                if h and s:
+                if h:
                     out[iid] = (h, s)
         except Exception as e:
             print(f"copy batch failed for {ed}: {e}", flush=True)
@@ -141,7 +141,7 @@ def _fallback_copy(items: list[dict]) -> dict:
     return out
 
 def _finish_copy(out: dict, titles: dict) -> dict:
-    """Strip any wall language the model echoed, then keep the 30 to 50 word shape."""
+    """Strip wall language the model echoed. An empty summary stays empty."""
     import story_text
     done = {}
     for iid, pair in out.items():

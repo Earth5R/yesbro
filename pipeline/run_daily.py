@@ -289,15 +289,9 @@ def build_stories(ed: str, d: dt.date, cfg: dict, picks: dict, cache: dict, copy
                 # still allow if we have text from rss
                 if len(o.get("tx") or "") < 40 and len(o.get("rss_desc") or "") < 40:
                     continue
-            n = len(s.split())
-            if not 30 <= n <= 50:
-                # trim or pad lightly
-                words = s.split()
-                if n > 50:
-                    s = " ".join(words[:50])
-                elif n < 30:
-                    s = (s + " Further details were thin in the open report.").strip()
-                    s = " ".join(s.split()[:50])
+            words = s.split()
+            if len(words) > 50:
+                s = " ".join(words[:50])
             if re.search(r"[\u2014\u2013;]", h + s):
                 h = h.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
                 s = s.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")

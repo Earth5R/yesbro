@@ -188,10 +188,11 @@ def story_html(s, lead, cls, fallbacks):
     # Same-page satire anchors stay in-tab; real reports still open in a new tab.
     tgt = '' if u.startswith('#') else ' target="_blank" rel="noopener"'
     blurb = story_text.present_summary(s.get("summary") or "", s.get("headline") or "")
+    sum_html = f'<p class="sum">{esc(blurb)}</p>' if blurb else ""
     return (f'<article class="story{" lead" if lead else ""}">{fig}{kick}'
             f'<h3><a href="{u}"{tgt}>{esc(s["headline"])}</a></h3>'
             f'<p class="byline">{esc(_byline(s))}</p>'
-            f'<p class="sum">{esc(blurb)}</p>'
+            f'{sum_html}'
             f'{_inspired(s)}'
             f'<a class="more" href="{u}"{tgt}>{_more(s)}</a></article>')
 
@@ -200,8 +201,9 @@ def brief_html(s):
     kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
     tgt = '' if u.startswith('#') else ' target="_blank" rel="noopener"'
     blurb = story_text.present_summary(s.get("summary") or "", s.get("headline") or "")
+    sum_html = f'<p class="sum">{esc(blurb)}</p>' if blurb else ""
     return (f'<article class="brief">{kick}<h3><a href="{u}"{tgt}>{esc(s["headline"])}</a></h3>'
-            f'<p class="byline">{esc(_byline(s))}</p><p class="sum">{esc(blurb)}</p>'
+            f'<p class="byline">{esc(_byline(s))}</p>{sum_html}'
             f'{_inspired(s)}'
             f'<a class="more" href="{u}"{tgt}>{_more(s)}</a></article>')
 

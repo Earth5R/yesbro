@@ -2,8 +2,9 @@
 
 The daily pipeline fetches each picked URL and, when the body is short, used to
 glue it to the feed description. Bot walls are short, so the blurb became
-"Enable JavaScript and cookies…" plus the headline plus the source name, and
-the no-AI fallback then added "The full piece is for subscribers…".
+"Enable JavaScript and cookies…" plus the headline plus the source name.
+When nothing usable remains, the blurb is empty. The card keeps the headline
+and the Read more link.
 
 This module is the shared cleaner for fetch, Gemini input, the fallback teaser,
 and HTML rendering. It does not invent article facts.
@@ -16,8 +17,13 @@ import re
 # Long, distinctive wall phrases. Removed anywhere they appear. Order matters:
 # longer lines first so a short piece of a longer line is not left behind.
 _PHRASES = (
-    "the full piece is for subscribers, and the headline is all that is public for now",
+    "the source page returned a block or an empty shell, so this edition has no article body to go on and stays with the headline",
+    "the rest of the report was not in the open text, so this note stops there",
+    "further details were thin in the open report",
     "further details were not available in the open teaser",
+    "open the original report for the full account",
+    "open the original report for anything further",
+    "the full piece is for subscribers, and the headline is all that is public for now",
     "please enable js and disable any ad blocker",
     "please enable javascript and cookies to continue",
     "enable javascript and cookies to continue",
@@ -106,7 +112,9 @@ _WALL_SENTENCE = re.compile(
     r"\bverifying your browser\b|\bchecking your browser\b|"
     r"\bnot redirected automatically\b|\bby clicking accept\b|"
     r"\bcookies are disabled\b|\bwe use cookies to\b|"
-    r"\bprovide your consent\b)"
+    r"\bprovide your consent\b|\bfor subscribers\b|"
+    r"\bsubscription required\b|\brequires a sign in\b|"
+    r"\bsign in to acc\b)"
 )
 
 
@@ -355,79 +363,45 @@ def drop_leading_headline(text: str, title: str) -> str:
     return text
 
 
-def fit_length(text: str) -> str:
-    """Bring a real short dek up to the paper's 30-word floor without a second headline."""
+def _trim(text: str) -> str:
     words = collapse(text).split()
     if len(words) > 50:
         return " ".join(words[:50])
-    if len(words) >= 30:
-        return collapse(text)
-    note = "The rest of the report was not in the open text, so this note stops there."
-    text = collapse(text).rstrip(" .") + ". " + note
-    if len(text.split()) < 30:
-        text += " Open the original report for anything further."
-    return " ".join(text.split()[:50])
-
-
-def headline_teaser(title: str) -> str:
-    """Dry stand-in when the page and the feed gave us nothing but the headline."""
-    head = bare_headline(title) or "This report"
-    if _BAD_TITLE.search(head):
-        head = "This report"
-    words = head.split()
-    if len(words) > 18:
-        head = " ".join(words[:18]).rstrip(",;:")
-    head = head.rstrip(" .")
-    note = (
-        "The source page returned a block or an empty shell, so this edition "
-        "has no article body to go on and stays with the headline."
-    )
-    summary = f"{head}. {note}"
-    if len(summary.split()) < 30:
-        summary += " Open the original report for the full account."
-    return " ".join(summary.split()[:50])
+    return collapse(text)
 
 
 def present_summary(summary: str, title: str) -> str:
     """Last line of defence before a blurb is saved or printed.
 
-    A clean summary is returned as it was. A wall, a consent dump, or a
-    headline glued to a source name becomes a headline teaser. Real prose
-    that was only prefixed by a wall is kept.
+    A clean summary is returned as it was. Real prose that was only prefixed
+    by a wall is kept. A wall, a consent dump, a headline glued to a source
+    name, or a note about the pipeline itself becomes an empty blurb. The
+    card then shows the headline and the Read more link, and nothing else.
     """
     raw = collapse(summary)
     if not raw or cookie_banner_dump(raw):
-        return headline_teaser(title)
+        return ""
     cleaned = clean_body(raw)
-    if not cleaned or is_headline_echo(cleaned, title):
-        return headline_teaser(title)
+    if not cleaned or is_headline_echo(cleaned, title) or not has_news(cleaned, title):
+        return ""
     repaired = _norm(cleaned) != _norm(raw)
     if not repaired:
-        words = raw.split()
-        return raw if len(words) <= 50 else " ".join(words[:50])
-    if not has_news(cleaned, title):
-        return headline_teaser(title)
+        return _trim(raw)
     cleaned = drop_leading_headline(cleaned, title)
     if not cleaned or is_headline_echo(cleaned, title) or not has_news(cleaned, title):
-        return headline_teaser(title)
-    if len(cleaned.split()) < 30:
-        return fit_length(cleaned)
-    return " ".join(cleaned.split()[:50])
+        return ""
+    return _trim(cleaned)
 
 
 def fallback_summary(title: str, text: str) -> str:
-    """Plain teaser used when Gemini is off, or when there is nothing to summarise."""
-    title = collapse(title) or "Untitled"
+    """Reader blurb when Gemini is off. Empty when the page and the feed have no dek."""
     text = clean_body(text or "")
     if not has_news(text, title):
-        return headline_teaser(title)
+        return ""
     text = drop_leading_headline(text, title)
     if not has_news(text, title):
-        return headline_teaser(title)
-    summary = " ".join(text.split()[:45])
-    if len(summary.split()) < 30:
-        summary = fit_length(summary)
-    return present_summary(summary, title)
+        return ""
+    return present_summary(_trim(text), title)
 
 
 def assemble_story(page_html: str, status, rss_title: str, rss_desc: str,

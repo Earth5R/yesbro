@@ -20,7 +20,9 @@ LEAK = re.compile(
     r"403 forbidden|trouble reading this e-mail|verifying your browser|"
     r"just a quick check|full piece is for subscribers|cookie preferences|"
     r"checking your browser|not redirected automatically|by clicking accept|"
-    r"we use cookies to authenticate",
+    r"we use cookies to authenticate|empty shell|article body to go on|"
+    r"stays with the headline|open teaser|open text|further details were|"
+    r"source page returned|for subscribers|subscription required",
     re.I,
 )
 
@@ -89,35 +91,26 @@ def _words(text: str) -> int:
 
 
 class StoryTextTests(unittest.TestCase):
-    def test_screenshot_walls_become_readable_blurbs(self):
+    def test_screenshot_walls_leave_no_blurb(self):
         tax = story_text.present_summary(TAXCORP, TAXCORP_TITLE)
         reuters = story_text.present_summary(REUTERS, REUTERS_TITLE)
         green = story_text.present_summary(GREEN, GREEN_TITLE)
-        for cleaned in (tax, reuters, green):
-            self.assertIsNone(LEAK.search(cleaned), cleaned)
-            self.assertNotIn("TaxCorp", cleaned)
-            self.assertGreaterEqual(_words(cleaned), 30)
-            self.assertLessEqual(_words(cleaned), 50)
-        self.assertIn("carbon credit", tax.lower())
-        self.assertIn("climate finance", reuters.lower())
-        self.assertNotIn("Reuters", reuters)
+        self.assertEqual(tax, "")
+        self.assertEqual(reuters, "")
+        self.assertIsNone(LEAK.search(green), green)
         self.assertTrue(green.startswith("Partner Insight:"))
         self.assertIn("Emma Littlewood", green)
         self.assertNotIn("51 Delta", green)
+        self.assertNotIn("shell", green.lower())
+        self.assertNotIn("subscribers", green.lower())
 
-    def test_headline_plus_source_is_not_the_blurb(self):
-        cleaned = story_text.present_summary(BRUSSELS, BRUSSELS_TITLE)
-        self.assertIsNone(LEAK.search(cleaned), cleaned)
-        self.assertNotIn("Brussels Times", cleaned)
-        self.assertIn("oversight standards", cleaned.lower())
-        self.assertGreaterEqual(_words(cleaned), 30)
+    def test_headline_plus_source_leaves_no_blurb(self):
+        self.assertEqual(story_text.present_summary(BRUSSELS, BRUSSELS_TITLE), "")
 
-    def test_access_denied_page_is_replaced(self):
+    def test_access_denied_page_leaves_no_blurb(self):
         cleaned = story_text.present_summary(UNDP, UNDP_TITLE)
-        self.assertIsNone(LEAK.search(cleaned), cleaned)
-        self.assertNotIn("http", cleaned)
-        self.assertIn("Caspian Sea", cleaned)
-        self.assertGreaterEqual(_words(cleaned), 30)
+        self.assertEqual(cleaned, "")
+        self.assertIsNone(LEAK.search(cleaned))
 
     def test_live_challenge_pages_do_not_supply_the_blurb(self):
         tax = story_text.assemble_story(
@@ -141,15 +134,15 @@ class StoryTextTests(unittest.TestCase):
             "case for investment. The note was in the feed, not on the blocked page.",
             extracted="Just a moment... Enable JavaScript and cookies to continue",
         )
-        for row in (tax, reuters, undp, green):
-            self.assertIsNone(LEAK.search(row["summary"]), row["summary"])
-            self.assertGreaterEqual(_words(row["summary"]), 30)
-            self.assertLessEqual(_words(row["summary"]), 50)
+        self.assertEqual(tax["summary"], "")
+        self.assertEqual(reuters["summary"], "")
+        self.assertEqual(undp["summary"], "")
         self.assertEqual(tax["text"], "")
         self.assertEqual(reuters["text"], "")
         self.assertIn("Emma Littlewood", green["text"])
         self.assertNotIn("Enable JavaScript", green["text"])
         self.assertIn("Emma Littlewood", green["summary"])
+        self.assertIsNone(LEAK.search(green["summary"]), green["summary"])
 
     def test_real_article_with_a_cookie_banner_in_the_header_is_kept(self):
         article = (
@@ -198,8 +191,10 @@ class StoryTextTests(unittest.TestCase):
         for raw, title in cases:
             cleaned = story_text.present_summary(raw, title)
             self.assertIsNone(LEAK.search(cleaned), (raw, cleaned))
-            self.assertGreaterEqual(_words(cleaned), 30, cleaned)
-            self.assertLessEqual(_words(cleaned), 50, cleaned)
+            if "archaeological" in raw:
+                self.assertIn("Amstel", cleaned)
+            else:
+                self.assertEqual(cleaned, "", (raw, cleaned))
 
     def test_wall_prefix_with_real_reporting_keeps_the_reporting(self):
         raw = (
@@ -213,6 +208,7 @@ class StoryTextTests(unittest.TestCase):
         self.assertIsNone(LEAK.search(cleaned), cleaned)
         self.assertIn("community development", cleaned)
         self.assertNotIn("Enable JavaScript", cleaned)
+        self.assertNotIn("open text", cleaned.lower())
 
     def test_present_summary_is_stable(self):
         for raw, title in (
@@ -235,9 +231,7 @@ class StoryTextTests(unittest.TestCase):
             "text": "Please enable JS and disable any ad blocker " + REUTERS_TITLE.replace(" - ", " "),
         }])
         headline, summary = out[7]
-        self.assertIsNone(LEAK.search(summary), summary)
-        self.assertNotIn("Reuters The full piece", summary)
-        self.assertGreaterEqual(_words(summary), 30)
+        self.assertEqual(summary, "")
         self.assertIn("climate finance", headline.lower())
 
     def test_published_papers_have_no_wall_left_after_cleaning(self):
@@ -274,11 +268,20 @@ class StoryTextTests(unittest.TestCase):
         import build_html
         card = build_html.story_html(
             {"headline": REUTERS_TITLE, "summary": REUTERS, "url": "https://www.reuters.com/example"},
-            False, "", {},
+            True, "", {},
         )
         self.assertIn("climate finance", card)
+        self.assertIn("Read more", card)
+        self.assertNotIn('class="sum"', card)
         self.assertNotIn("Please enable JS", card)
-        self.assertNotIn("full piece is for subscribers", card)
+        self.assertNotIn("subscribers", card)
+        self.assertNotIn("shell", card)
+        kept = build_html.story_html(
+            {"headline": "A real report", "summary": GOOD, "url": "https://example.com/sap"},
+            False, "", {},
+        )
+        self.assertIn('class="sum"', kept)
+        self.assertIn("product level emissions", kept)
 
 
 if __name__ == "__main__":
