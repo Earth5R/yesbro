@@ -284,5 +284,91 @@ class StoryTextTests(unittest.TestCase):
         self.assertIn("product level emissions", kept)
 
 
+class BadItemTests(unittest.TestCase):
+    def test_src_without_hostname(self):
+        sys.path.insert(0, str(PIPE / "yesbro"))
+        import sources
+        self.assertEqual(sources.src(""), "")
+        self.assertEqual(sources.src(None), "")
+        self.assertEqual(sources.src("#satire-notice"), "")
+        self.assertEqual(sources.src("/relative/story"), "")
+        self.assertEqual(sources.src("https://"), "")
+        self.assertEqual(sources.src("https://www.bbc.co.uk/news/x"), "BBC News")
+        self.assertFalse(sources.http_url(""))
+        self.assertFalse(sources.http_url("/relative"))
+        self.assertTrue(sources.http_url("https://example.com/a"))
+        self.assertTrue(sources.http_url("#satire-notice", anchor=True))
+
+    def test_bad_story_is_skipped_and_page_still_builds(self):
+        sys.path.insert(0, str(PIPE / "yesbro"))
+        import build_html
+        page = build_html.build([
+            {"section": "India Politics", "headline": "Good story", "summary": GOOD, "url": "https://example.com/good"},
+            {"section": "India Politics", "headline": "No link", "summary": GOOD, "url": ""},
+            {"section": "India Politics", "headline": "Relative", "summary": GOOD, "url": "/local"},
+            {"headline": "No section", "url": "https://example.com/x"},
+            {"section": "India Politics", "url": "https://example.com/y"},
+            {"section": "India Politics", "headline": "Fake desk", "summary": "", "url": "#satire-notice", "source": "Yes Bro Fake News Desk"},
+        ], "Tuesday 17 November 2026", {}, jobs={"jobs": [
+            {"title": "Open role", "url": "https://example.com/job", "org": "Acme", "region": "India"},
+            {"title": "Broken role", "region": "India"},
+            "not a job",
+        ]})
+        self.assertIn("Good story", page)
+        self.assertIn("Fake desk", page)
+        self.assertIn("Open role", page)
+        self.assertNotIn("No link", page)
+        self.assertNotIn("Relative", page)
+        self.assertNotIn("No section", page)
+        self.assertNotIn("Broken role", page)
+        self.assertEqual(build_html.story_html({"headline": "Nope"}, False, "", {}), "")
+
+    def test_unresolved_feed_story_is_dropped(self):
+        import datetime as dt
+        import run_daily
+        picks = {"Markets": [1, 2]}
+        cache = {
+            "1": {"url": None, "final": "", "status": "unresolved", "tx": "", "rss_desc": "x" * 50},
+            "2": {"url": "https://example.com/ok", "final": "https://example.com/ok", "status": 200, "tx": "body " * 20, "rss_desc": "dek"},
+        }
+        copy = {
+            1: ("Broken link", GOOD),
+            2: ("Kept story", GOOD),
+        }
+        out = run_daily.build_stories("ux", dt.date(2026, 11, 17), {"sections": ["Markets"]}, picks, cache, copy)
+        self.assertEqual([s["headline"] for s in out], ["Kept story"])
+
+    def test_one_failed_paper_does_not_fail_the_job(self):
+        import datetime as dt
+        import tempfile
+        from unittest import mock
+        import run_daily
+        tmp = Path(tempfile.mkdtemp())
+        d = "2026-11-17"
+        for name in (f"stories_{d}.json", f"stories_{d}.html.json", f"stories_ux_{d}.json", f"stories_ux_{d}.html.json"):
+            (tmp / name).write_text("[]", encoding="utf-8")
+        published = []
+
+        def fake_run(cmd, **kw):
+            text = " ".join(str(c) for c in cmd)
+            code = 1 if ("build_html.py" in text and f"stories_ux_{d}" in text) else 0
+            if "publish.py" in text:
+                published.append(text)
+            return mock.Mock(returncode=code)
+
+        old = run_daily.ROOT, run_daily.SITE
+        run_daily.ROOT, run_daily.SITE = tmp, tmp / "site"
+        try:
+            with mock.patch("subprocess.run", fake_run):
+                code = run_daily.build_and_publish(dt.date(2026, 11, 17), ["daily", "ux"], False)
+                none = run_daily.build_and_publish(dt.date(2026, 11, 17), ["ux"], False)
+        finally:
+            run_daily.ROOT, run_daily.SITE = old
+        self.assertEqual(code, 0)
+        self.assertTrue(any("publish.py daily " in p for p in published))
+        self.assertFalse(any("publish.py ux " in p for p in published))
+        self.assertEqual(none, 1)
+
+
 if __name__ == "__main__":
     unittest.main()

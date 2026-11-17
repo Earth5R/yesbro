@@ -9,8 +9,29 @@ NAMES = {"thehindu.com":"The Hindu","moneycontrol.com":"Moneycontrol","indianexp
  "unep.org":"UNEP","nature.com":"Nature","esgnews.com":"ESG News","europarl.europa.eu":"European Parliament"}
 NAMES.update({'abcnews.com': 'ABC News (AP)', 'aljazeera.com': 'Al Jazeera', 'bbc.co.uk': 'BBC News', 'businesstoday.in': 'Business Today', 'carbonbrief.org': 'Carbon Brief', 'channelnewsasia.com': 'CNA', 'cleantechnica.com': 'CleanTechnica', 'climatechangenews.com': 'Climate Home News', 'dw.com': 'DW', 'edie.net': 'edie', 'energy.economictimes.indiatimes.com': 'ET EnergyWorld', 'engadget.com': 'Engadget', 'esgtoday.com': 'ESG Today', 'firstpost.com': 'Firstpost', 'france24.com': 'France 24', 'ft.com': 'Financial Times', 'india.mongabay.com': 'Mongabay India', 'insideclimatenews.org': 'Inside Climate News', 'livemint.com': 'Mint', 'marktechpost.com': 'MarkTechPost', 'medianama.com': 'MediaNama', 'news.mongabay.com': 'Mongabay', 'news18.com': 'News18', 'phys.org': 'Phys.org', 'pv-magazine-india.com': 'pv magazine India', 'pv-magazine.com': 'pv magazine', 'sciencedaily.com': 'ScienceDaily', 'scmp.com': 'South China Morning Post', 'semafor.com': 'Semafor', 'siliconangle.com': 'SiliconANGLE', 'straitstimes.com': 'The Straits Times', 'techcrunch.com': 'TechCrunch', 'techinasia.com': 'Tech in Asia', 'techmeme.com': 'Techmeme', 'the-decoder.com': 'The Decoder', 'thebetterindia.com': 'The Better India', 'theguardian.com': 'The Guardian', 'thehindubusinessline.com': 'BusinessLine', 'theinformation.com': 'The Information', 'theprint.in': 'ThePrint', 'thequint.com': 'The Quint', 'theregister.com': 'The Register', 'timesofindia.indiatimes.com': 'The Times of India', 'yourstory.com': 'YourStory', 'ndtv.com': 'NDTV', 'cnbc.com': 'CNBC', 'npr.org': 'NPR', 'electrek.co': 'Electrek', 'grist.org': 'Grist', 'canarymedia.com': 'Canary Media', 'axios.com': 'Axios', 'wired.com': 'Wired', 'japantimes.co.jp': 'The Japan Times', 'dawn.com': 'Dawn', 'rfi.fr': 'RFI', 'abc.net.au': 'ABC Australia', 'politico.eu': 'Politico Europe'})
 NAMES.update({'bharatfast.com': 'Bharat Fast', 'bleepingcomputer.com': 'BleepingComputer', 'ca.sports.yahoo.com': 'Yahoo Sports (AP)', 'channelafrica.co.za': 'Channel Africa', 'conservativepost.co.uk': 'Conservative Post', 'dailymail.com': 'Daily Mail', 'dailyrecord.co.uk': 'Daily Record', 'dawan.africa': 'Dawan Africa', 'deccanchronicle.com': 'Deccan Chronicle', 'eadt.co.uk': 'East Anglian Daily Times', 'earth.com': 'Earth.com', 'environewsnigeria.com': 'EnviroNews Nigeria', 'fitandwell.com': 'Fit&Well', 'hothardware.com': 'HotHardware', 'ianslive.in': 'IANS', 'independent.co.ug': 'The Independent Uganda', 'knnindia.co.in': 'KNN India', 'lbc.co.uk': 'LBC', 'morungexpress.com': 'The Morung Express', 'news.ssbcrack.com': 'SSBCrack News', 'newsonair.gov.in': 'All India Radio', 'nysba.org': 'New York State Bar Association', 'onlymyhealth.com': 'OnlyMyHealth', 'onmanorama.com': 'Onmanorama', 'poetsandquants.com': 'Poets&Quants', 'pratidintime.com': 'Pratidin Time', 'qazinform.com': 'Qazinform', 'samaa.tv': 'Samaa', 'scitechdaily.com': 'SciTechDaily', 'techradar.com': 'TechRadar', 'thehawk.in': 'The Hawk', 'thenews.com.pk': 'The News', 'thestatesman.com': 'The Statesman', 'verywellhealth.com': 'Verywell Health', 'vice.com': 'Vice', 'whec.com': 'WHEC (AP)', 'wtop.com': 'WTOP (AP)'})
+def http_url(u, anchor=False):
+    """True for an http(s) URL with a hostname. anchor=True also allows in-page # links."""
+    if not isinstance(u, str) or not u.strip():
+        return False
+    u = u.strip()
+    if anchor and u.startswith("#") and len(u) > 1:
+        return True
+    if not u.startswith(("http://", "https://")):
+        return False
+    try:
+        return bool(urlparse(u).hostname)
+    except Exception:
+        return False
+
 def src(u):
-    h = urlparse(u).hostname.removeprefix("www.")
+    """Display host. Empty when the URL has no hostname, so one bad link cannot crash a paper."""
+    try:
+        host = urlparse(u or "").hostname or ""
+    except Exception:
+        return ""
+    h = host.removeprefix("www.")
+    if not h:
+        return ""
     return NAMES.get(h, h)
 
 # Added for Yes Bro UX / Architecture / Schools editions (2026-10-25)
