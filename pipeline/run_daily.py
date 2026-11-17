@@ -20,6 +20,13 @@ SITE = Path(os.environ.get("YESBRO_SITE", "/workspace/yesbro-site")).resolve()
 PIPE = Path(__file__).resolve().parent
 sys.path[:0] = [str(PIPE), str(ROOT)]
 
+def _link_ok(u):
+    yb = ROOT if (ROOT / "sources.py").exists() else Path(__file__).resolve().parent / "yesbro"
+    if str(yb) not in sys.path:
+        sys.path.insert(0, str(yb))
+    from sources import http_url
+    return http_url(u)
+
 FIELD_EDS = [
     "business", "ux", "arch", "schools", "sustainability", "startups", "highered",
     "consulting", "health", "marketing", "finance", "aviation", "healing", "ai",
@@ -86,11 +93,15 @@ def gather_fields(run_dir: Path, d: dt.date) -> Path:
             ts = calendar.timegm(t) if t else None
             if not ts or ts < cut or ts > now:
                 continue
+            link = e.get("link") or ""
+            if not _link_ok(link):
+                print(f"skip feed item {ed}: missing or invalid url {link!r}", flush=True)
+                continue
             desc = re.sub(r"<[^>]+>", " ", html.unescape(e.get("summary", "") or ""))
             desc = re.sub(r"\s+", " ", desc).strip()[:450]
             desc = story_text.clean_body(desc)
             src = (e.get("source") or {}).get("title", "")
-            out.append({"ed": ed, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": e.get("link", ""), "ts": ts, "desc": desc, "src": src})
+            out.append({"ed": ed, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": link, "ts": ts, "desc": desc, "src": src})
         return ed, u, st, out
 
     jobs = [(s, u) for s, us in FEEDS.items() for u in us]
@@ -135,10 +146,14 @@ def gather_daily(run_dir: Path, d: dt.date) -> Path:
             ts = calendar.timegm(t) if t else None
             if ts and ts < cut:
                 continue
+            link = e.get("link") or ""
+            if not _link_ok(link):
+                print(f"skip feed item {sec}: missing or invalid url {link!r}", flush=True)
+                continue
             desc = re.sub(r"<[^>]+>", " ", html.unescape(e.get("summary", "") or ""))
             desc = re.sub(r"\s+", " ", desc).strip()[:500]
             desc = story_text.clean_body(desc)
-            out.append({"sec": sec, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": e.get("link", ""), "ts": ts, "desc": desc})
+            out.append({"sec": sec, "feed": u, "title": html.unescape(e.get("title", "")).strip(), "url": link, "ts": ts, "desc": desc})
         return sec, u, st, out
 
     jobs = [(s, u) for s, us in FEEDS.items() for u in us]
@@ -275,32 +290,44 @@ def build_stories(ed: str, d: dt.date, cfg: dict, picks: dict, cache: dict, copy
             if ed != "daily":
                 probs.append(f"unknown section {sec}")
         for i in L:
-            o = cache.get(str(i))
-            if not o:
-                continue
-            if int(i) not in copy_map:
-                continue
-            h, s = copy_map[int(i)]
-            s = story_text.present_summary(s, h)
-            u = o.get("final") or o.get("url") or ""
-            u = re.sub(r"[?&](source|utm_[a-z]+)=[^&]*", "", u)
-            st = o.get("status")
-            if st not in (200, 403, 401) and st != "unresolved":
-                # still allow if we have text from rss
-                if len(o.get("tx") or "") < 40 and len(o.get("rss_desc") or "") < 40:
+            try:
+                o = cache.get(str(i))
+                if not isinstance(o, dict):
                     continue
-            words = s.split()
-            if len(words) > 50:
-                s = " ".join(words[:50])
-            if re.search(r"[\u2014\u2013;]", h + s):
-                h = h.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
-                s = s.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
-            if u in urls or i in ids:
-                continue
-            if "news.google" in (u or ""):
-                continue
-            urls.add(u); ids.add(i)
-            out.append({"section": sec, "headline": h, "summary": s, "url": u})
+                if int(i) not in copy_map:
+                    continue
+                h, s = copy_map[int(i)]
+                if not isinstance(h, str) or not h.strip():
+                    print(f"skip story {ed} #{i}: missing headline", flush=True)
+                    continue
+                if not isinstance(s, str):
+                    s = "" if s is None else str(s)
+                s = story_text.present_summary(s, h)
+                u = o.get("final") or o.get("url") or ""
+                if not isinstance(u, str):
+                    u = ""
+                u = re.sub(r"[?&](source|utm_[a-z]+)=[^&]*", "", u)
+                st = o.get("status")
+                if st not in (200, 403, 401) and st != "unresolved":
+                    # still allow if we have text from rss
+                    if len(o.get("tx") or "") < 40 and len(o.get("rss_desc") or "") < 40:
+                        continue
+                words = s.split()
+                if len(words) > 50:
+                    s = " ".join(words[:50])
+                if re.search(r"[\u2014\u2013;]", h + s):
+                    h = h.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
+                    s = s.replace("\u2014", ",").replace("\u2013", " to ").replace(";", ",")
+                if u in urls or i in ids:
+                    continue
+                # An unresolved Google News link is stored with no URL. Drop it here so it cannot reach the builder.
+                if not _link_ok(u) or "news.google" in u:
+                    print(f"skip story {ed} #{i}: no usable link {u!r}", flush=True)
+                    continue
+                urls.add(u); ids.add(i)
+                out.append({"section": sec, "headline": h, "summary": s, "url": u})
+            except Exception as e:
+                print(f"skip story {ed} #{i}: {e}", flush=True)
     # sort by config section order
     order = {s: n for n, s in enumerate(cfg.get("sections", []))}
     out.sort(key=lambda x: order.get(x["section"], 99))
@@ -438,7 +465,7 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
     import subprocess
     dl = dateline(d)
     D = d.isoformat()
-    failed = []
+    failed, published = [], []
 
     def ev(ed):
         p = ROOT / f"events_{ed}_{D}.json"
@@ -460,72 +487,96 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
         p = ROOT / f"fieldwork_blog_schools_{D}.json"
         return ["--fieldwork-blog", str(p)] if p.exists() else []
 
-    # daily
-    if "daily" in eds:
-        sj = ROOT / f"stories_{D}.json"
-        if sj.exists():
+    def run_paper(ed, cmd, html_out):
+        """Build one paper. A crash is logged and that paper's live files are left as they are."""
+        try:
+            r = subprocess.run(cmd, cwd=str(ROOT), check=False)
+        except Exception as e:
+            print(f"paper {ed}: build failed ({e}); keeping the previous published version", flush=True)
+            failed.append(ed)
+            return
+        if r.returncode != 0:
+            print(f"paper {ed}: build failed; keeping the previous published version", flush=True)
+            failed.append(ed)
+            return
+        if skip_publish:
+            published.append(ed)
+            return
+        try:
+            p = subprocess.run(
+                [sys.executable, str(ROOT / "publish.py"), ed, str(html_out), D, "--site", str(SITE)],
+                cwd=str(ROOT), check=False)
+        except Exception as e:
+            print(f"paper {ed}: publish failed ({e}); keeping the previous published version", flush=True)
+            failed.append(ed)
+            return
+        if p.returncode != 0:
+            print(f"paper {ed}: publish failed (exit {p.returncode}); keeping the previous published version", flush=True)
+            failed.append(ed)
+            return
+        published.append(ed)
+
+    def build_one(ed):
+        if ed == "daily":
+            sj = ROOT / f"stories_{D}.json"
             hj = ROOT / f"stories_{D}.html.json"
             oj = ROOT / f"stories_{D}.out.json"
-            if not hj.exists():
-                fetch_images_safe(sj, hj, oj)
+            cfg = ROOT / "editions/config/daily.json"
             html_out = ROOT / f"yesbro_{D}.html"
-            cmd = [sys.executable, str(ROOT / "build_html.py"), str(hj if hj.exists() else sj), dl, str(html_out),
-                   "--config", str(ROOT / "editions/config/daily.json")] + ev("daily") + rd("daily")
-            if oj.exists():
-                cmd += ["--fallback", str(oj)]
-            r = subprocess.run(cmd, cwd=str(ROOT), check=False)
-            if r.returncode != 0:
-                failed.append("daily")
-            elif not skip_publish:
-                subprocess.run([sys.executable, str(ROOT / "publish.py"), "daily", str(html_out), D, "--site", str(SITE)], cwd=str(ROOT), check=False)
-
-    for ed in eds:
-        if ed == "daily":
-            continue
-        sj = ROOT / f"stories_{ed}_{D}.json"
+        else:
+            sj = ROOT / f"stories_{ed}_{D}.json"
+            hj = ROOT / f"stories_{ed}_{D}.html.json"
+            oj = ROOT / f"stories_{ed}_{D}.out.json"
+            cfg = ROOT / f"editions/config/{ed}.json"
+            html_out = ROOT / f"yesbro_{ed}_{D}.html"
         if not sj.exists():
-            continue
-        hj = ROOT / f"stories_{ed}_{D}.html.json"
-        oj = ROOT / f"stories_{ed}_{D}.out.json"
+            return
         if not hj.exists():
             fetch_images_safe(sj, hj, oj)
-        html_out = ROOT / f"yesbro_{ed}_{D}.html"
-        jobs = ROOT / f"jobs_{ed}_{D}.json"
         cmd = [sys.executable, str(ROOT / "build_html.py"), str(hj if hj.exists() else sj), dl, str(html_out),
-               "--config", str(ROOT / f"editions/config/{ed}.json")]
-        if jobs.exists():
-            cmd += ["--jobs", str(jobs)]
-        cmd += ev(ed) + rd(ed) + so(ed) + fw(ed)
-        if ed == "business":
-            op = ROOT / f"opps_business_{D}.json"
-            if op.exists():
-                cmd += ["--opps", str(op)]
+               "--config", str(cfg)] + ev(ed) + rd(ed) + so(ed) + fw(ed)
+        if ed != "daily":
+            jobs = ROOT / f"jobs_{ed}_{D}.json"
+            if jobs.exists():
+                cmd += ["--jobs", str(jobs)]
+            if ed == "business":
+                op = ROOT / f"opps_business_{D}.json"
+                if op.exists():
+                    cmd += ["--opps", str(op)]
         if oj.exists():
             cmd += ["--fallback", str(oj)]
         # NO --talks
-        r = subprocess.run(cmd, cwd=str(ROOT), check=False)
-        if r.returncode != 0:
-            failed.append(ed)
-            continue
-        if not skip_publish:
-            subprocess.run([sys.executable, str(ROOT / "publish.py"), ed, str(html_out), D, "--site", str(SITE)], cwd=str(ROOT), check=False)
+        run_paper(ed, cmd, html_out)
 
-    if not skip_publish:
-        subprocess.run([sys.executable, str(ROOT / "columns.py"), "publish", "--site", str(SITE)], cwd=str(ROOT), check=False)
-        subprocess.run([sys.executable, str(ROOT / "build_landing.py"), "--site", str(SITE), "--stories-dir", str(ROOT)], cwd=str(ROOT), check=False)
-        # Category SEO/AEO: refresh paper <head> JSON-LD/meta, then sitemaps/robots/llms/RSS/IndexNow key
-        subprocess.run([sys.executable, str(ROOT / "enrich_seo.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
-        subprocess.run([sys.executable, str(ROOT / "sitemap.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
-        subprocess.run([sys.executable, str(ROOT / "pwa.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
-        # mypaper best effort
+    for ed in eds:
         try:
-            subprocess.run([sys.executable, str(ROOT / "build_mypaper_data.py"), "--date", D, "--site", str(SITE)], cwd=str(ROOT), check=False, timeout=120)
-            subprocess.run([sys.executable, str(ROOT / "build_mypaper.py"), "--site", str(SITE)], cwd=str(ROOT), check=False, timeout=120)
+            build_one(ed)
         except Exception as e:
-            print(f"mypaper: {e}", flush=True)
-    if failed:
-        print("FAILED papers:", " ".join(failed), flush=True)
+            print(f"paper {ed}: build failed ({e}); keeping the previous published version", flush=True)
+            if ed not in failed:
+                failed.append(ed)
+
+    if not published:
+        print("FAILED papers: nothing published" + (": " + " ".join(failed) if failed else ""), flush=True)
         return 1
+    if failed:
+        print("kept previous version for:", " ".join(failed), flush=True)
+    if not skip_publish:
+        try:
+            subprocess.run([sys.executable, str(ROOT / "columns.py"), "publish", "--site", str(SITE)], cwd=str(ROOT), check=False)
+            subprocess.run([sys.executable, str(ROOT / "build_landing.py"), "--site", str(SITE), "--stories-dir", str(ROOT)], cwd=str(ROOT), check=False)
+            # Category SEO/AEO: refresh paper <head> JSON-LD/meta, then sitemaps/robots/llms/RSS/IndexNow key
+            subprocess.run([sys.executable, str(ROOT / "enrich_seo.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
+            subprocess.run([sys.executable, str(ROOT / "sitemap.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
+            subprocess.run([sys.executable, str(ROOT / "pwa.py"), "--site", str(SITE)], cwd=str(ROOT), check=False)
+            # mypaper best effort
+            try:
+                subprocess.run([sys.executable, str(ROOT / "build_mypaper_data.py"), "--date", D, "--site", str(SITE)], cwd=str(ROOT), check=False, timeout=120)
+                subprocess.run([sys.executable, str(ROOT / "build_mypaper.py"), "--site", str(SITE)], cwd=str(ROOT), check=False, timeout=120)
+            except Exception as e:
+                print(f"mypaper: {e}", flush=True)
+        except Exception as e:
+            print(f"site extras failed ({e}); published papers are kept", flush=True)
     return 0
 
 def maybe_columns(d: dt.date, eds: list[str]):

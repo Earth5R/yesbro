@@ -64,8 +64,16 @@ def get_page(url):
         return c2, b2.decode("utf-8", "replace"), "reader"
     return code, body.decode("utf-8", "replace"), "direct"
 
+def _story_url(story):
+    u = story.get("url") if isinstance(story, dict) else ""
+    if not isinstance(u, str) or not u.startswith(("http://", "https://")):
+        return ""
+    return u
+
 def process(story, width, quality, fmt, cache, crop=(16, 9)):
-    url = story["url"]
+    url = _story_url(story)
+    if not url:
+        return "", "skip missing or invalid url"
     key = hashlib.md5(f"{url}|{width}|{quality}|{fmt}|{crop}".encode()).hexdigest()
     cpath = os.path.join(cache, key + ".txt")
     if os.path.exists(cpath):
@@ -121,7 +129,9 @@ def hotlink_ok(img_url):
     return True
 
 def process_html(story, width, quality, cache):
-    url = story["url"]
+    url = _story_url(story)
+    if not url:
+        return "", "", "skip missing or invalid url"
     key = hashlib.md5(f"html|{url}|{width}|{quality}".encode()).hexdigest()
     cpath = os.path.join(cache, key + ".json")
     if os.path.exists(cpath):
@@ -158,10 +168,13 @@ def main_html(a, stories, cache):
     with ThreadPoolExecutor(8) as ex:
         res = list(ex.map(lambda s: process_html(s, a.width or 640, a.quality or 60, cache), stories))
     for s, (iu, img, msg) in zip(stories, res):
+        if not isinstance(s, dict):
+            print("skip image: not an object", file=sys.stderr)
+            continue
         s["image_url"], s["image"] = iu, img
-        print(f"[{'IMG' if img else '---'}] {s['url'][:70]} :: {msg}", file=sys.stderr)
+        print(f"[{'IMG' if img else '---'}] {(s.get('url') or '')[:70]} :: {msg}", file=sys.stderr)
     json.dump(stories, open(a.out, "w"), indent=1, ensure_ascii=False)
-    n = sum(1 for s in stories if s["image"]); e = sum(1 for s in stories if s["image"].startswith("data:"))
+    n = sum(1 for s in stories if isinstance(s, dict) and s.get("image")); e = sum(1 for s in stories if isinstance(s, dict) and (s.get("image") or "").startswith("data:"))
     print(f"{n}/{len(stories)} with images ({n-e} original URLs, {e} embedded)", file=sys.stderr)
 
 def main():
@@ -184,11 +197,14 @@ def main():
         res = list(ex.map(lambda s: process(s, a.width, a.quality, a.format, cache, crop), stories))
     total = 0
     for s, (uri, msg) in zip(stories, res):
+        if not isinstance(s, dict):
+            print("skip image: not an object", file=sys.stderr)
+            continue
         s["image"] = uri
-        total += len(uri)
-        print(f"[{'IMG' if uri else '---'}] {s['url'][:70]} :: {msg}", file=sys.stderr)
+        total += len(uri or "")
+        print(f"[{'IMG' if uri else '---'}] {(s.get('url') or '')[:70]} :: {msg}", file=sys.stderr)
     json.dump(stories, open(a.out, "w"), indent=1, ensure_ascii=False)
-    print(f"{sum(1 for s in stories if s['image'])}/{len(stories)} with images, {total} chars of data URIs", file=sys.stderr)
+    print(f"{sum(1 for s in stories if isinstance(s, dict) and s.get('image'))}/{len(stories)} with images, {total} chars of data URIs", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

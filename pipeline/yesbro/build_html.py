@@ -10,7 +10,7 @@ stories.html.json : output of `fetch_images.py ... --mode html` (needs section, 
                     a picture. Stories with no image at all render text only (no placeholder).
 """
 import os, sys, argparse, html, json, re
-from sources import src
+from sources import http_url, src
 import yb_auth_strip
 
 _PIPE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +43,35 @@ def esc(s):
 
 def slug(s):
     return "".join(c if c.isalnum() else "-" for c in s.lower()).strip("-")
+
+def _problem(item, fields, anchor=False):
+    """Why this card cannot be printed, or '' when it can. Missing url or fields never raise."""
+    if not isinstance(item, dict):
+        return "not an object"
+    for f in fields:
+        if f == "url":
+            if not http_url(item.get("url"), anchor=anchor):
+                return f"missing or invalid url {item.get('url')!r}"
+        elif not isinstance(item.get(f), str) or not item.get(f).strip():
+            return f"missing {f}"
+    return ""
+
+def _cards(kind, items, fn, *fields, anchor=False):
+    """Render items. One bad item is logged and skipped."""
+    parts = []
+    for it in items or []:
+        why = _problem(it, fields, anchor=anchor)
+        if why:
+            print(f"skip {kind}: {why}", flush=True)
+            continue
+        try:
+            html = fn(it)
+        except Exception as e:
+            print(f"skip {kind}: {e}", flush=True)
+            continue
+        if html:
+            parts.append(html)
+    return "".join(parts)
 
 CSS = r"""
 :root{
@@ -254,6 +283,17 @@ def _inspired(s):
             f'(real report). This card is still satire.</p>')
 
 def story_html(s, lead, cls, fallbacks):
+    why = _problem(s, ("headline", "url"), anchor=True)
+    if why:
+        print(f"skip story: {why}", flush=True)
+        return ""
+    try:
+        return _story_html(s, lead, cls, fallbacks)
+    except Exception as e:
+        print(f"skip story: {e}", flush=True)
+        return ""
+
+def _story_html(s, lead, cls, fallbacks):
     img = s.get("image") or ""
     fig = ""
     if img:
@@ -276,6 +316,17 @@ def story_html(s, lead, cls, fallbacks):
             f'<a class="more" href="{u}"{tgt}>{_more(s)}</a></article>')
 
 def brief_html(s):
+    why = _problem(s, ("headline", "url"), anchor=True)
+    if why:
+        print(f"skip story: {why}", flush=True)
+        return ""
+    try:
+        return _brief_html(s)
+    except Exception as e:
+        print(f"skip story: {e}", flush=True)
+        return ""
+
+def _brief_html(s):
     u = esc(s["url"])
     kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
     tgt = '' if u.startswith('#') else ' target="_blank" rel="noopener"'
@@ -503,9 +554,9 @@ def jobs_section(jobs, c):
     mark = not all(j.get("new") for j in jobs["jobs"])  # first run: everything is new, so mark nothing
     labels = {"India": "India", "Global": "Global", "Remote": c.get("jobs_remote_label", "Remote")}
     for reg in ("India", "Global", "Remote"):
-        js = [j for j in jobs["jobs"] if j["region"] == reg]
+        js = [j for j in jobs["jobs"] if isinstance(j, dict) and j.get("region") == reg]
         if js:
-            groups.append(f'<div class="jobgroup"><h4>{labels[reg]}</h4><div class="classifieds">' + "".join(job_html(j, mark) for j in js) + "</div></div>")
+            groups.append(f'<div class="jobgroup"><h4>{labels[reg]}</h4><div class="classifieds">' + _cards("job", js, lambda j: job_html(j, mark), "title", "url") + "</div></div>")
     n = len(jobs["jobs"])
     return (c.get("jobs_ad_html", "")
             + f'<section class="sec" id="jobs"><div class="sec-head"><h2>Jobs</h2><span>Checked this morning</span></div>'
@@ -546,7 +597,7 @@ def events_section(ev, c):
     for reg, label in (("India", "India"), ("World", "Worldwide"), ("Online", "Online")):
         xs = [e for e in es if e.get("region", "World") == reg]
         if xs:
-            groups.append(f'<div class="jobgroup"><h4>{label}</h4><div class="classifieds">' + "".join(event_html(e) for e in xs) + "</div></div>")
+            groups.append(f'<div class="jobgroup"><h4>{label}</h4><div class="classifieds">' + _cards("event", xs, event_html, "name", "url") + "</div></div>")
     n = len(es)
     intro = c.get("events_intro") or DEFAULT_EVENTS_INTRO
     return (f'<section class="sec" id="events"><div class="sec-head"><h2>Events and Conferences</h2><span>Coming up</span></div>'
@@ -571,8 +622,8 @@ def opp_html(x):
 def tenders_section(op, c):
     ts, rs = op.get("tenders") or [], op.get("releases") or []
     groups = []
-    if ts: groups.append('<div class="jobgroup"><h4>Tenders and bids</h4><div class="classifieds">' + "".join(opp_html(x) for x in ts) + "</div></div>")
-    if rs: groups.append('<div class="jobgroup"><h4>Government releases</h4><div class="classifieds">' + "".join(opp_html(x) for x in rs) + "</div></div>")
+    if ts: groups.append('<div class="jobgroup"><h4>Tenders and bids</h4><div class="classifieds">' + _cards("tender", ts, opp_html, "title", "url") + "</div></div>")
+    if rs: groups.append('<div class="jobgroup"><h4>Government releases</h4><div class="classifieds">' + _cards("release", rs, opp_html, "title", "url") + "</div></div>")
     intro = c.get("tenders_intro", "Bid invitations and official releases from the past few days, each linked to the report or the release itself. "
                   "Read the actual tender document before you quote. The government certainly will.")
     return (f'<section class="sec" id="tenders"><div class="sec-head"><h2>Government Tenders and Releases</h2><span>This week</span></div>'
@@ -583,7 +634,7 @@ def funding_section(op, c):
     intro = c.get("funding_intro", "Calls for applications that are open today, re-checked on the official page every morning. "
                   "Extensions remain a rumour until someone announces one.")
     return (f'<section class="sec" id="funding"><div class="sec-head"><h2>Funding Opportunities</h2><span>Still open</span></div>'
-            f'<p class="ev-intro">{intro}</p><div class="classifieds">' + "".join(opp_html(x) for x in fs) + "</div></section>")
+            f'<p class="ev-intro">{intro}</p><div class="classifieds">' + _cards("funding", fs, opp_html, "title", "url") + "</div></section>")
 
 
 # ---- Schools halves, Student Opportunities, FIELDWORK blog
@@ -625,15 +676,22 @@ def student_opps_section(data, c):
     intro = blk.get("intro") or "Competitions, olympiads, contests and scholarships still open, each checked on its official page this morning."
     cards = []
     for it in items:
-        u = esc(it["url"])
-        dl = ("Apply by " + _d(it["deadline"])) if it.get("deadline") else "Deadline on the official page"
-        meta = esc(it.get("org") or "")
-        loc = it.get("location") or it.get("region") or ""
-        if loc: meta = meta + (f" &middot; {esc(loc)}" if meta else esc(loc))
-        cards.append(f'<div class="classified"><span class="ed">{esc(dl)}</span>'
-                     f'<a class="jt" href="{u}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
-                     f'<span class="jm">{meta}</span><span class="jd">{esc(it.get("line") or "")}</span>'
-                     f'<a class="apply" href="{u}" target="_blank" rel="noopener">Official page</a></div>')
+        why = _problem(it, ("title", "url"))
+        if why:
+            print(f"skip student opp: {why}", flush=True)
+            continue
+        try:
+            u = esc(it["url"])
+            dl = ("Apply by " + _d(it["deadline"])) if it.get("deadline") else "Deadline on the official page"
+            meta = esc(it.get("org") or "")
+            loc = it.get("location") or it.get("region") or ""
+            if loc: meta = meta + (f" &middot; {esc(loc)}" if meta else esc(loc))
+            cards.append(f'<div class="classified"><span class="ed">{esc(dl)}</span>'
+                         f'<a class="jt" href="{u}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
+                         f'<span class="jm">{meta}</span><span class="jd">{esc(it.get("line") or "")}</span>'
+                         f'<a class="apply" href="{u}" target="_blank" rel="noopener">Official page</a></div>')
+        except Exception as e:
+            print(f"skip student opp: {e}", flush=True)
     return (f'<section class="sec stu-opp" id="student_opps"><div class="sec-head"><h2>{esc(title)}</h2><span>Still open</span></div>'
             f'<p class="ev-intro">{esc(intro)}</p><div class="classifieds">' + "".join(cards) + "</div></section>")
 
@@ -645,9 +703,16 @@ def fieldwork_blog_section(data, c):
     intro = blk.get("intro") or "Notes from Earth5R on university applications, profile building and live projects for school students."
     cards = []
     for it in items:
-        cards.append(f'<article class="fw-item"><h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
-                     f'<span class="fw-meta">{esc(it.get("source") or "Earth5R")}</span>'
-                     f'<p class="fw-sum">{esc(it.get("summary") or "")}</p></article>')
+        why = _problem(it, ("title", "url"))
+        if why:
+            print(f"skip fieldwork: {why}", flush=True)
+            continue
+        try:
+            cards.append(f'<article class="fw-item"><h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
+                         f'<span class="fw-meta">{esc(it.get("source") or "Earth5R")}</span>'
+                         f'<p class="fw-sum">{esc(it.get("summary") or "")}</p></article>')
+        except Exception as e:
+            print(f"skip fieldwork: {e}", flush=True)
     return (f'<section class="sec fw-blog" id="fieldwork_blog"><div class="sec-head"><h2>{esc(title)}</h2><span>From Earth5R</span></div>'
             f'<p class="ev-intro">{esc(intro)}</p><div class="rd-grid">' + "".join(cards) + "</div></section>")
 
@@ -913,10 +978,17 @@ def research_section(rd, c):
     intro = sb.get("intro", "Papers and lab notes that landed recently. Preprints say so on the card. Findings stay where the source put them.")
     rows = []
     for it in items:
-        tag = '<span class="rd-tag">Preprint</span>' if it.get("kind") == "preprint" else ""
-        meta = esc(it.get("source") or "") + (f' &middot; {esc(it["date"])}' if it.get("date") else "")
-        rows.append(f'<article class="rd-item">{tag}<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
-                    f'<span class="rd-meta">{meta}</span><p class="rd-sum">{esc(it["summary"])}</p></article>')
+        why = _problem(it, ("title", "url"))
+        if why:
+            print(f"skip research: {why}", flush=True)
+            continue
+        try:
+            tag = '<span class="rd-tag">Preprint</span>' if it.get("kind") == "preprint" else ""
+            meta = esc(it.get("source") or "") + (f' &middot; {esc(it["date"])}' if it.get("date") else "")
+            rows.append(f'<article class="rd-item">{tag}<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
+                        f'<span class="rd-meta">{meta}</span><p class="rd-sum">{esc(it.get("summary") or "")}</p></article>')
+        except Exception as e:
+            print(f"skip research: {e}", flush=True)
     return (f'<section class="sec" id="research"><div class="sec-head"><h2>{esc(title)}</h2><span>Fresh from the lab</span></div>'
             f'<p class="rd-intro">{esc(intro)}</p><div class="rd-grid">' + "".join(rows) + "</div></section>")
 
@@ -928,23 +1000,38 @@ def talks_section(tk, c):
     intro = sb.get("intro", "Talks worth a quiet half hour. Each one was still up on YouTube this morning.")
     cards = []
     for it in items:
-        thumb = ""
-        if it.get("thumb"):
-            thumb = (f'<a class="tk-thumb" href="{esc(it["url"])}" target="_blank" rel="noopener">'
-                     f'<img src="{esc(it["thumb"])}" alt="" loading="lazy"></a>')
-        elif it.get("id"):
-            thumb = (f'<a class="tk-thumb" href="{esc(it["url"])}" target="_blank" rel="noopener">'
-                     f'<img src="https://i.ytimg.com/vi/{esc(it["id"])}/hqdefault.jpg" alt="" loading="lazy"></a>')
-        meta = esc(it.get("channel") or "")
-        if it.get("duration"): meta += f' &middot; {esc(it["duration"])}'
-        cards.append(f'<article class="tk-card">{thumb}<div class="tk-body">'
-                     f'<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
-                     f'<span class="tk-meta">{meta}</span><p class="tk-note">{esc(it.get("note") or "")}</p></div></article>')
+        why = _problem(it, ("title", "url"))
+        if why:
+            print(f"skip talk: {why}", flush=True)
+            continue
+        try:
+            thumb = ""
+            if it.get("thumb"):
+                thumb = (f'<a class="tk-thumb" href="{esc(it["url"])}" target="_blank" rel="noopener">'
+                         f'<img src="{esc(it["thumb"])}" alt="" loading="lazy"></a>')
+            elif it.get("id"):
+                thumb = (f'<a class="tk-thumb" href="{esc(it["url"])}" target="_blank" rel="noopener">'
+                         f'<img src="https://i.ytimg.com/vi/{esc(it["id"])}/hqdefault.jpg" alt="" loading="lazy"></a>')
+            meta = esc(it.get("channel") or "")
+            if it.get("duration"): meta += f' &middot; {esc(it["duration"])}'
+            cards.append(f'<article class="tk-card">{thumb}<div class="tk-body">'
+                         f'<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></h3>'
+                         f'<span class="tk-meta">{meta}</span><p class="tk-note">{esc(it.get("note") or "")}</p></div></article>')
+        except Exception as e:
+            print(f"skip talk: {e}", flush=True)
     return (f'<section class="sec" id="talks"><div class="sec-head"><h2>{esc(title)}</h2><span>Worth a watch</span></div>'
             f'<p class="tk-intro">{esc(intro)}</p><div class="tk-grid">' + "".join(cards) + "</div></section>")
 
 def build(stories, date, fallbacks, sections=None, cfg=None, jobs=None, events=None, opps=None, research=None, talks=None, student_opps=None, fieldwork_blog=None):
     c = dict(DEFAULTS); c.update(cfg or {})
+    kept = []
+    for s in stories or []:
+        why = _problem(s, ("section", "headline", "url"), anchor=True)
+        if why:
+            print(f"skip story: {why}", flush=True)
+            continue
+        kept.append(s)
+    stories = kept
     secs = [(n, [s for s in stories if s["section"] == n]) for n in (sections or SECTIONS)]
     secs = [(n, ss) for n, ss in secs if ss]
     box = ""
@@ -967,15 +1054,20 @@ def build(stories, date, fallbacks, sections=None, cfg=None, jobs=None, events=N
             rails[k].append(s); h[k] += (1.0 if s.get("image") else 0.0) + 0.9
         parts = []
         if li is not None:
-            parts.append(f'<div class="rail leadrail">{story_html(ss[li], True, "", fallbacks)}</div>')
+            lead = _cards("story", [ss[li]], lambda s: story_html(s, True, "", fallbacks), "headline", "url", anchor=True)
+            if lead:
+                parts.append(f'<div class="rail leadrail">{lead}</div>')
         for r in rails:
             if r:
-                parts.append('<div class="rail">' + "".join(story_html(s, False, "", fallbacks) for s in r) + "</div>")
+                rail = _cards("story", r, lambda s: story_html(s, False, "", fallbacks), "headline", "url", anchor=True)
+                if rail:
+                    parts.append('<div class="rail">' + rail + "</div>")
+        briefs_html = _cards("story", briefs, brief_html, "headline", "url", anchor=True)
         news[n] = (f'<section class="sec" id="{slug(n)}"><div class="sec-head"><h2>{esc(n)}</h2>'
                    f'</div>'
                    f'<div class="cols{"" if li is not None else " nolead"}">{"".join(parts)}</div>'
                    + (f'<div class="briefs-head">More from {esc(n)}</div><div class="briefs">'
-                      + "".join(brief_html(s) for s in briefs) + '</div>' if briefs else '')
+                      + briefs_html + '</div>' if briefs_html else '')
                    + '</section>')
     # Schools: Student Opportunities is its own section, so strip Student-tagged rows from Jobs.
     if jobs and jobs.get("jobs") and (student_opps or c.get("student_opps_block") is not None):
@@ -1229,7 +1321,8 @@ def main():
     blocklist.log(_bl)
     fb = {}
     if a.fallback:
-        fb = {s["url"]: s.get("image", "") for s in json.load(open(a.fallback)) if s.get("image")}
+        fb = {s["url"]: s.get("image", "") for s in json.load(open(a.fallback))
+              if isinstance(s, dict) and s.get("image") and s.get("url")}
     if research and research.get("items"): research["items"] = blocklist.keep(research["items"], "research", _bl)
     if talks and talks.get("talks"): talks["talks"] = blocklist.keep(talks["talks"], "talks", _bl)
     if cfg.get("satire"):
@@ -1242,8 +1335,9 @@ def main():
     page = build(stories, a.date, fb, sections, cfg, jobs, events, opps, research, talks, student_opps, fieldwork_blog)
     blocklist.guard_html(page, cfg.get("key") or a.out)  # final guard: fail this paper if Begin slipped in via config, column, meme or interlude
     open(a.out, "w").write(page)
-    n = sum(1 for s in stories if s.get("image"))
-    print(f"wrote {a.out}: {len(stories)} stories, {n} with images", flush=True)
+    usable = [s for s in stories if not _problem(s, ("section", "headline", "url"), anchor=True)]
+    n = sum(1 for s in usable if s.get("image"))
+    print(f"wrote {a.out}: {len(usable)} stories, {n} with images", flush=True)
 
 if __name__ == "__main__":
     main()
