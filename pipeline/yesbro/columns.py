@@ -28,16 +28,14 @@ SITE = "https://yesbrohq.com"
 # key: (folder, field label used in "Yes Bro <label>", share image)
 EDS = {
     "daily": ("daily", "Daily"),
-    "finance": ("finance", "Finance"),
-    "business": ("business", "Business"),
+    "business-finance": ("business-finance", "Business & Finance"),
     "ai": ("ai", "AI"),
     "health": ("health", "Health"),
     "startups": ("startups", "Startups"),
     "realestate": ("realestate", "Real Estate"),
     "auto": ("auto", "Auto"),
     "fashion": ("fashion", "Fashion"),
-    "highered": ("highered", "Higher Ed"),
-    "schools": ("schools", "Schools"),
+    "schools": ("schools", "Schools & Higher Ed"),
     "marketing": ("marketing", "Marketing"),
     "ux": ("ux", "UX & Design"),
     "arch": ("architecture", "Architecture"),
@@ -56,7 +54,7 @@ NOINTERN = re.compile(r"(?i)\bintern(ship)?s?\b")
 E5R_INTERN = re.compile(r"(?i)earth5r\.org/[^)\s\"]*intern")
 
 # Width of 'Yes Bro <Field>' in em at equal size (UnifrakturMaguntia 'Yes Bro ' = 3.89em, Playfair 900 field word), measured in Chrome.
-BRAND_W = {'Daily': 2.52, 'UX & Design': 5.85, 'Architecture': 5.91, 'Schools': 3.68, 'Sustainability': 6.54, 'Startups': 4.03, 'Higher Ed': 4.8, 'Consulting': 5.21, 'Health': 3.14, 'Marketing': 4.9, 'Finance': 3.72, 'Aviation': 3.95, 'Business': 4.12, 'Newspaper': 5.18, 'AI': 1.09, 'Packaging': 4.93, 'Fashion': 3.80, 'Real Estate': 5.50, 'Auto': 2.20}
+BRAND_W = {'Daily': 2.52, 'UX & Design': 5.85, 'Architecture': 5.91, 'Schools & Higher Ed': 9.4, 'Sustainability': 6.54, 'Startups': 4.03, 'Consulting': 5.21, 'Health': 3.14, 'Marketing': 4.9, 'Business & Finance': 8.6, 'Aviation': 3.95, 'Newspaper': 5.18, 'AI': 1.09, 'Packaging': 4.93, 'Fashion': 3.80, 'Real Estate': 5.50, 'Auto': 2.20}
 def brand(name):
     """'Yes Bro' in blackletter, the field word in bold Playfair at the SAME size (cap heights match at 1em).
     The whole title scales down together via --w when the line is too narrow."""

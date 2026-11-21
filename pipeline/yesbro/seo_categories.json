@@ -64,43 +64,26 @@
         "business"
       ]
     },
-    "business": {
-      "name": "Yes Bro Business",
-      "folder": "business",
-      "title": "Indian business news, markets, deals and funding | Yes Bro Business",
-      "description": "Free daily Indian business newspaper: companies, markets, deals and M&A, business basics, tenders and funding calls. Written for people who read the business pages first. No tracking.",
-      "about": "Yes Bro Business is a free daily trade paper for Indian business readers. It opens with Indian company and market news, then deals, explainers and tenders, with links to the original reports.",
+    "business-finance": {
+      "name": "Yes Bro Business & Finance",
+      "folder": "business-finance",
+      "title": "Business, markets and personal finance news | Yes Bro Business & Finance",
+      "description": "Free daily paper on Indian business, markets, deals, banking and personal money. Not investment advice. No tracking.",
+      "about": "Yes Bro Business & Finance is a free daily paper for business and money. It opens with Indian companies and deals, then markets, banking, fintech and personal money, with links to the original reports. It is not investment advice.",
       "keywords": [
         "Indian business news",
-        "stock market India",
+        "stock market news India",
         "M&A India",
-        "business newspaper",
+        "banking news",
+        "personal finance India",
+        "mutual funds",
+        "RBI",
         "tenders India",
-        "funding news",
-        "Yes Bro Business"
+        "Yes Bro Business & Finance"
       ],
       "genre": [
         "business",
         "finance"
-      ]
-    },
-    "finance": {
-      "name": "Yes Bro Finance",
-      "folder": "finance",
-      "title": "Stock market, banking and personal finance news | Yes Bro Finance",
-      "description": "Daily finance news: markets, banking, personal money and investing explainers for India. Free newspaper, not investment advice. No tracking.",
-      "about": "Yes Bro Finance covers markets, banking and personal finance for India in a free daily paper. Summaries stay factual and dry, with links to the source. It is not investment advice.",
-      "keywords": [
-        "stock market news India",
-        "personal finance India",
-        "banking news",
-        "mutual funds",
-        "RBI",
-        "Yes Bro Finance"
-      ],
-      "genre": [
-        "finance",
-        "business"
       ]
     },
     "health": {
@@ -236,17 +219,20 @@
       ]
     },
     "schools": {
-      "name": "Yes Bro Schools",
+      "name": "Yes Bro Schools & Higher Ed",
       "folder": "schools",
-      "title": "IB and school news for students and teachers | Yes Bro Schools",
-      "description": "Daily schools newspaper for grades 9 to 12, IB and Cambridge: careers, exams, scholarships, teaching and education India. Gentle voice. Free. No tracking.",
-      "about": "Yes Bro Schools is a free daily paper for senior-school students and teachers. It covers exams, scholarships, study skills and school policy in a gentle voice.",
+      "title": "School and university news for students and teachers | Yes Bro Schools & Higher Ed",
+      "description": "Daily paper for schools and higher education. Exams, teaching and scholarships lead, then university admissions, study abroad and campus news. Gentle voice. Free. No tracking.",
+      "about": "Yes Bro Schools & Higher Ed is a free daily paper for school students, teachers and university applicants. School news leads. University admissions, study abroad, visas and campus news follow.",
       "keywords": [
         "IB news",
         "school exams India",
         "scholarships",
         "Cambridge board",
-        "Yes Bro Schools"
+        "study abroad India",
+        "university admissions",
+        "student visa",
+        "Yes Bro Schools & Higher Ed"
       ],
       "genre": [
         "education"
@@ -268,23 +254,6 @@
       "genre": [
         "environment",
         "business"
-      ]
-    },
-    "highered": {
-      "name": "Yes Bro Higher Ed",
-      "folder": "highered",
-      "title": "University, study abroad and scholarship news | Yes Bro Higher Ed",
-      "description": "Daily higher education newspaper: admissions, study abroad, visas, scholarships and campus news for Indian students. Free. No tracking.",
-      "about": "Yes Bro Higher Ed covers university admissions, study abroad, visas and scholarships for Indian students in a free daily paper.",
-      "keywords": [
-        "study abroad India",
-        "university admissions",
-        "scholarships",
-        "student visa",
-        "Yes Bro Higher Ed"
-      ],
-      "genre": [
-        "education"
       ]
     },
     "consulting": {

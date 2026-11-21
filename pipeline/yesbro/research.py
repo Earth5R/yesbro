@@ -14,8 +14,8 @@ import feedparser, requests
 import blocklist
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-EDS = ["daily","ux","arch","schools","sustainability","startups","highered","consulting","health",
-       "marketing","finance","aviation","business","healing","ai","packaging","fashion","realestate","auto"]
+EDS = ["daily","ux","arch","schools","sustainability","startups","consulting","health",
+       "marketing","aviation","business-finance","healing","ai","packaging","fashion","realestate","auto"]
 UA = {"User-Agent": "Mozilla/5.0 (compatible; YesBroResearch/1.0)", "Accept-Language": "en"}
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 CAP = 8
@@ -144,7 +144,7 @@ FEEDS = {
 
 # Soft keyword keep filters when a feed is broad (title+summary must match at least one if set).
 KEEP = {
- "schools": re.compile(r"\b(schools?|students?|teachers?|classrooms?|pedagog\w*|literacy|curriculum|education|tutoring|homework|edtech|lesson plan|K-12|\bIB\b|Cambridge Assessment|child development|reading comprehension|dyslex\w*|math education|science education|autis\w*|learning|adolescents?|classroom|tutoring|scaffolding|LLM.{0,20}tutor)\b", re.I),
+ "schools": re.compile(r"\b(schools?|students?|teachers?|classrooms?|pedagog\w*|literacy|curriculum|education|tutoring|homework|edtech|lesson plan|K-12|\bIB\b|Cambridge Assessment|child development|reading comprehension|dyslex\w*|math education|science education|autis\w*|learning|adolescents?|classroom|tutoring|scaffolding|LLM.{0,20}tutor|universit\w*|campus|admissions?|college|higher education)\b", re.I),
  "fashion": re.compile(r"\b(fashion|apparel|textile|fabric|fibre|fiber|garment|jewellery|jewelry|diamond|cotton|silk|wool|dye|weav|knit|handloom|sustainable fashion|circular fashion|leather|footwear)\b", re.I),
  "realestate": re.compile(r"\b(real.?estate|housing market|housing price|mortgage|\bREIT\b|proptech|urban planning|land use|zoning|green building|\bLEED\b|building energy|construction material|\bcement\b|\bconcrete\b|smart city|residential property|commercial property|office vacancy|warehouse|JLL|Knight Frank|CBRE|Anarock|PropEquity)\b", re.I),
  "auto": re.compile(r"\b(auto(?:motive)?|automobile|vehicle|\bEV\b|electric vehicle|battery|charging|mobility|ADAS|autonomous|two.?wheeler|passenger car|commercial vehicle|SIAM|FADA|ACMA|ICCT|IEA|tyre|tire|powertrain|safety)\b", re.I),
@@ -232,9 +232,30 @@ def save_seen(s):
 def india_score(title, summary):
     return 1 if re.search(r"\b(India|Indian|IIT|IISc|CSIR|ICMR|Delhi|Mumbai|Bengaluru|Bangalore|Chennai|Hyderabad)\b", title + " " + summary) else 0
 
+def feeds_for(ed):
+    import paper_merges
+    out, seen = [], set()
+    for src in paper_merges.sources_of(ed):
+        for item in FEEDS.get(src) or []:
+            if item[0] not in seen:
+                seen.add(item[0])
+                out.append(item)
+    return out or FEEDS.get(ed) or FEEDS["daily"]
+
+def keep_for(ed):
+    import paper_merges
+    parts = []
+    for src in paper_merges.sources_of(ed):
+        k = KEEP.get(src)
+        if k:
+            parts.append(k.pattern)
+    if not parts:
+        return None
+    return re.compile("|".join(f"(?:{p})" for p in parts), re.I)
+
 def pick_for(ed, today, seen):
-    feeds = FEEDS.get(ed) or FEEDS["daily"]
-    keep = KEEP.get(ed)
+    feeds = feeds_for(ed)
+    keep = keep_for(ed)
     horizon = today - dt.timedelta(days=21)
     cands = []
     with ThreadPoolExecutor(6) as ex:

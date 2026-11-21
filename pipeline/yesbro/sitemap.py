@@ -55,6 +55,14 @@ def lastmod(path: str) -> str:
     return m.group(1) if m else dt.date.today().isoformat()
 
 
+def _is_redirect(path: str) -> bool:
+    try:
+        head = open(path, encoding="utf-8", errors="ignore").read(2000).lower()
+    except OSError:
+        return False
+    return "http-equiv=\"refresh\"" in head or "http-equiv='refresh'" in head
+
+
 def _paper_folders(site: str) -> list[str]:
     out = []
     for idx in sorted(glob.glob(os.path.join(site, "*", "index.html"))):
@@ -172,7 +180,7 @@ def write_news_sitemap(site: str, cats: dict) -> int:
             lm_date = dt.date.fromisoformat(lm)
         except ValueError:
             lm_date = dt.date.today()
-        if lm_date >= cutoff:
+        if lm_date >= cutoff and not _is_redirect(idx):
             entries.append((f"{SITE}/{folder}/", lm, name, keywords, meta.get("title") or name))
         for a in sorted(glob.glob(os.path.join(site, folder, "archive", "*.html")), reverse=True):
             lm = lastmod(a)
@@ -318,6 +326,8 @@ def write_rss_feeds(site: str, cats: dict) -> int:
             html_text = open(idx, encoding="utf-8", errors="ignore").read()
         except OSError:
             continue
+        if _is_redirect(idx):
+            continue
         stories = _extract_stories(html_text)
         lm = lastmod(idx)
         title = meta.get("title") or meta.get("name") or folder
@@ -379,10 +389,11 @@ def collect_urls(site: str) -> list[tuple]:
     add(os.path.join(site, "index.html"), SITE + "/", "daily", "1.0")
     for folder in _paper_folders(site):
         idx = os.path.join(site, folder, "index.html")
-        add(idx, f"{SITE}/{folder}/", "daily", "0.9")
-        feed = os.path.join(site, folder, "feed.xml")
-        if os.path.exists(feed):
-            add(feed, f"{SITE}/{folder}/feed.xml", "daily", "0.5")
+        if not _is_redirect(idx):
+            add(idx, f"{SITE}/{folder}/", "daily", "0.9")
+            feed = os.path.join(site, folder, "feed.xml")
+            if os.path.exists(feed):
+                add(feed, f"{SITE}/{folder}/feed.xml", "daily", "0.5")
         ex = os.path.join(site, folder, "explains", "index.html")
         if os.path.exists(ex):
             add(ex, f"{SITE}/{folder}/explains/", "weekly", "0.7")

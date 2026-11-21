@@ -1,0 +1,66 @@
+{
+  "sections": [
+    "Indian Business",
+    "Deals and M&A",
+    "Indian Markets",
+    "Global Markets",
+    "Banking and Regulation",
+    "Fintech and Payments",
+    "Personal Money",
+    "Business Basics"
+  ],
+  "top_blocks": [
+    "Indian Business",
+    "Deals and M&A",
+    "Indian Markets",
+    "Global Markets",
+    "Banking and Regulation",
+    "Fintech and Payments",
+    "Personal Money",
+    "Business Basics",
+    "funding",
+    "tenders",
+    "events",
+    "jobs"
+  ],
+  "title": "Yes Bro Business & Finance",
+  "masthead": "Yes Bro Business & Finance",
+  "family": "Yes Bro Newspaper",
+  "motto": "Where the money is made, and where it is counted",
+  "ear_left": "Read It Before<br>the Meeting",
+  "ear_right": "Printed This Morning<br>Markets Inside",
+  "edition": "Business and Finance Edition",
+  "price": "Price: Free, unlike your CA",
+  "footer": "A Yes Bro Newspaper edition. Every headline links to the original report. Not investment advice. Past headlines are no guarantee of future headlines.",
+  "head_extra": "\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-title\" content=\"Business & Finance\">\n<meta name=\"theme-color\" content=\"#f3ead6\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<link rel=\"apple-touch-icon\" href=\"../icon-512.png\">\n<link rel=\"icon\" href=\"../icon-512.png\">",
+  "ad_after": 4,
+  "ad_html": "<aside class=\"housead\"><p class=\"ad-kicker\">Advertisement</p><p class=\"ad-brand\">Fieldwork</p><h4>Some returns do not show up in a portfolio.</h4><p>FIELDWORK by Earth5R takes students into their own neighbourhoods to work with the community on climate and waste projects, with a mentor checking the work along the way. The returns are slow and entirely real.</p><a class=\"ad-cta\" href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">Learn more at earth5r.org</a></aside>",
+  "jobs_ad_html": "<aside class=\"jobsad\"><b>Fieldwork</b> Planning a career in business or finance? FIELDWORK by Earth5R is a mentored fellowship where school and university students work on a live Earth5R project near home and sit in on research conversations with professors at MIT, Oxford, Cambridge and LSE. The work is verified, which tends to come up in interviews. <a href=\"https://earth5r.org/fieldwork/\" target=\"_blank\" rel=\"noopener\">earth5r.org/fieldwork</a></aside>",
+  "jobs_intro": "Business, banking and markets roles checked today. Each one links to the original posting, where the real interview begins.",
+  "events_intro": "Summits, founder meetups and finance gatherings coming up, each checked against its own page this morning.",
+  "key": "business-finance",
+  "url": "https://yesbrohq.com/business-finance/",
+  "seo_title": "Business, markets and personal finance news | Yes Bro Business & Finance",
+  "seo_desc": "Free daily paper on Indian business, markets, deals, banking and personal money. Not investment advice. No tracking.",
+  "menu_pins": [
+    "jobs",
+    "events",
+    "funding",
+    "tenders"
+  ],
+  "meme": true,
+  "merge_sources": ["business", "finance"],
+  "redirects": ["business", "finance"],
+  "per_section": 7,
+  "max_stories": 56,
+  "research_block": {
+    "title": "Research and Development",
+    "nav": "R&D",
+    "intro": "Markets, firms and banking research that landed recently. Preprints say so on the card. Findings stay where the source put them."
+  },
+  "talks_block": {
+    "title": "Talks",
+    "nav": "Talks",
+    "intro": "Talks on business and markets. Each one was still up on YouTube this morning."
+  }
+}

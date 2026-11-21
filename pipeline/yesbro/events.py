@@ -18,7 +18,7 @@ import blocklist
 import requests
 from concurrent.futures import ThreadPoolExecutor
 HERE = os.path.dirname(os.path.abspath(__file__))
-EDS = ["daily", "ux", "arch", "schools", "sustainability", "startups", "highered", "consulting", "health", "marketing", "finance", "aviation", "business", "healing", "ai", "packaging", "fashion", "realestate", "auto"]
+EDS = ["daily", "ux", "arch", "schools", "sustainability", "startups", "consulting", "health", "marketing", "aviation", "business-finance", "healing", "ai", "packaging", "fashion", "realestate", "auto"]
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36", "Accept-Language": "en"}
 MON = ["january","february","march","april","may","june","july","august","september","october","november","december"]
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
@@ -175,9 +175,12 @@ def main():
     seeds, dropped = verify_seeds(today, horizon)
     lu = luma(today, horizon); ct = confstech(today, horizon)
     report = {}
+    import paper_merges
     for ed in eds:
-        pick = [s for s in seeds if ed in s["eds"]] + [c for c in ct if ed in c["eds"]]
-        kw = re.compile(KW.get(ed, r"$^"), re.I)
+        srcs = set(paper_merges.sources_of(ed))
+        pick = [s for s in seeds if srcs.intersection(s.get("eds") or [])] + [c for c in ct if srcs.intersection(c.get("eds") or [])]
+        parts = [KW[s] for s in paper_merges.sources_of(ed) if KW.get(s) and KW[s] != r"$^"]
+        kw = re.compile("|".join(f"(?:{p})" for p in parts) if parts else KW.get(ed, r"$^"), re.I)
         lum = [l for l in lu if kw.search(l["hay"])]
         lum.sort(key=lambda x: x["start"])
         room = max(4, CAP - len(pick))
