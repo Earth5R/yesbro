@@ -49,13 +49,13 @@ Yes Bro Aviation is a free daily paper for airline and airport readers. It cover
 - RSS: https://yesbrohq.com/aviation/feed.xml
 - Keywords: aviation news India, airline news, pilot jobs India, airport news, Yes Bro Aviation
 
-## Yes Bro Business
+## Yes Bro Business & Finance
 
-Yes Bro Business is a free daily trade paper for Indian business readers. It opens with Indian company and market news, then deals, explainers and tenders, with links to the original reports.
+Yes Bro Business & Finance is a free daily paper for business and money. It opens with Indian companies and deals, then markets, banking, fintech and personal money, with links to the original reports. It is not investment advice.
 
-- Home: https://yesbrohq.com/business/
-- RSS: https://yesbrohq.com/business/feed.xml
-- Keywords: Indian business news, stock market India, M&A India, business newspaper, tenders India, funding news, Yes Bro Business
+- Home: https://yesbrohq.com/business-finance/
+- RSS: https://yesbrohq.com/business-finance/feed.xml
+- Keywords: Indian business news, stock market news India, M&A India, banking news, personal finance India, mutual funds, RBI, tenders India, Yes Bro Business & Finance
 
 ## Yes Bro Consulting
 
@@ -73,14 +73,6 @@ Yes Bro Fashion covers fashion, jewellery and textiles with an India-first lens,
 - RSS: https://yesbrohq.com/fashion/feed.xml
 - Keywords: fashion news India, jewellery industry, textiles India, sustainable fashion, fashion jobs, Yes Bro Fashion
 
-## Yes Bro Finance
-
-Yes Bro Finance covers markets, banking and personal finance for India in a free daily paper. Summaries stay factual and dry, with links to the source. It is not investment advice.
-
-- Home: https://yesbrohq.com/finance/
-- RSS: https://yesbrohq.com/finance/feed.xml
-- Keywords: stock market news India, personal finance India, banking news, mutual funds, RBI, Yes Bro Finance
-
 ## Yes Bro Healing
 
 Yes Bro Healing is the daily field newspaper for Mindful Wholeness (https://mindfulwholeness.org/), Saurabh's healing practice site. It covers mental health, mindfulness, sleep, nutrition and related topics without cure claims, and without house-ad promotion from other brands.
@@ -96,14 +88,6 @@ Yes Bro Health is a free daily paper for doctors and health readers. It covers p
 - Home: https://yesbrohq.com/health/
 - RSS: https://yesbrohq.com/health/feed.xml
 - Keywords: health news India, medical news, public health, pharma news, hospital news, Yes Bro Health
-
-## Yes Bro Higher Ed
-
-Yes Bro Higher Ed covers university admissions, study abroad, visas and scholarships for Indian students in a free daily paper.
-
-- Home: https://yesbrohq.com/highered/
-- RSS: https://yesbrohq.com/highered/feed.xml
-- Keywords: study abroad India, university admissions, scholarships, student visa, Yes Bro Higher Ed
 
 ## Yes Bro Marketing
 
@@ -129,13 +113,13 @@ Yes Bro Real Estate is a free India-first trade paper for developers, brokers an
 - RSS: https://yesbrohq.com/realestate/feed.xml
 - Keywords: real estate news India, RERA, REITs India, PropTech, housing news, Yes Bro Real Estate
 
-## Yes Bro Schools
+## Yes Bro Schools & Higher Ed
 
-Yes Bro Schools is a free daily paper for senior-school students and teachers. It covers exams, scholarships, study skills and school policy in a gentle voice.
+Yes Bro Schools & Higher Ed is a free daily paper for school students, teachers and university applicants. School news leads. University admissions, study abroad, visas and campus news follow.
 
 - Home: https://yesbrohq.com/schools/
 - RSS: https://yesbrohq.com/schools/feed.xml
-- Keywords: IB news, school exams India, scholarships, Cambridge board, Yes Bro Schools
+- Keywords: IB news, school exams India, scholarships, Cambridge board, study abroad India, university admissions, student visa, Yes Bro Schools & Higher Ed
 
 ## Yes Bro Startups
 

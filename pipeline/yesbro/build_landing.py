@@ -21,16 +21,14 @@ SHARE_TEXT = share.text_for("landing", SHARE_TITLE)
 # card photo (site relative, grayscale 16:9 webp about 800x450 under 80KB, or "" for none)
 EDITIONS = [
     ("daily", "Yes Bro Daily", "daily/", "stories_", None, "India and the world, from politics to climate. Neither waits for you to finish your tea", "img/landing/daily.webp"),
-    ("finance", "Yes Bro Finance", "finance/", "stories_finance_", "editions/config/finance.json", "For bankers and anyone keeping an eye on their own savings. Not investment advice", "img/landing/finance.webp"),
-    ("business", "Yes Bro Business", "business/", "stories_business_", "editions/config/business.json", "For people who read the business pages before the sports pages", "img/landing/business.webp"),
+    ("business-finance", "Yes Bro Business & Finance", "business-finance/", "stories_business-finance_", "editions/config/business-finance.json", "For people who read the business pages and check the markets before lunch. Not investment advice", "img/landing/business.webp"),
     ("ai", "Yes Bro AI", "ai/", "stories_ai_", "editions/config/ai.json", "For anyone keeping up with artificial intelligence, minus the launch livestream", "img/landing/ai.webp"),
     ("health", "Yes Bro Health", "health/", "stories_health_", "editions/config/health.json", "For doctors and health people with a minute between rounds, which is about how long they have", "img/landing/health.webp"),
     ("startups", "Yes Bro Startups", "startups/", "stories_startups_", "editions/config/startups.json", "For founders and the investors who reply eventually. Runway sold separately", "img/landing/startups.webp"),
     ("realestate", "Yes Bro Real Estate", "realestate/", "stories_realestate_", "editions/config/realestate.json", "For developers, brokers and anyone who has argued about carpet area", "img/landing/realestate.webp"),
     ("auto", "Yes Bro Auto", "auto/", "stories_auto_", "editions/config/auto.json", "For anyone who still negotiates the on-road price", "img/landing/auto.webp"),
     ("fashion", "Yes Bro Fashion", "fashion/", "stories_fashion_", "editions/config/fashion.json", "For anyone who follows fashion, jewellery and accessories, India first", "img/landing/fashion.webp"),
-    ("highered", "Yes Bro Higher Ed", "highered/", "stories_highered_", "editions/config/highered.json", "For applicants and admissions teams. The essay is still your problem", "img/landing/highered.webp"),
-    ("schools", "Yes Bro Schools", "schools/", "stories_schools_", "editions/config/schools.json", "For IB and Cambridge students and their teachers. Admissions dates included, panic optional", "img/landing/schools.webp"),
+    ("schools", "Yes Bro Schools & Higher Ed", "schools/", "stories_schools_", "editions/config/schools.json", "For school students, their teachers, and anyone applying further. School news leads", "img/landing/schools.webp"),
     ("marketing", "Yes Bro Marketing", "marketing/", "stories_marketing_", "editions/config/marketing.json", "For marketers with strong opinions about the new logo", "img/landing/marketing.webp"),
     ("ux", "Yes Bro UX & Design", "ux/", "stories_ux_", "editions/config/ux.json", "For UX, product and design people who still care about the craft", "img/landing/ux.webp"),
     ("arch", "Yes Bro Architecture", "architecture/", "stories_arch_", "editions/config/arch.json", "For architects and anyone who has argued about a facade", "img/landing/arch.webp"),
@@ -45,7 +43,7 @@ FIELD_MAIL = ("mailto:ontheworldroad@gmail.com?subject=" + "Yes%20Bro%20for%20my
               + "&body=" + "Hi%20Yes%20Bro%2C%0A%0AMy%20field%20is%3A%20%0AI%20would%20want%20sections%20on%3A%20%0A")
 
 # Width of 'Yes Bro <Field>' in em at equal size (UnifrakturMaguntia 'Yes Bro ' = 3.89em, Playfair 900 field word), measured in Chrome.
-BRAND_W = {'Daily': 2.52, 'UX & Design': 5.85, 'Architecture': 5.91, 'Schools': 3.68, 'Sustainability': 6.54, 'Startups': 4.03, 'Higher Ed': 4.8, 'Consulting': 5.21, 'Health': 3.14, 'Marketing': 4.9, 'Finance': 3.72, 'Aviation': 3.95, 'Business': 4.12, 'Healing': 3.55, 'AI': 1.09, 'Newspaper': 5.18, 'Packaging': 4.93, 'Fashion': 3.80, 'Real Estate': 5.50, 'Auto': 2.20}
+BRAND_W = {'Daily': 2.52, 'UX & Design': 5.85, 'Architecture': 5.91, 'Schools & Higher Ed': 9.4, 'Sustainability': 6.54, 'Startups': 4.03, 'Consulting': 5.21, 'Health': 3.14, 'Marketing': 4.9, 'Business & Finance': 8.6, 'Aviation': 3.95, 'Healing': 3.55, 'AI': 1.09, 'Newspaper': 5.18, 'Packaging': 4.93, 'Fashion': 3.80, 'Real Estate': 5.50, 'Auto': 2.20}
 def brand(name):
     """'Yes Bro' in blackletter, the field word in bold Playfair at the SAME size (cap heights match at 1em).
     The whole title scales down together via --w when the line is too narrow."""
@@ -190,8 +188,8 @@ AD = ('<aside class="housead" id="fieldwork"><p class="ad-kicker">Advertisement<
       'there is a street to start on.</p>'
       '<a class="btn" href="https://earth5r.org/fieldwork/" target="_blank" rel="noopener">Learn more at earth5r.org</a></aside>')
 
-DESC = ("The newspaper for your field. News, jobs, opportunities and research, every morning. Yes Bro is the first field-specific daily newspaper: India and world news, business, finance, AI, health, startups, UX and design, "
-        "architecture, schools, sustainability, higher ed, consulting, marketing, aviation, healing, packaging, fashion, real estate and auto. No tracking.")
+DESC = ("The newspaper for your field. News, jobs, opportunities and research, every morning. Yes Bro is the first field-specific daily newspaper: India and world news, business and finance, AI, health, startups, UX and design, "
+        "architecture, schools and higher ed, sustainability, consulting, marketing, aviation, healing, packaging, fashion, real estate and auto. No tracking.")
 
 def ld(day):
     org = {"@type": "Organization", "@id": "https://yesbrohq.com/#org", "name": "Yes Bro", "url": "https://yesbrohq.com/",

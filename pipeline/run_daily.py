@@ -28,20 +28,20 @@ def _link_ok(u):
     return http_url(u)
 
 FIELD_EDS = [
-    "business", "ux", "arch", "schools", "sustainability", "startups", "highered",
-    "consulting", "health", "marketing", "finance", "aviation", "healing", "ai",
+    "business-finance", "ux", "arch", "schools", "sustainability", "startups",
+    "consulting", "health", "marketing", "aviation", "healing", "ai",
     "packaging", "fashion", "realestate", "auto",
 ]
 ALL_EDS = ["daily"] + FIELD_EDS
 
 # Column rotation (approx from house practice). Empty = skip that weekday.
 COLUMN_DAYS = {
-    0: ["daily", "business", "ux"],          # Mon
+    0: ["daily", "business-finance", "ux"],  # Mon
     1: ["arch", "schools", "health"],        # Tue
     2: ["ai", "startups", "consulting"],     # Wed
-    3: ["finance", "highered", "healing"],   # Thu
+    3: ["business-finance", "healing"],      # Thu
     4: ["marketing", "aviation", "sustainability"],  # Fri
-    5: ["daily", "business"],                # Sat
+    5: ["daily", "business-finance"],        # Sat
     6: ["ai", "healing", "daily"],           # Sun
 }
 
@@ -75,6 +75,8 @@ def gather_fields(run_dir: Path, d: dt.date) -> Path:
                 u = u.replace("when:7d", "when:3d").replace("+when%3A7d", "+when%3A3d")
                 if u not in FEEDS[k]:
                     FEEDS[k].append(u)
+    import paper_merges
+    paper_merges.apply_feeds(FEEDS)
     cut = calendar.timegm((d - dt.timedelta(days=3)).timetuple())
     now = time.time() + 3600
     UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36"}
@@ -358,6 +360,8 @@ def process_field(run_dir: Path, ed: str, d: dt.date, per_section: int) -> Path 
         print(f"skip {ed}: too few titles ({len(lines)})", flush=True)
         return None
     picks = ai_write.write_picks(ed, sections, lines, per_section=per_section)
+    import paper_merges
+    picks = paper_merges.trim_picks(picks, cfg, per_section)
     (run_dir / f"picks_{ed}.py").write_text("P=" + json.dumps(picks, indent=1), encoding="utf-8")
     # also as importable module style
     (run_dir / f"picks_{ed}.py").write_text("P = " + repr(picks) + "\n", encoding="utf-8")
@@ -425,14 +429,43 @@ def fetch_images_safe(stories_json: Path, html_json: Path, out_json: Path):
         html_json.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
         out_json.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
 
+def _sources(ed: str) -> list[str]:
+    import paper_merges
+    return paper_merges.sources_of(ed)
+
+def _union_side(paths: list[Path], list_key: str, cap: int) -> list:
+    out, seen = [], set()
+    for p in paths:
+        if not p.exists():
+            continue
+        data = json.loads(p.read_text(encoding="utf-8"))
+        items = data.get(list_key) if isinstance(data, dict) else data
+        for it in items or []:
+            if not isinstance(it, dict):
+                continue
+            u = (it.get("url") or "").split("?")[0].rstrip("/")
+            if not u or u in seen:
+                continue
+            seen.add(u)
+            out.append(it)
+            if len(out) >= cap:
+                return out
+    return out
+
 def aux_jobs_events(d: dt.date, eds: list[str]):
     import subprocess
-    # jobs one at a time (cache helps)
+    # jobs one at a time (cache helps). Merged papers run each source, then keep one capped list.
     for ed in eds:
         if ed == "daily":
             continue
+        sources = _sources(ed)
         try:
-            subprocess.run([sys.executable, str(ROOT / "jobs.py"), ed, "--date", d.isoformat()], cwd=str(ROOT), check=False, timeout=300)
+            for src in sources:
+                subprocess.run([sys.executable, str(ROOT / "jobs.py"), src, "--date", d.isoformat()], cwd=str(ROOT), check=False, timeout=300)
+            if len(sources) > 1 or sources[0] != ed:
+                jobs = _union_side([ROOT / f"jobs_{src}_{d.isoformat()}.json" for src in sources], "jobs", 30)
+                (ROOT / f"jobs_{ed}_{d.isoformat()}.json").write_text(
+                    json.dumps({"date": d.isoformat(), "edition": ed, "jobs": jobs}, indent=1), encoding="utf-8")
         except Exception as e:
             print(f"jobs {ed}: {e}", flush=True)
     try:
@@ -443,7 +476,7 @@ def aux_jobs_events(d: dt.date, eds: list[str]):
     except Exception as e:
         print(f"events: {e}", flush=True)
     try:
-        if "business" in eds:
+        if any("business" in _sources(e) for e in eds):
             subprocess.run([sys.executable, str(ROOT / "opps.py"), "--date", d.isoformat()], cwd=str(ROOT), check=False, timeout=300)
     except Exception as e:
         print(f"opps: {e}", flush=True)
@@ -453,7 +486,7 @@ def aux_jobs_events(d: dt.date, eds: list[str]):
     except Exception as e:
         print(f"research: {e}", flush=True)
     # schools extras
-    if "schools" in eds:
+    if any("schools" in _sources(e) for e in eds):
         for script in ("student_opps.py", "fieldwork_blog.py"):
             try:
                 subprocess.run([sys.executable, str(ROOT / script), "--date", d.isoformat()], cwd=str(ROOT), check=False, timeout=300)
@@ -476,13 +509,13 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
         return ["--research", str(p)] if p.exists() else []
 
     def so(ed):
-        if ed != "schools":
+        if "schools" not in _sources(ed):
             return []
         p = ROOT / f"student_opps_schools_{D}.json"
         return ["--student-opps", str(p)] if p.exists() else []
 
     def fw(ed):
-        if ed != "schools":
+        if "schools" not in _sources(ed):
             return []
         p = ROOT / f"fieldwork_blog_schools_{D}.json"
         return ["--fieldwork-blog", str(p)] if p.exists() else []
@@ -539,7 +572,7 @@ def build_and_publish(d: dt.date, eds: list[str], skip_publish: bool):
             jobs = ROOT / f"jobs_{ed}_{D}.json"
             if jobs.exists():
                 cmd += ["--jobs", str(jobs)]
-            if ed == "business":
+            if "business" in _sources(ed):
                 op = ROOT / f"opps_business_{D}.json"
                 if op.exists():
                     cmd += ["--opps", str(op)]

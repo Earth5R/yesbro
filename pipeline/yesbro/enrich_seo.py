@@ -263,6 +263,13 @@ def main() -> int:
         folder = idx.parent.name
         if folder in {"archive", "img", "data", "mypaper_src", "pipeline"}:
             continue
+        try:
+            head = idx.read_text(encoding="utf-8", errors="ignore")[:2000].lower()
+        except OSError:
+            continue
+        if "http-equiv=\"refresh\"" in head or "http-equiv='refresh'" in head:
+            print("redirect, skipped", folder)
+            continue
         meta = meta_for_folder(cats, folder)
         if not meta:
             print("no category meta for", folder)
